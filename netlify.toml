@@ -5,6 +5,8 @@
 # Makes sure styling/build tools are always installed (fixes plain white “unstyled” site).
 [build.environment]
   NPM_CONFIG_PRODUCTION = "false"
+  # Pin Node here — do not rely on .nvmrc (Windows/Git can add CR and break Netlify).
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/favicon.ico"
