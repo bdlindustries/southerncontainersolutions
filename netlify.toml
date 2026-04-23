@@ -1,3 +1,6 @@
+# Node version: use NODE_VERSION below. Do NOT commit .nvmrc — browser uploads from Windows add CR (\r)
+# and Netlify fails with "Version '20\r' not found".
+
 [build]
   command = "npm install && npm run build"
   publish = "dist"
@@ -5,7 +8,6 @@
 # Makes sure styling/build tools are always installed (fixes plain white “unstyled” site).
 [build.environment]
   NPM_CONFIG_PRODUCTION = "false"
-  # Pin Node here — do not rely on .nvmrc (Windows/Git can add CR and break Netlify).
   NODE_VERSION = "20"
 
 [[redirects]]
