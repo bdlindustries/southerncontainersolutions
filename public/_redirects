@@ -1,0 +1,2 @@
+# Browsers that request /favicon.ico still get the SVG asset (Netlify)
+/favicon.ico  /favicon.svg  200

@@ -1,0 +1,17 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+# Makes sure styling/build tools are always installed (fixes plain white “unstyled” site).
+[build.environment]
+  NPM_CONFIG_PRODUCTION = "false"
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.svg"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

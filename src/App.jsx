@@ -18,6 +18,13 @@ import {
 } from "firebase/auth";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
+/** Public files in `/public` (works with Vite base for GitHub Pages, etc.) */
+function publicUrl(filename) {
+  const base = import.meta.env.BASE_URL ?? "/";
+  const name = filename.replace(/^\//, "");
+  return `${base.endsWith("/") ? base : `${base}/`}${name}`;
+}
+
 function resolveFirebaseConfig() {
   if (typeof globalThis.__firebase_config === "string") {
     try {
@@ -658,7 +665,27 @@ const SEO_RESOURCES = [
 // ==========================================
 // ADMIN - LOGIN
 // ==========================================
-const AdminLogin = ({ onLoginSuccess, onBackToSite }) => {
+function adminLoginErrorMessage(err) {
+  const code = err?.code || '';
+  if (code === 'auth/unauthorized-domain') {
+    return 'This website address is not allowed to use Firebase sign-in yet. In Firebase Console go to Authentication → Settings → Authorized domains, and add your live domain (e.g. your-site.netlify.app and your custom domain). Then try again.';
+  }
+  if (code === 'auth/invalid-credential' || code === 'auth/wrong-password' || code === 'auth/user-not-found' || code === 'auth/invalid-email') {
+    return 'Invalid email or password.';
+  }
+  if (code === 'auth/operation-not-allowed') {
+    return 'Email/password sign-in is turned off in Firebase. Enable it under Authentication → Sign-in method.';
+  }
+  if (code === 'auth/invalid-api-key' || code === 'auth/api-key-not-valid') {
+    return 'Firebase API key is missing or wrong. Check Netlify → Site settings → Environment variables (all VITE_FIREBASE_* values), then redeploy.';
+  }
+  if (code === 'auth/network-request-failed') {
+    return 'Network error — check your connection and try again.';
+  }
+  return err?.message || 'Sign-in failed. Check the browser console (F12) for details.';
+}
+
+const AdminLogin = ({ onLoginSuccess, onBackToSite, onEmailSignIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPass, setShowPass] = useState(false);
@@ -670,10 +697,17 @@ const AdminLogin = ({ onLoginSuccess, onBackToSite }) => {
     setError('');
     setLoading(true);
     try {
+      if (!auth) {
+        setError(
+          'Firebase is not connected on this deployment. In Netlify add all VITE_FIREBASE_* variables from your .env (same names as .env.example), save, then trigger a new deploy.'
+        );
+        return;
+      }
       await signInWithEmailAndPassword(auth, email, password);
-      onLoginSuccess();
+      onEmailSignIn?.();
+      onLoginSuccess?.();
     } catch (err) {
-      setError('Invalid email or password.');
+      setError(adminLoginErrorMessage(err));
     } finally {
       setLoading(false);
     }
@@ -698,6 +732,12 @@ const AdminLogin = ({ onLoginSuccess, onBackToSite }) => {
           <h1 className="text-2xl font-black text-white">Admin Access</h1>
           <p className="text-slate-500 text-sm mt-1">Southern Container Solutions</p>
         </div>
+
+        {!auth && (
+          <div className="mb-6 bg-amber-950/40 border border-amber-700/60 text-amber-200 text-sm px-4 py-3 rounded-lg">
+            Firebase config is missing on this server build. Add the six <span className="font-mono text-xs">VITE_FIREBASE_*</span> environment variables in Netlify, then redeploy the site.
+          </div>
+        )}
 
         <form onSubmit={handleLogin} className="bg-slate-900 border border-slate-800 rounded-2xl p-8 space-y-5">
           <div>
@@ -728,7 +768,7 @@ const AdminLogin = ({ onLoginSuccess, onBackToSite }) => {
             </div>
           )}
 
-          <button disabled={loading} className="w-full bg-amber-500 hover:bg-amber-400 disabled:opacity-60 text-slate-950 py-4 rounded font-black transition-colors">
+          <button disabled={loading || !auth} className="w-full bg-amber-500 hover:bg-amber-400 disabled:opacity-60 text-slate-950 py-4 rounded font-black transition-colors">
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
@@ -1080,7 +1120,7 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
 // ==========================================
 // ADMIN - DASHBOARD VIEW
 // ==========================================
-const ViewAdmin = ({ isAdmin, inventory, onRefresh, onNavigateHome }) => {
+const ViewAdmin = ({ isAdmin, inventory, onRefresh, onNavigateHome, onEmailAdminSignedIn }) => {
   const [editingItem, setEditingItem] = useState(null);
   const [showNewForm, setShowNewForm] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
@@ -1122,7 +1162,7 @@ const ViewAdmin = ({ isAdmin, inventory, onRefresh, onNavigateHome }) => {
   if (!authChecked) return null;
 
   if (!isAdmin) {
-    return <AdminLogin onLoginSuccess={() => {}} onBackToSite={onNavigateHome} />;
+    return <AdminLogin onLoginSuccess={() => {}} onBackToSite={onNavigateHome} onEmailSignIn={onEmailAdminSignedIn} />;
   }
 
   return (
@@ -1402,7 +1442,7 @@ const ViewHome = ({ setView, inventory }) => (
       {/* Hero photo — right on desktop; full width on top for mobile */}
       <div className="relative w-full lg:w-[50%] xl:w-[48%] min-h-[260px] sm:min-h-[340px] lg:min-h-[85vh] order-1 lg:order-2 shrink-0">
         <img
-          src="/hero-office-storage-combo.png"
+          src={publicUrl("hero-office-storage-combo.png")}
           alt="40-foot container office and storage unit on a job site"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
@@ -1457,6 +1497,24 @@ const ViewHome = ({ setView, inventory }) => (
     </section>
   </div>
 );
+
+const SITE_LEADS_EMAIL = 'bdlindustriesllc@gmail.com';
+
+/** FormSubmit → SITE_LEADS_EMAIL (confirm inbox once at formsubmit.co on first submission). */
+async function sendSiteLeadEmail(subject, fields) {
+  const body = {
+    _subject: subject,
+    _template: 'table',
+    _captcha: false,
+    ...fields,
+  };
+  const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(SITE_LEADS_EMAIL)}`, {
+    method: 'POST',
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) console.warn('Site lead email returned', res.status);
+}
 
 /** Buy flow: collect contact + payment preference; you send QuickBooks link or wire instructions. */
 const OfficePurchaseRequestModal = ({ product, onClose }) => {
@@ -1515,6 +1573,18 @@ const OfficePurchaseRequestModal = ({ product, onClose }) => {
           submittedAt: serverTimestamp(),
         });
       }
+      await sendSiteLeadEmail('Southern Container Solutions - Office purchase request', {
+        formType: 'office-purchase-request',
+        productId: product.id,
+        productTitle: product.title,
+        priceStr: product.priceStr ?? '',
+        paymentPreference: formData.paymentPreference,
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        company: formData.company.trim(),
+        notes: formData.notes.trim(),
+      });
       setStatus('success');
     } catch (err) {
       console.error('Purchase request error:', err);
@@ -1886,6 +1956,14 @@ const ViewRawContainers = () => {
           submittedAt: serverTimestamp(),
         });
       }
+      await sendSiteLeadEmail('Southern Container Solutions - Raw container quote', {
+        formType: 'raw-container-quote',
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        zip: formData.zip.trim(),
+        container: formData.container,
+      });
       setStatus('success');
     } catch (err) {
       console.error('Submission error:', err);
@@ -2159,7 +2237,7 @@ const ViewRentals = () => {
                     Leasing partner
                   </p>
                   <img
-                    src="/big-rentals-logo.png"
+                    src={publicUrl("big-rentals-logo.png")}
                     alt="Big Rentals — commercial equipment leasing"
                     className="h-20 sm:h-24 md:h-28 w-auto max-w-full object-contain rounded-lg shadow-md ring-1 ring-slate-200/80"
                     onError={() => setLogoError(true)}
@@ -2277,6 +2355,14 @@ const ViewCustom = () => {
           submittedAt: serverTimestamp(),
         });
       }
+      await sendSiteLeadEmail('Southern Container Solutions - Custom build quote', {
+        formType: 'custom-build-quote',
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        size: formData.size,
+        details: formData.details.trim(),
+      });
       setStatus('success');
     } catch (err) {
       console.error('Submission error:', err);
@@ -2378,6 +2464,14 @@ const ViewDelivery = () => {
           submittedAt: serverTimestamp(),
         });
       }
+      await sendSiteLeadEmail('Southern Container Solutions - Delivery quote', {
+        formType: 'delivery-quote',
+        email: formData.email.trim(),
+        product: formData.product.trim(),
+        address: formData.address.trim(),
+        type: formData.type,
+        message: formData.message.trim(),
+      });
       setStatus('success');
     } catch (err) {
       console.error('Submission error:', err);
@@ -2401,7 +2495,7 @@ const ViewDelivery = () => {
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
             <img
-              src="/delivery-container-office.png"
+              src={publicUrl("delivery-container-office.png")}
               alt="Modified office container on a flatbed trailer, ready for delivery"
               className="w-full h-full object-cover object-center"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://images.unsplash.com/photo-1588636181775-654db0733a41?auto=format&fit=crop&q=80&w=1200"; }}
@@ -2644,17 +2738,34 @@ export default function App() {
   // Anonymous auth for public form submissions + admin auth state listener
   useEffect(() => {
     if (!auth) return;
-    const unsub = onAuthStateChanged(auth, async (user) => {
+    let anonymousTimer = null;
+    const unsub = onAuthStateChanged(auth, (user) => {
+      if (anonymousTimer) {
+        clearTimeout(anonymousTimer);
+        anonymousTimer = null;
+      }
       if (!user) {
-        // No user at all - sign in anonymously for form submissions
-        try { await signInAnonymously(auth); } catch {}
         setIsAdmin(false);
+        // Brief delay so email/password sign-in can set currentUser before we re-anonymize
+        // (avoids a race where admin login appears to succeed but session snaps back to anonymous)
+        anonymousTimer = setTimeout(async () => {
+          anonymousTimer = null;
+          if (!auth?.currentUser) {
+            try {
+              await signInAnonymously(auth);
+            } catch {
+              /* ignore */
+            }
+          }
+        }, 500);
       } else {
-        // Email/password users are admins; anonymous are not
         setIsAdmin(!user.isAnonymous);
       }
     });
-    return unsub;
+    return () => {
+      if (anonymousTimer) clearTimeout(anonymousTimer);
+      unsub();
+    };
   }, []);
 
   // Load inventory from Firestore; seed empty DB; restore any missing default catalog rows (e.g. 40' deleted earlier)
@@ -2708,7 +2819,15 @@ export default function App() {
         {currentView === 'delivery'  && <ViewDelivery />}
         {currentView === 'about'     && <ViewAbout />}
         {currentView === 'resources' && <ViewResources setView={setCurrentView} />}
-        {currentView === 'admin'     && <ViewAdmin isAdmin={isAdmin} inventory={inventory} onRefresh={loadInventory} onNavigateHome={() => setCurrentView('home')} />}
+        {currentView === 'admin'     && (
+          <ViewAdmin
+            isAdmin={isAdmin}
+            inventory={inventory}
+            onRefresh={loadInventory}
+            onNavigateHome={() => setCurrentView('home')}
+            onEmailAdminSignedIn={() => setIsAdmin(true)}
+          />
+        )}
       </main>
 
       {currentView !== 'admin' && (
