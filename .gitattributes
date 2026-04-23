@@ -1,0 +1,2 @@
+# Netlify/Linux read .nvmrc literally — Windows CRLF breaks Node version parsing.
+.nvmrc text eol=lf
