@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isEmailPasswordUser() {
+      return request.auth != null
+        && request.auth.token.firebase.sign_in_provider == 'password';
+    }
+
+    // Listing images and videos (e.g. scs_inventory/..., scs_inventory/videos/...)
+    match /scs_inventory/{allPaths=**} {
+      allow read: if true;
+      allow write: if isEmailPasswordUser();
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

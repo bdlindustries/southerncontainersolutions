@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Signed in with Email/Password (not anonymous, not Google-only unless you add it)
+    function isEmailPasswordUser() {
+      return request.auth != null
+        && request.auth.token.firebase.sign_in_provider == 'password';
+    }
+
+    // Optional: only your UID can change inventory/leads (uncomment && line inside isAdmin)
+    // function isAdmin() {
+    //   return isEmailPasswordUser()
+    //     && request.auth.uid == 'miPmnBhM2xODD86yupjYPBqYRMG3';
+    // }
+
+    // Shop + site: anyone can read product rows
+    match /scs_inventory/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isEmailPasswordUser();
+    }
+
+    // Quote / contact submissions: visitors must be able to CREATE without an account
+    match /scs_leads/{docId} {
+      allow read: if isEmailPasswordUser();
+      allow create: if true;
+      allow update, delete: if isEmailPasswordUser();
+    }
+
+    // Deny everything else by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
