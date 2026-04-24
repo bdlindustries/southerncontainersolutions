@@ -2832,7 +2832,7 @@ export default function App() {
 
       {currentView !== 'admin' && (
         <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
-          <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-12">
             <div className="col-span-1 md:col-span-2">
               <div className="flex flex-col mb-6">
                 <h2 className="text-2xl font-black text-white tracking-tighter leading-none m-0">SOUTHERN</h2>
@@ -2852,6 +2852,16 @@ export default function App() {
                 <li><button onClick={() => setCurrentView('rentals')} className="hover:text-amber-500 transition-colors">Rentals</button></li>
                 <li><button onClick={() => setCurrentView('custom')} className="hover:text-amber-500 transition-colors">Custom Builds</button></li>
                 <li><button onClick={() => setCurrentView('delivery')} className="hover:text-amber-500 transition-colors">Delivery Info</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Service Areas</h4>
+              <ul className="space-y-3 text-sm font-medium">
+                <li><a href="/locations/covington-la.html" className="hover:text-amber-500 transition-colors">Covington, LA</a></li>
+                <li><a href="/locations/beaumont-tx.html" className="hover:text-amber-500 transition-colors">Beaumont, TX</a></li>
+                <li><a href="/locations/jackson-ms.html" className="hover:text-amber-500 transition-colors">Jackson, MS</a></li>
+                <li><a href="/locations/columbus-ms.html" className="hover:text-amber-500 transition-colors">Columbus, MS</a></li>
               </ul>
             </div>
 
