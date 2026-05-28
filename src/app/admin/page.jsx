@@ -13,7 +13,7 @@ import {
   signInWithEmailAndPassword, signOut, onAuthStateChanged 
 } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { db, auth, storage } from "@/lib/firebase";
+import { db, auth, storage, DELIVERY_PAGE_SETTINGS_ID } from "@/lib/firebase";
 import { listingImageUrls } from "@/lib/data";
 import { getYoutubeEmbedUrl, getYoutubeVideoId } from "@/lib/youtube";
 
@@ -88,6 +88,7 @@ const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
   const [youtubeUrl, setYoutubeUrl] = useState(initialUrl);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [saveError, setSaveError] = useState('');
   const embedPreview = getYoutubeEmbedUrl(youtubeUrl);
 
   useEffect(() => {
@@ -96,14 +97,21 @@ const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
 
   const handleSave = async (e) => {
     e.preventDefault();
+    if (!db) {
+      setSaveError('Firebase is not connected.');
+      return;
+    }
     setSaving(true);
     setSaved(false);
+    setSaveError('');
     try {
       const trimmed = youtubeUrl.trim();
       const youtubeVideoId = getYoutubeVideoId(trimmed);
       await setDoc(
-        doc(db, 'scs_settings', 'delivery'),
+        doc(db, 'scs_inventory', DELIVERY_PAGE_SETTINGS_ID),
         {
+          _type: 'page_settings',
+          page: 'delivery',
           youtubeUrl: youtubeVideoId ? trimmed : '',
           youtubeVideoId: youtubeVideoId || '',
           updatedAt: Date.now(),
@@ -115,6 +123,7 @@ const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
       onSaved?.();
     } catch (err) {
       console.error('Delivery video save error:', err);
+      setSaveError(err.message || 'Could not save. Check that you are signed in and try again.');
     } finally {
       setSaving(false);
     }
@@ -127,13 +136,14 @@ const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
         <p className="text-xs text-slate-500 mb-3">Paste a YouTube link to show a delivery walkthrough on the Delivery page. Leave blank to hide the video section.</p>
         <div className="flex gap-2">
           <input
-            type="url"
+            type="text"
             placeholder="https://www.youtube.com/watch?v=..."
             className="flex-1 bg-slate-950 border border-slate-800 rounded p-3 text-white outline-none focus:border-amber-500 transition-colors"
             value={youtubeUrl}
             onChange={(e) => {
               setYoutubeUrl(e.target.value);
               setSaved(false);
+              setSaveError('');
             }}
           />
           {youtubeUrl && (
@@ -173,6 +183,7 @@ const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
           <Save className="w-4 h-4" /> {saving ? 'Saving...' : 'Save Delivery Video'}
         </button>
         {saved && <span className="text-xs font-bold text-green-400">Saved to delivery page</span>}
+        {saveError && <span className="text-xs font-bold text-red-400">{saveError}</span>}
       </div>
     </form>
   );
@@ -465,16 +476,24 @@ export default function AdminPage() {
   const fetchInventory = async () => {
     if (!db) return;
     const snapshot = await getDocs(collection(db, 'scs_inventory'));
-    const items = snapshot.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+    const items = snapshot.docs
+      .map(d => ({ id: d.id, ...d.data() }))
+      .filter((item) => !item.id.startsWith('_'))
+      .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
     setInventory(items);
   };
 
   const fetchDeliverySettings = async () => {
     if (!db) return;
     try {
-      const snap = await getDoc(doc(db, 'scs_settings', 'delivery'));
+      const snap = await getDoc(doc(db, 'scs_inventory', DELIVERY_PAGE_SETTINGS_ID));
       if (snap.exists()) {
         setDeliveryYoutubeUrl(snap.data().youtubeUrl || '');
+        return;
+      }
+      const legacySnap = await getDoc(doc(db, 'scs_settings', 'delivery'));
+      if (legacySnap.exists()) {
+        setDeliveryYoutubeUrl(legacySnap.data().youtubeUrl || '');
       } else {
         setDeliveryYoutubeUrl('');
       }

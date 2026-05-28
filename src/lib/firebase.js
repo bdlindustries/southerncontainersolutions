@@ -33,12 +33,43 @@ try {
 
 export { auth, storage };
 
+/** Reserved Firestore doc IDs in scs_inventory (not shop listings). */
+export const DELIVERY_PAGE_SETTINGS_ID = '_page_delivery';
+
+export function isInventoryListingDoc(id) {
+  return typeof id === 'string' && !id.startsWith('_');
+}
+
+export async function getDeliveryPageSettings() {
+  try {
+    const inventoryDocRef = doc(db, 'scs_inventory', DELIVERY_PAGE_SETTINGS_ID);
+    const inventorySnap = await getDoc(inventoryDocRef);
+    if (inventorySnap.exists()) {
+      return inventorySnap.data();
+    }
+
+    // Legacy location before rules fix
+    const legacyRef = doc(db, 'scs_settings', 'delivery');
+    const legacySnap = await getDoc(legacyRef);
+    if (legacySnap.exists()) {
+      return legacySnap.data();
+    }
+
+    return { youtubeUrl: '', youtubeVideoId: '' };
+  } catch (e) {
+    console.error("Delivery settings fetch failed", e);
+    return { youtubeUrl: '', youtubeVideoId: '' };
+  }
+}
+
 export async function getLiveInventory() {
   try {
     const snapshot = await getDocs(collection(db, 'scs_inventory'));
-    const items = snapshot.docs.map((d) =>
-      enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
-    );
+    const items = snapshot.docs
+      .filter((d) => isInventoryListingDoc(d.id))
+      .map((d) =>
+        enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
+      );
     if (items.length) {
       return items.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
     }
@@ -56,21 +87,8 @@ export async function getFeaturedInventory(limit = 2) {
   return source.slice(0, limit);
 }
 
-export async function getDeliveryPageSettings() {
-  try {
-    const docRef = doc(db, 'scs_settings', 'delivery');
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      return docSnap.data();
-    }
-    return { youtubeUrl: '', youtubeVideoId: '' };
-  } catch (e) {
-    console.error("Delivery settings fetch failed", e);
-    return { youtubeUrl: '', youtubeVideoId: '' };
-  }
-}
-
 export async function getProductById(id) {
+  if (!isInventoryListingDoc(id)) return null;
   try {
     const docRef = doc(db, 'scs_inventory', id);
     const docSnap = await getDoc(docRef);
