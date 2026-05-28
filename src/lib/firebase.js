@@ -49,6 +49,27 @@ export async function getLiveInventory() {
   }
 }
 
+export async function getFeaturedInventory(limit = 2) {
+  const inventory = await getLiveInventory();
+  const featured = inventory.filter((p) => p.featured);
+  const source = featured.length > 0 ? featured : inventory;
+  return source.slice(0, limit);
+}
+
+export async function getDeliveryPageSettings() {
+  try {
+    const docRef = doc(db, 'scs_settings', 'delivery');
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      return docSnap.data();
+    }
+    return { youtubeUrl: '', youtubeVideoId: '' };
+  } catch (e) {
+    console.error("Delivery settings fetch failed", e);
+    return { youtubeUrl: '', youtubeVideoId: '' };
+  }
+}
+
 export async function getProductById(id) {
   try {
     const docRef = doc(db, 'scs_inventory', id);

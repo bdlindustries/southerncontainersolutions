@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { 
   ArrowLeft, Lock, Plus, Edit2, Trash2, LogOut, 
-  Upload, Save, Image as ImageIcon, RefreshCw, Video, Play, GripVertical, PackageOpen 
+  Upload, Save, Video, GripVertical, PackageOpen, Star
 } from "lucide-react";
 import { 
-  collection, addDoc, getDocs, doc, setDoc, deleteDoc 
+  collection, addDoc, getDocs, doc, setDoc, deleteDoc, getDoc 
 } from "firebase/firestore";
 import { 
   signInWithEmailAndPassword, signOut, onAuthStateChanged 
@@ -84,6 +84,100 @@ const AdminLogin = ({ onLoginSuccess }) => {
   );
 };
 
+const AdminDeliveryVideo = ({ initialUrl = '', onSaved }) => {
+  const [youtubeUrl, setYoutubeUrl] = useState(initialUrl);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const embedPreview = getYoutubeEmbedUrl(youtubeUrl);
+
+  useEffect(() => {
+    setYoutubeUrl(initialUrl);
+  }, [initialUrl]);
+
+  const handleSave = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    setSaved(false);
+    try {
+      const trimmed = youtubeUrl.trim();
+      const youtubeVideoId = getYoutubeVideoId(trimmed);
+      await setDoc(
+        doc(db, 'scs_settings', 'delivery'),
+        {
+          youtubeUrl: youtubeVideoId ? trimmed : '',
+          youtubeVideoId: youtubeVideoId || '',
+          updatedAt: Date.now(),
+        },
+        { merge: true }
+      );
+      setYoutubeUrl(youtubeVideoId ? trimmed : '');
+      setSaved(true);
+      onSaved?.();
+    } catch (err) {
+      console.error('Delivery video save error:', err);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSave} className="space-y-4">
+      <div>
+        <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">YouTube video URL</label>
+        <p className="text-xs text-slate-500 mb-3">Paste a YouTube link to show a delivery walkthrough on the Delivery page. Leave blank to hide the video section.</p>
+        <div className="flex gap-2">
+          <input
+            type="url"
+            placeholder="https://www.youtube.com/watch?v=..."
+            className="flex-1 bg-slate-950 border border-slate-800 rounded p-3 text-white outline-none focus:border-amber-500 transition-colors"
+            value={youtubeUrl}
+            onChange={(e) => {
+              setYoutubeUrl(e.target.value);
+              setSaved(false);
+            }}
+          />
+          {youtubeUrl && (
+            <button
+              type="button"
+              onClick={() => {
+                setYoutubeUrl('');
+                setSaved(false);
+              }}
+              className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 rounded transition-colors shrink-0"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+      </div>
+      {youtubeUrl && !embedPreview && (
+        <p className="text-xs text-amber-500 font-medium">Could not parse that URL. Use a standard YouTube watch or youtu.be link.</p>
+      )}
+      {embedPreview && (
+        <div className="aspect-video max-w-lg rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
+          <iframe
+            src={embedPreview}
+            title="Delivery page video preview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      )}
+      <div className="flex items-center gap-3">
+        <button
+          type="submit"
+          disabled={saving || Boolean(youtubeUrl.trim() && !embedPreview)}
+          className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 disabled:opacity-60 text-slate-950 font-black px-5 py-2.5 rounded text-sm transition-colors"
+        >
+          <Save className="w-4 h-4" /> {saving ? 'Saving...' : 'Save Delivery Video'}
+        </button>
+        {saved && <span className="text-xs font-bold text-green-400">Saved to delivery page</span>}
+      </div>
+    </form>
+  );
+};
+
 const AdminItemForm = ({ item, onSave, onCancel }) => {
   const isNew = !item?.id;
   const fileInputRef = useRef(null);
@@ -103,6 +197,7 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
     images: initialImages(),
     order: item?.order ?? 99,
     youtubeUrl: item?.youtubeUrl || item?.videoUrl || '',
+    featured: Boolean(item?.featured),
   });
 
   const [uploadProgress, setUploadProgress] = useState(null);
@@ -170,6 +265,7 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
       order: parseInt(form.order, 10) || 0,
       youtubeUrl: youtubeVideoId ? youtubeUrl : '',
       youtubeVideoId: youtubeVideoId || '',
+      featured: Boolean(form.featured),
       updatedAt: Date.now(),
     };
 
@@ -206,6 +302,18 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
         <div>
           <label className={labelCls}>Display Order</label>
           <input type="number" className={inputCls} value={form.order} onChange={e => setForm(f => ({...f, order: e.target.value}))} />
+          <p className="text-xs text-slate-500 mt-1">Lower numbers appear first on the shop page. You can also drag listings on the admin dashboard.</p>
+        </div>
+        <div className="flex items-end">
+          <label className="flex items-center gap-3 cursor-pointer bg-slate-950 border border-slate-800 rounded p-3 w-full">
+            <input
+              type="checkbox"
+              checked={form.featured}
+              onChange={(e) => setForm((f) => ({ ...f, featured: e.target.checked }))}
+              className="w-4 h-4 rounded border-slate-700 text-amber-500 focus:ring-amber-500"
+            />
+            <span className="text-sm font-bold text-white">Feature on homepage</span>
+          </label>
         </div>
         <div className="md:col-span-2">
           <label className={labelCls}>Availability Status</label>
@@ -350,6 +458,9 @@ export default function AdminPage() {
   const [inventory, setInventory] = useState([]);
   const [editingItem, setEditingItem] = useState(null);
   const [showNewForm, setShowNewForm] = useState(false);
+  const [listDragIndex, setListDragIndex] = useState(null);
+  const [orderSaving, setOrderSaving] = useState(false);
+  const [deliveryYoutubeUrl, setDeliveryYoutubeUrl] = useState('');
 
   const fetchInventory = async () => {
     if (!db) return;
@@ -358,12 +469,79 @@ export default function AdminPage() {
     setInventory(items);
   };
 
+  const fetchDeliverySettings = async () => {
+    if (!db) return;
+    try {
+      const snap = await getDoc(doc(db, 'scs_settings', 'delivery'));
+      if (snap.exists()) {
+        setDeliveryYoutubeUrl(snap.data().youtubeUrl || '');
+      } else {
+        setDeliveryYoutubeUrl('');
+      }
+    } catch (err) {
+      console.error('Delivery settings fetch error:', err);
+    }
+  };
+
+  const persistInventoryOrder = async (items) => {
+    setOrderSaving(true);
+    try {
+      await Promise.all(
+        items.map((item, index) =>
+          setDoc(doc(db, 'scs_inventory', item.id), { order: index, id: item.id }, { merge: true })
+        )
+      );
+      setInventory(items.map((item, index) => ({ ...item, order: index })));
+    } catch (err) {
+      console.error('Order save error:', err);
+    } finally {
+      setOrderSaving(false);
+    }
+  };
+
+  const moveListing = (from, to) => {
+    if (from === to || from < 0 || to < 0 || from >= inventory.length || to >= inventory.length) return;
+    const next = [...inventory];
+    const [moved] = next.splice(from, 1);
+    next.splice(to, 0, moved);
+    return next;
+  };
+
+  const handleListingDrop = async (toIndex) => {
+    if (listDragIndex === null || listDragIndex === toIndex) {
+      setListDragIndex(null);
+      return;
+    }
+    const reordered = moveListing(listDragIndex, toIndex);
+    setListDragIndex(null);
+    if (reordered) await persistInventoryOrder(reordered);
+  };
+
+  const toggleFeatured = async (item) => {
+    const nextFeatured = !item.featured;
+    try {
+      await setDoc(
+        doc(db, 'scs_inventory', item.id),
+        { featured: nextFeatured, id: item.id, updatedAt: Date.now() },
+        { merge: true }
+      );
+      setInventory((prev) =>
+        prev.map((row) => (row.id === item.id ? { ...row, featured: nextFeatured } : row))
+      );
+    } catch (err) {
+      console.error('Featured toggle error:', err);
+    }
+  };
+
   useEffect(() => {
     if (!auth) return setAuthChecked(true);
     const unsub = onAuthStateChanged(auth, (user) => {
       setIsAdmin(!!user && !user.isAnonymous);
       setAuthChecked(true);
-      if (user && !user.isAnonymous) fetchInventory();
+      if (user && !user.isAnonymous) {
+        fetchInventory();
+        fetchDeliverySettings();
+      }
     });
     return unsub;
   }, []);
@@ -403,29 +581,91 @@ export default function AdminPage() {
           </div>
         ) : (
           <>
-            <div className="flex justify-between items-center mb-8">
-              <div><h1 className="text-2xl font-black">Inventory Listings</h1></div>
-              <button onClick={() => setShowNewForm(true)} className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-2.5 rounded text-sm"><Plus className="w-4 h-4" /> Add Listing</button>
+            <div className="flex justify-between items-center mb-4">
+              <div>
+                <h1 className="text-2xl font-black">Inventory Listings</h1>
+                <p className="text-slate-500 text-sm mt-1">Drag to reorder the shop page. Star up to two listings for the homepage featured section.</p>
+              </div>
+              <button onClick={() => setShowNewForm(true)} className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-2.5 rounded text-sm shrink-0"><Plus className="w-4 h-4" /> Add Listing</button>
             </div>
-            <div className="space-y-4">
-              {inventory.map(item => (
-                <div key={item.id} className="bg-slate-900 border border-slate-800 rounded-xl flex overflow-hidden p-4">
+            {orderSaving && (
+              <div className="mb-4 text-xs font-bold text-amber-500">Saving shop order...</div>
+            )}
+            <div className="space-y-3">
+              {inventory.map((item, idx) => (
+                <div
+                  key={item.id}
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                  }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    handleListingDrop(idx);
+                  }}
+                  className={`bg-slate-900 border rounded-xl flex overflow-hidden p-4 transition-all ${
+                    listDragIndex === idx ? 'border-amber-500 opacity-60 scale-[0.99]' : 'border-slate-800'
+                  } ${listDragIndex !== null && listDragIndex !== idx ? 'hover:border-amber-500/40' : ''}`}
+                >
+                  <div
+                    draggable
+                    onDragStart={() => setListDragIndex(idx)}
+                    onDragEnd={() => setListDragIndex(null)}
+                    className="flex items-center pr-3 text-slate-500 cursor-grab active:cursor-grabbing"
+                  >
+                    <GripVertical className="w-5 h-5" />
+                  </div>
                   <div className="w-32 h-24 bg-slate-800 rounded shrink-0 overflow-hidden">
                     {listingImageUrls(item)[0] && <img src={listingImageUrls(item)[0]} alt="" className="w-full h-full object-cover" />}
                   </div>
-                  <div className="flex-1 ml-4 flex justify-between">
-                    <div>
-                      <h3 className="font-black text-lg">{item.title}</h3>
+                  <div className="flex-1 ml-4 flex justify-between gap-4 min-w-0">
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="font-black text-lg truncate">{item.title}</h3>
+                        {item.featured && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded">
+                            <Star className="w-3 h-3 fill-current" /> Homepage
+                          </span>
+                        )}
+                      </div>
                       <div className="text-amber-500 font-black">{item.priceStr}</div>
                       <div className="text-xs text-slate-500 mt-1">{item.availability}</div>
+                      <div className="text-xs text-slate-600 mt-1">Shop position: {idx + 1}</div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => toggleFeatured(item)}
+                        className={`flex items-center justify-center gap-1 text-xs font-bold px-3 py-1.5 rounded transition-colors ${
+                          item.featured
+                            ? 'bg-amber-500 text-slate-950 hover:bg-amber-400'
+                            : 'bg-slate-800 hover:bg-slate-700 text-slate-300'
+                        }`}
+                        title="Toggle homepage featured"
+                      >
+                        <Star className={`w-3.5 h-3.5 ${item.featured ? 'fill-current' : ''}`} />
+                        {item.featured ? 'Featured' : 'Feature'}
+                      </button>
                       <button onClick={() => setEditingItem(item)} className="bg-slate-800 hover:bg-amber-500 text-xs font-bold px-3 py-1.5 rounded transition-colors">Edit</button>
                       <button onClick={() => handleDelete(item.id)} className="bg-slate-800 hover:bg-red-700 text-xs font-bold px-3 py-1.5 rounded transition-colors">Delete</button>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12 bg-slate-900 border border-slate-800 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6 border-b border-slate-800 pb-4">
+                <Video className="w-6 h-6 text-amber-500" />
+                <div>
+                  <h2 className="text-xl font-black text-white">Delivery Page Video</h2>
+                  <p className="text-slate-500 text-sm mt-0.5">Embed a YouTube walkthrough on the public Delivery page.</p>
+                </div>
+              </div>
+              <AdminDeliveryVideo
+                initialUrl={deliveryYoutubeUrl}
+                onSaved={() => fetchDeliverySettings()}
+              />
             </div>
           </>
         )}

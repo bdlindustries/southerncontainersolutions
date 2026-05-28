@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { ShoppingCart, ChevronRight, PackageOpen } from "lucide-react";
 import { listingImageUrls } from "@/lib/data";
-import { getLiveInventory } from "@/lib/firebase";
+import { getFeaturedInventory } from "@/lib/firebase";
 
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  const inventory = await getLiveInventory();
+  const featuredInventory = await getFeaturedInventory(2);
 
   return (
     <div className="animate-in fade-in duration-500">
@@ -61,7 +61,7 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {inventory.slice(0, 2).map(product => {
+            {featuredInventory.map(product => {
               const imgUrl = listingImageUrls(product)[0];
               return (
               <div key={product.id} className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
