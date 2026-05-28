@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Zap, ShoppingCart, PackageOpen } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Zap, PackageOpen } from "lucide-react";
 import { SEED_INVENTORY, listingImageUrls } from "@/lib/data";
 import { getProductById, getLiveInventory } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
+import ProductPurchaseActions from "@/components/ProductPurchaseActions";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -109,9 +110,13 @@ export default async function ProductDetailPage({ params }) {
               </ul>
 
               <div className="mt-auto pt-6 border-t border-slate-100">
-                <button className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 py-4 rounded-lg font-black text-lg transition-all text-center flex items-center justify-center gap-2 shadow-md">
-                  Buy now <ShoppingCart className="w-5 h-5" />
-                </button>
+                <ProductPurchaseActions
+                  product={{
+                    id: product.id,
+                    title: product.title,
+                    priceStr: product.priceStr,
+                  }}
+                />
               </div>
 
             </div>

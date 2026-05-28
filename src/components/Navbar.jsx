@@ -90,7 +90,7 @@ export default function Navbar() {
               href="/shop"
               className="bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-2.5 rounded font-black text-sm transition-all shadow-[0_4px_14px_0_rgba(245,158,11,0.39)] hover:shadow-[0_6px_20px_rgba(245,158,11,0.23)] hover:-translate-y-0.5"
             >
-              Buy Online
+              Request Purchase
             </Link>
           </div>
 
@@ -134,7 +134,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="w-full bg-amber-500 text-slate-950 px-6 py-4 rounded font-black text-base mt-6 flex justify-center items-center"
             >
-              Buy Online <ArrowRight className="ml-2 w-5 h-5" />
+              Request Purchase <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         )}
