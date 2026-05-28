@@ -15,6 +15,7 @@ import {
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { db, auth, storage } from "@/lib/firebase";
 import { listingImageUrls } from "@/lib/data";
+import { getYoutubeEmbedUrl, getYoutubeVideoId } from "@/lib/youtube";
 
 function coerceImageList(raw) {
   if (raw == null) return [];
@@ -101,10 +102,24 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
     availability: item?.availability || 'In Stock - Ready to Ship',
     images: initialImages(),
     order: item?.order ?? 99,
+    youtubeUrl: item?.youtubeUrl || item?.videoUrl || '',
   });
 
   const [uploadProgress, setUploadProgress] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [dragIndex, setDragIndex] = useState(null);
+
+  const moveImage = (from, to) => {
+    if (from === to || from < 0 || to < 0 || from >= form.images.length || to >= form.images.length) return;
+    setForm((f) => {
+      const images = [...f.images];
+      const [moved] = images.splice(from, 1);
+      images.splice(to, 0, moved);
+      return { ...f, images };
+    });
+  };
+
+  const moveImageByOffset = (index, offset) => moveImage(index, index + offset);
 
   const uploadToStorage = (file) => new Promise((resolve, reject) => {
     const safeName = file.name.replace(/[^\w.-]/g, '_');
@@ -139,6 +154,8 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
     setSaving(true);
     const priceNum = parseInt(form.price, 10) || 0;
     const imgs = form.images.filter(Boolean);
+    const youtubeUrl = form.youtubeUrl.trim();
+    const youtubeVideoId = getYoutubeVideoId(youtubeUrl);
     
     const itemData = {
       ...(item || {}),
@@ -151,13 +168,17 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
       images: imgs,
       image: imgs[0] || '',
       order: parseInt(form.order, 10) || 0,
+      youtubeUrl: youtubeVideoId ? youtubeUrl : '',
+      youtubeVideoId: youtubeVideoId || '',
+      updatedAt: Date.now(),
     };
 
     try {
       if (isNew) {
-        await addDoc(collection(db, 'scs_inventory'), itemData);
+        const docRef = await addDoc(collection(db, 'scs_inventory'), itemData);
+        await setDoc(docRef, { ...itemData, id: docRef.id }, { merge: true });
       } else {
-        await setDoc(doc(db, 'scs_inventory', item.id), itemData);
+        await setDoc(doc(db, 'scs_inventory', item.id), { ...itemData, id: item.id }, { merge: true });
       }
       onSave();
     } catch (err) {
@@ -169,6 +190,7 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
 
   const inputCls = "w-full bg-slate-950 border border-slate-800 rounded p-3 text-white outline-none focus:border-amber-500 transition-colors text-sm";
   const labelCls = "block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2";
+  const youtubeEmbedPreview = getYoutubeEmbedUrl(form.youtubeUrl);
 
   return (
     <form onSubmit={handleSave} className="space-y-5">
@@ -199,14 +221,62 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
         </div>
 
         <div className="md:col-span-2 bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-6">
-          <label className={labelCls}>Listing photos</label>
+          <div>
+            <label className={labelCls}>Listing photos</label>
+            <p className="text-xs text-slate-500 mt-1">Drag photos to reorder. The first photo is the shop catalog cover.</p>
+          </div>
           {form.images.length > 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {form.images.map((src, idx) => (
-                <div key={idx} className="relative group rounded-lg overflow-hidden border border-slate-800 aspect-square bg-slate-900">
-                  <img src={src} alt="" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <button type="button" onClick={() => removeImageAt(idx)} className="text-[10px] font-bold bg-red-600 text-white px-2 py-1 rounded">Remove</button>
+                <div
+                  key={`${src}-${idx}`}
+                  draggable
+                  onDragStart={() => setDragIndex(idx)}
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                  }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    if (dragIndex !== null && dragIndex !== idx) moveImage(dragIndex, idx);
+                    setDragIndex(null);
+                  }}
+                  onDragEnd={() => setDragIndex(null)}
+                  className={`relative group rounded-lg overflow-hidden border aspect-square bg-slate-900 cursor-grab active:cursor-grabbing transition-all ${
+                    dragIndex === idx ? 'border-amber-500 opacity-60 scale-95' : 'border-slate-800'
+                  } ${dragIndex !== null && dragIndex !== idx ? 'hover:border-amber-500/50' : ''}`}
+                >
+                  <img src={src} alt="" className="w-full h-full object-cover pointer-events-none" draggable={false} />
+                  {idx === 0 && (
+                    <span className="absolute top-2 left-2 text-[10px] font-black uppercase tracking-wider bg-amber-500 text-slate-950 px-2 py-0.5 rounded">
+                      Cover
+                    </span>
+                  )}
+                  <div className="absolute top-2 right-2 bg-slate-950/80 rounded p-1 text-slate-400">
+                    <GripVertical className="w-4 h-4" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 bg-black/70 p-2 flex items-center justify-between gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                    <div className="flex gap-1">
+                      <button
+                        type="button"
+                        disabled={idx === 0}
+                        onClick={() => moveImageByOffset(idx, -1)}
+                        className="text-[10px] font-bold bg-slate-700 hover:bg-slate-600 disabled:opacity-40 text-white px-2 py-1 rounded"
+                      >
+                        ←
+                      </button>
+                      <button
+                        type="button"
+                        disabled={idx === form.images.length - 1}
+                        onClick={() => moveImageByOffset(idx, 1)}
+                        className="text-[10px] font-bold bg-slate-700 hover:bg-slate-600 disabled:opacity-40 text-white px-2 py-1 rounded"
+                      >
+                        →
+                      </button>
+                    </div>
+                    <button type="button" onClick={() => removeImageAt(idx)} className="text-[10px] font-bold bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded">
+                      Remove
+                    </button>
                   </div>
                 </div>
               ))}
@@ -218,6 +288,48 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
             </button>
             <input ref={fileInputRef} type="file" accept="image/*" multiple className="hidden" onChange={handlePhotosUpload} />
           </div>
+        </div>
+
+        <div className="md:col-span-2 bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-4">
+          <div>
+            <label className={labelCls}>YouTube video (optional)</label>
+            <p className="text-xs text-slate-500 mt-1">Paste a YouTube link to embed a walkthrough on the product page.</p>
+          </div>
+          <div className="flex gap-2">
+            <div className="relative flex-1">
+              <Video className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="url"
+                placeholder="https://www.youtube.com/watch?v=..."
+                className={inputCls + " pl-10"}
+                value={form.youtubeUrl}
+                onChange={(e) => setForm((f) => ({ ...f, youtubeUrl: e.target.value }))}
+              />
+            </div>
+            {form.youtubeUrl && (
+              <button
+                type="button"
+                onClick={() => setForm((f) => ({ ...f, youtubeUrl: '' }))}
+                className="shrink-0 bg-slate-800 hover:bg-slate-700 text-white text-sm font-bold px-4 py-3 rounded"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+          {form.youtubeUrl && !youtubeEmbedPreview && (
+            <p className="text-xs text-amber-500 font-medium">Could not parse that URL. Use a standard YouTube watch or youtu.be link.</p>
+          )}
+          {youtubeEmbedPreview && (
+            <div className="aspect-video rounded-lg overflow-hidden border border-slate-800 bg-black">
+              <iframe
+                src={youtubeEmbedPreview}
+                title="YouTube preview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          )}
         </div>
       </div>
 

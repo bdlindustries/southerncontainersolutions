@@ -9,7 +9,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const primaryLinks = [
-    { path: '/shop', label: 'Finished Offices' },
+    { path: '/shop', label: 'Shop Products' },
     { path: '/raw', label: 'Raw Containers' },
     { path: '/rentals', label: 'Rentals' },
     { path: '/custom-builds', label: 'Custom Builds' },

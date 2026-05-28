@@ -3,6 +3,8 @@ import { ShoppingCart, ChevronRight, PackageOpen } from "lucide-react";
 import { listingImageUrls } from "@/lib/data";
 import { getLiveInventory } from "@/lib/firebase";
 
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   const inventory = await getLiveInventory();
 

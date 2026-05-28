@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2, Zap, ShoppingCart, PackageOpen } from "lucide-react";
 import { SEED_INVENTORY, listingImageUrls } from "@/lib/data";
 import { getProductById, getLiveInventory } from "@/lib/firebase";
+import { getYoutubeEmbedUrl } from "@/lib/youtube";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -23,6 +24,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = true;
+
 export default async function ProductDetailPage({ params }) {
   const { id } = await params;
   const product = await getProductById(id);
@@ -34,6 +37,7 @@ export default async function ProductDetailPage({ params }) {
     : product.features || [];
 
   const imgUrl = listingImageUrls(product)[0];
+  const youtubeEmbedUrl = getYoutubeEmbedUrl(product.youtubeUrl || product.videoUrl);
 
   return (
     <div className="min-h-screen bg-slate-50 py-10 md:py-14">
@@ -61,6 +65,20 @@ export default async function ProductDetailPage({ params }) {
               ) : (
                 <div className="w-full aspect-[4/3] flex items-center justify-center bg-slate-200 rounded-xl border border-slate-200">
                   <PackageOpen className="w-16 h-16 text-slate-400" />
+                </div>
+              )}
+              {youtubeEmbedUrl && (
+                <div className="mt-4">
+                  <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Video walkthrough</p>
+                  <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 bg-slate-950">
+                    <iframe
+                      src={youtubeEmbedUrl}
+                      title={`${product.title} video`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
                 </div>
               )}
             </div>
