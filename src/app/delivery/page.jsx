@@ -34,24 +34,6 @@ export default async function DeliveryPage() {
           </div>
         </div>
 
-        {youtubeEmbedUrl && (
-          <div className="mb-16 max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-4">
-              <Video className="w-5 h-5 text-amber-500" />
-              <h3 className="text-2xl font-black text-slate-950 uppercase tracking-tight">See How Delivery Works</h3>
-            </div>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950">
-              <iframe
-                src={youtubeEmbedUrl}
-                title="Delivery walkthrough"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        )}
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-200">
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-black text-slate-950 mb-6 flex items-center">
@@ -77,6 +59,24 @@ export default async function DeliveryPage() {
             <DeliveryQuoteForm />
           </div>
         </div>
+
+        {youtubeEmbedUrl && (
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2 mb-4">
+              <Video className="w-5 h-5 text-amber-500" />
+              <h3 className="text-2xl font-black text-slate-950 uppercase tracking-tight">See How Delivery Works</h3>
+            </div>
+            <div className="aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950">
+              <iframe
+                src={youtubeEmbedUrl}
+                title="Delivery walkthrough"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
