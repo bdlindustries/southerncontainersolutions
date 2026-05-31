@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Zap, PackageOpen } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Zap } from "lucide-react";
 import { SEED_INVENTORY, listingImageUrls } from "@/lib/data";
 import { getProductById, getLiveInventory } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import ProductPurchaseActions from "@/components/ProductPurchaseActions";
+import ProductImageGallery from "@/components/ProductImageGallery";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -37,7 +38,7 @@ export default async function ProductDetailPage({ params }) {
     ? product.listingFeatures 
     : product.features || [];
 
-  const imgUrl = listingImageUrls(product)[0];
+  const images = listingImageUrls(product);
   const youtubeEmbedUrl = getYoutubeEmbedUrl(product.youtubeUrl || product.videoUrl);
 
   return (
@@ -56,18 +57,7 @@ export default async function ProductDetailPage({ params }) {
                 <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 {product.availability}
               </div>
-              {imgUrl ? (
-                <img 
-                  src={imgUrl} 
-                  alt={product.title}
-                  className="w-full h-auto rounded-xl border border-slate-200" 
-                  referrerPolicy="no-referrer"
-                />
-              ) : (
-                <div className="w-full aspect-[4/3] flex items-center justify-center bg-slate-200 rounded-xl border border-slate-200">
-                  <PackageOpen className="w-16 h-16 text-slate-400" />
-                </div>
-              )}
+              <ProductImageGallery images={images} title={product.title} />
               {youtubeEmbedUrl && (
                 <div className="mt-4">
                   <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Video walkthrough</p>
