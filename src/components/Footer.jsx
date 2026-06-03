@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Lock } from "lucide-react";
+import { serviceAreas } from "@/lib/data/serviceAreas";
 
 export default function Footer() {
   return (
@@ -30,10 +31,16 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Service Areas</h4>
           <ul className="space-y-3 text-sm font-medium">
-            <li><Link href="/locations/covington-la" className="hover:text-amber-500 transition-colors">Covington, LA</Link></li>
-            <li><Link href="/locations/beaumont-tx" className="hover:text-amber-500 transition-colors">Beaumont, TX</Link></li>
-            <li><Link href="/locations/jackson-ms" className="hover:text-amber-500 transition-colors">Jackson, MS</Link></li>
-            <li><Link href="/locations/columbus-ms" className="hover:text-amber-500 transition-colors">Columbus, MS</Link></li>
+            {serviceAreas.map((area) => (
+              <li key={area.slug}>
+                <Link
+                  href={`/service-areas/${area.slug}`}
+                  className="hover:text-amber-500 transition-colors"
+                >
+                  {area.city}, {area.state}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
