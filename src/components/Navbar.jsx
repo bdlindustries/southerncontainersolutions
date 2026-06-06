@@ -29,8 +29,8 @@ export default function Navbar() {
           <span className="flex items-center"><Truck className="w-3 h-3 mr-1 text-amber-500" /> Nationwide Delivery</span>
         </div>
         <div className="flex space-x-6">
-          <a href="tel:985-250-0708" className="hover:text-white transition-colors flex items-center">
-            <Phone className="w-3 h-3 mr-1" /> (985) 250-0708
+          <a href="tel:985-251-2356" className="hover:text-white transition-colors flex items-center">
+            <Phone className="w-3 h-3 mr-1" /> (985) 251-2356
           </a>
         </div>
       </div>

@@ -144,7 +144,7 @@ export default function RequestPurchaseModal({ open, onClose, onSuccess, product
           {status === "error" && (
             <div className="mb-5 flex items-start gap-3 rounded-lg border border-red-800 bg-red-950/40 px-4 py-3 text-sm text-red-300">
               <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
-              <span>Something went wrong. Please try again or call us at (985) 250-0708.</span>
+              <span>Something went wrong. Please try again or call us at (985) 251-2356.</span>
             </div>
           )}
 

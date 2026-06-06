@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     "@type": "LocalBusiness",
     "name": "Southern Container Solutions",
     "url": "https://southerncontainersolutions.com/",
-    "telephone": "+1-985-250-0708",
+    "telephone": "+1-985-251-2356",
     "description": "Premium shipping container modifications and custom mobile offices.",
     "areaServed": [
       "Covington, LA",
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-18133402943');
             gtag('config', 'G-6ZK38729KP');
             gtag('config', 'AW-18133402943/fsnfCJasoqYcEL-K18ZD', {
-              'phone_conversion_number': '9852500708'
+              'phone_conversion_number': '9852512356'
             });
           `}
         </Script>

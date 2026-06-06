@@ -45,7 +45,7 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col text-right">
               <span className="font-bold text-slate-900">Covington, LA</span>
-              <a href="tel:9852500708" className="text-amber-600 font-bold hover:underline">(985) 250-0708</a>
+              <a href="tel:9852512356" className="text-amber-600 font-bold hover:underline">(985) 251-2356</a>
               <a href="mailto:info@southerncontainersolutions.com" className="text-slate-500 text-sm hover:text-slate-900">info@southerncontainersolutions.com</a>
             </div>
           </div>
