@@ -2,33 +2,33 @@
 const nextConfig = {
   async redirects() {
     return [
-      // /contact has no page — send quote intent to the custom-build form
+      {
+        source: '/home',
+        destination: '/shop',
+        permanent: true,
+      },
+
+      // Legacy lead / info URLs → shop
       {
         source: '/contact',
-        destination: '/custom-builds',
+        destination: '/shop',
         permanent: true,
       },
-
-      // Price shoppers → quote form
       {
         source: '/container-conversion-cost',
-        destination: '/custom-builds',
+        destination: '/shop',
         permanent: true,
       },
-
-      // Off-topic or comparison content → homepage (shop + custom-build CTAs)
       {
         source: '/shipping-container-tiny-homes',
-        destination: '/',
+        destination: '/shop',
         permanent: true,
       },
       {
         source: '/container-office-vs-shed',
-        destination: '/',
+        destination: '/shop',
         permanent: true,
       },
-
-      // Office-related legacy articles → shop or quote paths
       {
         source: '/container-office-interior-options',
         destination: '/shop',
@@ -36,7 +36,7 @@ const nextConfig = {
       },
       {
         source: '/how-container-conversions-are-built',
-        destination: '/custom-builds',
+        destination: '/shop',
         permanent: true,
       },
       {
@@ -45,15 +45,15 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Old location landing pages → matching service area (shop + delivery CTAs)
+      // Old static location landing pages → shop
       {
         source: '/locations/:slug.html',
-        destination: '/service-areas/:slug',
+        destination: '/shop',
         permanent: true,
       },
       {
         source: '/locations/:slug',
-        destination: '/service-areas/:slug',
+        destination: '/shop',
         permanent: true,
       },
     ];

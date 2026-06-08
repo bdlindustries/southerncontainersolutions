@@ -4,3 +4,64 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Legacy URLs — force redirect even if a static file exists
+[[redirects]]
+  from = "/home"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/container-conversion-cost"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shipping-container-tiny-homes"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/container-office-vs-shed"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/container-office-interior-options"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-container-conversions-are-built"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shipping-container-office-uses"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/:slug.html"
+  to = "/shop"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/:slug"
+  to = "/shop"
+  status = 301
+  force = true
