@@ -27,11 +27,23 @@ export const serviceAreas: ServiceArea[] = [
     state: "TX",
     h1: "Commercial Jobsite Office Containers in Beaumont, TX",
     hook:
-      "Serving industrial contractors, refinery turnarounds, and project managers across Southeast Texas with secure, ground-level mobile offices.",
+      "Delivering secure, turnkey office containers for the Golden Triangle's refinery expansions, LNG projects, and industrial staging sites.",
     industryFocus:
-      "Beaumont jobsites demand steel that survives heat, humidity, and heavy traffic. We deliver commercial-grade 20' and 40' office containers with insulation, HVAC, and secure lockable construction—built for industrial schedules, not residential trailer timelines.",
+      "With massive capital projects sweeping through Beaumont, Port Arthur, and Orange, regional project managers need reliable, fast-deployment site infrastructure. Standard mobile trailers are prone to damage and require complex setup. We supply heavy-duty 20' and 40' ground-level container offices built for the realities of Texas refinery work. Protect your blueprints, IT infrastructure, and site personnel in a climate-controlled, steel-enforced workspace without the OSHA trip hazards of stairs.",
     logistics:
-      "We dispatch from Louisiana and run dedicated freight into the Beaumont and Golden Triangle corridor, dropping units exactly where your field team needs them.",
+      "Cross-state delivery is seamless. We dispatch directly down I-10 to the Golden Triangle, providing transparent pricing and winch-loaded delivery directly to your plant or construction site. Drop it on the dirt and get to work.",
+  },
+  {
+    slug: "houston-tx",
+    city: "Houston",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Houston, TX",
+    hook:
+      "Supporting the Houston Ship Channel, massive petrochemical expansions, and heavy industrial contractors with heavy-duty, ground-level mobile offices.",
+    industryFocus:
+      "Houston is the epicenter of American energy and industrial manufacturing. When you are staging a major turnaround in Pasadena or managing port logistics in Baytown, you need workspaces that match the scale of your project. Southern Container Solutions delivers rugged, commercial-grade 20' and 40' office containers designed to endure Gulf Coast weather and heavy industrial use. Skip the flimsy trailers; our steel-framed offices provide a secure, climate-controlled environment for your engineers and site managers.",
+    logistics:
+      "We run straight down I-10 from our Louisiana yard, bypassing the backlog of local Texas trailer rentals. Our winch-loaded trucks drop your ground-level office directly onto the dirt, gravel, or asphalt of your jobsite, ready for immediate power connection.",
   },
   {
     slug: "jackson-ms",
