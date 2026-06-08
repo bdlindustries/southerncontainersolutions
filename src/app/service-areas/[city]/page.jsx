@@ -50,6 +50,16 @@ export default async function ServiceAreaPage({ params }) {
       </header>
 
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-20 space-y-12">
+        {area.image && (
+          <figure className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+            <img
+              src={area.image}
+              alt={area.imageAlt ?? `${area.city}, ${area.state} jobsite office container`}
+              className="w-full h-auto object-cover"
+            />
+          </figure>
+        )}
+
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
           <h2 className="text-sm font-black text-amber-600 uppercase tracking-widest mb-4">
             Built for Your Jobsite
