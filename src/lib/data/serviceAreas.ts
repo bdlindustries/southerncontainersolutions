@@ -54,6 +54,54 @@ export const serviceAreas: ServiceArea[] = [
       "40-foot ground-level mobile office container on a Texas jobsite by Southern Container Solutions",
   },
   {
+    slug: "corpus-christi-tx",
+    city: "Corpus Christi",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Corpus Christi, TX",
+    hook:
+      "Supporting the Port of Corpus Christi, heavy crude export terminals, and coastal refinery expansions with secure, ground-level mobile offices.",
+    industryFocus:
+      "When you are managing massive energy exports and coastal refinery operations, you need workspaces that withstand extreme coastal conditions. Standard trailers degrade and cause safety hazards in high winds. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Provide your site managers and engineers with a secure, climate-controlled, steel-enforced workspace without the hassle of stairs or skirting.",
+    logistics:
+      "We deliver straight to your coastal jobsite. Our winch-loaded trucks drop your ground-level office directly onto the dirt, gravel, or concrete of your port or refinery staging area, ready for immediate use.",
+  },
+  {
+    slug: "baytown-tx",
+    city: "Baytown",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Baytown, TX",
+    hook:
+      "Supplying the massive chemical complexes and Houston Ship Channel contractors with heavy-duty, climate-controlled mobile workspaces.",
+    industryFocus:
+      "Staging greenfield projects and plant turnarounds in Baytown requires robust site infrastructure. Standard wheeled trailers create logistical headaches on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace.",
+    logistics:
+      "We streamline delivery to the Baytown industrial sector. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it, skipping the red tape of blocking and complex setup so your team can get straight to work.",
+  },
+  {
+    slug: "lake-charles-la",
+    city: "Lake Charles",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Lake Charles, LA",
+    hook:
+      "Providing heavy-duty, weatherproof mobile offices for LNG export terminal expansions, port infrastructure, and petrochemical turnarounds across Calcasieu Parish.",
+    industryFocus:
+      "With billions of dollars flowing into Calcasieu Parish projects like Woodside LNG and Venture Global, out-of-state modular trailer companies can't keep up with demand or the rough terrain. We provide heavy-duty, commercial-grade 20' and 40' office containers designed for the realities of the Gulf Coast. Built to withstand extreme weather and heavy industrial use, our ground-level offices offer secure staging for project managers, foremen, and engineers on active refinery and port jobsites.",
+    logistics:
+      "We deliver directly to the mud and gravel of your industrial site. Using specialized winch-loaded trucks, our dispatch ensures your office container is dropped flat on the ground exactly where you need it, bypassing the need for blocking, skirting, or complex setup.",
+  },
+  {
+    slug: "baton-rouge-la",
+    city: "Baton Rouge",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Baton Rouge, LA",
+    hook:
+      "Supporting the chemical manufacturing corridor, plant turnarounds, and industrial contractors from North Baton Rouge down to Geismar with turnkey mobile offices.",
+    industryFocus:
+      "When major specialty contractors and plant managers execute turnarounds or greenfield capital projects along the Mississippi River, fast mobilization is everything. Standard office trailers cause logistical bottlenecks. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' container offices that are ready for immediate deployment. Situate your team securely in a ground-level, climate-ready environment without the OSHA trip hazards of traditional trailers.",
+    logistics:
+      "Located just down the interstate in Covington, we offer unmatched local proximity. We dispatch our winch-loaded trucks straight down I-12 and I-10 to deliver directly to your plant gate, chemical facility, or industrial park in the Greater Baton Rouge and Ascension Parish areas.",
+  },
+  {
     slug: "jackson-ms",
     city: "Jackson",
     state: "MS",
