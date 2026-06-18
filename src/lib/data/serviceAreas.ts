@@ -90,6 +90,18 @@ export const serviceAreas: ServiceArea[] = [
       "We deliver directly to the mud and gravel of your industrial site. Using specialized winch-loaded trucks, our dispatch ensures your office container is dropped flat on the ground exactly where you need it, bypassing the need for blocking, skirting, or complex setup.",
   },
   {
+    slug: "sulphur-la",
+    city: "Sulphur",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Sulphur, LA",
+    hook:
+      "Providing rugged, climate-controlled mobile offices for petrochemical expansions and industrial staging across the Calcasieu Parish industrial corridor.",
+    industryFocus:
+      "Serving the heavy industrial boom tied to the Lake Charles and Sulphur region means contractors need workspaces that can handle the mud, heavy traffic, and extreme Gulf Coast weather. Traditional trailers sink, degrade, and create OSHA trip hazards. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Provide your site managers, engineers, and safety teams with a secure, climate-stable environment that sits flat on the ground.",
+    logistics:
+      "We dispatch our specialized winch-loaded trucks directly to your Sulphur jobsite or plant gate. Your ground-level office is dropped exactly where you need it—on dirt, gravel, or asphalt—eliminating the need for blocking, skirting, or complex setups.",
+  },
+  {
     slug: "baton-rouge-la",
     city: "Baton Rouge",
     state: "LA",
@@ -100,6 +112,18 @@ export const serviceAreas: ServiceArea[] = [
       "When major specialty contractors and plant managers execute turnarounds or greenfield capital projects along the Mississippi River, fast mobilization is everything. Standard office trailers cause logistical bottlenecks. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' container offices that are ready for immediate deployment. Situate your team securely in a ground-level, climate-ready environment without the OSHA trip hazards of traditional trailers.",
     logistics:
       "Located just down the interstate in Covington, we offer unmatched local proximity. We dispatch our winch-loaded trucks straight down I-12 and I-10 to deliver directly to your plant gate, chemical facility, or industrial park in the Greater Baton Rouge and Ascension Parish areas.",
+  },
+  {
+    slug: "garyville-la",
+    city: "Garyville",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Garyville, LA",
+    hook:
+      "Supplying turnkey, ground-level mobile offices for Marathon Refinery turnarounds and capital projects along the Mississippi River.",
+    industryFocus:
+      "Home to the largest refinery in Louisiana, Garyville is a critical hub for heavy industrial turnarounds and large-scale contractor mobilization. Standard mobile trailers create logistical bottlenecks and safety hazards on crowded refinery sites. We provide heavy-duty 20' and 40' container offices built strictly for industrial use. Protect your foremen, blueprints, and on-site IT gear in a fully fortified, climate-controlled workspace without the need for traditional trailer stairs or anchoring.",
+    logistics:
+      "Located just across the lake in Covington, we offer fast, direct logistics to St. John the Baptist Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
   },
   {
     slug: "jackson-ms",
