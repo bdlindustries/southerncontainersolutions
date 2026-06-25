@@ -8,6 +8,8 @@ export type ServiceArea = {
   logistics: string;
   image?: string;
   imageAlt?: string;
+  /** Top-level route when different from /service-areas/[slug] */
+  routePath?: string;
 };
 
 export const serviceAreas: ServiceArea[] = [
@@ -173,7 +175,88 @@ export const serviceAreas: ServiceArea[] = [
     logistics:
       "We handle the logistics straight up I-49. Every climate-controlled unit is delivered via winch-truck and dropped ground-level. No trailer hitches, no complicated blocking, just a secure, weatherproof office ready for power.",
   },
+  {
+    slug: "gulfport-ms",
+    city: "Gulfport",
+    state: "MS",
+    routePath: "/gulfport-ms",
+    h1: "Custom Shipping Container Offices & Modifications in Gulfport, MS",
+    hook:
+      "Building and modifying heavy-duty container offices for Gulfport contractors, port-adjacent projects, and commercial jobsites across the Mississippi Gulf Coast.",
+    industryFocus:
+      "Gulfport, MS demands workspace solutions that survive coastal humidity, hurricane-season winds, and active commercial construction schedules. Southern Container Solutions designs custom shipping container offices and modifications—from added windows and door placements to electrical upgrades and climate-controlled interiors—for project managers who need more than a cookie-cutter trailer. Our 20' and 40' steel-framed units are built for commercial durability, transparent pricing, and fast deployment to Gulfport, Biloxi corridor, and Harrison County jobsites.",
+    logistics:
+      "We dispatch from our Covington, Louisiana fabrication yard straight down I-10 into Gulfport and the Mississippi Gulf Coast. Winch-loaded trucks place your modified container office ground-level on dirt, gravel, or concrete—no stairs, no skirting, and no complicated blocking required.",
+  },
+  {
+    slug: "pascagoula-ms",
+    city: "Pascagoula",
+    state: "MS",
+    routePath: "/pascagoula-ms",
+    h1: "Custom Shipping Container Offices & Modifications in Pascagoula, MS",
+    hook:
+      "Turnkey container office builds and custom modifications for Pascagoula shipyard contractors, industrial turnarounds, and Jackson County construction sites.",
+    industryFocus:
+      "Pascagoula, MS is one of the Gulf South's most demanding industrial environments—shipbuilding schedules, refinery turnarounds, and heavy contractor mobilization leave no room for flimsy mobile trailers. Southern Container Solutions delivers custom shipping container offices and modifications engineered for the realities of Pascagoula jobsites: secure steel construction, spray-foam insulation, commercial-grade finishes, and layout changes tailored to your crew. Whether you need a climate-controlled command center or a modified 40' office with custom door and window placement, we build it in Louisiana and deliver it ready to work.",
+    logistics:
+      "Our logistics team runs dedicated freight from Covington into Pascagoula and Jackson County via I-10. Specialized winch trucks drop your container office exactly where your superintendent directs—flat on the ground at the shipyard gate, staging yard, or industrial pad—so your team can connect power and get to work the same day.",
+  },
+  {
+    slug: "mobile-al",
+    city: "Mobile",
+    state: "AL",
+    routePath: "/mobile-al",
+    h1: "Custom Shipping Container Offices & Modifications in Mobile, AL",
+    hook:
+      "Heavy-duty container offices and custom modifications for Mobile maritime contractors, port operations, shipbuilding yards, and coastal industrial jobsites along the Gulf.",
+    industryFocus:
+      "Mobile, AL sits at the heart of Gulf Coast maritime commerce—from the Port of Mobile and APM Terminals to active shipbuilding and coastal industrial construction. Project managers staging waterfront work need offices that handle salt air, heavy equipment traffic, and tight mobilization windows. Southern Container Solutions builds custom shipping container offices and modifications for Mobile's maritime and industrial sector: climate-controlled interiors, secure steel construction, custom door and window layouts, and electrical upgrades spec'd for port-adjacent and shipyard jobsites. Our 20' and 40' units replace flimsy trailers with ground-level workspaces built for Alabama's coastal industrial reality.",
+    logistics:
+      "We run dedicated delivery from our Covington, Louisiana yard into Mobile and the Alabama Gulf Coast via I-10. Winch-loaded trucks drop your modified container office ground-level at the port gate, shipyard staging area, or coastal jobsite—on dirt, gravel, or asphalt—with no stairs, skirting, or complex setup required.",
+  },
+  {
+    slug: "morgan-city-la",
+    city: "Morgan City",
+    state: "LA",
+    routePath: "/morgan-city-la",
+    h1: "Commercial Jobsite Office Containers in Morgan City, LA",
+    hook:
+      "Providing heavy-duty, marine-grade mobile offices for offshore fabrication, shipyards, and port logistics across St. Mary and Lower St. Martin Parishes.",
+    industryFocus:
+      "Morgan City is a critical hub for offshore construction, marine transportation, and heavy steel fabrication. Staging maritime projects requires rugged site infrastructure that can handle intense coastal humidity and heavy industrial wear. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough shipyard and marine footprints. Keep your logistics managers, foremen, and blueprints protected in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
+    logistics:
+      "We run directly down from our yard straight into the Morgan City industrial and port sectors. Our specialized winch-loaded trucks drop your office container flat on the ground exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+  },
+  {
+    slug: "houma-la",
+    city: "Houma",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Houma, LA",
+    hook:
+      "Supplying turnkey, ground-level mobile offices for shipbuilding, offshore marine services, and coastal restoration staging throughout Terrebonne Parish.",
+    industryFocus:
+      "When major marine contractors, shipyards, and coastal engineering firms execute large-scale builds or staging in Houma, fast mobilization is key. Traditional wheeled trailers create logistical headaches and safety risks on busy, unpaved coastal yards. We provide fortified 20' and 40' container offices built strictly for heavy industrial and maritime use. Protect your engineering teams, safety managers, and vital technical infrastructure in a fully insulated, climate-ready steel structure that sits flat on the dirt without OSHA trip hazards.",
+    logistics:
+      "We offer efficient, direct logistics to Terrebonne Parish jobsites. We dispatch our winch-loaded trucks straight to your shipyard gate, port staging area, or industrial site, providing quick deployment and transparent pricing so your crew can plug in and get to work immediately.",
+  },
+  {
+    slug: "geismar-la",
+    city: "Geismar",
+    state: "LA",
+    routePath: "/geismar-la",
+    h1: "Custom Shipping Container Offices & Modifications in Geismar, LA",
+    hook:
+      "Custom container offices and modifications for Geismar chemical plants, heavy industrial facilities, refinery turnarounds, and Ascension Parish capital projects.",
+    industryFocus:
+      "Geismar, LA is one of the most concentrated chemical manufacturing corridors on the Mississippi River—home to major petrochemical complexes, heavy industrial plants, and constant turnaround activity. Plant managers and specialty contractors executing capital projects can't afford flimsy trailers that create OSHA trip hazards and logistical bottlenecks on crowded facility sites. Southern Container Solutions builds custom shipping container offices and modifications for Geismar's chemical and industrial sector: secure steel-framed construction, climate-controlled interiors, custom door and window placement, and electrical upgrades spec'd for refinery and chemical plant environments. Our 20' and 40' ground-level offices protect your foremen, blueprints, and on-site IT gear without the stairs, skirting, or anchoring headaches of traditional mobile trailers.",
+    logistics:
+      "Located just down the interstate in Covington, we offer fast direct logistics into Geismar and Ascension Parish. Our winch-loaded trucks dispatch straight down I-10 and I-12 to your plant gate, turnaround staging area, or industrial pad—dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+  },
 ];
+
+export function getServiceAreaHref(area: ServiceArea): string {
+  return area.routePath ?? `/service-areas/${area.slug}`;
+}
 
 export function getServiceAreaBySlug(slug: string): ServiceArea | undefined {
   return serviceAreas.find((area) => area.slug === slug);

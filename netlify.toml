@@ -55,6 +55,96 @@
   force = true
 
 [[redirects]]
+  from = "/service-areas/gulfport-ms"
+  to = "/gulfport-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas/pascagoula-ms"
+  to = "/pascagoula-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/gulfport-ms.html"
+  to = "/gulfport-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/pascagoula-ms.html"
+  to = "/pascagoula-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/gulfport-ms"
+  to = "/gulfport-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/pascagoula-ms"
+  to = "/pascagoula-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas/mobile-al"
+  to = "/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas/morgan-city-la"
+  to = "/morgan-city-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas/geismar-la"
+  to = "/geismar-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/mobile-al.html"
+  to = "/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/morgan-city-la.html"
+  to = "/morgan-city-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/geismar-la.html"
+  to = "/geismar-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/mobile-al"
+  to = "/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/morgan-city-la"
+  to = "/morgan-city-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/geismar-la"
+  to = "/geismar-la"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/locations/:slug.html"
   to = "/shop"
   status = 301

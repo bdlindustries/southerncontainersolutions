@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { serviceAreas } from "@/lib/data/serviceAreas";
+import { serviceAreas, getServiceAreaHref } from "@/lib/data/serviceAreas";
 
 export const metadata = {
   title: "Areas We Serve | Southern Container Solutions",
@@ -37,7 +37,7 @@ export default function ServiceAreasHubPage() {
           {serviceAreas.map((area) => (
             <Link
               key={area.slug}
-              href={`/service-areas/${area.slug}`}
+              href={getServiceAreaHref(area)}
               className="group flex items-center justify-center min-h-[5rem] bg-white border border-slate-200 rounded-xl p-6 shadow-sm transition-all hover:bg-gray-50 hover:border-amber-500/50 hover:shadow-md"
             >
               <span className="text-lg font-black text-slate-950 group-hover:text-amber-600 transition-colors text-center">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Lock } from "lucide-react";
-import { serviceAreas } from "@/lib/data/serviceAreas";
+import { serviceAreas, getServiceAreaHref } from "@/lib/data/serviceAreas";
 
 export default function Footer() {
   return (
@@ -34,7 +34,7 @@ export default function Footer() {
             {serviceAreas.map((area) => (
               <li key={area.slug}>
                 <Link
-                  href={`/service-areas/${area.slug}`}
+                  href={getServiceAreaHref(area)}
                   className="hover:text-amber-500 transition-colors"
                 >
                   {area.city}, {area.state}
