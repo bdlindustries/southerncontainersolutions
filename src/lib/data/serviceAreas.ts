@@ -41,6 +41,30 @@ export const serviceAreas: ServiceArea[] = [
       "40-foot ground-level mobile office container on a Texas jobsite by Southern Container Solutions",
   },
   {
+    slug: "orange-tx",
+    city: "Orange",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Orange, TX",
+    hook:
+      "Supporting the Golden Triangle's shipbuilding, petrochemical expansions, and heavy industrial contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "As a critical piece of the Golden Triangle, Orange is home to massive marine fabrication and chemical manufacturing. Staging a project here requires rugged site infrastructure that can handle heavy industrial wear and Gulf Coast weather. Traditional wheeled trailers create safety risks and logistical headaches on unpaved or crowded yards. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers. Protect your engineering teams and blueprints in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
+    logistics:
+      "We run directly down I-10 to service the Golden Triangle. Our specialized winch-loaded trucks drop your office container flat on the dirt or gravel exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+  },
+  {
+    slug: "freeport-tx",
+    city: "Freeport",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Freeport, TX",
+    hook:
+      "Providing heavy-duty, marine-grade mobile offices for LNG export terminals, deepwater port logistics, and major chemical plant expansions.",
+    industryFocus:
+      "Staging near massive operations like Freeport LNG and the Dow Chemical complex requires infrastructure that can handle intense coastal and industrial environments. High winds and corrosive conditions quickly destroy standard office trailers. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Keep your site managers, safety coordinators, and technical gear secure in a fully fortified, climate-ready steel structure that completely bypasses OSHA trip hazards.",
+    logistics:
+      "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it on your port staging area or chemical plant gate, providing quick deployment so your crew can plug in and get straight to work.",
+  },
+  {
     slug: "houston-tx",
     city: "Houston",
     state: "TX",
@@ -78,6 +102,42 @@ export const serviceAreas: ServiceArea[] = [
       "Staging greenfield projects and plant turnarounds in Baytown requires robust site infrastructure. Standard wheeled trailers create logistical headaches on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace.",
     logistics:
       "We streamline delivery to the Baytown industrial sector. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it, skipping the red tape of blocking and complex setup so your team can get straight to work.",
+  },
+  {
+    slug: "pasadena-tx",
+    city: "Pasadena",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Pasadena, TX",
+    hook:
+      "Supporting the Houston Ship Channel's massive petrochemical complexes and heavy industrial contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "Pasadena is a critical hub for the Gulf Coast's chemical and refining industries. Staging a major turnaround or greenfield project here requires rugged, reliable site infrastructure. Standard office trailers cause logistical headaches and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+    logistics:
+      "We dispatch straight down I-10 to the Houston Ship Channel region. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Pasadena jobsite—ready for immediate power and bypassing the need for blocking or skirting.",
+  },
+  {
+    slug: "deer-park-tx",
+    city: "Deer Park",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Deer Park, TX",
+    hook:
+      "Supplying turnkey, climate-controlled mobile offices for plant turnarounds and capital projects throughout the Deer Park refinery sector.",
+    industryFocus:
+      "Home to some of the most intensive refining and chemical manufacturing operations in Texas, Deer Park contractors demand secure and fast site mobilization. Traditional wheeled trailers degrade quickly and require complex anchoring setups. We provide heavy-duty 20' and 40' container offices built strictly for heavy industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+    logistics:
+      "We streamline delivery directly to the Texas petrochemical corridor. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your plant gate or construction staging site, providing quick deployment so your crew can plug in and get straight to work.",
+  },
+  {
+    slug: "laporte-tx",
+    city: "LaPorte",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in LaPorte, TX",
+    hook:
+      "Providing heavy-duty, climate-controlled mobile offices for Barbours Cut Terminal, maritime logistics, and chemical plant expansions.",
+    industryFocus:
+      "As a crucial logistics hub for the Houston Ship Channel, LaPorte handles massive container terminal operations and heavy chemical manufacturing. When you are managing port infrastructure or plant turnarounds, traditional wheeled trailers are a liability. We provide heavy-duty 20' and 40' container offices built strictly for heavy industrial and marine use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+    logistics:
+      "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your port staging area or plant gate, providing quick deployment so your crew can plug in and get straight to work.",
   },
   {
     slug: "lake-charles-la",
@@ -128,6 +188,54 @@ export const serviceAreas: ServiceArea[] = [
       "Located just across the lake in Covington, we offer fast, direct logistics to St. John the Baptist Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
   },
   {
+    slug: "reserve-la",
+    city: "Reserve",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Reserve, LA",
+    hook:
+      "Supporting Port of South Louisiana operations, refinery turnarounds, and heavy industrial contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "Reserve sits at the heart of the Port of South Louisiana's massive maritime and refining footprint. Staging major capital projects here means dealing with heavy logistics and unpredictable river weather. Standard office trailers sink in the mud and create OSHA safety hazards on active industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical and port environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace.",
+    logistics:
+      "Located across the lake, we run straight down to St. John the Baptist Parish to deliver directly to your jobsite. Our winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+  },
+  {
+    slug: "plaquemine-la",
+    city: "Plaquemine",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Plaquemine, LA",
+    hook:
+      "Supplying Dow Chemical, industrial staging, and heavy contractors along the Mississippi River with turnkey mobile offices.",
+    industryFocus:
+      "Staging a project near massive operations like the Dow Chemical complex in Plaquemine requires robust site infrastructure. Standard wheeled trailers create logistical bottlenecks and safety risks on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace without the OSHA trip hazards of stairs.",
+    logistics:
+      "Located just across the lake in Covington, we offer unmatched local proximity to Iberville Parish. We dispatch our winch-loaded trucks straight to your plant gate or industrial staging area, dropping your workspace flat on the ground so your crew can plug in and get to work safely and immediately.",
+  },
+  {
+    slug: "luling-boutte-la",
+    city: "Luling and Boutte",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Luling and Boutte, LA",
+    hook:
+      "Supporting St. Charles Parish chemical plants, refineries, and heavy industrial contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "The industrial corridor running through Luling and Boutte handles some of the heaviest chemical and refining traffic in the state. When you are managing plant turnarounds or staging capital projects, standard office trailers create safety risks and logistical bottlenecks. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough petrochemical environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
+    logistics:
+      "Located just across the lake in Covington, we run straight down I-310 to deliver directly to your St. Charles Parish jobsite. Our winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+  },
+  {
+    slug: "convent-la",
+    city: "Convent",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Convent, LA",
+    hook:
+      "Supplying turnkey, ground-level mobile offices for Mississippi River refinery turnarounds and industrial staging throughout St. James Parish.",
+    industryFocus:
+      "Convent is anchored by massive refining and terminal operations along the Mississippi River. Staging contractors for facility expansions here requires heavy-duty site infrastructure. Traditional wheeled trailers sink in the mud and require complex setups that waste time. We provide fortified 20' and 40' container offices built strictly for heavy industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully climate-ready steel structure that sits securely on the ground.",
+    logistics:
+      "We offer fast, direct logistics to St. James Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+  },
+  {
     slug: "jackson-ms",
     city: "Jackson",
     state: "MS",
@@ -174,6 +282,18 @@ export const serviceAreas: ServiceArea[] = [
       "Louisiana heat and humidity will destroy sensitive IT equipment and blueprints. If you are staging tech infrastructure or managing large-scale civil projects in Alexandria, a standard metal box won't cut it. We build and deliver fully insulated, AC-and-heated office containers designed strictly for commercial project managers. Available in 20' and 40' footprints, these units offer a fortified, climate-stable environment for your crew, your gear, and your server racks.",
     logistics:
       "We handle the logistics straight up I-49. Every climate-controlled unit is delivered via winch-truck and dropped ground-level. No trailer hitches, no complicated blocking, just a secure, weatherproof office ready for power.",
+  },
+  {
+    slug: "shreveport-la",
+    city: "Shreveport",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Shreveport, LA",
+    hook:
+      "Supporting logistics hubs, regional manufacturing, and commercial construction across North Louisiana with secure, ground-level mobile offices.",
+    industryFocus:
+      "As a major logistics and manufacturing hub in North Louisiana, Shreveport demands rugged site infrastructure. Standard office trailers cause logistical headaches and safety risks on active commercial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+    logistics:
+      "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on your Shreveport jobsite, completely eliminating the need for trailer stairs, skirting, or complex anchoring.",
   },
   {
     slug: "gulfport-ms",
