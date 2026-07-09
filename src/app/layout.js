@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { getLocalBusinessSchema } from '@/lib/localBusinessSchema';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,27 +21,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const localSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Southern Container Solutions",
-    "url": "https://southerncontainersolutions.com/",
-    "telephone": "+1-985-251-2356",
-    "description": "Premium shipping container modifications and custom mobile offices.",
-    "areaServed": [
-      "Covington, LA",
-      "Mandeville, LA",
-      "Slidell, LA",
-      "Madisonville, LA",
-      "Abita Springs, LA",
-      "Hammond, LA",
-      "Ponchatoula, LA",
-      "Folsom, LA",
-      "Pearl River, LA",
-      "Lacombe, LA"
-    ],
-    "priceRange": "$$"
-  };
+  const localSchema = getLocalBusinessSchema();
 
   return (
     <html lang="en">

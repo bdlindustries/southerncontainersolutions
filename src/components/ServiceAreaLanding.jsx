@@ -1,7 +1,18 @@
 import Link from "next/link";
-import { ArrowRight, MapPin, Truck, PackageOpen } from "lucide-react";
+import { ArrowRight, MapPin, Truck, PackageOpen, Thermometer, Shield } from "lucide-react";
+import {
+  getClimateControlContent,
+  getImageAlt,
+  getLocalDeliveryContent,
+  getStateDisplayName,
+} from "@/lib/serviceAreaLocalSeo";
 
 export default function ServiceAreaLanding({ area }) {
+  const localDeliveryContent = getLocalDeliveryContent(area);
+  const climateControlContent = getClimateControlContent(area.city, area.state);
+  const stateName = getStateDisplayName(area.state);
+  const imageAlt = getImageAlt(area.city, area.state);
+
   return (
     <div className="min-h-screen bg-slate-50 animate-in fade-in duration-300">
       <header className="bg-slate-950 py-16 md:py-24 border-b-4 border-amber-500">
@@ -26,18 +37,32 @@ export default function ServiceAreaLanding({ area }) {
           <figure className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
             <img
               src={area.image}
-              alt={area.imageAlt ?? `${area.city}, ${area.state} jobsite office container`}
+              alt={imageAlt}
               className="w-full h-auto object-cover"
             />
           </figure>
         )}
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
-          <h2 className="text-sm font-black text-amber-600 uppercase tracking-widest mb-4">
-            Built for Your Jobsite
-          </h2>
+          <div className="flex items-center gap-2 mb-4">
+            <Shield className="w-5 h-5 text-amber-500" />
+            <h2 className="text-sm font-black text-amber-600 uppercase tracking-widest">
+              Built for Your Jobsite
+            </h2>
+          </div>
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.industryFocus}
+          </p>
+          <p className="text-slate-600 text-base leading-relaxed mt-6">
+            Browse{" "}
+            <Link href="/shop" className="text-amber-600 font-bold hover:text-amber-700">
+              turnkey container offices
+            </Link>{" "}
+            with transparent pricing, or start a{" "}
+            <Link href="/custom-builds" className="text-amber-600 font-bold hover:text-amber-700">
+              custom build
+            </Link>{" "}
+            engineered for {area.city} petrochemical, maritime, and mega-project requirements.
           </p>
         </section>
 
@@ -45,11 +70,41 @@ export default function ServiceAreaLanding({ area }) {
           <div className="flex items-center gap-2 mb-4">
             <Truck className="w-5 h-5 text-amber-500" />
             <h2 className="text-sm font-black text-slate-950 uppercase tracking-widest">
-              Delivery &amp; Logistics
+              Local Delivery &amp; Logistics in {area.city}
             </h2>
           </div>
-          <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
-            {area.logistics}
+          <div className="text-slate-700 text-lg leading-relaxed space-y-6">
+            {localDeliveryContent.split("\n\n").map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+          <div className="flex items-center gap-2 mb-4">
+            <Thermometer className="w-5 h-5 text-amber-500" />
+            <h2 className="text-sm font-black text-slate-950 uppercase tracking-widest">
+              Climate Control Specs for {stateName} Weather
+            </h2>
+          </div>
+          <div className="text-slate-700 text-lg leading-relaxed space-y-6">
+            {climateControlContent.split("\n\n").map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
+          </div>
+          <p className="text-slate-600 text-base leading-relaxed mt-6">
+            Learn more about moisture management in our{" "}
+            <Link
+              href="/resources/container-condensation"
+              className="text-amber-600 font-bold hover:text-amber-700"
+            >
+              container condensation guide
+            </Link>{" "}
+            and{" "}
+            <Link href="/resources/site-prep-delivery" className="text-amber-600 font-bold hover:text-amber-700">
+              site prep for delivery
+            </Link>
+            .
           </p>
         </section>
 

@@ -18,11 +18,11 @@ export default async function HomePage() {
               <span>Commercial Grade. Built in Louisiana</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-              Premium Modular Offices. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Transparent Pricing.</span>
+              Premium Shipping Container Offices & <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Commercial Command Centers.</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-medium">
-              Stop waiting days for a quote. We engineer heavy duty container offices for job sites and businesses. See the price, buy direct, and get it delivered.
+              Turnkey, climate-controlled containerized offices delivered to Gulf Coast industrial jobsites. See transparent pricing, buy direct, and deploy a heavy-duty workspace built for refinery turnarounds, plant expansions, and commercial construction.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/shop" className="bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded font-black text-lg transition-all flex items-center justify-center hover:-translate-y-1">
