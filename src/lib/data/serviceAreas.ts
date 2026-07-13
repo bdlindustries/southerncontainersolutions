@@ -24,6 +24,7 @@ export const serviceAreas: ServiceArea[] = [
       "Southern Container Solutions builds heavy-duty, climate-controlled container offices at our Covington facility. Whether you need a secure jobsite command center or a finished portable office for your crew, our units are spec'd for commercial durability, transparent pricing, and fast deployment.",
     logistics:
       "We coordinate delivery from our Covington yard using tilt-bed and winch-loaded trucks so your unit lands ground-level on your pad with minimal site prep.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "beaumont-tx",
@@ -51,6 +52,7 @@ export const serviceAreas: ServiceArea[] = [
       "As a critical piece of the Golden Triangle, Orange is home to massive marine fabrication and chemical manufacturing. Staging a project here requires rugged site infrastructure that can handle heavy industrial wear and Gulf Coast weather. Traditional wheeled trailers create safety risks and logistical headaches on unpaved or crowded yards. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers. Protect your engineering teams and blueprints in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
     logistics:
       "We run directly down I-10 to service the Golden Triangle. Our specialized winch-loaded trucks drop your office container flat on the dirt or gravel exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "freeport-tx",
@@ -63,6 +65,7 @@ export const serviceAreas: ServiceArea[] = [
       "Staging near massive operations like Freeport LNG and the Dow Chemical complex requires infrastructure that can handle intense coastal and industrial environments. High winds and corrosive conditions quickly destroy standard office trailers. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Keep your site managers, safety coordinators, and technical gear secure in a fully fortified, climate-ready steel structure that completely bypasses OSHA trip hazards.",
     logistics:
       "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it on your port staging area or chemical plant gate, providing quick deployment so your crew can plug in and get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "houston-tx",
@@ -90,6 +93,7 @@ export const serviceAreas: ServiceArea[] = [
       "When you are managing massive energy exports and coastal refinery operations, you need workspaces that withstand extreme coastal conditions. Standard trailers degrade and cause safety hazards in high winds. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Provide your site managers and engineers with a secure, climate-controlled, steel-enforced workspace without the hassle of stairs or skirting.",
     logistics:
       "We deliver straight to your coastal jobsite. Our winch-loaded trucks drop your ground-level office directly onto the dirt, gravel, or concrete of your port or refinery staging area, ready for immediate use.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "victoria-tx",
@@ -102,6 +106,7 @@ export const serviceAreas: ServiceArea[] = [
       "As a crucial inland crossroads supporting the Texas Gulf Coast, Victoria's manufacturing and logistics sectors demand fast and reliable site mobilization. Standard mobile trailers are prone to damage and slow to deploy. We provide heavy-duty 20' and 40' container offices built strictly for heavy commercial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
     logistics:
       "We dispatch our specialized winch-loaded trucks directly to your Victoria plant gate or commercial site. Your ground-level office is dropped exactly where you need it—on dirt, gravel, or asphalt—eliminating the need for complex setups so your team can get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "brownsville-tx",
@@ -114,6 +119,7 @@ export const serviceAreas: ServiceArea[] = [
       "With massive LNG expansions and aerospace infrastructure driving the Brownsville economy, contractors need rugged site infrastructure that can handle the extreme South Texas coastal environment. Traditional trailers sink, degrade, and become liabilities in high winds. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for heavy industrial and port footprints. Keep your engineering teams and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
     logistics:
       "We dispatch straight to the South Texas coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Brownsville jobsite—ready for immediate power and bypassing the need for blocking or skirting.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "baytown-tx",
@@ -126,6 +132,7 @@ export const serviceAreas: ServiceArea[] = [
       "Staging greenfield projects and plant turnarounds in Baytown requires robust site infrastructure. Standard wheeled trailers create logistical headaches on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace.",
     logistics:
       "We streamline delivery to the Baytown industrial sector. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it, skipping the red tape of blocking and complex setup so your team can get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "pasadena-tx",
@@ -138,6 +145,7 @@ export const serviceAreas: ServiceArea[] = [
       "Pasadena is a critical hub for the Gulf Coast's chemical and refining industries. Staging a major turnaround or greenfield project here requires rugged, reliable site infrastructure. Standard office trailers cause logistical headaches and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
     logistics:
       "We dispatch straight down I-10 to the Houston Ship Channel region. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Pasadena jobsite—ready for immediate power and bypassing the need for blocking or skirting.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "deer-park-tx",
@@ -150,6 +158,7 @@ export const serviceAreas: ServiceArea[] = [
       "Home to some of the most intensive refining and chemical manufacturing operations in Texas, Deer Park contractors demand secure and fast site mobilization. Traditional wheeled trailers degrade quickly and require complex anchoring setups. We provide heavy-duty 20' and 40' container offices built strictly for heavy industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
     logistics:
       "We streamline delivery directly to the Texas petrochemical corridor. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your plant gate or construction staging site, providing quick deployment so your crew can plug in and get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "laporte-tx",
@@ -162,6 +171,7 @@ export const serviceAreas: ServiceArea[] = [
       "As a crucial logistics hub for the Houston Ship Channel, LaPorte handles massive container terminal operations and heavy chemical manufacturing. When you are managing port infrastructure or plant turnarounds, traditional wheeled trailers are a liability. We provide heavy-duty 20' and 40' container offices built strictly for heavy industrial and marine use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
     logistics:
       "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your port staging area or plant gate, providing quick deployment so your crew can plug in and get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "channelview-tx",
@@ -174,6 +184,7 @@ export const serviceAreas: ServiceArea[] = [
       "Channelview is deeply tied to the marine and heavy industrial sectors along the San Jacinto River and the Houston Ship Channel. Staging a project here requires durable infrastructure that can survive a heavy industrial footprint. Traditional trailers fail in these zones and create OSHA trip hazards. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for tough maritime and petrochemical environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace.",
     logistics:
       "We streamline delivery directly down I-10 to your Channelview site. Our specialized winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "lake-charles-la",
@@ -186,6 +197,7 @@ export const serviceAreas: ServiceArea[] = [
       "With billions of dollars flowing into Calcasieu Parish projects like Woodside LNG and Venture Global, out-of-state modular trailer companies can't keep up with demand or the rough terrain. We provide heavy-duty, commercial-grade 20' and 40' office containers designed for the realities of the Gulf Coast. Built to withstand extreme weather and heavy industrial use, our ground-level offices offer secure staging for project managers, foremen, and engineers on active refinery and port jobsites.",
     logistics:
       "We deliver directly to the mud and gravel of your industrial site. Using specialized winch-loaded trucks, our dispatch ensures your office container is dropped flat on the ground exactly where you need it, bypassing the need for blocking, skirting, or complex setup.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "sulphur-la",
@@ -198,6 +210,7 @@ export const serviceAreas: ServiceArea[] = [
       "Serving the heavy industrial boom tied to the Lake Charles and Sulphur region means contractors need workspaces that can handle the mud, heavy traffic, and extreme Gulf Coast weather. Traditional trailers sink, degrade, and create OSHA trip hazards. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Provide your site managers, engineers, and safety teams with a secure, climate-stable environment that sits flat on the ground.",
     logistics:
       "We dispatch our specialized winch-loaded trucks directly to your Sulphur jobsite or plant gate. Your ground-level office is dropped exactly where you need it—on dirt, gravel, or asphalt—eliminating the need for blocking, skirting, or complex setups.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "baton-rouge-la",
@@ -210,6 +223,7 @@ export const serviceAreas: ServiceArea[] = [
       "When major specialty contractors and plant managers execute turnarounds or greenfield capital projects along the Mississippi River, fast mobilization is everything. Standard office trailers cause logistical bottlenecks. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' container offices that are ready for immediate deployment. Situate your team securely in a ground-level, climate-ready environment without the OSHA trip hazards of traditional trailers.",
     logistics:
       "Located just down the interstate in Covington, we offer unmatched local proximity. We dispatch our winch-loaded trucks straight down I-12 and I-10 to deliver directly to your plant gate, chemical facility, or industrial park in the Greater Baton Rouge and Ascension Parish areas.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "garyville-la",
@@ -222,6 +236,7 @@ export const serviceAreas: ServiceArea[] = [
       "Home to the largest refinery in Louisiana, Garyville is a critical hub for heavy industrial turnarounds and large-scale contractor mobilization. Standard mobile trailers create logistical bottlenecks and safety hazards on crowded refinery sites. We provide heavy-duty 20' and 40' container offices built strictly for industrial use. Protect your foremen, blueprints, and on-site IT gear in a fully fortified, climate-controlled workspace without the need for traditional trailer stairs or anchoring.",
     logistics:
       "Located just across the lake in Covington, we offer fast, direct logistics to St. John the Baptist Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "reserve-la",
@@ -234,6 +249,7 @@ export const serviceAreas: ServiceArea[] = [
       "Reserve sits at the heart of the Port of South Louisiana's massive maritime and refining footprint. Staging major capital projects here means dealing with heavy logistics and unpredictable river weather. Standard office trailers sink in the mud and create OSHA safety hazards on active industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical and port environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace.",
     logistics:
       "Located across the lake, we run straight down to St. John the Baptist Parish to deliver directly to your jobsite. Our winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "plaquemine-la",
@@ -246,6 +262,7 @@ export const serviceAreas: ServiceArea[] = [
       "Staging a project near massive operations like the Dow Chemical complex in Plaquemine requires robust site infrastructure. Standard wheeled trailers create logistical bottlenecks and safety risks on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace without the OSHA trip hazards of stairs.",
     logistics:
       "Located just across the lake in Covington, we offer unmatched local proximity to Iberville Parish. We dispatch our winch-loaded trucks straight to your plant gate or industrial staging area, dropping your workspace flat on the ground so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "luling-boutte-la",
@@ -258,6 +275,20 @@ export const serviceAreas: ServiceArea[] = [
       "The industrial corridor running through Luling and Boutte handles some of the heaviest chemical and refining traffic in the state. When you are managing plant turnarounds or staging capital projects, standard office trailers create safety risks and logistical bottlenecks. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough petrochemical environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
     logistics:
       "Located just across the lake in Covington, we run straight down I-310 to deliver directly to your St. Charles Parish jobsite. Our winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "st-rose-la",
+    city: "St. Rose",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in St. Rose, LA",
+    hook:
+      "Supplying bulk liquid terminals, Mississippi River industrial staging, and petrochemical contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "St. Rose is anchored by massive riverfront operations like the IMTT bulk terminal. Staging a project in these high-traffic, heavy industrial zones requires rugged site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded terminal sites. We provide heavy-duty 20' and 40' steel-framed office containers built specifically for heavy petrochemical footprints. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+    logistics:
+      "Located just across the lake in Covington, we offer fast, direct logistics to St. Charles Parish. We dispatch our winch-loaded trucks straight to your terminal gate or industrial staging area, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "convent-la",
@@ -270,6 +301,7 @@ export const serviceAreas: ServiceArea[] = [
       "Convent is anchored by massive refining and terminal operations along the Mississippi River. Staging contractors for facility expansions here requires heavy-duty site infrastructure. Traditional wheeled trailers sink in the mud and require complex setups that waste time. We provide fortified 20' and 40' container offices built strictly for heavy industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully climate-ready steel structure that sits securely on the ground.",
     logistics:
       "We offer fast, direct logistics to St. James Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "jackson-ms",
@@ -282,6 +314,7 @@ export const serviceAreas: ServiceArea[] = [
       "Mississippi heat punishes crews and equipment alike. Our containerized offices deliver a climate-stable workspace with commercial PVC finishes, spray foam insulation, and jobsite-grade security—available in 20' and 40' footprints for project managers who need gear protected and teams productive.",
     logistics:
       "We handle routing and delivery into Jackson and surrounding parishes, with ground-level placement so your crew can walk straight in—no stairs, no trailer hitches.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "columbus-ms",
@@ -294,6 +327,7 @@ export const serviceAreas: ServiceArea[] = [
       "When your project timeline is tight, you need an office that shows up ready to work. We build and deliver fortified container offices with transparent pricing, secure steel construction, and finishes that hold up on active industrial sites.",
     logistics:
       "Our logistics team schedules winch-truck and tilt-bed delivery into Columbus and regional jobsites, placing units flat on the ground where your superintendent directs.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "monroe-la",
@@ -306,6 +340,7 @@ export const serviceAreas: ServiceArea[] = [
       "When you are managing a multi-billion-dollar site, you don't have time for flimsy trailers that take weeks to set up. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' office containers built to handle the mud, dirt, and heavy traffic of North Louisiana jobsites. Our units sit flat on the ground—meaning no stairs, no skirting, and no OSHA trip hazards. Every unit is turnkey, secure, and ready for your crew to plug in and get to work the second it hits the dirt.",
     logistics:
       "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on the Monroe or Richland Parish jobsite, even on unimproved surfaces.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "alexandria-la",
@@ -318,6 +353,7 @@ export const serviceAreas: ServiceArea[] = [
       "Louisiana heat and humidity will destroy sensitive IT equipment and blueprints. If you are staging tech infrastructure or managing large-scale civil projects in Alexandria, a standard metal box won't cut it. We build and deliver fully insulated, AC-and-heated office containers designed strictly for commercial project managers. Available in 20' and 40' footprints, these units offer a fortified, climate-stable environment for your crew, your gear, and your server racks.",
     logistics:
       "We handle the logistics straight up I-49. Every climate-controlled unit is delivered via winch-truck and dropped ground-level. No trailer hitches, no complicated blocking, just a secure, weatherproof office ready for power.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "shreveport-la",
@@ -330,6 +366,7 @@ export const serviceAreas: ServiceArea[] = [
       "As a major logistics and manufacturing hub in North Louisiana, Shreveport demands rugged site infrastructure. Standard office trailers cause logistical headaches and safety risks on active commercial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
     logistics:
       "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on your Shreveport jobsite, completely eliminating the need for trailer stairs, skirting, or complex anchoring.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "gulfport-ms",
@@ -343,6 +380,7 @@ export const serviceAreas: ServiceArea[] = [
       "Gulfport, MS demands workspace solutions that survive coastal humidity, hurricane-season winds, and active commercial construction schedules. Southern Container Solutions designs custom shipping container offices and modifications—from added windows and door placements to electrical upgrades and climate-controlled interiors—for project managers who need more than a cookie-cutter trailer. Our 20' and 40' steel-framed units are built for commercial durability, transparent pricing, and fast deployment to Gulfport, Biloxi corridor, and Harrison County jobsites.",
     logistics:
       "We dispatch from our Covington, Louisiana fabrication yard straight down I-10 into Gulfport and the Mississippi Gulf Coast. Winch-loaded trucks place your modified container office ground-level on dirt, gravel, or concrete—no stairs, no skirting, and no complicated blocking required.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "pascagoula-ms",
@@ -356,6 +394,33 @@ export const serviceAreas: ServiceArea[] = [
       "Pascagoula, MS is one of the Gulf South's most demanding industrial environments—shipbuilding schedules, refinery turnarounds, and heavy contractor mobilization leave no room for flimsy mobile trailers. Southern Container Solutions delivers custom shipping container offices and modifications engineered for the realities of Pascagoula jobsites: secure steel construction, spray-foam insulation, commercial-grade finishes, and layout changes tailored to your crew. Whether you need a climate-controlled command center or a modified 40' office with custom door and window placement, we build it in Louisiana and deliver it ready to work.",
     logistics:
       "Our logistics team runs dedicated freight from Covington into Pascagoula and Jackson County via I-10. Specialized winch trucks drop your container office exactly where your superintendent directs—flat on the ground at the shipyard gate, staging yard, or industrial pad—so your team can connect power and get to work the same day.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "biloxi-ms",
+    city: "Biloxi",
+    state: "MS",
+    h1: "Commercial Jobsite Office Containers in Biloxi, MS",
+    hook:
+      "Providing secure, ground-level mobile offices for coastal commercial development, hospitality infrastructure projects, and maritime logistics.",
+    industryFocus:
+      "When staging large-scale commercial developments or casino infrastructure along the Mississippi Gulf Coast, you need workspaces that withstand the coastal elements. Standard office trailers degrade quickly in high humidity and high winds, creating safety hazards on active sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically to handle tough coastal footprints. Keep your project managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
+    logistics:
+      "We dispatch straight from our yard across the state line to the Mississippi Gulf Coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Biloxi jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "bay-st-louis-ms",
+    city: "Bay St. Louis",
+    state: "MS",
+    h1: "Commercial Jobsite Office Containers in Bay St. Louis, MS",
+    hook:
+      "Supplying Port Bienville industrial contractors, aerospace logistics, and coastal developers with heavy-duty, climate-controlled mobile offices.",
+    industryFocus:
+      "Bay St. Louis and the surrounding Hancock County area are critical zones for heavy industrial manufacturing and aerospace staging. Standard mobile trailers are prone to damage and require complex setups that slow down mobilization. We provide heavy-duty 20' and 40' container offices built strictly for commercial and industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+    logistics:
+      "Located just a short drive down I-10, we offer fast, direct logistics to Hancock County. We dispatch our winch-loaded trucks straight to your plant gate, port staging area, or commercial site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "mobile-al",
@@ -369,6 +434,46 @@ export const serviceAreas: ServiceArea[] = [
       "Mobile, AL sits at the heart of Gulf Coast maritime commerce—from the Port of Mobile and APM Terminals to active shipbuilding and coastal industrial construction. Project managers staging waterfront work need offices that handle salt air, heavy equipment traffic, and tight mobilization windows. Southern Container Solutions builds custom shipping container offices and modifications for Mobile's maritime and industrial sector: climate-controlled interiors, secure steel construction, custom door and window layouts, and electrical upgrades spec'd for port-adjacent and shipyard jobsites. Our 20' and 40' units replace flimsy trailers with ground-level workspaces built for Alabama's coastal industrial reality.",
     logistics:
       "We run dedicated delivery from our Covington, Louisiana yard into Mobile and the Alabama Gulf Coast via I-10. Winch-loaded trucks drop your modified container office ground-level at the port gate, shipyard staging area, or coastal jobsite—on dirt, gravel, or asphalt—with no stairs, skirting, or complex setup required.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "theodore-al",
+    city: "Theodore",
+    state: "AL",
+    h1: "Commercial Jobsite Office Containers in Theodore, AL",
+    hook:
+      "Supporting the Theodore Industrial Canal, heavy manufacturing, and maritime staging with secure, ground-level mobile offices.",
+    industryFocus:
+      "Theodore's industrial corridor handles intense heavy manufacturing and maritime operations. Staging projects near the canal requires robust site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy industrial footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+    logistics:
+      "We run straight down I-10 to the Alabama coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Theodore jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "pensacola-fl",
+    city: "Pensacola",
+    state: "FL",
+    h1: "Commercial Jobsite Office Containers in Pensacola, FL",
+    hook:
+      "Supplying aerospace infrastructure, military staging, and coastal commercial developers with heavy-duty, climate-controlled mobile offices.",
+    industryFocus:
+      "Pensacola is anchored by major defense staging, aerospace expansions, and heavy coastal commercial construction. Standard mobile trailers are liabilities in high winds and require complex setups that slow down mobilization. We provide heavy-duty 20' and 40' container offices built strictly for commercial and industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure designed to withstand harsh Gulf Coast weather and sit securely on the ground.",
+    logistics:
+      "We push efficiently along the I-10 corridor into the Florida Panhandle. We dispatch our winch-loaded trucks straight to your commercial site, aerospace facility, or port staging area, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "panama-city-fl",
+    city: "Panama City",
+    state: "FL",
+    h1: "Commercial Jobsite Office Containers in Panama City, FL",
+    hook:
+      "Supporting Tyndall AFB infrastructure projects, marine manufacturing, and coastal commercial developers with heavy-duty, climate-controlled mobile offices.",
+    industryFocus:
+      "Panama City's economy is driven by massive military reconstruction and heavy marine manufacturing. In hurricane-prone coastal zones, standard mobile trailers are liabilities that degrade quickly and require complex setups. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers built strictly for tough coastal and industrial environments. Keep your military contractors, project managers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
+    logistics:
+      "We run our specialized winch-loaded trucks along the I-10 corridor directly into the Florida Panhandle. We drop your ground-level office exactly where you need it on your Panama City jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "morgan-city-la",
@@ -382,6 +487,7 @@ export const serviceAreas: ServiceArea[] = [
       "Morgan City is a critical hub for offshore construction, marine transportation, and heavy steel fabrication. Staging maritime projects requires rugged site infrastructure that can handle intense coastal humidity and heavy industrial wear. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough shipyard and marine footprints. Keep your logistics managers, foremen, and blueprints protected in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
     logistics:
       "We run directly down from our yard straight into the Morgan City industrial and port sectors. Our specialized winch-loaded trucks drop your office container flat on the ground exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "houma-la",
@@ -394,6 +500,7 @@ export const serviceAreas: ServiceArea[] = [
       "When major marine contractors, shipyards, and coastal engineering firms execute large-scale builds or staging in Houma, fast mobilization is key. Traditional wheeled trailers create logistical headaches and safety risks on busy, unpaved coastal yards. We provide fortified 20' and 40' container offices built strictly for heavy industrial and maritime use. Protect your engineering teams, safety managers, and vital technical infrastructure in a fully insulated, climate-ready steel structure that sits flat on the dirt without OSHA trip hazards.",
     logistics:
       "We offer efficient, direct logistics to Terrebonne Parish jobsites. We dispatch our winch-loaded trucks straight to your shipyard gate, port staging area, or industrial site, providing quick deployment and transparent pricing so your crew can plug in and get to work immediately.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "lafayette-la",
@@ -406,6 +513,7 @@ export const serviceAreas: ServiceArea[] = [
       "As the administrative and logistical center for Louisiana's energy sector, Lafayette contractors require fast, reliable site mobilization. Standard mobile trailers are prone to damage and require complex setups. We provide heavy-duty 20' and 40' container offices built strictly for commercial and industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
     logistics:
       "Located straight down I-10 and I-49, we offer efficient delivery to Lafayette Parish. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your staging area or commercial site, providing quick deployment so your crew can plug in and get straight to work.",
+    image: "/images/jobsite-office-container.png",
   },
   {
     slug: "geismar-la",
@@ -419,6 +527,7 @@ export const serviceAreas: ServiceArea[] = [
       "Geismar, LA is one of the most concentrated chemical manufacturing corridors on the Mississippi River—home to major petrochemical complexes, heavy industrial plants, and constant turnaround activity. Plant managers and specialty contractors executing capital projects can't afford flimsy trailers that create OSHA trip hazards and logistical bottlenecks on crowded facility sites. Southern Container Solutions builds custom shipping container offices and modifications for Geismar's chemical and industrial sector: secure steel-framed construction, climate-controlled interiors, custom door and window placement, and electrical upgrades spec'd for refinery and chemical plant environments. Our 20' and 40' ground-level offices protect your foremen, blueprints, and on-site IT gear without the stairs, skirting, or anchoring headaches of traditional mobile trailers.",
     logistics:
       "Located just down the interstate in Covington, we offer fast direct logistics into Geismar and Ascension Parish. Our winch-loaded trucks dispatch straight down I-10 and I-12 to your plant gate, turnaround staging area, or industrial pad—dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
   },
 ];
 

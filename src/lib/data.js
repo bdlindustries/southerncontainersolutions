@@ -1,6 +1,7 @@
 export const SEED_INVENTORY = [
   {
     id: "scs-20-office",
+    slug: "scs-20-office",
     title: "20' Office Container",
     price: 19900,
     priceStr: "$19,900",
@@ -37,6 +38,7 @@ export const SEED_INVENTORY = [
   },
   {
     id: "scs-40-office",
+    slug: "scs-40-office",
     title: "40' Office Container",
     price: 27900,
     priceStr: "$27,900",
@@ -73,6 +75,7 @@ export const SEED_INVENTORY = [
   },
   {
     id: "scs-40-combo",
+    slug: "scs-40-combo",
     title: "40' Office / Storage Combo",
     price: 22000,
     priceStr: "$22,000",
@@ -175,6 +178,11 @@ export function normalizeInventoryItemFromFirestore(id, data) {
   const images = fromImages.length ? fromImages : fromImageField;
   const image = images[0] || (typeof data?.image === 'string' ? data.image.trim() : '') || '';
   return { ...data, images, image, id };
+}
+
+export function getProductPathSlug(product) {
+  const slug = typeof product?.slug === 'string' ? product.slug.trim() : '';
+  return slug || product?.id || '';
 }
 
 export function listingImageUrls(item) {

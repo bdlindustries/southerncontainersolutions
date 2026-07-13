@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:slugs": "node scripts/migrate-slugs.js",
+    "migrate:slugs:dry-run": "node scripts/migrate-slugs.js --dry-run"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.15.11",

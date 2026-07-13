@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore, collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import {
   SEED_INVENTORY,
@@ -104,4 +104,26 @@ export async function getProductById(id) {
     const seed = SEED_INVENTORY.find((p) => p.id === id);
     return seed ? enrichInventoryFromSeed(seed) : null;
   }
+}
+
+export async function getProductBySlug(slug) {
+  if (!slug || typeof slug !== 'string') return null;
+
+  try {
+    const slugQuery = query(collection(db, 'scs_inventory'), where('slug', '==', slug));
+    const snapshot = await getDocs(slugQuery);
+    const match = snapshot.docs.find((d) => isInventoryListingDoc(d.id));
+    if (match) {
+      return enrichInventoryFromSeed(
+        normalizeInventoryItemFromFirestore(match.id, match.data())
+      );
+    }
+  } catch (e) {
+    console.error("Firebase slug lookup failed", e);
+  }
+
+  const seedBySlug = SEED_INVENTORY.find((p) => p.slug === slug || p.id === slug);
+  if (seedBySlug) return enrichInventoryFromSeed(seedBySlug);
+
+  return getProductById(slug);
 }

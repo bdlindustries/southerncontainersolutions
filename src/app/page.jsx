@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShoppingCart, ChevronRight, PackageOpen } from "lucide-react";
-import { listingImageUrls } from "@/lib/data";
+import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getFeaturedInventory } from "@/lib/firebase";
 
 export const dynamic = 'force-dynamic';
@@ -85,7 +85,7 @@ export default async function HomePage() {
                     <span className="text-2xl font-black text-amber-600">{product.priceStr}</span>
                   </div>
                   <p className="text-slate-600 mb-6 font-medium line-clamp-2">{product.description}</p>
-                  <Link href={`/shop/${product.id}`} className="w-full bg-slate-100 hover:bg-slate-950 text-slate-900 hover:text-white py-4 rounded font-bold transition-colors flex justify-center items-center">
+                  <Link href={`/shop/${getProductPathSlug(product)}`} className="w-full bg-slate-100 hover:bg-slate-950 text-slate-900 hover:text-white py-4 rounded font-bold transition-colors flex justify-center items-center">
                     View Specifications
                   </Link>
                 </div>

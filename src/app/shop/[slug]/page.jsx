@@ -1,15 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, Zap } from "lucide-react";
-import { SEED_INVENTORY, listingImageUrls } from "@/lib/data";
-import { getProductById, getLiveInventory } from "@/lib/firebase";
+import { SEED_INVENTORY, getProductPathSlug, listingImageUrls } from "@/lib/data";
+import { getLiveInventory, getProductBySlug } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import ProductPurchaseActions from "@/components/ProductPurchaseActions";
 import ProductImageGallery from "@/components/ProductImageGallery";
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
-  const product = await getProductById(id);
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
   if (!product) return { title: 'Product Not Found' };
   
   return {
@@ -22,15 +22,15 @@ export async function generateStaticParams() {
   const inventory = await getLiveInventory();
   const source = inventory.length ? inventory : SEED_INVENTORY;
   return source.map((product) => ({
-    id: product.id,
+    slug: getProductPathSlug(product),
   }));
 }
 
 export const dynamicParams = true;
 
 export default async function ProductDetailPage({ params }) {
-  const { id } = await params;
-  const product = await getProductById(id);
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
   
   if (!product) notFound();
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Zap, ChevronRight, PackageOpen, ShieldCheck, Thermometer, BookOpen, ArrowRight } from "lucide-react";
-import { listingImageUrls } from "@/lib/data";
+import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getLiveInventory } from "@/lib/firebase";
 
 export const metadata = {
@@ -119,7 +119,7 @@ export default async function ShopPage() {
                     </div>
 
                     <div className="flex gap-3 pt-6 border-t border-slate-100">
-                      <Link href={`/shop/${product.id}`} className="flex-1 bg-slate-950 hover:bg-slate-800 text-white py-4 rounded-lg font-black text-sm transition-colors flex items-center justify-center gap-2">
+                      <Link href={`/shop/${getProductPathSlug(product)}`} className="flex-1 bg-slate-950 hover:bg-slate-800 text-white py-4 rounded-lg font-black text-sm transition-colors flex items-center justify-center gap-2">
                         View Mobile Office Specs <ChevronRight className="w-4 h-4" />
                       </Link>
                     </div>

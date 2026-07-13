@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getLiveInventory } from "@/lib/firebase";
+import { getProductPathSlug } from "@/lib/data";
 
 const BASE_URL = "https://www.southerncontainersolutions.com";
 
@@ -74,7 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const inventory = await getLiveInventory();
 
   const productEntries: MetadataRoute.Sitemap = inventory.map((product) =>
-    entry(`/shop/${product.id}`, 0.9, "daily")
+    entry(`/shop/${getProductPathSlug(product)}`, 0.9, "daily")
   );
 
   const topLevelSlugSet = new Set(Object.values(TOP_LEVEL_SLUG_BY_PATH));
