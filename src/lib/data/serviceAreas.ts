@@ -498,13 +498,97 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Sulphur, LA",
     heroSub:
-      "Providing rugged, climate-controlled mobile offices for petrochemical expansions and industrial staging across the Calcasieu Parish industrial corridor.",
+      "Rugged mobile offices supplied for petrochemical expansions across the Calcasieu Parish industrial corridor.",
     localIndustryFocus:
-      "Serving the heavy industrial boom tied to the Lake Charles and Sulphur region means contractors need workspaces that can handle the mud, heavy traffic, and extreme Gulf Coast weather. Traditional trailers sink, degrade, and create OSHA trip hazards. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Provide your site managers, engineers, and safety teams with a secure, climate-stable environment that sits flat on the ground.",
+      "Serving the heavy industrial boom tied to the Lake Charles and Sulphur region means contractors need workspaces that can handle heavy traffic and extreme Gulf Coast weather. Traditional trailers degrade and create trip hazards. We deliver commercial grade steel office containers built from one trip shipping containers. Provide your engineers and safety teams with a secure climate stable environment that sits flat on the ground.",
     localDeliveryLogistics:
-      "We dispatch our specialized winch-loaded trucks directly to your Sulphur jobsite or plant gate. Your ground-level office is dropped exactly where you need it on dirt, gravel, or asphalt, eliminating the need for blocking, skirting, or complex setups.",
+      "We dispatch our specialized winch loaded trucks directly to your Sulphur jobsite or plant gate. Your ground level office is dropped exactly where you need it on dirt or gravel eliminating the need for blocking skirting or complex setups.",
     localClimateSpecs:
-      "Every Sulphur unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for industrial corridor humidity and heat across Calcasieu Parish petrochemical yards. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Sulphur command centers. From summer heat advisories to sudden Gulf rain events, your Sulphur, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch closed cell spray foam and smooth PVC wall systems to combat industrial corridor humidity. The 12,000 BTU LG mini split heat pump ensures your Sulphur office maintains stable interior conditions that uninsulated rental trailers simply cannot hold.",
+    localHighways: "Interstate 10 and Interstate 210",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Sulphur?",
+        answer:
+          "Because our units sit flat on the ground no stairs or skirting are required. You just need a relatively firm surface like gravel or compacted dirt on your jobsite.",
+      },
+      {
+        question: "How do I power the office container at the plant?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets and AC.",
+      },
+      {
+        question: "Are these containers secure on Sulphur jobsites?",
+        answer:
+          "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "cameron-la",
+    city: "Cameron",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Cameron, LA",
+    heroSub:
+      "Turnkey ground level mobile offices delivered to Cameron Parish coastal projects and LNG sites.",
+    localIndustryFocus:
+      "Contractors working the massive LNG export terminals and coastal infrastructure projects in Cameron need highly durable site offices. Out of state modular trailers cannot withstand the harsh marine environment. We supply commercial grade steel framed units that provide secure workspace without the trip hazards of traditional trailers on active industrial sites.",
+    localDeliveryLogistics:
+      "We dispatch our heavy transport trucks directly to your Cameron jobsite. The container is placed flat on the ground ready for immediate power connection without blocking packages or trailer stair towers.",
+    localClimateSpecs:
+      "Every unit ships with 2 inch closed cell spray foam and moisture resistant PVC panels sized for Cameron Parish coastal humidity and Gulf storm exposure. The LG mini split HVAC maintains a comfortable environment for your crew during extreme summer heat.",
+    localHighways: "Louisiana Highway 27 and Louisiana Highway 82",
+    faqs: [
+      {
+        question: "Do these containers hold up against Cameron coastal weather?",
+        answer:
+          "Yes. Built from one trip shipping containers they provide a rigid weather resistant steel shell that easily outperforms traditional fiberglass trailers.",
+      },
+      {
+        question: "How do we get power to the unit on a remote coastal site?",
+        answer:
+          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+      },
+      {
+        question: "Are the interior walls resistant to coastal humidity?",
+        answer:
+          "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "port-fourchon-la",
+    city: "Port Fourchon",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Port Fourchon, LA",
+    heroSub:
+      "Heavy duty mobile offices for offshore marine services and deepwater port logistics.",
+    localIndustryFocus:
+      "Port Fourchon is the epicenter of Gulf offshore logistics. Staging maritime projects requires rugged infrastructure that can survive intense salt air and heavy industrial wear. Protect your logistics managers and blueprints in a fully insulated steel container office built specifically for tough shipyard and marine footprints.",
+    localDeliveryLogistics:
+      "We run directly down into the port sector dropping your office container flat on the ground. This eliminates the need for trailer stairs or complex anchoring giving your marine crews immediate and safe access.",
+    localClimateSpecs:
+      "Our units combat extreme coastal moisture with 2 inch spray foam insulation and a dedicated 12,000 BTU heat pump. The smooth PVC interiors are incredibly easy to clean after heavy boots track through the unpaved port yard.",
+    localHighways: "Louisiana Highway 1",
+    faqs: [
+      {
+        question: "Can we load heavy marine equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment or gear directly into the workspace.",
+      },
+      {
+        question: "How do we power the office at the port?",
+        answer:
+          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+      },
+      {
+        question: "Will the exterior lighting turn on automatically?",
+        answer:
+          "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning or night shifts.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -906,28 +990,64 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Monroe, LA",
     heroSub:
-      "Serving general contractors, infrastructure teams, and site managers across the Richland Parish data center projects with turnkey, ground-level mobile offices.",
+      "Serving general contractors and site managers across Richland Parish data center projects with turnkey mobile offices.",
     localIndustryFocus:
-      "When you are managing a multi-billion-dollar site, you don't have time for flimsy trailers that take weeks to set up. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' office containers built to handle the mud, dirt, and heavy traffic of North Louisiana jobsites. Our units sit flat on the ground, meaning no stairs, no skirting, and no OSHA trip hazards. Every unit is turnkey, secure, and ready for your crew to plug in and get to work the second it hits the dirt.",
+      "When managing massive capital sites you do not have time for flimsy trailers that take weeks to set up. We provide heavy duty commercial grade office containers built to handle the mud and heavy traffic of North Louisiana jobsites. Every unit is ready for your crew to plug in and get to work the second it hits the dirt.",
     localDeliveryLogistics:
-      "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on the Monroe or Richland Parish jobsite, even on unimproved surfaces.",
+      "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch loaded trucks allowing us to drop your office exactly where you need it on the Monroe jobsite even on unimproved surfaces.",
     localClimateSpecs:
-      "Every Monroe unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for North Louisiana humidity and heat on Richland Parish dirt-work sites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Monroe command centers. From summer heat advisories to sudden Gulf rain events, your Monroe, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every Monroe unit ships with 2 inch closed cell spray foam and mini split HVAC sized for North Louisiana humidity on heavy dirt work sites. Your office maintains stable interior conditions that uninsulated rental trailers cannot match.",
+    localHighways: "Interstate 20 and US Highway 165",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Monroe?",
+        answer:
+          "Because our units sit flat on the ground no stairs or skirting are required. You just need a relatively flat firm surface like gravel or dirt.",
+      },
+      {
+        question: "How do I power the office container?",
+        answer:
+          "The unit includes a 100 amp breaker panel. Have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator.",
+      },
+      {
+        question: "Are these containers secure on Monroe jobsites?",
+        answer:
+          "Yes. They are built from one trip shipping containers and include a 36 inch steel man door with a deadbolt plus heavy duty steel security bars.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
     slug: "alexandria-la",
     city: "Alexandria",
     state: "LA",
-    heroHeadline: "Climate-Controlled Jobsite Containers in Alexandria, LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Alexandria, LA",
     heroSub:
-      "Providing secure, fully insulated, climate-controlled workspaces for the AI campus expansions and heavy industrial projects throughout Rapides Parish.",
+      "Providing fully insulated climate controlled workspaces for tech campus expansions throughout Rapides Parish.",
     localIndustryFocus:
-      "Louisiana heat and humidity will destroy sensitive IT equipment and blueprints. If you are staging tech infrastructure or managing large-scale civil projects in Alexandria, a standard metal box won't cut it. We build and deliver fully insulated, AC and heated office containers designed strictly for commercial project managers. Available in 20' and 40' footprints, these units offer a fortified, climate-stable environment for your crew, your gear, and your server racks.",
+      "If you are staging tech infrastructure or managing large scale civil projects in Alexandria a standard metal box will not cut it. We build and deliver fully insulated office containers designed strictly for commercial project managers. Provide your crew and server racks with a highly secure climate stable environment.",
     localDeliveryLogistics:
-      "We handle the logistics straight up I-49. Every climate-controlled unit is delivered via winch-truck and dropped ground-level. No trailer hitches, no complicated blocking, just a secure, weatherproof office ready for power.",
+      "We handle the logistics straight up the interstate. Every unit is delivered via winch truck and dropped ground level providing a secure weatherproof office ready for power without complicated blocking.",
     localClimateSpecs:
-      "Every Alexandria unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Rapides Parish humidity threatening server racks and blueprint storage on tech campuses. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Alexandria command centers. From summer heat advisories to sudden Gulf rain events, your Alexandria, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch spray foam and commercial PVC wall systems to protect sensitive IT equipment from Louisiana heat. The LG mini split ensures stable interior conditions for tech campuses and civil sites.",
+    localHighways: "Interstate 49 US Highway 71 and US Highway 167",
+    faqs: [
+      {
+        question: "What is required to power the office in Alexandria?",
+        answer:
+          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+      },
+      {
+        question: "How do we keep the inside clean on a dusty civil site?",
+        answer:
+          "The interior is finished with smooth PVC panels. Unlike drywall you can simply wipe the walls and ceiling clean of any construction dust.",
+      },
+      {
+        question: "Is the entry door durable enough for heavy daily use?",
+        answer:
+          "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -1075,13 +1195,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     routePath: "/morgan-city-la",
     heroHeadline: "Commercial Jobsite Office Containers in Morgan City, LA",
     heroSub:
-      "Providing heavy-duty, marine-grade mobile offices for offshore fabrication, shipyards, and port logistics across St. Mary and Lower St. Martin Parishes.",
+      "Marine grade mobile offices for offshore fabrication and shipyards across St. Mary Parish.",
     localIndustryFocus:
-      "Morgan City is a critical hub for offshore construction, marine transportation, and heavy steel fabrication. Staging maritime projects requires rugged site infrastructure that can handle intense coastal humidity and heavy industrial wear. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough shipyard and marine footprints. Keep your logistics managers, foremen, and blueprints protected in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
+      "Morgan City is a critical hub for offshore construction and heavy steel fabrication. Traditional wheeled trailers create logistical headaches on busy unpaved coastal yards. We supply commercial grade steel office containers built from one trip shipping containers providing your safety managers with a secure footprint.",
     localDeliveryLogistics:
-      "We run directly down from our yard straight into the Morgan City industrial and port sectors. Our specialized winch-loaded trucks drop your office container flat on the ground exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+      "We dispatch straight to your shipyard gate or port staging area. By dropping your workspace flat on the dirt your crew can bypass complex leveling and access the office without trip hazards.",
     localClimateSpecs:
-      "Every Morgan City unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for St. Mary Parish coastal humidity and shipyard heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Morgan City command centers. From summer heat advisories to sudden Gulf rain events, your Morgan City, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "To combat St. Mary Parish coastal humidity these offices feature 2 inch spray foam and smooth PVC walls. The 12,000 BTU LG mini split ensures excellent temperature control during intense summer heat.",
+    localHighways: "US Highway 90 and Louisiana Highway 182",
+    faqs: [
+      {
+        question: "Are these containers structurally sound for a shipyard?",
+        answer:
+          "Yes. They are constructed from heavy duty one trip shipping containers providing a rigid steel frame that easily handles industrial environments.",
+      },
+      {
+        question: "How much power capacity does the unit have?",
+        answer:
+          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+      },
+      {
+        question: "Is the AC unit protected against power surges?",
+        answer:
+          "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable site power.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -1090,13 +1228,97 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Houma, LA",
     heroSub:
-      "Supplying turnkey, ground-level mobile offices for shipbuilding, offshore marine services, and coastal restoration staging throughout Terrebonne Parish.",
+      "Ground level mobile offices for shipbuilding and coastal restoration staging throughout Terrebonne Parish.",
     localIndustryFocus:
-      "When major marine contractors, shipyards, and coastal engineering firms execute large-scale builds or staging in Houma, fast mobilization is key. Traditional wheeled trailers create logistical headaches and safety risks on busy, unpaved coastal yards. We provide fortified 20' and 40' container offices built strictly for heavy industrial and maritime use. Protect your engineering teams, safety managers, and vital technical infrastructure in a fully insulated, climate-ready steel structure that sits flat on the dirt without OSHA trip hazards.",
+      "When major marine contractors execute large scale builds in Houma fast mobilization is key. We provide robust container offices built strictly for heavy industrial and maritime use. Protect your engineering teams in a fully insulated steel structure that sits flat on the dirt without OSHA trip hazards.",
     localDeliveryLogistics:
-      "We offer efficient, direct logistics to Terrebonne Parish jobsites. We dispatch our winch-loaded trucks straight to your shipyard gate, port staging area, or industrial site, providing quick deployment and transparent pricing so your crew can plug in and get to work immediately.",
+      "We offer direct logistics to Terrebonne Parish jobsites. Our trucks navigate straight to your shipyard providing quick deployment so your crew can tie into power and get to work immediately.",
     localClimateSpecs:
-      "Every Houma unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Terrebonne Parish coastal humidity and unpaved marine yard heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Houma command centers. From summer heat advisories to sudden Gulf rain events, your Houma, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "We seal door and window openings and apply 2 inch closed cell spray foam to limit condensation. The LG mini split HVAC maintains stable interior conditions that uninsulated rental trailers simply cannot hold through a long project schedule.",
+    localHighways: "US Highway 90 and Louisiana Highway 24",
+    faqs: [
+      {
+        question: "Do we need a ramp to access the container office?",
+        answer:
+          "No. The container sits flat on the ground providing step free walk in access which is ideal for active marine yards.",
+      },
+      {
+        question: "Is the interior easy to clean after walking through the mud?",
+        answer:
+          "Absolutely. The interior features smooth moisture resistant PVC wall and ceiling panels that are incredibly easy to wipe down.",
+      },
+      {
+        question: "Can this handle a full engineering team?",
+        answer:
+          "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "thibodaux-la",
+    city: "Thibodaux",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Thibodaux, LA",
+    heroSub:
+      "Turnkey mobile workspaces delivered to Thibodaux commercial developments and Bayou industrial sites.",
+    localIndustryFocus:
+      "As Thibodaux expands its commercial footprint contractors need fast reliable staging solutions. Standard rental trailers take a beating during heavy construction. We supply highly professional steel office containers that provide your management team with a secure secure footprint for the duration of the build.",
+    localDeliveryLogistics:
+      "Navigating commercial developments requires precision. Our trucks place the container directly on the ground giving your crew step free access and eliminating the large footprint required by traditional trailer ramps.",
+    localClimateSpecs:
+      "We install 2 inch closed cell spray foam to provide excellent temperature control and sound reduction. The 12,000 BTU LG mini split keeps your computers and servers online regardless of the brutal Bayou heat.",
+    localHighways: "Louisiana Highway 1 and Louisiana Highway 20",
+    faqs: [
+      {
+        question: "Can we place this on unpaved dirt at our Thibodaux site?",
+        answer:
+          "Yes. The rigid steel frame allows the container to sit flush on compacted dirt or gravel without the need for complex blocking.",
+      },
+      {
+        question: "How many electrical outlets are inside?",
+        answer:
+          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+      },
+      {
+        question: "Do we have to run a dedicated power pole?",
+        answer:
+          "You can tie into a permanent power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "bogalusa-la",
+    city: "Bogalusa",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Bogalusa, LA",
+    heroSub:
+      "Heavy duty mobile offices for Washington Parish paper mills and timber industry logistics.",
+    localIndustryFocus:
+      "Contractors working the heavy timber operations and mill expansions around Bogalusa require tough remote operations centers. We supply climate controlled container offices that provide a quiet professional environment right in the middle of active unpaved industrial zones.",
+    localDeliveryLogistics:
+      "We dispatch straight to your Washington Parish jobsite. By placing the container flat on the ground we eliminate the need for stairs and provide easy loading access for your larger equipment through the rear cargo doors.",
+    localClimateSpecs:
+      "Unpaved mill sites generate intense heat and heavy dust. Our units combat this with moisture resistant PVC wall panels 2 inch spray foam insulation and a dedicated 12,000 BTU heat pump.",
+    localHighways: "Louisiana Highway 21 and Louisiana Highway 10",
+    faqs: [
+      {
+        question: "Is the insulation thick enough to block out heavy machinery noise?",
+        answer:
+          "Yes. The 2 inch closed cell spray foam insulation provides excellent sound reduction creating a quiet workspace for your project managers.",
+      },
+      {
+        question: "How do we connect power at a mill expansion site?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+      },
+      {
+        question: "Are the windows functional for fresh air?",
+        answer:
+          "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -1105,13 +1327,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Lafayette, LA",
     heroSub:
-      "Supplying turnkey, climate-controlled mobile offices for the oil and gas staging hubs and commercial construction sites throughout the Hub City.",
+      "Turnkey climate controlled mobile offices for Hub City energy sector staging and commercial builds.",
     localIndustryFocus:
-      "As the administrative and logistical center for Louisiana's energy sector, Lafayette contractors require fast, reliable site mobilization. Standard mobile trailers are prone to damage and require complex setups. We provide heavy-duty 20' and 40' container offices built strictly for commercial and industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+      "As the logistical center for Louisiana energy operations Lafayette contractors require fast reliable site mobilization. We provide heavy duty container offices built strictly for commercial use. Protect your foremen and vital technical infrastructure in a fully climate ready steel structure that sits securely on the ground.",
     localDeliveryLogistics:
-      "Located straight down I-10 and I-49, we offer efficient delivery to Lafayette Parish. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your staging area or commercial site, providing quick deployment so your crew can plug in and get straight to work.",
+      "We offer efficient delivery to Lafayette Parish using specialized winch loaded trucks. We drop your container office directly onto your staging area providing quick deployment so your crew can plug in and get straight to work.",
     localClimateSpecs:
-      "Every Lafayette unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Acadiana humidity and energy-sector heat on Hub City jobsites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Lafayette command centers. From summer heat advisories to sudden Gulf rain events, your Lafayette, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit features 2 inch closed cell spray foam and commercial PVC wall systems. The LG mini split handles the heavy cooling requirements of Acadiana humidity ensuring your networking gear stays dry and cool.",
+    localHighways: "Interstate 10 Interstate 49 and US Highway 90",
+    faqs: [
+      {
+        question: "Can we use this as a command center for our engineering team?",
+        answer:
+          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+      },
+      {
+        question: "Are the windows secure from jobsite vandalism?",
+        answer:
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+      {
+        question: "How much site preparation is needed in Lafayette?",
+        answer:
+          "Because our units sit flat on the ground you just need a relatively firm surface like gravel or asphalt on your jobsite.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
