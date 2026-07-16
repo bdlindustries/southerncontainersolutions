@@ -198,31 +198,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "new-orleans-la",
     city: "New Orleans",
     state: "LA",
-    heroHeadline: "Secure Temporary Office Containers in New Orleans, LA",
+    heroHeadline: "Commercial Jobsite Office Containers in New Orleans, LA",
     heroSub:
-      "Fully finished mobile workspaces built for urban infill projects and Orleans Parish commercial operations.",
+      "Secure ground level mobile workspaces built for urban infill projects and Orleans Parish commercial operations.",
     localIndustryFocus:
-      "Building in New Orleans requires intense security and durability. We supply commercial operations with one-trip container offices featuring heavy-duty steel security bars on the windows and a solid 36-inch steel man door with a deadbolt to protect your assets in the city.",
+      "Building in New Orleans requires intense security and durability. We supply commercial operations with one trip container offices featuring heavy duty steel security bars and a solid 36 inch steel man door to protect your assets in the city.",
     localDeliveryLogistics:
-      "Staging in the CBD or tight New Orleans neighborhoods means you cannot rely on sprawling trailer setups. We drop the unit flat on the ground, giving your crew instant access and the ability to load furniture directly through the cargo doors.",
+      "Staging in the Central Business District or tight New Orleans neighborhoods means you cannot rely on sprawling trailer setups. We drop the unit flat on the ground giving your crew instant access without blocking sidewalks with trailer stairs.",
     localClimateSpecs:
-      "New Orleans heat and humidity demand serious insulation. The 2-inch closed-cell spray foam and 12,000 BTU LG mini-split provide total temperature control. Inside, the four LED ceiling lights and eighteen interior outlets keep your team productive in a clean, mold-resistant PVC environment.",
-    localHighways: "I-10, US-90, and the Tchoupitoulas logistics corridor.",
+      "New Orleans heat and humidity demand serious insulation. The 2 inch closed cell spray foam and 12,000 BTU LG mini split provide total temperature control while the mold resistant PVC interiors keep your team productive.",
+    localHighways: "Interstate 10 US Highway 90 and the Tchoupitoulas logistics corridor",
     faqs: [
       {
         question: "Can these units be placed on uneven New Orleans pavement?",
         answer:
-          "Yes, as long as the surface is relatively firm and flat. The rigid steel frame allows it to sit flush on asphalt or dirt without the complex blocking required by mobile trailers.",
+          "Yes as long as the surface is relatively firm. The rigid steel frame allows it to sit flush on asphalt or dirt without the complex blocking required by mobile trailers.",
       },
       {
-        question: "How many outlets are inside for our computers and gear?",
+        question: "How do we get power to the unit on a tight lot?",
         answer:
-          "The office is heavily wired with eighteen standard interior outlets, ensuring you have plenty of power for desks, servers, and battery chargers.",
+          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
       },
       {
-        question: "Are the windows safe from break-ins?",
+        question: "Are the windows safe from urban vandalism?",
         answer:
-          "Both 42-inch by 30-inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8368 (1).JPEG",
@@ -829,6 +829,39 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8627.JPEG",
+  },
+  {
+    slug: "port-allen-la",
+    city: "Port Allen",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Port Allen, LA",
+    heroSub:
+      "Ground level mobile offices for West Baton Rouge Parish port operations and industrial staging.",
+    localIndustryFocus:
+      "Port Allen serves as a major hub for Mississippi River logistics and heavy manufacturing. Standard office trailers cause bottlenecks on active port yards and agricultural staging sites. We provide commercial grade steel office containers built from one trip shipping containers giving your safety managers a highly secure footprint.",
+    localDeliveryLogistics:
+      "We dispatch straight to your West Baton Rouge jobsite or port facility. By dropping the workspace flat on the ground your crew gets immediate access without the safety hazards of trailer stairs.",
+    localClimateSpecs:
+      "Every unit features 2 inch closed cell spray foam and moisture resistant PVC panels. The 12,000 BTU LG mini split ensures stable interior conditions that combat intense river humidity and industrial heat.",
+    localHighways: "Interstate 10 and Louisiana Highway 1",
+    faqs: [
+      {
+        question: "How do I hook up power at a port site?",
+        answer:
+          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the eighteen interior outlets and AC.",
+      },
+      {
+        question: "Are the windows secure from jobsite vandalism?",
+        answer:
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+      {
+        question: "Can we place this on unpaved dirt?",
+        answer:
+          "Yes. The rigid steel frame allows the container to sit flush on compacted dirt or gravel without the need for complex blocking.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8950.JPEG",
   },
   {
     slug: "garyville-la",
@@ -1709,7 +1742,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Turnkey mobile workspaces delivered to Thibodaux commercial developments and Bayou industrial sites.",
     localIndustryFocus:
-      "As Thibodaux expands its commercial footprint contractors need fast reliable staging solutions. Standard rental trailers take a beating during heavy construction. We supply highly professional steel office containers that provide your management team with a secure secure footprint for the duration of the build.",
+      "As Thibodaux expands its commercial footprint contractors need fast reliable staging solutions. Standard rental trailers take a beating during heavy construction. We supply highly professional steel office containers that provide your management team with a secure footprint for the duration of the build.",
     localDeliveryLogistics:
       "Navigating commercial developments requires precision. Our trucks place the container directly on the ground giving your crew step free access and eliminating the large footprint required by traditional trailer ramps.",
     localClimateSpecs:
@@ -1766,6 +1799,39 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
+  },
+  {
+    slug: "new-iberia-la",
+    city: "New Iberia",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in New Iberia, LA",
+    heroSub:
+      "Heavy duty mobile offices for Iberia Parish fabrication yards and offshore marine staging.",
+    localIndustryFocus:
+      "The Port of Iberia and surrounding fabrication yards demand rugged site infrastructure. Traditional trailers degrade quickly in heavy manufacturing zones. We supply secure steel framed offices built from one trip shipping containers providing your engineers with a climate stable environment.",
+    localDeliveryLogistics:
+      "We streamline delivery directly to your New Iberia fabrication yard or commercial site. Our trucks drop your container office flat on the dirt bypassing the need for skirting so your team can get straight to work.",
+    localClimateSpecs:
+      "To handle the intense Acadiana heat and coastal humidity these units are lined with smooth PVC panels that resist mold. Combined with 2 inch spray foam and an LG heat pump your remote office remains highly comfortable.",
+    localHighways: "US Highway 90 and Louisiana Highway 14",
+    faqs: [
+      {
+        question: "Can we load heavy manufacturing equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment directly into the workspace.",
+      },
+      {
+        question: "What is required to power the office?",
+        answer:
+          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and eighteen interior outlets.",
+      },
+      {
+        question: "Is the entry door safe from break ins?",
+        answer:
+          "The container features a solid 36 inch steel man door equipped with a heavy duty deadbolt to keep your assets secure overnight.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8952.JPEG",
   },
   {
     slug: "lafayette-la",
