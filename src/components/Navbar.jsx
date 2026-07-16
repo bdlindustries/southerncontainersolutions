@@ -13,6 +13,7 @@ export default function Navbar() {
     { path: '/raw', label: 'Raw Containers' },
     { path: '/rentals', label: 'Rentals' },
     { path: '/custom-builds', label: 'Custom Builds' },
+    { path: '/locations', label: 'Service Areas' },
   ];
 
   const secondaryLinks = [
@@ -20,6 +21,9 @@ export default function Navbar() {
     { path: '/about', label: 'About' },
     { path: '/resources', label: 'Resources' },
   ];
+
+  const isLinkActive = (path) =>
+    pathname === path || pathname.startsWith(`${path}/`);
 
   return (
     <>
@@ -52,7 +56,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`transition-colors pb-1 border-b-2 ${pathname === link.path ? 'text-slate-950 border-amber-500' : 'border-transparent hover:text-slate-950'}`}
+                className={`transition-colors pb-1 border-b-2 ${isLinkActive(link.path) ? 'text-slate-950 border-amber-500' : 'border-transparent hover:text-slate-950'}`}
               >
                 {link.label}
               </Link>

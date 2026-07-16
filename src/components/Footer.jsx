@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Lock } from "lucide-react";
-import { serviceAreas, getServiceAreaHref } from "@/lib/data/serviceAreas";
 
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
           <div className="flex flex-col mb-6">
             <h2 className="text-2xl font-black text-white tracking-tighter leading-none m-0">SOUTHERN</h2>
@@ -25,22 +24,7 @@ export default function Footer() {
             <li><Link href="/rentals" className="hover:text-amber-500 transition-colors">Rentals</Link></li>
             <li><Link href="/custom-builds" className="hover:text-amber-500 transition-colors">Custom Builds</Link></li>
             <li><Link href="/delivery" className="hover:text-amber-500 transition-colors">Delivery Info</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Service Areas</h4>
-          <ul className="space-y-3 text-sm font-medium">
-            {serviceAreas.map((area) => (
-              <li key={area.slug}>
-                <Link
-                  href={getServiceAreaHref(area)}
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  {area.city}, {area.state}
-                </Link>
-              </li>
-            ))}
+            <li><Link href="/locations" className="hover:text-amber-500 transition-colors">Service Areas</Link></li>
           </ul>
         </div>
 

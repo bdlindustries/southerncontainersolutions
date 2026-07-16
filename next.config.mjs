@@ -2,13 +2,25 @@
 const nextConfig = {
   async redirects() {
     return [
+      // www → apex (non-www), all paths
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.southerncontainersolutions.com',
+          },
+        ],
+        destination: 'https://southerncontainersolutions.com/:path*',
+        permanent: true,
+      },
+
+      // Legacy lead / info URLs → shop
       {
         source: '/home',
         destination: '/shop',
         permanent: true,
       },
-
-      // Legacy lead / info URLs → shop
       {
         source: '/contact',
         destination: '/shop',
@@ -45,94 +57,29 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Mississippi Gulf Coast city landing pages
+      // Legacy service-areas hub → locations hub
       {
-        source: '/service-areas/gulfport-ms',
-        destination: '/gulfport-ms',
-        permanent: true,
-      },
-      {
-        source: '/service-areas/pascagoula-ms',
-        destination: '/pascagoula-ms',
-        permanent: true,
-      },
-      {
-        source: '/locations/gulfport-ms.html',
-        destination: '/gulfport-ms',
-        permanent: true,
-      },
-      {
-        source: '/locations/pascagoula-ms.html',
-        destination: '/pascagoula-ms',
-        permanent: true,
-      },
-      {
-        source: '/locations/gulfport-ms',
-        destination: '/gulfport-ms',
-        permanent: true,
-      },
-      {
-        source: '/locations/pascagoula-ms',
-        destination: '/pascagoula-ms',
+        source: '/service-areas',
+        destination: '/locations',
         permanent: true,
       },
 
-      // Alabama & Louisiana Gulf Coast city landing pages
+      // Legacy /service-areas/:path* → clean /locations/:path*
       {
-        source: '/service-areas/mobile-al',
-        destination: '/mobile-al',
-        permanent: true,
-      },
-      {
-        source: '/service-areas/morgan-city-la',
-        destination: '/morgan-city-la',
-        permanent: true,
-      },
-      {
-        source: '/service-areas/geismar-la',
-        destination: '/geismar-la',
-        permanent: true,
-      },
-      {
-        source: '/locations/mobile-al.html',
-        destination: '/mobile-al',
-        permanent: true,
-      },
-      {
-        source: '/locations/morgan-city-la.html',
-        destination: '/morgan-city-la',
-        permanent: true,
-      },
-      {
-        source: '/locations/geismar-la.html',
-        destination: '/geismar-la',
-        permanent: true,
-      },
-      {
-        source: '/locations/mobile-al',
-        destination: '/mobile-al',
-        permanent: true,
-      },
-      {
-        source: '/locations/morgan-city-la',
-        destination: '/morgan-city-la',
-        permanent: true,
-      },
-      {
-        source: '/locations/geismar-la',
-        destination: '/geismar-la',
+        source: '/service-areas/:path*',
+        destination: '/locations/:path*',
         permanent: true,
       },
 
-      // Old static location landing pages → shop
+      // Legacy static .html location pages → clean /locations/:path*
       {
-        source: '/locations/:slug.html',
-        destination: '/shop',
+        source: '/locations/:path*.html',
+        destination: '/locations/:path*',
         permanent: true,
       },
       {
-        source: '/locations/:slug',
-        destination: '/shop',
+        source: '/service-areas/:path*.html',
+        destination: '/locations/:path*',
         permanent: true,
       },
     ];
