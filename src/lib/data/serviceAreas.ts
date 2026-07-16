@@ -27,6 +27,19 @@ export const serviceAreas: ServiceArea[] = [
     image: "/images/jobsite-office-container.png",
   },
   {
+    slug: "slidell-la",
+    city: "Slidell",
+    state: "LA",
+    h1: "Commercial Jobsite Office Containers in Slidell, LA",
+    hook:
+      "Supporting Northshore commercial construction, maritime contractors, and I-10 logistics hubs with turnkey, ground-level mobile offices.",
+    industryFocus:
+      "As a major commercial and logistics crossroads for the Northshore, Slidell projects demand fast, reliable mobilization. Standard trailers create safety hazards and require time-consuming setups. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for commercial and industrial use. Keep your project managers, blueprints, and IT gear protected in a fully insulated, climate-controlled workspace that sits securely on the ground without the need for stairs or anchoring.",
+    logistics:
+      "Operating right out of Covington, we offer unmatched local response times to St. Tammany Parish. We dispatch our winch-loaded trucks straight down I-12 to your Slidell jobsite, dropping your workspace flat on the dirt or gravel so your crew can plug in and get to work safely and immediately.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
     slug: "beaumont-tx",
     city: "Beaumont",
     state: "TX",
@@ -52,6 +65,19 @@ export const serviceAreas: ServiceArea[] = [
       "As a critical piece of the Golden Triangle, Orange is home to massive marine fabrication and chemical manufacturing. Staging a project here requires rugged site infrastructure that can handle heavy industrial wear and Gulf Coast weather. Traditional wheeled trailers create safety risks and logistical headaches on unpaved or crowded yards. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers. Protect your engineering teams and blueprints in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
     logistics:
       "We run directly down I-10 to service the Golden Triangle. Our specialized winch-loaded trucks drop your office container flat on the dirt or gravel exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "nederland-tx",
+    city: "Nederland",
+    state: "TX",
+    h1: "Commercial Jobsite Office Containers in Nederland, TX",
+    hook:
+      "Supplying Golden Triangle midstream terminals, refineries, and heavy industrial contractors with secure, ground-level mobile offices.",
+    industryFocus:
+      "Nederland is a major hub for pipeline terminals and petrochemical storage. Staging capital projects in these high-traffic, heavy industrial zones requires rugged site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded terminal sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+    logistics:
+      "We run our specialized winch-loaded trucks straight down the I-10 corridor to the Golden Triangle. We drop your ground-level office exactly where you need it on your Nederland jobsite—ready for immediate power and completely bypassing the need for vulnerable blocking or skirting.",
     image: "/images/jobsite-office-container.png",
   },
   {
