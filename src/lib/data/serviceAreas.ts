@@ -17,7 +17,7 @@ export type ServiceArea = {
   localClimateSpecs: string;
   localHighways: string;
   faqs: ServiceAreaFaq[];
-  image?: string;
+  heroImage: string;
   imageAlt?: string;
   /** Top-level route when different from /service-areas/[slug] */
   routePath?: string;
@@ -60,7 +60,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. They are built from one-trip shipping containers and include a 36-inch steel man door with a deadbolt, plus heavy-duty steel security bars over both sliding windows.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/123.png",
   },
   {
     slug: "slidell-la",
@@ -93,7 +93,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "We install a dedicated 12,000 BTU LG mini-split heat pump backed by 2-inch closed-cell spray foam insulation to maintain total climate control in extreme coastal humidity.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1042.JPEG",
   },
   {
     slug: "mandeville-la",
@@ -126,7 +126,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes, the original heavy-duty cargo doors remain fully operational, allowing you to easily load desks, large printers, and filing cabinets.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1047.JPEG",
   },
   {
     slug: "metairie-la",
@@ -159,7 +159,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes, the 12,000 BTU LG mini-split operates on standard 220v power, and the unit features a dedicated 100-amp breaker panel for easy connection to your site's temporary power pole.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
   },
   {
     slug: "kenner-la",
@@ -192,7 +192,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes, you can bypass the 36-inch man door and use the fully operational rear cargo doors to easily load oversized industrial equipment.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8362 (2).JPEG",
   },
   {
     slug: "new-orleans-la",
@@ -225,7 +225,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Both 42-inch by 30-inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8368 (1).JPEG",
   },
   {
     slug: "hammond-la",
@@ -258,7 +258,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "No. The container sits flat on the ground, providing an immediate, trip-free entrance through the steel man door.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8620.JPEG",
   },
   {
     slug: "beaumont-tx",
@@ -291,7 +291,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8624 (1).JPEG",
   },
   {
     slug: "orange-tx",
@@ -324,7 +324,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8627.JPEG",
   },
   {
     slug: "nederland-tx",
@@ -357,7 +357,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8628 (1).JPEG",
   },
   {
     slug: "port-arthur-tx",
@@ -390,7 +390,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "The container features a solid 36 inch steel man door equipped with a heavy duty deadbolt to keep your assets secure overnight.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8629.JPEG",
   },
   {
     slug: "freeport-tx",
@@ -398,14 +398,65 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Freeport, TX",
     heroSub:
-      "Providing heavy-duty, marine-grade mobile offices for LNG export terminals, deepwater port logistics, and major chemical plant expansions.",
+      "Providing heavy duty mobile offices for LNG export terminals deepwater port logistics and chemical plant expansions.",
     localIndustryFocus:
-      "Staging near massive operations like Freeport LNG and the Dow Chemical complex requires infrastructure that can handle intense coastal and industrial environments. High winds and corrosive conditions quickly destroy standard office trailers. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Keep your site managers, safety coordinators, and technical gear secure in a fully fortified, climate-ready steel structure that completely bypasses OSHA trip hazards.",
+      "Staging near massive operations like Freeport LNG and the local chemical complexes requires infrastructure that can handle intense coastal environments. High winds and corrosive conditions quickly destroy standard office trailers. We deliver heavy duty commercial grade office containers built for the harsh realities of the Texas coast.",
     localDeliveryLogistics:
-      "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it on your port staging area or chemical plant gate, providing quick deployment so your crew can plug in and get straight to work.",
+      "We streamline delivery directly to your Freeport port staging area or chemical plant gate. Our trucks place the container directly on the ground giving your crew step free access and eliminating the large footprint required by traditional trailer ramps.",
     localClimateSpecs:
-      "Every Freeport unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for coastal salt air, LNG terminal wind exposure, and extreme Texas Gulf humidity. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Freeport command centers. From summer heat advisories to sudden Gulf rain events, your Freeport, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Freeport unit ships with 2 inch closed cell spray foam and commercial PVC wall systems sized for coastal salt air and extreme Texas Gulf humidity. The LG mini split handles heavy cooling demands keeping your project management team comfortable.",
+    localHighways: "Texas State Highway 288 and Texas State Highway 36",
+    faqs: [
+      {
+        question: "Do these containers hold up against Freeport coastal weather?",
+        answer:
+          "Yes. Built from one trip shipping containers they provide a rigid weather resistant steel shell that easily outperforms traditional fiberglass trailers.",
+      },
+      {
+        question: "How do we get power to the unit on a remote coastal site?",
+        answer:
+          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+      },
+      {
+        question: "Are the interior walls resistant to coastal humidity?",
+        answer:
+          "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8630 (2).JPEG",
+  },
+  {
+    slug: "galveston-tx",
+    city: "Galveston",
+    state: "TX",
+    heroHeadline: "Commercial Jobsite Office Containers in Galveston, TX",
+    heroSub:
+      "Turnkey ground level mobile offices delivered to Galveston maritime jobsites and commercial projects.",
+    localIndustryFocus:
+      "We deliver commercial grade climate controlled container offices built for Galveston coastal contractors. Staging maritime projects requires rugged infrastructure that can survive intense salt air and heavy industrial wear. Protect your logistics managers and blueprints in a fully insulated steel container office built specifically for tough shipyard and port footprints.",
+    localDeliveryLogistics:
+      "We dispatch with winch loaded trucks dropping your office container flat on the ground at your Galveston jobsite. This ground level design ensures fast deployment and provides a safe trip free entrance for your crew during busy shift changes.",
+    localClimateSpecs:
+      "Our units combat extreme coastal moisture and weather exposure with 2 inch spray foam insulation and a dedicated 12,000 BTU heat pump. The smooth PVC interiors are incredibly easy to clean after heavy boots track through the port yard.",
+    localHighways: "Interstate 45 and Texas State Highway 87",
+    faqs: [
+      {
+        question: "Can we load heavy marine equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment directly into the workspace.",
+      },
+      {
+        question: "How do we power the office at the port?",
+        answer:
+          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+      },
+      {
+        question: "Will the exterior lighting turn on automatically?",
+        answer:
+          "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning or night shifts.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8631.JPEG",
   },
   {
     slug: "houston-tx",
@@ -438,7 +489,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture and mold.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8950.JPEG",
   },
   {
     slug: "corpus-christi-tx",
@@ -446,14 +497,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Corpus Christi, TX",
     heroSub:
-      "Supporting the Port of Corpus Christi, heavy crude export terminals, and coastal refinery expansions with secure, ground-level mobile offices.",
+      "Supporting heavy crude export terminals and coastal refinery expansions with secure ground level mobile offices.",
     localIndustryFocus:
-      "When you are managing massive energy exports and coastal refinery operations, you need workspaces that withstand extreme coastal conditions. Standard trailers degrade and cause safety hazards in high winds. We deliver heavy-duty 20' and 40' commercial-grade office containers built for the harsh realities of the Texas coast. Provide your site managers and engineers with a secure, climate-controlled, steel-enforced workspace without the hassle of stairs or skirting.",
+      "When you are managing massive energy exports and coastal refinery operations you need workspaces that withstand extreme coastal conditions. Standard trailers degrade and cause safety hazards in high winds. We deliver heavy duty steel enforced workspaces without the hassle of stairs or skirting to keep your engineers secure and productive.",
     localDeliveryLogistics:
-      "We deliver straight to your coastal jobsite. Our winch-loaded trucks drop your ground-level office directly onto the dirt, gravel, or concrete of your port or refinery staging area, ready for immediate use.",
+      "We deliver straight to your Corpus Christi coastal jobsite. Our winch loaded trucks drop your ground level office directly onto the dirt or gravel of your port or refinery staging area ready for immediate use.",
     localClimateSpecs:
-      "Every Corpus Christi unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for coastal export terminal salt exposure and South Texas heat advisories. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Corpus Christi command centers. From summer heat advisories to sudden Gulf rain events, your Corpus Christi, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every unit ships with 2 inch closed cell spray foam and mini split HVAC sized for coastal export terminal salt exposure and South Texas heat advisories. We seal the unit to ensure your Corpus Christi office maintains stable interior conditions.",
+    localHighways: "Interstate 37 and US Highway 181",
+    faqs: [
+      {
+        question: "How much site preparation is needed in Corpus Christi?",
+        answer:
+          "Because our units sit flat on the ground no stairs or skirting are required. You just need a relatively firm surface like gravel or asphalt on your jobsite.",
+      },
+      {
+        question: "How do I hook up power at a remote terminal site?",
+        answer:
+          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+      },
+      {
+        question: "Are the windows secure from jobsite vandalism?",
+        answer:
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8952.JPEG",
   },
   {
     slug: "victoria-tx",
@@ -468,7 +537,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We dispatch our specialized winch-loaded trucks directly to your Victoria plant gate or commercial site. Your ground-level office is dropped exactly where you need it on dirt, gravel, or asphalt, eliminating the need for complex setups so your team can get straight to work.",
     localClimateSpecs:
       "Every Victoria unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for inland Texas heat with Gulf humidity pushing dew points on long-shift manufacturing sites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Victoria command centers. From summer heat advisories to sudden Gulf rain events, your Victoria, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8955.JPEG",
   },
   {
     slug: "brownsville-tx",
@@ -483,7 +552,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We dispatch straight to the South Texas coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Brownsville jobsite, ready for immediate power and bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Brownsville unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for South Texas coastal winds, salt exposure, and extreme border-region heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Brownsville command centers. From summer heat advisories to sudden Gulf rain events, your Brownsville, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8956.JPEG",
   },
   {
     slug: "baytown-tx",
@@ -491,14 +560,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Baytown, TX",
     heroSub:
-      "Supplying the massive chemical complexes and Houston Ship Channel contractors with heavy-duty, climate-controlled mobile workspaces.",
+      "Supplying massive chemical complexes and Houston Ship Channel contractors with heavy duty mobile workspaces.",
     localIndustryFocus:
-      "Staging greenfield projects and plant turnarounds in Baytown requires robust site infrastructure. Standard wheeled trailers create logistical headaches on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace.",
+      "Staging greenfield projects and plant turnarounds in Baytown requires robust site infrastructure. Standard wheeled trailers create logistical headaches on crowded industrial sites. We provide heavy duty steel framed office containers built strictly for chemical plant use keeping your foremen and IT gear protected in a fully insulated workspace.",
     localDeliveryLogistics:
-      "We streamline delivery to the Baytown industrial sector. Our dispatch uses specialized winch-loaded trucks to drop your container office exactly where you need it, skipping the red tape of blocking and complex setup so your team can get straight to work.",
+      "We streamline delivery to the Baytown industrial sector. Our dispatch uses specialized heavy transport trucks to drop your container office exactly where you need it skipping the red tape of complex setup so your team can get straight to work.",
     localClimateSpecs:
-      "Every Baytown unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for refinery corridor heat and chemical plant humidity along the Ship Channel. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Baytown command centers. From summer heat advisories to sudden Gulf rain events, your Baytown, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Baytown unit ships with 2 inch closed cell spray foam and moisture resistant PVC wall panels sized for refinery corridor heat and chemical plant humidity. The LG mini split HVAC maintains comfortable conditions for your crew through a full turnaround schedule.",
+    localHighways: "Interstate 10 and Texas State Highway 146",
+    faqs: [
+      {
+        question: "Are these containers structurally sound for a chemical plant?",
+        answer:
+          "Yes. They are constructed from heavy duty one trip shipping containers providing a rigid steel frame that easily handles tough industrial environments.",
+      },
+      {
+        question: "How do we get power to the unit?",
+        answer:
+          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+      },
+      {
+        question: "Is the AC unit protected against power surges?",
+        answer:
+          "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable site power.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8958.JPEG",
   },
   {
     slug: "pasadena-tx",
@@ -506,14 +593,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Pasadena, TX",
     heroSub:
-      "Supporting the Houston Ship Channel's massive petrochemical complexes and heavy industrial contractors with secure, ground-level mobile offices.",
+      "Ground level mobile offices supporting Houston Ship Channel petrochemical complexes and heavy industrial contractors.",
     localIndustryFocus:
-      "Pasadena is a critical hub for the Gulf Coast's chemical and refining industries. Staging a major turnaround or greenfield project here requires rugged, reliable site infrastructure. Standard office trailers cause logistical headaches and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+      "Pasadena is a critical hub for the chemical and refining industries along the Gulf Coast. Staging a major turnaround or greenfield project here requires rugged reliable site infrastructure. Standard office trailers cause logistical headaches and create trip hazards on crowded industrial sites. We supply commercial grade steel office containers designed specifically for heavy petrochemical footprints to keep your project managers and blueprints protected.",
     localDeliveryLogistics:
-      "We dispatch straight down I-10 to the Houston Ship Channel region. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Pasadena jobsite, ready for immediate power and bypassing the need for blocking or skirting.",
+      "We dispatch straight down the interstate to the Houston Ship Channel region. Our specialized winch loaded trucks drop your ground level office exactly where you need it on your Pasadena jobsite ready for immediate power and bypassing the need for blocking or skirting.",
     localClimateSpecs:
-      "Every Pasadena unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for petrochemical yard heat and humidity on crowded Pasadena turnaround pads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Pasadena command centers. From summer heat advisories to sudden Gulf rain events, your Pasadena, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every unit ships with 2 inch closed cell spray foam and commercial PVC wall systems to combat heavy petrochemical yard heat and humidity. The 12,000 BTU LG mini split ensures stable interior conditions that uninsulated rental trailers simply cannot hold.",
+    localHighways: "Interstate 10 and Texas State Highway 225",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Pasadena?",
+        answer:
+          "Because our units sit flat on the ground no stairs or skirting are required. You just need a relatively firm surface like gravel or asphalt on your Pasadena jobsite.",
+      },
+      {
+        question: "How do I power the office container?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets and AC.",
+      },
+      {
+        question: "Are these containers secure on Pasadena jobsites?",
+        answer:
+          "Yes. They are built from one trip shipping containers and include a 36 inch steel man door with a deadbolt plus heavy duty steel security bars over both sliding windows.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/123.png",
   },
   {
     slug: "deer-park-tx",
@@ -528,7 +633,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We streamline delivery directly to the Texas petrochemical corridor. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your plant gate or construction staging site, providing quick deployment so your crew can plug in and get straight to work.",
     localClimateSpecs:
       "Every Deer Park unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for refinery-sector heat loads and humidity trapped on active turnaround sites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Deer Park command centers. From summer heat advisories to sudden Gulf rain events, your Deer Park, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1042.JPEG",
   },
   {
     slug: "laporte-tx",
@@ -543,7 +648,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We streamline delivery directly to the Texas coast. Our dispatch uses specialized winch-loaded trucks to drop your container office directly onto your port staging area or plant gate, providing quick deployment so your crew can plug in and get straight to work.",
     localClimateSpecs:
       "Every LaPorte unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Barbours Cut terminal salt air mixed with Ship Channel industrial humidity. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on LaPorte command centers. From summer heat advisories to sudden Gulf rain events, your LaPorte, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1047.JPEG",
   },
   {
     slug: "channelview-tx",
@@ -558,7 +663,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We streamline delivery directly down I-10 to your Channelview site. Our specialized winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
     localClimateSpecs:
       "Every Channelview unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for San Jacinto River humidity and marine-industrial heat on barge terminal jobsites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Channelview command centers. From summer heat advisories to sudden Gulf rain events, your Channelview, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
   },
   {
     slug: "lake-charles-la",
@@ -591,7 +696,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture and mold.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8362 (2).JPEG",
   },
   {
     slug: "sulphur-la",
@@ -624,7 +729,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8368 (1).JPEG",
   },
   {
     slug: "cameron-la",
@@ -657,7 +762,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8620.JPEG",
   },
   {
     slug: "port-fourchon-la",
@@ -690,7 +795,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning or night shifts.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8624 (1).JPEG",
   },
   {
     slug: "baton-rouge-la",
@@ -723,7 +828,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "There is one 36-inch steel man door for daily personnel access, plus the original cargo doors at the rear for moving large equipment.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8627.JPEG",
   },
   {
     slug: "garyville-la",
@@ -756,7 +861,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes, the steel security bars, deadbolted man door, and heavy-duty cargo doors make it an excellent dual-purpose secure storage and climate-controlled workspace.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8628 (1).JPEG",
   },
   {
     slug: "reserve-la",
@@ -789,7 +894,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes, both 42-inch by 30-inch windows are fully operational sliding windows, allowing for ventilation while still being protected by the exterior steel security bars.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8629.JPEG",
   },
   {
     slug: "plaquemine-la",
@@ -822,7 +927,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows to protect your assets.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8630 (2).JPEG",
   },
   {
     slug: "luling-boutte-la",
@@ -855,7 +960,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. With a 100 amp breaker panel handling the power load, you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8631.JPEG",
   },
   {
     slug: "st-rose-la",
@@ -888,7 +993,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning shifts or night operations.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8950.JPEG",
   },
   {
     slug: "convent-la",
@@ -921,7 +1026,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable temporary site power.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8952.JPEG",
   },
   {
     slug: "gonzales-la",
@@ -954,7 +1059,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8955.JPEG",
   },
   {
     slug: "prairieville-la",
@@ -987,7 +1092,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8956.JPEG",
   },
   {
     slug: "denham-springs-la",
@@ -1020,7 +1125,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8958.JPEG",
   },
   {
     slug: "laplace-la",
@@ -1053,7 +1158,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "The container features a solid 36 inch steel man door equipped with a heavy duty deadbolt to keep your assets secure overnight.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/123.png",
   },
   {
     slug: "jackson-ms",
@@ -1068,7 +1173,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We handle routing and delivery into Jackson and surrounding parishes, with ground-level placement so your crew can walk straight in with no stairs, no trailer hitches.",
     localClimateSpecs:
       "Every Jackson unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Central Mississippi heat indexes and humidity on infrastructure mega-projects. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Jackson command centers. From summer heat advisories to sudden Gulf rain events, your Jackson, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1042.JPEG",
   },
   {
     slug: "columbus-ms",
@@ -1083,7 +1188,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "Our logistics team schedules winch-truck and tilt-bed delivery into Columbus and regional jobsites, placing units flat on the ground where your superintendent directs.",
     localClimateSpecs:
       "Every Columbus unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Golden Triangle Mississippi heat and humidity on manufacturing expansions. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Columbus command centers. From summer heat advisories to sudden Gulf rain events, your Columbus, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1047.JPEG",
   },
   {
     slug: "monroe-la",
@@ -1116,7 +1221,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. They are built from one trip shipping containers and include a 36 inch steel man door with a deadbolt plus heavy duty steel security bars.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
   },
   {
     slug: "alexandria-la",
@@ -1149,7 +1254,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8362 (2).JPEG",
   },
   {
     slug: "shreveport-la",
@@ -1182,7 +1287,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows to protect your assets.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8368 (1).JPEG",
   },
   {
     slug: "ruston-la",
@@ -1215,7 +1320,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8620.JPEG",
   },
   {
     slug: "caddo-la",
@@ -1248,7 +1353,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning shifts or night operations.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8624 (1).JPEG",
   },
   {
     slug: "holly-ridge-la",
@@ -1281,7 +1386,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable temporary site power.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8627.JPEG",
   },
   {
     slug: "st-francisville-la",
@@ -1314,39 +1419,75 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "No. The combination of 2 inch closed cell spray foam and moisture resistant PVC panels prevents interior condensation and mold buildup.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8628 (1).JPEG",
   },
   {
     slug: "gulfport-ms",
     city: "Gulfport",
     state: "MS",
     routePath: "/gulfport-ms",
-    heroHeadline: "Custom Shipping Container Offices & Modifications in Gulfport, MS",
+    heroHeadline: "Commercial Jobsite Office Containers in Gulfport, MS",
     heroSub:
-      "Building and modifying heavy-duty container offices for Gulfport contractors, port-adjacent projects, and commercial jobsites across the Mississippi Gulf Coast.",
+      "Building heavy duty container offices for Gulfport contractors port adjacent projects and commercial jobsites.",
     localIndustryFocus:
-      "Gulfport, MS demands workspace solutions that survive coastal humidity, hurricane-season winds, and active commercial construction schedules. Southern Container Solutions designs custom shipping container offices and modifications, from added windows and door placements to electrical upgrades and climate-controlled interiors, for project managers who need more than a cookie cutter trailer. Our 20' and 40' steel-framed units are built for commercial durability, transparent pricing, and fast deployment to Gulfport, Biloxi corridor, and Harrison County jobsites.",
+      "Gulfport demands workspace solutions that survive coastal humidity and active commercial construction schedules. We deliver custom built steel framed units for project managers who need more than a cookie cutter trailer. Protect your foremen in a ground level office built for commercial durability.",
     localDeliveryLogistics:
-      "We dispatch from our Covington, Louisiana fabrication yard straight down I-10 into Gulfport and the Mississippi Gulf Coast. Winch-loaded trucks place your modified container office ground-level on dirt, gravel, or concrete with no stairs, no skirting, and no complicated blocking required.",
+      "We dispatch straight down the interstate into Gulfport and the Mississippi Gulf Coast. Winch loaded trucks place your container office ground level on dirt or concrete with no stairs and no complicated blocking required.",
     localClimateSpecs:
-      "Every Gulfport unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Harrison County coastal humidity, salt air, and hurricane-season wind loads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Gulfport command centers. From summer heat advisories to sudden Gulf rain events, your Gulfport, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Gulfport unit ships with 2 inch closed cell spray foam commercial PVC wall systems and mini split HVAC sized for Harrison County coastal humidity and salt air. Your office stays completely climate controlled through a full capital project schedule.",
+    localHighways: "Interstate 10 and US Highway 49",
+    faqs: [
+      {
+        question: "Are these containers structurally sound for port operations?",
+        answer:
+          "Yes. They are constructed from heavy duty one trip shipping containers providing a rigid steel frame that easily handles tough industrial environments.",
+      },
+      {
+        question: "How do we connect power at a new commercial build?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+      },
+      {
+        question: "Are the windows functional for fresh air?",
+        answer:
+          "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8629.JPEG",
   },
   {
     slug: "pascagoula-ms",
     city: "Pascagoula",
     state: "MS",
     routePath: "/pascagoula-ms",
-    heroHeadline: "Custom Shipping Container Offices & Modifications in Pascagoula, MS",
+    heroHeadline: "Commercial Jobsite Office Containers in Pascagoula, MS",
     heroSub:
-      "Turnkey container office builds and custom modifications for Pascagoula shipyard contractors, industrial turnarounds, and Jackson County construction sites.",
+      "Turnkey container office builds for Pascagoula shipyard contractors industrial turnarounds and Jackson County jobsites.",
     localIndustryFocus:
-      "Pascagoula, MS is one of the Gulf South's most demanding industrial environments. Shipbuilding schedules, refinery turnarounds, and heavy contractor mobilization leave no room for flimsy mobile trailers. Southern Container Solutions delivers custom shipping container offices and modifications engineered for the realities of Pascagoula jobsites: secure steel construction, spray-foam insulation, commercial-grade finishes, and layout changes tailored to your crew. Whether you need a climate-controlled command center or a modified 40' office with custom door and window placement, we build it in Louisiana and deliver it ready to work.",
+      "Pascagoula is one of the Gulf Souths most demanding industrial environments. Shipbuilding schedules and heavy contractor mobilization leave no room for flimsy mobile trailers. We deliver shipping container offices engineered for the realities of shipyard jobsites keeping your engineering teams in a fully insulated steel structure.",
     localDeliveryLogistics:
-      "Our logistics team runs dedicated freight from Covington into Pascagoula and Jackson County via I-10. Specialized winch trucks drop your container office exactly where your superintendent directs, flat on the ground at the shipyard gate, staging yard, or industrial pad, so your team can connect power and get to work the same day.",
+      "Our logistics team runs dedicated freight directly into Jackson County. Specialized winch trucks drop your container office exactly where your superintendent directs flat on the ground at the shipyard gate so your team can get to work the same day.",
     localClimateSpecs:
-      "Every Pascagoula unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Jackson County shipyard salt air and turnaround humidity. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Pascagoula command centers. From summer heat advisories to sudden Gulf rain events, your Pascagoula, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Pascagoula unit ships with 2 inch closed cell spray foam and commercial PVC wall systems sized for shipyard salt air and turnaround humidity. We seal the unit to ensure crew comfort and protect networking gear.",
+    localHighways: "Interstate 10 and US Highway 90",
+    faqs: [
+      {
+        question: "Is the insulation thick enough to block out shipyard noise?",
+        answer:
+          "Yes. The 2 inch closed cell spray foam insulation provides excellent sound reduction creating a quiet workspace for your project managers.",
+      },
+      {
+        question: "How do we power the office at the shipyard?",
+        answer:
+          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+      },
+      {
+        question: "Will the exterior lighting turn on automatically?",
+        answer:
+          "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning or night shifts.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8630 (2).JPEG",
   },
   {
     slug: "biloxi-ms",
@@ -1354,14 +1495,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "MS",
     heroHeadline: "Commercial Jobsite Office Containers in Biloxi, MS",
     heroSub:
-      "Providing secure, ground-level mobile offices for coastal commercial development, hospitality infrastructure projects, and maritime logistics.",
+      "Providing secure ground level mobile offices for coastal commercial development and hospitality infrastructure projects.",
     localIndustryFocus:
-      "When staging large-scale commercial developments or casino infrastructure along the Mississippi Gulf Coast, you need workspaces that withstand the coastal elements. Standard office trailers degrade quickly in high humidity and high winds, creating safety hazards on active sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically to handle tough coastal footprints. Keep your project managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
+      "When staging large scale commercial developments or hospitality infrastructure along the Mississippi Gulf Coast you need workspaces that withstand the coastal elements. Standard office trailers degrade quickly in high humidity creating safety hazards on active sites. We deliver commercial grade steel office containers designed specifically to handle tough coastal footprints.",
     localDeliveryLogistics:
-      "We dispatch straight from our yard across the state line to the Mississippi Gulf Coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Biloxi jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
+      "We dispatch straight across to the Mississippi Gulf Coast. Our specialized winch loaded trucks drop your ground level office exactly where you need it on your Biloxi jobsite ready for immediate power and bypassing the need for skirting.",
     localClimateSpecs:
-      "Every Biloxi unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for coastal casino-corridor humidity and Gulf wind exposure. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Biloxi command centers. From summer heat advisories to sudden Gulf rain events, your Biloxi, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Biloxi unit ships with 2 inch closed cell spray foam and commercial PVC wall systems. The 12,000 BTU LG mini split ensures stable interior conditions that uninsulated rental trailers cannot hold combating coastal casino corridor humidity.",
+    localHighways: "Interstate 10 and Interstate 110",
+    faqs: [
+      {
+        question: "What is required to power the office in Biloxi?",
+        answer:
+          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+      },
+      {
+        question: "How do we keep the inside clean on a dusty site?",
+        answer:
+          "The interior is finished with smooth PVC panels. Unlike drywall you can simply wipe the walls and ceiling clean of any construction dust.",
+      },
+      {
+        question: "Is the entry door durable enough for heavy daily use?",
+        answer:
+          "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8631.JPEG",
   },
   {
     slug: "bay-st-louis-ms",
@@ -1369,30 +1528,66 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "MS",
     heroHeadline: "Commercial Jobsite Office Containers in Bay St. Louis, MS",
     heroSub:
-      "Supplying Port Bienville industrial contractors, aerospace logistics, and coastal developers with heavy-duty, climate-controlled mobile offices.",
+      "Supplying Port Bienville industrial contractors aerospace logistics and coastal developers with heavy duty mobile offices.",
     localIndustryFocus:
-      "Bay St. Louis and the surrounding Hancock County area are critical zones for heavy industrial manufacturing and aerospace staging. Standard mobile trailers are prone to damage and require complex setups that slow down mobilization. We provide heavy-duty 20' and 40' container offices built strictly for commercial and industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+      "Bay St. Louis and the surrounding Hancock County area are critical zones for heavy industrial manufacturing and aerospace staging. Standard mobile trailers are prone to damage and require complex setups. We provide heavy duty container offices built strictly for commercial and industrial use providing your management team with a secure secure footprint.",
     localDeliveryLogistics:
-      "Located just a short drive down I-10, we offer fast, direct logistics to Hancock County. We dispatch our winch-loaded trucks straight to your plant gate, port staging area, or commercial site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+      "We offer fast direct logistics to Hancock County. We dispatch our winch loaded trucks straight to your plant gate or port staging area dropping your workspace flat on the dirt so your crew can plug in and get to work safely.",
     localClimateSpecs:
-      "Every Bay St. Louis unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Hancock County coastal humidity and aerospace staging heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Bay St. Louis command centers. From summer heat advisories to sudden Gulf rain events, your Bay St. Louis, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "We install 2 inch closed cell spray foam to provide excellent temperature control against Hancock County coastal humidity and aerospace staging heat. The 12,000 BTU LG mini split keeps your computers and servers online regardless of the brutal summer heat.",
+    localHighways: "Interstate 10 and US Highway 90",
+    faqs: [
+      {
+        question: "Can we place this on unpaved dirt at our site?",
+        answer:
+          "Yes. The rigid steel frame allows the container to sit flush on compacted dirt or gravel without the need for complex blocking.",
+      },
+      {
+        question: "How many electrical outlets are inside?",
+        answer:
+          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+      },
+      {
+        question: "Do we have to run a dedicated power pole?",
+        answer:
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8950.JPEG",
   },
   {
     slug: "mobile-al",
     city: "Mobile",
     state: "AL",
     routePath: "/mobile-al",
-    heroHeadline: "Custom Shipping Container Offices & Modifications in Mobile, AL",
+    heroHeadline: "Commercial Jobsite Office Containers in Mobile, AL",
     heroSub:
-      "Heavy-duty container offices and custom modifications for Mobile maritime contractors, port operations, shipbuilding yards, and coastal industrial jobsites along the Gulf.",
+      "Heavy duty container offices for Mobile maritime contractors port operations shipbuilding yards and coastal industrial sites.",
     localIndustryFocus:
-      "Mobile, AL sits at the heart of Gulf Coast maritime commerce, from the Port of Mobile and APM Terminals to active shipbuilding and coastal industrial construction. Project managers staging waterfront work need offices that handle salt air, heavy equipment traffic, and tight mobilization windows. Southern Container Solutions builds custom shipping container offices and modifications for Mobile's maritime and industrial sector: climate-controlled interiors, secure steel construction, custom door and window layouts, and electrical upgrades spec'd for port-adjacent and shipyard jobsites. Our 20' and 40' units replace flimsy trailers with ground-level workspaces built for Alabama's coastal industrial reality.",
+      "Mobile sits at the heart of Gulf Coast maritime commerce. Project managers staging waterfront work need offices that handle salt air heavy equipment traffic and tight mobilization windows. Our units replace flimsy trailers with ground level workspaces built for Alabamas coastal industrial reality protecting your crew and blueprints.",
     localDeliveryLogistics:
-      "We run dedicated delivery from our Covington, Louisiana yard into Mobile and the Alabama Gulf Coast via I-10. Winch-loaded trucks drop your modified container office ground-level at the port gate, shipyard staging area, or coastal jobsite on dirt, gravel, or asphalt, with no stairs, skirting, or complex setup required.",
+      "We run dedicated delivery directly into Mobile and the Alabama Gulf Coast. Winch loaded trucks drop your office ground level at the port gate shipyard staging area or coastal jobsite with no stairs or complex setup required.",
     localClimateSpecs:
-      "Every Mobile unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Mobile Bay salt air and port-adjacent humidity on waterfront jobsites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Mobile command centers. From summer heat advisories to sudden Gulf rain events, your Mobile, AL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+      "Every Mobile unit ships with 2 inch closed cell spray foam commercial PVC wall systems and mini split HVAC sized for Mobile Bay salt air and port adjacent humidity. From summer heat to sudden Gulf rain events your office remains stable and fully climate controlled.",
+    localHighways: "Interstate 10 and Interstate 65",
+    faqs: [
+      {
+        question: "Can we load heavy marine equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment or gear directly into the workspace.",
+      },
+      {
+        question: "How do we get power to the unit on a waterfront site?",
+        answer:
+          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+      },
+      {
+        question: "Are the interior walls resistant to coastal humidity?",
+        answer:
+          "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture.",
+      },
+    ],
+    heroImage: "/City-Pages-Pics/IMG_8952.JPEG",
   },
   {
     slug: "theodore-al",
@@ -1407,7 +1602,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We run straight down I-10 to the Alabama coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Theodore jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Theodore unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Theodore Industrial Canal humidity and Alabama Gulf heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Theodore command centers. From summer heat advisories to sudden Gulf rain events, your Theodore, AL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8955.JPEG",
   },
   {
     slug: "pensacola-fl",
@@ -1422,7 +1617,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We push efficiently along the I-10 corridor into the Florida Panhandle. We dispatch our winch-loaded trucks straight to your commercial site, aerospace facility, or port staging area, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
     localClimateSpecs:
       "Every Pensacola unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Florida Panhandle humidity, coastal winds, and defense-sector heat loads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Pensacola command centers. From summer heat advisories to sudden Gulf rain events, your Pensacola, FL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8956.JPEG",
   },
   {
     slug: "panama-city-fl",
@@ -1437,7 +1632,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       "We run our specialized winch-loaded trucks along the I-10 corridor directly into the Florida Panhandle. We drop your ground-level office exactly where you need it on your Panama City jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Panama City unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for hurricane-prone Panhandle humidity and Tyndall corridor heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Panama City command centers. From summer heat advisories to sudden Gulf rain events, your Panama City, FL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8958.JPEG",
   },
   {
     slug: "morgan-city-la",
@@ -1471,7 +1666,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable site power.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/123.png",
   },
   {
     slug: "houma-la",
@@ -1504,7 +1699,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1042.JPEG",
   },
   {
     slug: "thibodaux-la",
@@ -1537,7 +1732,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "You can tie into a permanent power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1047.JPEG",
   },
   {
     slug: "bogalusa-la",
@@ -1570,7 +1765,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
   },
   {
     slug: "lafayette-la",
@@ -1603,7 +1798,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Because our units sit flat on the ground you just need a relatively firm surface like gravel or asphalt on your jobsite.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8362 (2).JPEG",
   },
   {
     slug: "geismar-la",
@@ -1637,7 +1832,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "No. The combination of 2 inch closed cell spray foam and moisture resistant PVC panels prevents interior condensation and mold buildup.",
       },
     ],
-    image: "/images/jobsite-office-container.png",
+    heroImage: "/City-Pages-Pics/IMG_8368 (1).JPEG",
   },
 ];
 

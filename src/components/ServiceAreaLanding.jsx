@@ -5,7 +5,6 @@ import { STANDARD_OFFICE_CONTAINER_SPECS } from "@/lib/serviceAreaDefaults";
 
 export default function ServiceAreaLanding({ area }) {
   const imageAlt = getImageAlt(area.city, area.state);
-  const heroImage = area.image ?? "/images/jobsite-office-container.png";
 
   return (
     <div className="min-h-screen bg-slate-50 animate-in fade-in duration-300">
@@ -29,7 +28,7 @@ export default function ServiceAreaLanding({ area }) {
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-20 space-y-12">
         <figure className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
           <img
-            src={heroImage}
+            src={area.heroImage}
             alt={imageAlt}
             className="w-full h-auto object-cover"
           />
