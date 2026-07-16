@@ -17,8 +17,8 @@ export async function generateMetadata({ params }) {
   const canonicalPath = area.routePath ?? `/service-areas/${area.slug}`;
 
   return {
-    title: `${area.h1} | Southern Container Solutions`,
-    description: area.hook,
+    title: `${area.heroHeadline} | Southern Container Solutions`,
+    description: area.heroSub,
     alternates: {
       canonical: `https://www.southerncontainersolutions.com${canonicalPath}`,
     },

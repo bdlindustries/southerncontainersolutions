@@ -20,8 +20,8 @@ export async function generateMetadata({ params }) {
   const canonicalSlug = normalizeLocationSlug(area.slug);
 
   return {
-    title: `${area.h1} | Southern Container Solutions`,
-    description: area.hook,
+    title: `${area.heroHeadline} | Southern Container Solutions`,
+    description: area.heroSub,
     alternates: {
       canonical: `https://southerncontainersolutions.com/locations/${canonicalSlug}`,
     },

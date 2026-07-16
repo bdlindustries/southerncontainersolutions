@@ -1,16 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, MapPin, Truck, PackageOpen, Thermometer, Shield } from "lucide-react";
-import {
-  getClimateControlContent,
-  getImageAlt,
-  getLocalDeliveryContent,
-  getStateDisplayName,
-} from "@/lib/serviceAreaLocalSeo";
+import { ArrowRight, MapPin, PackageOpen } from "lucide-react";
+import { getImageAlt } from "@/lib/serviceAreaLocalSeo";
 
 export default function ServiceAreaLanding({ area }) {
-  const localDeliveryContent = getLocalDeliveryContent(area);
-  const climateControlContent = getClimateControlContent(area.city, area.state);
-  const stateName = getStateDisplayName(area.state);
   const imageAlt = getImageAlt(area.city, area.state);
   const heroImage = area.image ?? "/images/jobsite-office-container.png";
 
@@ -25,10 +17,10 @@ export default function ServiceAreaLanding({ area }) {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 max-w-4xl">
-            {area.h1}
+            {area.heroHeadline}
           </h1>
           <p className="text-xl text-slate-300 font-medium max-w-3xl leading-relaxed">
-            {area.hook}
+            {area.heroSub}
           </p>
         </div>
       </header>
@@ -43,78 +35,39 @@ export default function ServiceAreaLanding({ area }) {
         </figure>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
-          <div className="flex items-center gap-2 mb-4">
-            <Shield className="w-5 h-5 text-amber-500" />
-            <h2 className="text-sm font-black text-amber-600 uppercase tracking-widest">
-              Built for Your Jobsite
-            </h2>
-          </div>
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
-            {area.industryFocus}
-          </p>
-          <p className="text-slate-600 text-base leading-relaxed mt-6">
-            Browse{" "}
-            <Link href="/shop" className="text-amber-600 font-bold hover:text-amber-700">
-              turnkey container offices
-            </Link>{" "}
-            with transparent pricing, or start a{" "}
-            <Link href="/custom-builds" className="text-amber-600 font-bold hover:text-amber-700">
-              custom build
-            </Link>{" "}
-            engineered for {area.city} petrochemical, maritime, and mega-project requirements.
+            {area.localIndustryFocus}
           </p>
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
-          <div className="flex items-center gap-2 mb-4">
-            <Truck className="w-5 h-5 text-amber-500" />
-            <h2 className="text-sm font-black text-slate-950 uppercase tracking-widest">
-              Local Delivery &amp; Logistics in {area.city}
-            </h2>
-          </div>
-          <div className="text-slate-700 text-lg leading-relaxed space-y-6">
-            {localDeliveryContent.split("\n\n").map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-            ))}
-          </div>
+          <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
+            {area.localDeliveryLogistics}
+          </p>
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
-          <div className="flex items-center gap-2 mb-4">
-            <Thermometer className="w-5 h-5 text-amber-500" />
-            <h2 className="text-sm font-black text-slate-950 uppercase tracking-widest">
-              Climate Control Specs for {stateName} Weather
-            </h2>
-          </div>
-          <div className="text-slate-700 text-lg leading-relaxed space-y-6">
-            {climateControlContent.split("\n\n").map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-            ))}
-          </div>
-          <p className="text-slate-600 text-base leading-relaxed mt-6">
-            Learn more about moisture management in our{" "}
+          <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
+            {area.localClimateSpecs}
+          </p>
+        </section>
+
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
+          <div className="flex-1 flex flex-col gap-3">
             <Link
-              href="/resources/container-condensation"
-              className="text-amber-600 font-bold hover:text-amber-700"
+              href="/shop"
+              className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-lg font-black transition-colors"
             >
-              container condensation guide
-            </Link>{" "}
-            and{" "}
-            <Link href="/resources/site-prep-delivery" className="text-amber-600 font-bold hover:text-amber-700">
-              site prep for delivery
+              <PackageOpen className="w-5 h-5" />
+              View Available Units
             </Link>
-            .
-          </p>
-        </section>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/shop"
-            className="flex-1 inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-lg font-black transition-colors"
-          >
-            <PackageOpen className="w-5 h-5" />
-            View Available Units
-          </Link>
+            <Link
+              href="/rentals"
+              className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-slate-600 hover:text-amber-600 border border-slate-300 hover:border-amber-400 px-6 py-2.5 rounded-lg transition-colors"
+            >
+              Need it short-term? Explore our Rental Fleet →
+            </Link>
+          </div>
           <Link
             href="/delivery"
             className="flex-1 inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-black transition-colors"

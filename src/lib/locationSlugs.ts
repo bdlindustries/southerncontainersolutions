@@ -3,6 +3,7 @@ import {
   getServiceAreaBySlug,
   type ServiceArea,
 } from "@/lib/data/serviceAreas";
+import { buildClimateSpecs } from "@/lib/serviceAreaClimate";
 
 /** Legacy static location pages from the previous site (public/locations/*.html). */
 export const LEGACY_LOCATION_SLUGS = [
@@ -69,14 +70,6 @@ const SLUG_ALIASES: Record<string, string> = {
   "st.-francisville-la": "st-francisville-la",
 };
 
-const STATE_NAMES: Record<string, string> = {
-  LA: "Louisiana",
-  TX: "Texas",
-  MS: "Mississippi",
-  AL: "Alabama",
-  FL: "Florida",
-};
-
 function capitalize(word: string): string {
   if (!word) return word;
   return word.charAt(0).toUpperCase() + word.slice(1);
@@ -124,16 +117,16 @@ function createLegacyServiceArea(slug: string): ServiceArea | null {
   if (!parsed) return null;
 
   const { city, state } = parsed;
-  const stateName = STATE_NAMES[state] ?? state;
 
   return {
     slug,
     city,
     state,
-    h1: `Commercial Jobsite Office Containers in ${city}, ${state}`,
-    hook: `Turnkey 20' and 40' ground-level mobile offices delivered to ${city}, ${state} jobsites and commercial projects.`,
-    industryFocus: `Southern Container Solutions delivers commercial-grade, climate-controlled container offices built for demanding ${stateName} jobsites. Our 20' and 40' steel-framed units provide secure, ground-level workspace for project managers, engineers, and crews without the OSHA trip hazards of traditional trailers.`,
-    logistics: `We dispatch from our Covington, Louisiana yard with winch-loaded trucks, dropping your office container ground-level at your ${city} jobsite on dirt, gravel, or asphalt—ready for power connection.`,
+    heroHeadline: `Commercial Jobsite Office Containers in ${city}, ${state}`,
+    heroSub: `Turnkey 20' and 40' ground-level mobile offices delivered to ${city}, ${state} jobsites and commercial projects.`,
+    localIndustryFocus: `Southern Container Solutions delivers commercial-grade, climate-controlled container offices built for ${city}, ${state} contractors. Our 20' and 40' steel-framed units provide secure, ground-level workspace for project managers, engineers, and crews without the OSHA trip hazards of traditional trailers on active ${city} industrial sites.`,
+    localDeliveryLogistics: `We dispatch from our Covington, Louisiana yard with winch-loaded trucks, dropping your office container ground-level at your ${city} jobsite on dirt, gravel, or asphalt—ready for power connection without blocking packages or trailer stair towers.`,
+    localClimateSpecs: buildClimateSpecs(city, state, slug),
     image: "/images/jobsite-office-container.png",
   };
 }
