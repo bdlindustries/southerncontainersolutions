@@ -29,7 +29,7 @@ export default function ProductImageGallery({ images = [], title = "Product" }) 
       <div className="relative">
         <img
           src={urls[safeIndex]}
-          alt={`${title} — photo ${safeIndex + 1} of ${urls.length}`}
+          alt={`${title}, photo ${safeIndex + 1} of ${urls.length}`}
           className="w-full h-auto rounded-xl border border-slate-200"
           referrerPolicy="no-referrer"
         />

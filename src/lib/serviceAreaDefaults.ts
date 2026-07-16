@@ -16,7 +16,7 @@ export function buildDefaultFaqs(city: string, state: string): ServiceAreaFaq[] 
     {
       question: "How do I power the office container?",
       answer:
-        "The container features a 20-amp exterior outlet. Simply run a heavy-duty extension cord or have your site electrician hardwire it, and the eighteen interior outlets, LED lights, and 12,000 BTU AC will be ready to go.",
+        "The unit includes a 100-amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets, LED lights, and 12,000 BTU AC.",
     },
     {
       question: `Are these containers secure on ${city} jobsites?`,
@@ -33,7 +33,7 @@ export const STANDARD_OFFICE_CONTAINER_SPECS = [
   "4 interior LED lights",
   "1 exterior photocell light",
   "18 interior outlets",
-  "1 20-amp exterior outlet",
+  "100-amp breaker panel",
   'two 42"x30" sliding windows with steel security bars',
   '36" steel man door with deadbolt',
 ] as const;

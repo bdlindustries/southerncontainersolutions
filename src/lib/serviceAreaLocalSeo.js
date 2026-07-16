@@ -208,10 +208,10 @@ const STATE_CLIMATE = {
       "2-inch closed-cell spray foam insulation rated for Louisiana's extreme humidity and sustained 95°F+ summer heat indexes",
       "Commercial-grade PVC interior wall systems that resist mold, moisture intrusion, and condensation common on Louisiana jobsites",
       "Corten steel exteriors and reinforced door frames spec'd for Gulf Coast storm exposure and industrial yard traffic",
-      "HVAC sizing calibrated for dehumidification during Louisiana's wet season—keeping blueprints, servers, and crew comfortable year-round",
+      "HVAC sizing calibrated for dehumidification during Louisiana's wet season, keeping blueprints, servers, and crew comfortable year-round",
     ],
     closing:
-      "From Baton Rouge chemical corridors to coastal shipyards, our container offices maintain stable interior temperatures when Louisiana weather swings from torrential rain to blistering heat—without the condensation failures that ruin equipment in standard trailers.",
+      "From Baton Rouge chemical corridors to coastal shipyards, our container offices maintain stable interior temperatures when Louisiana weather swings from torrential rain to blistering heat, without the condensation failures that ruin equipment in standard trailers.",
   },
   TX: {
     headline:
@@ -279,8 +279,8 @@ export function getLocalDeliveryContent(area) {
 
   return [
     logistics,
-    `Southern Container Solutions coordinates local delivery and logistics in ${city} for contractors managing ${industryPhrase}. Our Covington, Louisiana fabrication yard dispatches winch-loaded and tilt-bed trucks directly to your plant gate, refinery turnaround pad, port staging area, or unpaved industrial yard—wherever your mega-project needs a ground-level command center without trailer stairs, skirting, or complex blocking.`,
-    `For ${city} procurement teams, we provide transparent freight quotes and realistic delivery windows tied to your mobilization schedule. We routinely serve ${stateName} petrochemical, maritime, and heavy construction accounts that cannot wait on rental-trailer backlogs or multi-day setup crews. Your 20' or 40' containerized office arrives ready for power connection: steel-framed, climate-controlled, and positioned exactly where your superintendent directs—on dirt, gravel, asphalt, or compacted pad.`,
+    `Southern Container Solutions coordinates local delivery and logistics in ${city} for contractors managing ${industryPhrase}. Our Covington, Louisiana fabrication yard dispatches winch-loaded and tilt-bed trucks directly to your plant gate, refinery turnaround pad, port staging area, or unpaved industrial yard, wherever your mega-project needs a ground-level command center without trailer stairs, skirting, or complex blocking.`,
+    `For ${city} procurement teams, we provide transparent freight quotes and realistic delivery windows tied to your mobilization schedule. We routinely serve ${stateName} petrochemical, maritime, and heavy construction accounts that cannot wait on rental trailer backlogs or multi day setup crews. Your 20' or 40' containerized office arrives ready for power connection: steel-framed, climate-controlled, and positioned exactly where your superintendent directs on dirt, gravel, asphalt, or compacted pad.`,
     `Our ${city} delivery playbook is built for industrial buyers: confirm site access and overhead clearance, coordinate drop timing with turnaround or construction milestones, and place the unit flat on the ground so crews can walk in at grade level. That ground-level advantage matters on ${stateName} petrochemical and maritime jobsites where trailer stairs create OSHA exposure and slow down daily foot traffic between the yard and the command center.`,
     `Need staging for a turnaround, LNG expansion, or Ship Channel logistics hub? Request a delivery quote and we will confirm routing, site access requirements, and drop placement for your ${city}, ${state} jobsite.`,
   ].join("\n\n");
@@ -291,11 +291,11 @@ export function getClimateControlContent(city, state) {
   const climate = STATE_CLIMATE[state] ?? STATE_CLIMATE.LA;
 
   return [
-    `${stateName} jobsites demand more than a basic portable office. Our container offices are engineered for ${climate.headline}—the conditions that destroy standard mobile trailers on active ${city} industrial and commercial projects.`,
+    `${stateName} jobsites demand more than a basic portable office. Our container offices are engineered for ${climate.headline}, the conditions that destroy standard mobile trailers on active ${city} industrial and commercial projects.`,
     ...climate.specs.map((spec) => spec),
     climate.closing,
     `Every unit we deliver to ${city}, ${state} includes commercial-grade climate control spec'd for Gulf South industrial duty: insulated walls, sealed openings, and HVAC appropriate for continuous use by engineers, safety managers, and project teams running ${stateName} mega-projects around the clock.`,
-    `Compared to uninsulated trailers, our closed-cell spray foam and commercial interior spec reduce condensation risk on ${city} jobsites—protecting paper records, networking gear, and employee comfort when ${stateName} weather shifts fast. That is why petrochemical, maritime, and EPC contractors across the Gulf South specify containerized offices instead of short-term rental trailers for multi-month turnarounds and capital projects.`,
+    `Compared to uninsulated trailers, our closed-cell spray foam and commercial interior spec reduce condensation risk on ${city} jobsites, protecting paper records, networking gear, and employee comfort when ${stateName} weather shifts fast. That is why petrochemical, maritime, and EPC contractors across the Gulf South specify containerized offices instead of short term rental trailers for multi month turnarounds and capital projects.`,
   ].join("\n\n");
 }
 

@@ -52,7 +52,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I power the office container?",
         answer:
-          "The container features a 20-amp exterior outlet. Simply run a heavy-duty extension cord or have your site electrician hardwire it, and the eighteen interior outlets, LED lights, and 12,000 BTU AC will be ready to go.",
+          "The unit includes a 100-amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets, LED lights, and 12,000 BTU AC.",
       },
       {
         question: "Are these containers secure against Northshore jobsite theft?",
@@ -118,7 +118,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How fast can I get my team working inside?",
         answer:
-          "Almost immediately. Once we drop the unit flat on your site, you just plug into the 20-amp exterior outlet, and the climate control and eighteen interior outlets are instantly active.",
+          "Almost immediately. Once we drop the unit flat on your site, tie your temporary power into the provided 100-amp breaker panel, and the climate control and eighteen interior outlets are instantly active.",
       },
       {
         question: "Can I load furniture through the back doors?",
@@ -138,7 +138,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Metairie renovations and commercial builds rarely have extra space. Our office containers give growing businesses and construction crews a fully finished workspace that fits perfectly in cramped urban lots. The two 42-inch by 30-inch sliding windows are protected by steel security bars, giving you a secure remote operations center.",
     localDeliveryLogistics:
-      "We drop your office flat on the pavement in your Metairie staging zone. The ground-level design eliminates trip hazards, and the 20-amp exterior outlet gives your crew immediate access to power right outside the unit.",
+      "We drop your office flat on the pavement in your Metairie staging zone. The ground-level design eliminates trip hazards, and the provided 100-amp breaker panel allows your electrician to quickly tie into your site's temporary power pole.",
     localClimateSpecs:
       "The asphalt heat in Metairie requires aggressive cooling. Our units feature a 12,000 BTU LG mini-split and 2-inch spray foam insulation to maintain excellent temperature control, while the smooth PVC interior walls make it easy to wipe down the daily construction dust.",
     localHighways: "I-10, Causeway Blvd, and Veterans Memorial Blvd.",
@@ -156,7 +156,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Does the AC run on standard power?",
         answer:
-          "Yes, the 12,000 BTU LG mini-split operates on standard power, and the unit features a dedicated exterior 20-amp plug for easy connection to your site's temporary power pole.",
+          "Yes, the 12,000 BTU LG mini-split operates on standard 220v power, and the unit features a dedicated 100-amp breaker panel for easy connection to your site's temporary power pole.",
       },
     ],
     image: "/images/jobsite-office-container.png",
@@ -302,7 +302,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Nederland is a major hub for pipeline terminals and petrochemical storage. Staging capital projects in these high-traffic, heavy industrial zones requires rugged site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded terminal sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
     localDeliveryLogistics:
-      "We run our specialized winch-loaded trucks straight down the I-10 corridor to the Golden Triangle. We drop your ground-level office exactly where you need it on your Nederland jobsite—ready for immediate power and completely bypassing the need for vulnerable blocking or skirting.",
+      "We run our specialized winch-loaded trucks straight down the I-10 corridor to the Golden Triangle. We drop your ground-level office exactly where you need it on your Nederland jobsite, ready for immediate power and completely bypassing the need for vulnerable blocking or skirting.",
     localClimateSpecs:
       "Every Nederland unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for terminal corridor humidity and heat radiating off midstream pipeline and storage infrastructure. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Nederland command centers. From summer heat advisories to sudden Gulf rain events, your Nederland, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -364,7 +364,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "As a crucial inland crossroads supporting the Texas Gulf Coast, Victoria's manufacturing and logistics sectors demand fast and reliable site mobilization. Standard mobile trailers are prone to damage and slow to deploy. We provide heavy-duty 20' and 40' container offices built strictly for heavy commercial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
     localDeliveryLogistics:
-      "We dispatch our specialized winch-loaded trucks directly to your Victoria plant gate or commercial site. Your ground-level office is dropped exactly where you need it—on dirt, gravel, or asphalt—eliminating the need for complex setups so your team can get straight to work.",
+      "We dispatch our specialized winch-loaded trucks directly to your Victoria plant gate or commercial site. Your ground-level office is dropped exactly where you need it on dirt, gravel, or asphalt, eliminating the need for complex setups so your team can get straight to work.",
     localClimateSpecs:
       "Every Victoria unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for inland Texas heat with Gulf humidity pushing dew points on long-shift manufacturing sites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Victoria command centers. From summer heat advisories to sudden Gulf rain events, your Victoria, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -379,7 +379,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "With massive LNG expansions and aerospace infrastructure driving the Brownsville economy, contractors need rugged site infrastructure that can handle the extreme South Texas coastal environment. Traditional trailers sink, degrade, and become liabilities in high winds. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for heavy industrial and port footprints. Keep your engineering teams and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
     localDeliveryLogistics:
-      "We dispatch straight to the South Texas coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Brownsville jobsite—ready for immediate power and bypassing the need for blocking or skirting.",
+      "We dispatch straight to the South Texas coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Brownsville jobsite, ready for immediate power and bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Brownsville unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for South Texas coastal winds, salt exposure, and extreme border-region heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Brownsville command centers. From summer heat advisories to sudden Gulf rain events, your Brownsville, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -409,7 +409,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Pasadena is a critical hub for the Gulf Coast's chemical and refining industries. Staging a major turnaround or greenfield project here requires rugged, reliable site infrastructure. Standard office trailers cause logistical headaches and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
     localDeliveryLogistics:
-      "We dispatch straight down I-10 to the Houston Ship Channel region. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Pasadena jobsite—ready for immediate power and bypassing the need for blocking or skirting.",
+      "We dispatch straight down I-10 to the Houston Ship Channel region. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Pasadena jobsite, ready for immediate power and bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Pasadena unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for petrochemical yard heat and humidity on crowded Pasadena turnaround pads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Pasadena command centers. From summer heat advisories to sudden Gulf rain events, your Pasadena, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -465,13 +465,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Lake Charles, LA",
     heroSub:
-      "Providing heavy-duty, weatherproof mobile offices for LNG export terminal expansions, port infrastructure, and petrochemical turnarounds across Calcasieu Parish.",
+      "Heavy duty mobile offices supplied for LNG export terminal expansions and port infrastructure.",
     localIndustryFocus:
-      "With billions of dollars flowing into Calcasieu Parish projects like Woodside LNG and Venture Global, out-of-state modular trailer companies can't keep up with demand or the rough terrain. We provide heavy-duty, commercial-grade 20' and 40' office containers designed for the realities of the Gulf Coast. Built to withstand extreme weather and heavy industrial use, our ground-level offices offer secure staging for project managers, foremen, and engineers on active refinery and port jobsites.",
+      "With massive capital flowing into Calcasieu Parish LNG projects contractors need highly durable site infrastructure. Out of state modular trailer companies cannot keep up with the rough terrain. We supply commercial grade steel office containers designed specifically to protect engineers and IT gear on active port jobsites.",
     localDeliveryLogistics:
-      "We deliver directly to the mud and gravel of your industrial site. Using specialized winch-loaded trucks, our dispatch ensures your office container is dropped flat on the ground exactly where you need it, bypassing the need for blocking, skirting, or complex setup.",
+      "We dispatch directly to the mud and gravel of your Lake Charles industrial site. Our trucks ensure your office is dropped flat on the ground bypassing the need for skirting or complex setup.",
     localClimateSpecs:
-      "Every Lake Charles unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Calcasieu Parish humidity, LNG corridor winds, and Gulf rain events. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Lake Charles command centers. From summer heat advisories to sudden Gulf rain events, your Lake Charles, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch closed cell spray foam to combat intense coastal moisture and high winds. The 12,000 BTU LG mini split handles the heavy cooling demands keeping your project management team comfortable.",
+    localHighways: "Interstate 10 and Interstate 210",
+    faqs: [
+      {
+        question: "Do these containers hold up against Lake Charles coastal weather?",
+        answer:
+          "Yes. They are built from one trip shipping containers providing a rigid weather resistant steel shell that outperforms traditional fiberglass trailers.",
+      },
+      {
+        question: "How do we power the office at an LNG expansion site?",
+        answer:
+          "The office is equipped with a 100 amp breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
+      },
+      {
+        question: "Are the interior walls resistant to coastal humidity?",
+        answer:
+          "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture and mold.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -484,7 +502,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Serving the heavy industrial boom tied to the Lake Charles and Sulphur region means contractors need workspaces that can handle the mud, heavy traffic, and extreme Gulf Coast weather. Traditional trailers sink, degrade, and create OSHA trip hazards. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Provide your site managers, engineers, and safety teams with a secure, climate-stable environment that sits flat on the ground.",
     localDeliveryLogistics:
-      "We dispatch our specialized winch-loaded trucks directly to your Sulphur jobsite or plant gate. Your ground-level office is dropped exactly where you need it—on dirt, gravel, or asphalt—eliminating the need for blocking, skirting, or complex setups.",
+      "We dispatch our specialized winch-loaded trucks directly to your Sulphur jobsite or plant gate. Your ground-level office is dropped exactly where you need it on dirt, gravel, or asphalt, eliminating the need for blocking, skirting, or complex setups.",
     localClimateSpecs:
       "Every Sulphur unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for industrial corridor humidity and heat across Calcasieu Parish petrochemical yards. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Sulphur command centers. From summer heat advisories to sudden Gulf rain events, your Sulphur, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -499,7 +517,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Capital Region industrial contractors and growing businesses cannot wait on slow setups. Our one-trip shipping container offices provide an immediate, fully finished workspace with eighteen standard interior outlets to power a full engineering or management team.",
     localDeliveryLogistics:
-      "We dispatch directly to your Baton Rouge plant gate or commercial lot. The unit sits flat on the dirt or asphalt, giving your crew safe, step-free entry through the steel man door and easy exterior power access via the 20-amp outlet.",
+      "We dispatch directly to your Baton Rouge plant gate or commercial lot. The unit sits flat on the dirt or asphalt, giving your crew safe, step-free entry through the steel man door and commercial-grade power capacity via the included 100-amp breaker panel.",
     localClimateSpecs:
       "The Mississippi River corridor brings extreme humidity. We combat moisture intrusion using 2-inch closed-cell spray foam and mold-resistant PVC ceiling panels. The LG mini-split AC ensures excellent temperature control during the brutal Baton Rouge summers.",
     localHighways: "I-10, I-12, and Airline Highway.",
@@ -573,7 +591,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How fast can you set up the office once it arrives in Reserve?",
         answer:
-          "Deployment is nearly instant. The truck drops the unit flat on the ground, and as soon as you plug into the 20-amp exterior outlet, the lights and AC are operational.",
+          "Deployment is nearly instant. The truck drops the unit flat on the ground, and as soon as you tie into the 100-amp breaker panel, the lights and AC are operational.",
       },
       {
         question: "Will the interior grow mold in the riverfront humidity?",
@@ -594,13 +612,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Plaquemine, LA",
     heroSub:
-      "Supplying Dow Chemical, industrial staging, and heavy contractors along the Mississippi River with turnkey mobile offices.",
+      "Turnkey mobile offices supplied to Iberville Parish chemical plants and heavy industrial contractors.",
     localIndustryFocus:
-      "Staging a project near massive operations like the Dow Chemical complex in Plaquemine requires robust site infrastructure. Standard wheeled trailers create logistical bottlenecks and safety risks on crowded industrial sites. We provide heavy-duty 20' and 40' steel-framed office containers built strictly for heavy industrial and chemical plant use. Keep your blueprints, foremen, and IT gear protected in a fully insulated, climate-controlled workspace without the OSHA trip hazards of stairs.",
+      "Staging a project near massive operations like the Dow Chemical complex in Plaquemine requires robust site infrastructure. Standard wheeled trailers create logistical bottlenecks on crowded industrial sites. We supply heavy duty steel office containers built from one trip shipping containers. Keep your blueprints and IT gear protected in a fully insulated workspace without the trip hazards of stairs.",
     localDeliveryLogistics:
-      "Located just across the lake in Covington, we offer unmatched local proximity to Iberville Parish. We dispatch our winch-loaded trucks straight to your plant gate or industrial staging area, dropping your workspace flat on the ground so your crew can plug in and get to work safely and immediately.",
+      "We dispatch our winch loaded trucks straight to your plant gate or industrial staging area. By dropping your workspace flat on the ground, your crew can bypass complex trailer setups and get to work safely and immediately.",
     localClimateSpecs:
-      "Every Plaquemine unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Iberville Parish river humidity and chemical plant heat loads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Plaquemine command centers. From summer heat advisories to sudden Gulf rain events, your Plaquemine, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch closed cell spray foam and smooth moisture resistant PVC wall systems. The 12,000 BTU LG mini split heat pump features dedicated surge protection to combat Iberville Parish river humidity and chemical plant heat loads.",
+    localHighways: "Louisiana Highway 1 and Louisiana Highway 1148",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Plaquemine?",
+        answer:
+          "Because our units sit flat on the ground, no stairs or skirting are required. You just need a relatively firm surface like gravel or compacted dirt on your jobsite.",
+      },
+      {
+        question: "How do we power the office container at the plant?",
+        answer:
+          "The office includes a 100 amp breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into this panel using a custom pigtail or a permanent line to run the eighteen interior outlets and AC.",
+      },
+      {
+        question: "Are these containers secure on Plaquemine jobsites?",
+        answer:
+          "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows to protect your assets.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -609,13 +645,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Luling and Boutte, LA",
     heroSub:
-      "Supporting St. Charles Parish chemical plants, refineries, and heavy industrial contractors with secure, ground-level mobile offices.",
+      "Secure mobile offices supporting St. Charles Parish chemical plants and heavy industrial contractors.",
     localIndustryFocus:
-      "The industrial corridor running through Luling and Boutte handles some of the heaviest chemical and refining traffic in the state. When you are managing plant turnarounds or staging capital projects, standard office trailers create safety risks and logistical bottlenecks. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers designed specifically for tough petrochemical environments. Keep your site managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
+      "The industrial corridor running through Luling and Boutte handles some of the heaviest chemical and refining traffic in the state. When you manage plant turnarounds, standard office trailers create safety risks. We supply commercial grade steel office containers designed for tough petrochemical environments to keep your site managers protected.",
     localDeliveryLogistics:
-      "Located just across the lake in Covington, we run straight down I-310 to deliver directly to your St. Charles Parish jobsite. Our winch-loaded trucks drop your office container flat on the ground exactly where you need it, skipping the hassle of blocking, tying down, or skirting.",
+      "We deliver directly to your St. Charles Parish jobsite. Our trucks drop your office container flat on the dirt exactly where you need it, skipping the hassle of blocking or tying down temporary structures.",
     localClimateSpecs:
-      "Every Luling and Boutte unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for St. Charles Parish river humidity on crowded chemical corridor jobsites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Luling and Boutte command centers. From summer heat advisories to sudden Gulf rain events, your Luling and Boutte, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "We seal door and window openings and apply 2 inch closed cell spray foam to limit condensation. The LG mini split HVAC maintains stable interior conditions that uninsulated rental trailers simply cannot hold through a full turnaround schedule.",
+    localHighways: "Interstate 310 and US Highway 90",
+    faqs: [
+      {
+        question: "Do we need a ramp to access the container office?",
+        answer:
+          "No. The container sits flat on the ground providing step free walk in access which is ideal for active chemical plant sites.",
+      },
+      {
+        question: "Is the interior easy to clean after walking through the mud?",
+        answer:
+          "Absolutely. The interior features smooth moisture resistant PVC wall and ceiling panels that are incredibly easy to wipe down and clean.",
+      },
+      {
+        question: "Can this handle a full engineering team?",
+        answer:
+          "Yes. With a 100 amp breaker panel handling the power load, you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -624,13 +678,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in St. Rose, LA",
     heroSub:
-      "Supplying bulk liquid terminals, Mississippi River industrial staging, and petrochemical contractors with secure, ground-level mobile offices.",
+      "Ground level mobile offices supplied to bulk liquid terminals and Mississippi River industrial staging sites.",
     localIndustryFocus:
-      "St. Rose is anchored by massive riverfront operations like the IMTT bulk terminal. Staging a project in these high-traffic, heavy industrial zones requires rugged site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded terminal sites. We provide heavy-duty 20' and 40' steel-framed office containers built specifically for heavy petrochemical footprints. Protect your foremen, safety managers, and vital technical infrastructure in a fully fortified, climate-ready steel structure that sits securely on the ground.",
+      "St. Rose is anchored by massive riverfront operations and bulk terminals. Staging a project in these heavy industrial zones requires rugged infrastructure. Protect your safety managers and vital technical equipment in a fully climate controlled steel structure built from a one trip shipping container.",
     localDeliveryLogistics:
-      "Located just across the lake in Covington, we offer fast, direct logistics to St. Charles Parish. We dispatch our winch-loaded trucks straight to your terminal gate or industrial staging area, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+      "We offer fast direct logistics to St. Charles Parish. We dispatch straight to your terminal gate or staging area and drop the container flat on the ground so your team has instant access through the 36 inch steel man door.",
     localClimateSpecs:
-      "Every St. Rose unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for river terminal humidity and heat on IMTT-adjacent staging areas. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on St. Rose command centers. From summer heat advisories to sudden Gulf rain events, your St. Rose, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "The extreme moisture near the river terminals demands excellent temperature control. Your office is outfitted with 2 inch spray foam insulation and a 12,000 BTU heat pump to ensure your networking gear stays dry and cool.",
+    localHighways: "Airline Highway and River Road",
+    faqs: [
+      {
+        question: "How do I hook up power at a remote St. Rose terminal site?",
+        answer:
+          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+      },
+      {
+        question: "Can we load heavy equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment or furniture.",
+      },
+      {
+        question: "Will the exterior lighting turn on automatically?",
+        answer:
+          "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning shifts or night operations.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -639,13 +711,163 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Convent, LA",
     heroSub:
-      "Supplying turnkey, ground-level mobile offices for Mississippi River refinery turnarounds and industrial staging throughout St. James Parish.",
+      "Turnkey mobile offices supporting Mississippi River refinery turnarounds and St. James Parish industrial staging.",
     localIndustryFocus:
-      "Convent is anchored by massive refining and terminal operations along the Mississippi River. Staging contractors for facility expansions here requires heavy-duty site infrastructure. Traditional wheeled trailers sink in the mud and require complex setups that waste time. We provide fortified 20' and 40' container offices built strictly for heavy industrial use. Protect your foremen, safety managers, and vital technical infrastructure in a fully climate-ready steel structure that sits securely on the ground.",
+      "Convent is dominated by major refining and terminal operations. Contractors handling facility expansions here need reliable site infrastructure. Traditional trailers sink in the mud and waste time during setup. We supply heavy duty container offices that provide immediate secure workspace for your foremen.",
     localDeliveryLogistics:
-      "We offer fast, direct logistics to St. James Parish. We dispatch our winch-loaded trucks straight to your plant gate or construction staging site, dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+      "Our trucks navigate straight to your plant gate or construction staging site. By dropping your workspace flat on the dirt, your crew can bypass complex leveling and get straight to work.",
     localClimateSpecs:
-      "Every Convent unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for St. James Parish river humidity and refinery turnaround heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Convent command centers. From summer heat advisories to sudden Gulf rain events, your Convent, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "To combat St. James Parish river humidity and refinery heat, these offices feature 2 inch closed cell spray foam and smooth PVC walls. The 12,000 BTU LG mini split ensures excellent temperature control during intense summer heat advisories.",
+    localHighways: "Louisiana Highway 44 and Louisiana Highway 70",
+    faqs: [
+      {
+        question: "Are these containers structurally sound for a refinery turnaround?",
+        answer:
+          "Yes. They are constructed from heavy duty one trip shipping containers providing a rigid steel frame that easily handles industrial environments.",
+      },
+      {
+        question: "How much power capacity does the unit have?",
+        answer:
+          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+      },
+      {
+        question: "Is the AC unit protected against power surges?",
+        answer:
+          "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable temporary site power.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "gonzales-la",
+    city: "Gonzales",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Gonzales, LA",
+    heroSub:
+      "Ground level mobile offices supplied to Gonzales commercial builds and industrial projects.",
+    localIndustryFocus:
+      "Gonzales serves as a massive commercial and industrial hub for Ascension Parish. Project managers handling heavy dirt work and facility expansions need reliable professional workspace. We supply premium office containers built from one trip shipping containers that deliver immediate secure infrastructure.",
+    localDeliveryLogistics:
+      "We route our heavy transport trucks directly to your Gonzales jobsite. The container is dropped flat on the prepared dirt or gravel ready for immediate power connection without blocking packages or temporary stair towers.",
+    localClimateSpecs:
+      "Industrial sites in Gonzales create intense heat and dust. Our units stay clean and cool with easy to wash PVC wall panels 2 inch spray foam insulation and a powerful 12,000 BTU heat pump.",
+    localHighways: "Interstate 10 and Airline Highway",
+    faqs: [
+      {
+        question: "What is required to power the office in Gonzales?",
+        answer:
+          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+      },
+      {
+        question: "How do we keep the inside clean on a dusty site?",
+        answer:
+          "The interior is finished with smooth PVC panels. Unlike drywall you can simply wipe the walls and ceiling clean of any construction dust.",
+      },
+      {
+        question: "Is the entry door durable enough for heavy daily use?",
+        answer:
+          "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "prairieville-la",
+    city: "Prairieville",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Prairieville, LA",
+    heroSub:
+      "Turnkey mobile workspaces delivered to Prairieville commercial developments and construction sites.",
+    localIndustryFocus:
+      "As Prairieville expands its commercial footprint contractors need fast reliable staging solutions. Standard rental trailers look unprofessional and take a beating during heavy construction. We supply clean highly professional steel office containers that provide your management team with a secure secure footprint.",
+    localDeliveryLogistics:
+      "Navigating commercial developments requires precision. Our trucks place the container directly on the ground giving your crew step free access and eliminating the large footprint required by traditional trailer ramps.",
+    localClimateSpecs:
+      "We install 2 inch closed cell spray foam to provide excellent temperature control and sound reduction. The 12,000 BTU LG mini split keeps your computers and servers online regardless of the brutal summer heat.",
+    localHighways: "Airline Highway and Louisiana Highway 42",
+    faqs: [
+      {
+        question: "Can we place this on unpaved dirt at our Prairieville site?",
+        answer:
+          "Yes. The rigid steel frame allows the container to sit flush on compacted dirt or gravel without the need for complex blocking.",
+      },
+      {
+        question: "How many electrical outlets are inside?",
+        answer:
+          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+      },
+      {
+        question: "Do we have to run a dedicated power pole?",
+        answer:
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "denham-springs-la",
+    city: "Denham Springs",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Denham Springs, LA",
+    heroSub:
+      "Heavy duty mobile offices for Livingston Parish commercial builds and dirt work operations.",
+    localIndustryFocus:
+      "Contractors working the heavy dirt operations and commercial builds around Denham Springs require tough remote operations centers. We supply climate controlled container offices that provide a quiet professional environment right in the middle of active unpaved construction zones.",
+    localDeliveryLogistics:
+      "We dispatch straight to your Livingston Parish jobsite. By placing the container flat on the ground we eliminate the need for stairs and provide easy loading access for your larger equipment through the rear cargo doors.",
+    localClimateSpecs:
+      "Unpaved jobsites generate intense heat and heavy dust. Our units combat this with moisture resistant PVC wall panels 2 inch spray foam insulation and a dedicated 12,000 BTU heat pump.",
+    localHighways: "Interstate 12 and Florida Boulevard",
+    faqs: [
+      {
+        question: "Is the insulation thick enough to block out heavy machinery noise?",
+        answer:
+          "Yes. The 2 inch closed cell spray foam insulation provides excellent sound reduction creating a quiet workspace for your project managers.",
+      },
+      {
+        question: "How do we connect power at a new commercial build?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+      },
+      {
+        question: "Are the windows functional for fresh air?",
+        answer:
+          "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "laplace-la",
+    city: "LaPlace",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in LaPlace, LA",
+    heroSub:
+      "Secure ground level offices supplied to St. John the Baptist Parish industrial and riverfront yards.",
+    localIndustryFocus:
+      "LaPlace serves as a critical junction for river logistics and heavy industry. Staging projects here means dealing with heavy machinery traffic and intense weather. We provide secure steel framed workspaces built from one trip shipping containers giving your foremen a durable fully finished command center.",
+    localDeliveryLogistics:
+      "Our transport trucks drop your office container flat on your prepared pad. This ground level design ensures fast deployment and provides a safe trip free entrance for your crew during busy shift changes.",
+    localClimateSpecs:
+      "To handle the relentless river humidity these units are lined with smooth PVC panels that resist mold. Combined with 2 inch spray foam and an LG heat pump your remote office remains dry and highly comfortable year round.",
+    localHighways: "Interstate 10 and Interstate 55",
+    faqs: [
+      {
+        question: "Can we load heavy riverfront equipment into the office?",
+        answer:
+          "Yes. You can use the fully operational rear cargo doors to load oversized items directly into the workspace.",
+      },
+      {
+        question: "How do we get power to the unit?",
+        answer:
+          "Your site electrician can wire your temporary power directly into the included 100 amp breaker panel to run the AC and eighteen interior outlets.",
+      },
+      {
+        question: "Is the entry door safe from break ins?",
+        answer:
+          "The container features a solid 36 inch steel man door equipped with a heavy duty deadbolt to keep your assets secure overnight.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -656,9 +878,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Providing secure, insulated mobile offices for commercial construction, infrastructure, and industrial projects throughout the Jackson metro.",
     localIndustryFocus:
-      "Mississippi heat punishes crews and equipment alike. Our containerized offices deliver a climate-stable workspace with commercial PVC finishes, spray foam insulation, and jobsite-grade security—available in 20' and 40' footprints for project managers who need gear protected and teams productive.",
+      "Mississippi heat punishes crews and equipment alike. Our containerized offices deliver a climate-stable workspace with commercial PVC finishes, spray foam insulation, and jobsite-grade security, available in 20' and 40' footprints for project managers who need gear protected and teams productive.",
     localDeliveryLogistics:
-      "We handle routing and delivery into Jackson and surrounding parishes, with ground-level placement so your crew can walk straight in—no stairs, no trailer hitches.",
+      "We handle routing and delivery into Jackson and surrounding parishes, with ground-level placement so your crew can walk straight in with no stairs, no trailer hitches.",
     localClimateSpecs:
       "Every Jackson unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Central Mississippi heat indexes and humidity on infrastructure mega-projects. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Jackson command centers. From summer heat advisories to sudden Gulf rain events, your Jackson, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -686,7 +908,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Serving general contractors, infrastructure teams, and site managers across the Richland Parish data center projects with turnkey, ground-level mobile offices.",
     localIndustryFocus:
-      "When you are managing a multi-billion-dollar site, you don't have time for flimsy trailers that take weeks to set up. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' office containers built to handle the mud, dirt, and heavy traffic of North Louisiana jobsites. Our units sit flat on the ground—meaning no stairs, no skirting, and no OSHA trip hazards. Every unit is turnkey, secure, and ready for your crew to plug in and get to work the second it hits the dirt.",
+      "When you are managing a multi-billion-dollar site, you don't have time for flimsy trailers that take weeks to set up. Southern Container Solutions provides heavy-duty, commercial-grade 20' and 40' office containers built to handle the mud, dirt, and heavy traffic of North Louisiana jobsites. Our units sit flat on the ground, meaning no stairs, no skirting, and no OSHA trip hazards. Every unit is turnkey, secure, and ready for your crew to plug in and get to work the second it hits the dirt.",
     localDeliveryLogistics:
       "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on the Monroe or Richland Parish jobsite, even on unimproved surfaces.",
     localClimateSpecs:
@@ -701,7 +923,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Providing secure, fully insulated, climate-controlled workspaces for the AI campus expansions and heavy industrial projects throughout Rapides Parish.",
     localIndustryFocus:
-      "Louisiana heat and humidity will destroy sensitive IT equipment and blueprints. If you are staging tech infrastructure or managing large-scale civil projects in Alexandria, a standard metal box won't cut it. We build and deliver fully insulated, AC-and-heated office containers designed strictly for commercial project managers. Available in 20' and 40' footprints, these units offer a fortified, climate-stable environment for your crew, your gear, and your server racks.",
+      "Louisiana heat and humidity will destroy sensitive IT equipment and blueprints. If you are staging tech infrastructure or managing large-scale civil projects in Alexandria, a standard metal box won't cut it. We build and deliver fully insulated, AC and heated office containers designed strictly for commercial project managers. Available in 20' and 40' footprints, these units offer a fortified, climate-stable environment for your crew, your gear, and your server racks.",
     localDeliveryLogistics:
       "We handle the logistics straight up I-49. Every climate-controlled unit is delivered via winch-truck and dropped ground-level. No trailer hitches, no complicated blocking, just a secure, weatherproof office ready for power.",
     localClimateSpecs:
@@ -732,9 +954,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Building and modifying heavy-duty container offices for Gulfport contractors, port-adjacent projects, and commercial jobsites across the Mississippi Gulf Coast.",
     localIndustryFocus:
-      "Gulfport, MS demands workspace solutions that survive coastal humidity, hurricane-season winds, and active commercial construction schedules. Southern Container Solutions designs custom shipping container offices and modifications—from added windows and door placements to electrical upgrades and climate-controlled interiors—for project managers who need more than a cookie-cutter trailer. Our 20' and 40' steel-framed units are built for commercial durability, transparent pricing, and fast deployment to Gulfport, Biloxi corridor, and Harrison County jobsites.",
+      "Gulfport, MS demands workspace solutions that survive coastal humidity, hurricane-season winds, and active commercial construction schedules. Southern Container Solutions designs custom shipping container offices and modifications, from added windows and door placements to electrical upgrades and climate-controlled interiors, for project managers who need more than a cookie cutter trailer. Our 20' and 40' steel-framed units are built for commercial durability, transparent pricing, and fast deployment to Gulfport, Biloxi corridor, and Harrison County jobsites.",
     localDeliveryLogistics:
-      "We dispatch from our Covington, Louisiana fabrication yard straight down I-10 into Gulfport and the Mississippi Gulf Coast. Winch-loaded trucks place your modified container office ground-level on dirt, gravel, or concrete—no stairs, no skirting, and no complicated blocking required.",
+      "We dispatch from our Covington, Louisiana fabrication yard straight down I-10 into Gulfport and the Mississippi Gulf Coast. Winch-loaded trucks place your modified container office ground-level on dirt, gravel, or concrete with no stairs, no skirting, and no complicated blocking required.",
     localClimateSpecs:
       "Every Gulfport unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Harrison County coastal humidity, salt air, and hurricane-season wind loads. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Gulfport command centers. From summer heat advisories to sudden Gulf rain events, your Gulfport, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -748,9 +970,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Turnkey container office builds and custom modifications for Pascagoula shipyard contractors, industrial turnarounds, and Jackson County construction sites.",
     localIndustryFocus:
-      "Pascagoula, MS is one of the Gulf South's most demanding industrial environments—shipbuilding schedules, refinery turnarounds, and heavy contractor mobilization leave no room for flimsy mobile trailers. Southern Container Solutions delivers custom shipping container offices and modifications engineered for the realities of Pascagoula jobsites: secure steel construction, spray-foam insulation, commercial-grade finishes, and layout changes tailored to your crew. Whether you need a climate-controlled command center or a modified 40' office with custom door and window placement, we build it in Louisiana and deliver it ready to work.",
+      "Pascagoula, MS is one of the Gulf South's most demanding industrial environments. Shipbuilding schedules, refinery turnarounds, and heavy contractor mobilization leave no room for flimsy mobile trailers. Southern Container Solutions delivers custom shipping container offices and modifications engineered for the realities of Pascagoula jobsites: secure steel construction, spray-foam insulation, commercial-grade finishes, and layout changes tailored to your crew. Whether you need a climate-controlled command center or a modified 40' office with custom door and window placement, we build it in Louisiana and deliver it ready to work.",
     localDeliveryLogistics:
-      "Our logistics team runs dedicated freight from Covington into Pascagoula and Jackson County via I-10. Specialized winch trucks drop your container office exactly where your superintendent directs—flat on the ground at the shipyard gate, staging yard, or industrial pad—so your team can connect power and get to work the same day.",
+      "Our logistics team runs dedicated freight from Covington into Pascagoula and Jackson County via I-10. Specialized winch trucks drop your container office exactly where your superintendent directs, flat on the ground at the shipyard gate, staging yard, or industrial pad, so your team can connect power and get to work the same day.",
     localClimateSpecs:
       "Every Pascagoula unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Jackson County shipyard salt air and turnaround humidity. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Pascagoula command centers. From summer heat advisories to sudden Gulf rain events, your Pascagoula, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -765,7 +987,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "When staging large-scale commercial developments or casino infrastructure along the Mississippi Gulf Coast, you need workspaces that withstand the coastal elements. Standard office trailers degrade quickly in high humidity and high winds, creating safety hazards on active sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically to handle tough coastal footprints. Keep your project managers and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
     localDeliveryLogistics:
-      "We dispatch straight from our yard across the state line to the Mississippi Gulf Coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Biloxi jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+      "We dispatch straight from our yard across the state line to the Mississippi Gulf Coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Biloxi jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Biloxi unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for coastal casino-corridor humidity and Gulf wind exposure. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Biloxi command centers. From summer heat advisories to sudden Gulf rain events, your Biloxi, MS office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -794,9 +1016,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Heavy-duty container offices and custom modifications for Mobile maritime contractors, port operations, shipbuilding yards, and coastal industrial jobsites along the Gulf.",
     localIndustryFocus:
-      "Mobile, AL sits at the heart of Gulf Coast maritime commerce—from the Port of Mobile and APM Terminals to active shipbuilding and coastal industrial construction. Project managers staging waterfront work need offices that handle salt air, heavy equipment traffic, and tight mobilization windows. Southern Container Solutions builds custom shipping container offices and modifications for Mobile's maritime and industrial sector: climate-controlled interiors, secure steel construction, custom door and window layouts, and electrical upgrades spec'd for port-adjacent and shipyard jobsites. Our 20' and 40' units replace flimsy trailers with ground-level workspaces built for Alabama's coastal industrial reality.",
+      "Mobile, AL sits at the heart of Gulf Coast maritime commerce, from the Port of Mobile and APM Terminals to active shipbuilding and coastal industrial construction. Project managers staging waterfront work need offices that handle salt air, heavy equipment traffic, and tight mobilization windows. Southern Container Solutions builds custom shipping container offices and modifications for Mobile's maritime and industrial sector: climate-controlled interiors, secure steel construction, custom door and window layouts, and electrical upgrades spec'd for port-adjacent and shipyard jobsites. Our 20' and 40' units replace flimsy trailers with ground-level workspaces built for Alabama's coastal industrial reality.",
     localDeliveryLogistics:
-      "We run dedicated delivery from our Covington, Louisiana yard into Mobile and the Alabama Gulf Coast via I-10. Winch-loaded trucks drop your modified container office ground-level at the port gate, shipyard staging area, or coastal jobsite—on dirt, gravel, or asphalt—with no stairs, skirting, or complex setup required.",
+      "We run dedicated delivery from our Covington, Louisiana yard into Mobile and the Alabama Gulf Coast via I-10. Winch-loaded trucks drop your modified container office ground-level at the port gate, shipyard staging area, or coastal jobsite on dirt, gravel, or asphalt, with no stairs, skirting, or complex setup required.",
     localClimateSpecs:
       "Every Mobile unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Mobile Bay salt air and port-adjacent humidity on waterfront jobsites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Mobile command centers. From summer heat advisories to sudden Gulf rain events, your Mobile, AL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -811,7 +1033,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Theodore's industrial corridor handles intense heavy manufacturing and maritime operations. Staging projects near the canal requires robust site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded industrial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy industrial footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
     localDeliveryLogistics:
-      "We run straight down I-10 to the Alabama coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Theodore jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+      "We run straight down I-10 to the Alabama coast. Our specialized winch-loaded trucks drop your ground-level office exactly where you need it on your Theodore jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Theodore unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Theodore Industrial Canal humidity and Alabama Gulf heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Theodore command centers. From summer heat advisories to sudden Gulf rain events, your Theodore, AL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -841,7 +1063,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Panama City's economy is driven by massive military reconstruction and heavy marine manufacturing. In hurricane-prone coastal zones, standard mobile trailers are liabilities that degrade quickly and require complex setups. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers built strictly for tough coastal and industrial environments. Keep your military contractors, project managers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt, eliminating OSHA trip hazards.",
     localDeliveryLogistics:
-      "We run our specialized winch-loaded trucks along the I-10 corridor directly into the Florida Panhandle. We drop your ground-level office exactly where you need it on your Panama City jobsite—ready for immediate power and completely bypassing the need for blocking or skirting.",
+      "We run our specialized winch-loaded trucks along the I-10 corridor directly into the Florida Panhandle. We drop your ground-level office exactly where you need it on your Panama City jobsite, ready for immediate power and completely bypassing the need for blocking or skirting.",
     localClimateSpecs:
       "Every Panama City unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for hurricane-prone Panhandle humidity and Tyndall corridor heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Panama City command centers. From summer heat advisories to sudden Gulf rain events, your Panama City, FL office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
     image: "/images/jobsite-office-container.png",
@@ -897,15 +1119,33 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     city: "Geismar",
     state: "LA",
     routePath: "/geismar-la",
-    heroHeadline: "Custom Shipping Container Offices & Modifications in Geismar, LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Geismar, LA",
     heroSub:
-      "Custom container offices and modifications for Geismar chemical plants, heavy industrial facilities, refinery turnarounds, and Ascension Parish capital projects.",
+      "Heavy duty mobile offices for Geismar chemical plants and Ascension Parish capital projects.",
     localIndustryFocus:
-      "Geismar, LA is one of the most concentrated chemical manufacturing corridors on the Mississippi River—home to major petrochemical complexes, heavy industrial plants, and constant turnaround activity. Plant managers and specialty contractors executing capital projects can't afford flimsy trailers that create OSHA trip hazards and logistical bottlenecks on crowded facility sites. Southern Container Solutions builds custom shipping container offices and modifications for Geismar's chemical and industrial sector: secure steel-framed construction, climate-controlled interiors, custom door and window placement, and electrical upgrades spec'd for refinery and chemical plant environments. Our 20' and 40' ground-level offices protect your foremen, blueprints, and on-site IT gear without the stairs, skirting, or anchoring headaches of traditional mobile trailers.",
+      "Geismar is a concentrated chemical manufacturing corridor with constant turnaround activity. Plant managers executing capital projects cannot afford flimsy trailers that create logistical bottlenecks. We provide secure steel framed offices that protect your blueprints and on site IT gear.",
     localDeliveryLogistics:
-      "Located just down the interstate in Covington, we offer fast direct logistics into Geismar and Ascension Parish. Our winch-loaded trucks dispatch straight down I-10 and I-12 to your plant gate, turnaround staging area, or industrial pad—dropping your workspace flat on the dirt so your crew can plug in and get to work safely and immediately.",
+      "We dispatch straight to your Geismar plant gate or turnaround staging area. The unit is placed directly on the ground giving your crew safe walk in access without the need for skirting or stairs.",
     localClimateSpecs:
-      "Every Geismar unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Ascension Parish chemical corridor humidity and turnaround heat. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Geismar command centers. From summer heat advisories to sudden Gulf rain events, your Geismar, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Ascension Parish chemical corridors generate immense heat. The 2 inch closed cell spray foam provides superior insulation and sound reduction while the LG mini split handles the heavy cooling requirements.",
+    localHighways: "Louisiana Highway 73 and Louisiana Highway 30",
+    faqs: [
+      {
+        question: "Can we use this as a command center for our engineering team?",
+        answer:
+          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+      },
+      {
+        question: "Are the windows secure from jobsite vandalism?",
+        answer:
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+      {
+        question: "Will the walls sweat in the extreme humidity?",
+        answer:
+          "No. The combination of 2 inch closed cell spray foam and moisture resistant PVC panels prevents interior condensation and mold buildup.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
 ];

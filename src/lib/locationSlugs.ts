@@ -126,7 +126,7 @@ function createLegacyServiceArea(slug: string): ServiceArea | null {
     heroHeadline: `Commercial Jobsite Office Containers in ${city}, ${state}`,
     heroSub: `Turnkey 20' and 40' ground-level mobile offices delivered to ${city}, ${state} jobsites and commercial projects.`,
     localIndustryFocus: `Southern Container Solutions delivers commercial-grade, climate-controlled container offices built for ${city}, ${state} contractors. Our 20' and 40' steel-framed units provide secure, ground-level workspace for project managers, engineers, and crews without the OSHA trip hazards of traditional trailers on active ${city} industrial sites.`,
-    localDeliveryLogistics: `We dispatch from our Covington, Louisiana yard with winch-loaded trucks, dropping your office container ground-level at your ${city} jobsite on dirt, gravel, or asphalt—ready for power connection without blocking packages or trailer stair towers.`,
+    localDeliveryLogistics: `We dispatch from our Covington, Louisiana yard with winch-loaded trucks, dropping your office container ground-level at your ${city} jobsite on dirt, gravel, or asphalt, ready for power connection without blocking packages or trailer stair towers.`,
     localClimateSpecs: buildClimateSpecs(city, state, slug),
     image: "/images/jobsite-office-container.png",
   });
