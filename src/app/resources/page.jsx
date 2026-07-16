@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { PackageOpen, ArrowRight, Droplets, Map, ShieldCheck } from 'lucide-react';
+import { PackageOpen, ArrowRight, Droplets, Map, ShieldCheck, HardHat, Lock, Shovel } from 'lucide-react';
 
 export const metadata = {
   title: 'Shipping Container Resources & Guides | Southern Container Solutions',
@@ -29,6 +29,27 @@ export default function ResourcesPage() {
       href: '/resources/industrial-jobsite-offices',
       icon: ShieldCheck,
       category: 'Industrial B2B'
+    },
+    {
+      title: 'Why Standard Mobile Trailers Fail During Gulf Coast Refinery Turnarounds',
+      description: 'How ground level steel container offices solve staging, power, and safety challenges on active petrochemical and refinery turnaround sites.',
+      href: '/resources/petrochemical-turnaround-trailers',
+      icon: HardHat,
+      category: 'Industrial B2B'
+    },
+    {
+      title: 'Preventing Jobsite Theft: Secure Container Offices for Urban Builds',
+      description: 'Why urban infill and zero lot line projects need vault like steel container offices instead of vulnerable plywood trailers.',
+      href: '/resources/urban-jobsite-theft-prevention',
+      icon: Lock,
+      category: 'Security'
+    },
+    {
+      title: 'Managing Dust and Heat on Unpaved Heavy Civil Construction Sites',
+      description: 'How moisture resistant PVC interiors and closed cell spray foam make container offices the best choice for dirt pad and civil jobsites.',
+      href: '/resources/civil-dirt-work-offices',
+      icon: Shovel,
+      category: 'Logistics'
     }
   ];
 
