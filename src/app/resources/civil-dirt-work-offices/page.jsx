@@ -50,7 +50,7 @@ export default function CivilDirtWorkOfficesArticle() {
           </p>
           <h3>Delivered to the Toughest Inland Projects</h3>
           <p>
-            Our heavy duty tilt bed trucks deliver these units directly to unpaved sites without sinking off blocks. From heavy distribution builds in <a href="/locations/hammond-la">Hammond</a> and <a href="/locations/shreveport-la">Shreveport</a>, to major commercial expansions in <a href="/locations/denham-springs-la">Denham Springs</a> and <a href="/locations/gonzales-la">Gonzales</a>, we provide remote operations centers that thrive in the dirt.
+            Our heavy duty tilt bed trucks deliver these units directly to unpaved sites without sinking off blocks. From heavy distribution builds in <a href="/service-areas/hammond-la">Hammond</a> and <a href="/service-areas/shreveport-la">Shreveport</a>, to major commercial expansions in <a href="/service-areas/denham-springs-la">Denham Springs</a> and <a href="/service-areas/gonzales-la">Gonzales</a>, we provide remote operations centers that thrive in the dirt.
           </p>
 
           <hr className="my-12 border-slate-200" />

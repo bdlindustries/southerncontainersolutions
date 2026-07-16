@@ -90,7 +90,7 @@ export default function IndustrialOfficesArticle() {
 
           <h3>Supporting the South&apos;s Industrial Corridors</h3>
           <p>
-            We engineer command centers specifically for the Gulf South&apos;s heavy industrial boom. From the massive LNG export terminals in <a href="/locations/lake-charles-la">Lake Charles</a> and <a href="/locations/port-arthur-tx">Port Arthur</a>, to continuous chemical plant turnarounds in <a href="/locations/geismar-la">Geismar</a> and <a href="/locations/pasadena-tx">Pasadena</a>, project managers rely on our 100-amp, climate-stable container offices to keep their engineering teams secure and fully operational on the most demanding sites in the country.
+            We engineer command centers specifically for the Gulf South&apos;s heavy industrial boom. From the massive LNG export terminals in <a href="/service-areas/lake-charles-la">Lake Charles</a> and <a href="/service-areas/port-arthur-tx">Port Arthur</a>, to continuous chemical plant turnarounds in <a href="/service-areas/geismar-la">Geismar</a> and <a href="/service-areas/pasadena-tx">Pasadena</a>, project managers rely on our 100-amp, climate-stable container offices to keep their engineering teams secure and fully operational on the most demanding sites in the country.
           </p>
 
           <hr className="my-12 border-slate-200" />

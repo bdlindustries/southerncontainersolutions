@@ -50,7 +50,7 @@ export default function PetrochemicalTurnaroundArticle() {
           </p>
           <h3>Supporting the Heavy Petrochemical Corridors</h3>
           <p>
-            From the Golden Triangle refineries in <a href="/locations/beaumont-tx">Beaumont</a> and <a href="/locations/port-arthur-tx">Port Arthur</a>, to the massive chemical complexes running through <a href="/locations/geismar-la">Geismar</a> and the <a href="/locations/pasadena-tx">Pasadena</a> Ship Channel corridor, we provide project managers with highly secure climate stable infrastructure engineered for the harshest environments.
+            From the Golden Triangle refineries in <a href="/service-areas/beaumont-tx">Beaumont</a> and <a href="/service-areas/port-arthur-tx">Port Arthur</a>, to the massive chemical complexes running through <a href="/service-areas/geismar-la">Geismar</a> and the <a href="/service-areas/pasadena-tx">Pasadena</a> Ship Channel corridor, we provide project managers with highly secure climate stable infrastructure engineered for the harshest environments.
           </p>
 
           <hr className="my-12 border-slate-200" />

@@ -96,7 +96,7 @@ export default function ContainerCondensationArticle() {
 
           <h3>Deploying in High-Humidity Gulf Coast Markets</h3>
           <p>
-            Standard fiberglass insulation fails fastest in heavy coastal and river moisture. If you are staging a project in <a href="/locations/new-orleans-la">New Orleans</a>, navigating the riverfront humidity of <a href="/locations/baton-rouge-la">Baton Rouge</a>, or managing a ship channel project in <a href="/locations/houston-tx">Houston</a>, our closed-cell spray foam is the only way to protect your IT gear. We also supply coastal operators down to <a href="/locations/corpus-christi-tx">Corpus Christi</a> with turnkey, moisture-proof office solutions.
+            Standard fiberglass insulation fails fastest in heavy coastal and river moisture. If you are staging a project in <a href="/service-areas/new-orleans-la">New Orleans</a>, navigating the riverfront humidity of <a href="/service-areas/baton-rouge-la">Baton Rouge</a>, or managing a ship channel project in <a href="/service-areas/houston-tx">Houston</a>, our closed-cell spray foam is the only way to protect your IT gear. We also supply coastal operators down to <a href="/service-areas/corpus-christi-tx">Corpus Christi</a> with turnkey, moisture-proof office solutions.
           </p>
 
           <hr className="my-12 border-slate-200" />

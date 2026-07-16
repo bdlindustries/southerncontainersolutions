@@ -50,7 +50,7 @@ export default function UrbanTheftPreventionArticle() {
           </p>
           <h3>Deployed in High Density Markets</h3>
           <p>
-            Because our units sit flat on the pavement, we can drop them into incredibly tight spaces without requiring ramps. We supply secure infrastructure for urban developers in <a href="/locations/new-orleans-la">New Orleans</a>, tight commercial lots in <a href="/locations/metairie-la">Metairie</a>, riverfront builds in <a href="/locations/baton-rouge-la">Baton Rouge</a>, and massive commercial operations across <a href="/locations/houston-tx">Houston</a>. Protect your assets with a workspace built like a vault.
+            Because our units sit flat on the pavement, we can drop them into incredibly tight spaces without requiring ramps. We supply secure infrastructure for urban developers in <a href="/service-areas/new-orleans-la">New Orleans</a>, tight commercial lots in <a href="/service-areas/metairie-la">Metairie</a>, riverfront builds in <a href="/service-areas/baton-rouge-la">Baton Rouge</a>, and massive commercial operations across <a href="/service-areas/houston-tx">Houston</a>. Protect your assets with a workspace built like a vault.
           </p>
 
           <hr className="my-12 border-slate-200" />

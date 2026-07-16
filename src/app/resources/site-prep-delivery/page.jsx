@@ -87,7 +87,7 @@ export default function SitePrepArticle() {
 
           <h3>Local Delivery Terrain Considerations</h3>
           <p>
-            Every region presents unique logistical challenges. For tight, zero-lot-line urban builds in <a href="/locations/metairie-la">Metairie</a>, our ground-level containers bypass the need for sprawling trailer ramps. If you are setting up on the soft, unpaved clay of the Northshore in <a href="/locations/covington-la">Covington</a> or managing heavy civil dirt-work in <a href="/locations/shreveport-la">Shreveport</a>, our tilt-bed delivery ensures your office is dropped perfectly without sinking into the mud. We also run heavy transport directly to Golden Triangle staging sites like <a href="/locations/beaumont-tx">Beaumont</a>.
+            Every region presents unique logistical challenges. For tight, zero-lot-line urban builds in <a href="/service-areas/metairie-la">Metairie</a>, our ground-level containers bypass the need for sprawling trailer ramps. If you are setting up on the soft, unpaved clay of the Northshore in <a href="/service-areas/covington-la">Covington</a> or managing heavy civil dirt-work in <a href="/service-areas/shreveport-la">Shreveport</a>, our tilt-bed delivery ensures your office is dropped perfectly without sinking into the mud. We also run heavy transport directly to Golden Triangle staging sites like <a href="/service-areas/beaumont-tx">Beaumont</a>.
           </p>
 
           <hr className="my-12 border-slate-200" />
