@@ -82,6 +82,18 @@ const nextConfig = {
         destination: '/locations/:path*',
         permanent: true,
       },
+
+      // Legacy filenames with dots → canonical slugs
+      {
+        source: '/locations/bay-st.-louis-ms',
+        destination: '/locations/bay-st-louis-ms',
+        permanent: true,
+      },
+      {
+        source: '/locations/st.-francisville-la',
+        destination: '/locations/st-francisville-la',
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,4 +1,9 @@
-import { serviceAreas, type ServiceArea } from "@/lib/data/serviceAreas";
+import {
+  getAllLocationAreas,
+  getAllLocationSlugs,
+  normalizeLocationSlug,
+} from "@/lib/locationSlugs";
+import type { ServiceArea } from "@/lib/data/serviceAreas";
 
 export type LocationSection = {
   label: string;
@@ -11,6 +16,14 @@ export type LocationRegion = {
   sections: LocationSection[];
 };
 
+const STATE_NAMES: Record<string, string> = {
+  LA: "Louisiana",
+  TX: "Texas",
+  MS: "Mississippi",
+  AL: "Alabama",
+  FL: "Florida",
+};
+
 /** Curated Gulf South groupings for the /locations directory. */
 export const LOCATION_REGIONS: LocationRegion[] = [
   {
@@ -19,7 +32,7 @@ export const LOCATION_REGIONS: LocationRegion[] = [
     sections: [
       {
         label: "Northshore & Metro",
-        slugs: ["covington-la", "slidell-la"],
+        slugs: ["covington-la", "slidell-la", "mandeville-la", "metairie-la", "kenner-la", "new-orleans-la", "hammond-la"],
       },
       {
         label: "Mississippi River Corridor",
@@ -32,19 +45,23 @@ export const LOCATION_REGIONS: LocationRegion[] = [
           "st-rose-la",
           "convent-la",
           "geismar-la",
+          "gonzales-la",
+          "prairieville-la",
+          "denham-springs-la",
+          "laplace-la",
         ],
       },
       {
         label: "Lake Charles & Southwest",
-        slugs: ["lake-charles-la", "sulphur-la"],
+        slugs: ["lake-charles-la", "sulphur-la", "cameron-la", "port-fourchon-la"],
       },
       {
         label: "Acadiana & Bayou",
-        slugs: ["lafayette-la", "morgan-city-la", "houma-la"],
+        slugs: ["lafayette-la", "morgan-city-la", "houma-la", "thibodaux-la", "bogalusa-la"],
       },
       {
         label: "North Louisiana",
-        slugs: ["monroe-la", "alexandria-la", "shreveport-la"],
+        slugs: ["monroe-la", "alexandria-la", "shreveport-la", "ruston-la", "caddo-la", "holly-ridge-la", "st-francisville-la"],
       },
     ],
   },
@@ -54,7 +71,7 @@ export const LOCATION_REGIONS: LocationRegion[] = [
     sections: [
       {
         label: "Golden Triangle",
-        slugs: ["beaumont-tx", "orange-tx", "nederland-tx"],
+        slugs: ["beaumont-tx", "orange-tx", "nederland-tx", "port-arthur-tx"],
       },
       {
         label: "Houston Ship Channel",
@@ -65,6 +82,7 @@ export const LOCATION_REGIONS: LocationRegion[] = [
           "deer-park-tx",
           "laporte-tx",
           "channelview-tx",
+          "texas-city-tx",
         ],
       },
       {
@@ -72,8 +90,8 @@ export const LOCATION_REGIONS: LocationRegion[] = [
         slugs: ["freeport-tx", "corpus-christi-tx", "brownsville-tx"],
       },
       {
-        label: "Inland Texas",
-        slugs: ["victoria-tx"],
+        label: "North & Central Texas",
+        slugs: ["victoria-tx", "midlothian-tx", "red-oak-tx", "temple-tx", "bryan-tx", "tyler-tx", "longview-tx", "lufkin-tx"],
       },
     ],
   },
@@ -83,11 +101,11 @@ export const LOCATION_REGIONS: LocationRegion[] = [
     sections: [
       {
         label: "Gulf Coast",
-        slugs: ["gulfport-ms", "pascagoula-ms", "biloxi-ms", "bay-st-louis-ms"],
+        slugs: ["gulfport-ms", "pascagoula-ms", "biloxi-ms", "bay-st-louis-ms", "ocean-springs-ms", "picayune-ms"],
       },
       {
         label: "Central Mississippi",
-        slugs: ["jackson-ms", "columbus-ms"],
+        slugs: ["jackson-ms", "columbus-ms", "canton-ms", "hattiesburg-ms"],
       },
     ],
   },
@@ -97,7 +115,11 @@ export const LOCATION_REGIONS: LocationRegion[] = [
     sections: [
       {
         label: "Gulf Coast",
-        slugs: ["mobile-al", "theodore-al"],
+        slugs: ["mobile-al", "theodore-al", "daphne-al"],
+      },
+      {
+        label: "North Alabama",
+        slugs: ["huntsville-al", "decatur-al"],
       },
     ],
   },
@@ -113,7 +135,9 @@ export const LOCATION_REGIONS: LocationRegion[] = [
   },
 ];
 
-const areaBySlug = new Map(serviceAreas.map((area) => [area.slug, area]));
+const areaBySlug = new Map(
+  getAllLocationAreas().map((area) => [normalizeLocationSlug(area.slug), area])
+);
 
 export type LocationSectionWithAreas = {
   label: string;
@@ -126,21 +150,79 @@ export type LocationRegionWithAreas = {
   sections: LocationSectionWithAreas[];
 };
 
+function uniqueAreas(areas: ServiceArea[]): ServiceArea[] {
+  const seen = new Set<string>();
+  return areas.filter((area) => {
+    const key = normalizeLocationSlug(area.slug);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export function getLocationDirectory(): LocationRegionWithAreas[] {
-  return LOCATION_REGIONS.map((region) => ({
+  const assignedSlugs = new Set<string>();
+
+  const curatedRegions = LOCATION_REGIONS.map((region) => ({
     state: region.state,
     stateName: region.stateName,
     sections: region.sections
-      .map((section) => ({
-        label: section.label,
-        areas: section.slugs
-          .map((slug) => areaBySlug.get(slug))
-          .filter((area): area is ServiceArea => Boolean(area)),
-      }))
+      .map((section) => {
+        const areas = uniqueAreas(
+          section.slugs
+            .map((slug) => areaBySlug.get(normalizeLocationSlug(slug)))
+            .filter((area): area is ServiceArea => Boolean(area))
+        );
+
+        areas.forEach((area) => assignedSlugs.add(normalizeLocationSlug(area.slug)));
+
+        return {
+          label: section.label,
+          areas,
+        };
+      })
       .filter((section) => section.areas.length > 0),
   })).filter((region) => region.sections.length > 0);
+
+  const unassignedByState = new Map<string, ServiceArea[]>();
+
+  for (const slug of getAllLocationSlugs()) {
+    const normalized = normalizeLocationSlug(slug);
+    if (assignedSlugs.has(normalized)) continue;
+
+    const area = areaBySlug.get(normalized);
+    if (!area) continue;
+
+    const bucket = unassignedByState.get(area.state) ?? [];
+    bucket.push(area);
+    unassignedByState.set(area.state, bucket);
+  }
+
+  for (const [state, areas] of unassignedByState.entries()) {
+    if (!areas.length) continue;
+
+    const sortedAreas = [...areas].sort((a, b) => a.city.localeCompare(b.city, "en"));
+    const existingRegion = curatedRegions.find((region) => region.state === state);
+
+    const overflowSection = {
+      label: "Additional Markets",
+      areas: sortedAreas,
+    };
+
+    if (existingRegion) {
+      existingRegion.sections.push(overflowSection);
+    } else {
+      curatedRegions.push({
+        state,
+        stateName: STATE_NAMES[state] ?? state,
+        sections: [overflowSection],
+      });
+    }
+  }
+
+  return curatedRegions.sort((a, b) => a.stateName.localeCompare(b.stateName, "en"));
 }
 
 export function getLocationHref(area: ServiceArea): string {
-  return `/locations/${area.slug}`;
+  return `/locations/${normalizeLocationSlug(area.slug)}`;
 }
