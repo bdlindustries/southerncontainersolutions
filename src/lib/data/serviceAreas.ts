@@ -1,3 +1,11 @@
+import {
+  buildDefaultFaqs,
+  buildDefaultHighways,
+  type ServiceAreaFaq,
+} from "@/lib/serviceAreaDefaults";
+
+export type { ServiceAreaFaq };
+
 export type ServiceArea = {
   slug: string;
   city: string;
@@ -7,13 +15,20 @@ export type ServiceArea = {
   localIndustryFocus: string;
   localDeliveryLogistics: string;
   localClimateSpecs: string;
+  localHighways: string;
+  faqs: ServiceAreaFaq[];
   image?: string;
   imageAlt?: string;
   /** Top-level route when different from /service-areas/[slug] */
   routePath?: string;
 };
 
-export const serviceAreas: ServiceArea[] = [
+type ServiceAreaRecord = Omit<ServiceArea, "localHighways" | "faqs"> & {
+  localHighways?: string;
+  faqs?: ServiceAreaFaq[];
+};
+
+const serviceAreaRecords: ServiceAreaRecord[] = [
   {
     slug: "covington-la",
     city: "Covington",
@@ -27,6 +42,24 @@ export const serviceAreas: ServiceArea[] = [
       "We dispatch directly to your St. Tammany Parish pad. Because our units sit flat on the ground, your crew gets immediate access through the 36-inch steel man door or the fully operational cargo doors without navigating trailer stairs.",
     localClimateSpecs:
       "Inland heat requires serious temperature control. We outfit these units with 2-inch closed-cell spray foam insulation and a 12,000 BTU LG mini-split heat pump to keep your remote office comfortable. The interior features smooth, moisture-resistant PVC walls that are easy to clean after a long day in the dirt.",
+    localHighways: "I-12, US Highway 190, and LA-21 corridor.",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Covington?",
+        answer:
+          "Because our units sit flat on the ground, no stairs or skirting are required. You just need a relatively flat, firm surface like gravel, dirt, or asphalt on your St. Tammany jobsite.",
+      },
+      {
+        question: "How do I power the office container?",
+        answer:
+          "The container features a 20-amp exterior outlet. Simply run a heavy-duty extension cord or have your site electrician hardwire it, and the eighteen interior outlets, LED lights, and 12,000 BTU AC will be ready to go.",
+      },
+      {
+        question: "Are these containers secure against Northshore jobsite theft?",
+        answer:
+          "Yes. They are built from one-trip shipping containers and include a 36-inch steel man door with a deadbolt, plus heavy-duty steel security bars over both sliding windows.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -42,6 +75,24 @@ export const serviceAreas: ServiceArea[] = [
       "We deliver directly to your Slidell staging area. Skip the blocking and leveling required for standard trailers; our trucks drop your unit flat on the ground so you can load larger equipment directly through the operational rear cargo doors.",
     localClimateSpecs:
       "Slidell's coastal moisture ruins standard trailers. Our units combat this with mold-resistant PVC ceiling panels and an exterior photocell light for automatic nighttime operation. The LG mini-split provides dedicated AC and heat, backed by spray foam insulation for excellent sound reduction in noisy industrial yards.",
+    localHighways: "I-10, I-12, I-59, and US Highway 11.",
+    faqs: [
+      {
+        question: "Can you deliver to unpaved marine or infrastructure sites in Slidell?",
+        answer:
+          "Yes. Our tilt-bed trucks can drop the unit directly onto compacted dirt or gravel. The ground-level design means you don't have to worry about the unit sinking off blocks in the mud.",
+      },
+      {
+        question: "Will the interior hold up to industrial yard dirt?",
+        answer:
+          "Absolutely. The interior is finished with smooth, moisture-resistant PVC wall and ceiling panels that are incredibly easy to wipe down and clean, preventing mold and grime buildup.",
+      },
+      {
+        question: "Is the AC strong enough for Slidell humidity?",
+        answer:
+          "We install a dedicated 12,000 BTU LG mini-split heat pump backed by 2-inch closed-cell spray foam insulation to maintain total climate control in extreme coastal humidity.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -57,6 +108,24 @@ export const serviceAreas: ServiceArea[] = [
       "Navigating Mandeville's retail corridors requires a straightforward drop. We deliver the unit directly to the asphalt or dirt, providing instant, step-free access to your temporary office while avoiding the massive footprint of traditional trailer ramps.",
     localClimateSpecs:
       "Combat the extreme Louisiana humidity with a workspace designed for long-term use. We utilize 2-inch closed-cell spray foam for moisture resistance and install a 12,000 BTU heat pump with dedicated surge protection, ensuring your computers and servers stay online regardless of the weather.",
+    localHighways: "Causeway Blvd approach, Hwy 22, and Hwy 190.",
+    faqs: [
+      {
+        question: "Do these containers look professional enough for a Mandeville commercial build?",
+        answer:
+          "Yes. We use one-trip shipping containers, which are in excellent condition. Inside, the bright LED lighting and clean PVC walls provide a highly professional environment for client and contractor meetings.",
+      },
+      {
+        question: "How fast can I get my team working inside?",
+        answer:
+          "Almost immediately. Once we drop the unit flat on your site, you just plug into the 20-amp exterior outlet, and the climate control and eighteen interior outlets are instantly active.",
+      },
+      {
+        question: "Can I load furniture through the back doors?",
+        answer:
+          "Yes, the original heavy-duty cargo doors remain fully operational, allowing you to easily load desks, large printers, and filing cabinets.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -72,6 +141,24 @@ export const serviceAreas: ServiceArea[] = [
       "We drop your office flat on the pavement in your Metairie staging zone. The ground-level design eliminates trip hazards, and the 20-amp exterior outlet gives your crew immediate access to power right outside the unit.",
     localClimateSpecs:
       "The asphalt heat in Metairie requires aggressive cooling. Our units feature a 12,000 BTU LG mini-split and 2-inch spray foam insulation to maintain excellent temperature control, while the smooth PVC interior walls make it easy to wipe down the daily construction dust.",
+    localHighways: "I-10, Causeway Blvd, and Veterans Memorial Blvd.",
+    faqs: [
+      {
+        question: "Do I need a ramp or stairs for a Metairie lot?",
+        answer:
+          "No. The container sits flat on the ground, providing step-free walk-in access. This is ideal for tight urban lots where sprawling trailer ramps won't fit.",
+      },
+      {
+        question: "Is the unit protected against urban vandalism?",
+        answer:
+          "We install heavy-duty steel security bars over the sliding windows and a deadbolt on the solid steel man door to keep your site equipment locked down tight.",
+      },
+      {
+        question: "Does the AC run on standard power?",
+        answer:
+          "Yes, the 12,000 BTU LG mini-split operates on standard power, and the unit features a dedicated exterior 20-amp plug for easy connection to your site's temporary power pole.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -87,6 +174,24 @@ export const serviceAreas: ServiceArea[] = [
       "Our delivery trucks navigate tight Kenner industrial grids to place your office exactly where you need it. You can easily move oversized gear inside using the fully operational rear cargo doors, giving you immediate utility from day one.",
     localClimateSpecs:
       "Built to handle the noise and heat of an active Kenner industrial yard, these units feature moisture-resistant PVC panels and an LG AC/Heat pump. The exterior photocell light ensures your entryway is automatically illuminated during early morning shifts or late-night operations.",
+    localHighways: "I-10, Williams Blvd, and Airline Highway.",
+    faqs: [
+      {
+        question: "Does the insulation help block out airport and industrial noise?",
+        answer:
+          "Yes, the 2-inch closed-cell spray foam insulation provides excellent sound reduction, creating a quiet workspace even in heavy Kenner industrial zones.",
+      },
+      {
+        question: "What lighting is included for early morning or night shifts?",
+        answer:
+          "The office includes four interior LED ceiling lights and an exterior photocell light above the man door that automatically turns on at night.",
+      },
+      {
+        question: "Can we load heavy aviation or testing equipment inside?",
+        answer:
+          "Yes, you can bypass the 36-inch man door and use the fully operational rear cargo doors to easily load oversized industrial equipment.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -102,6 +207,24 @@ export const serviceAreas: ServiceArea[] = [
       "Staging in the CBD or tight New Orleans neighborhoods means you cannot rely on sprawling trailer setups. We drop the unit flat on the ground, giving your crew instant access and the ability to load furniture directly through the cargo doors.",
     localClimateSpecs:
       "New Orleans heat and humidity demand serious insulation. The 2-inch closed-cell spray foam and 12,000 BTU LG mini-split provide total temperature control. Inside, the four LED ceiling lights and eighteen interior outlets keep your team productive in a clean, mold-resistant PVC environment.",
+    localHighways: "I-10, US-90, and the Tchoupitoulas logistics corridor.",
+    faqs: [
+      {
+        question: "Can these units be placed on uneven New Orleans pavement?",
+        answer:
+          "Yes, as long as the surface is relatively firm and flat. The rigid steel frame allows it to sit flush on asphalt or dirt without the complex blocking required by mobile trailers.",
+      },
+      {
+        question: "How many outlets are inside for our computers and gear?",
+        answer:
+          "The office is heavily wired with eighteen standard interior outlets, ensuring you have plenty of power for desks, servers, and battery chargers.",
+      },
+      {
+        question: "Are the windows safe from break-ins?",
+        answer:
+          "Both 42-inch by 30-inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -117,6 +240,24 @@ export const serviceAreas: ServiceArea[] = [
       "We deliver straight to your Hammond logistics yard. By placing the container directly on the ground, we eliminate the need for stairs and provide easy loading access for your equipment through the operational rear cargo doors.",
     localClimateSpecs:
       "Unpaved Hammond jobsites generate intense heat and dust. Our units stay clean and cool with easy-to-wash PVC wall panels, 2-inch spray foam insulation, and a dedicated 12,000 BTU heat pump protected by dedicated surge protection.",
+    localHighways: "I-55, I-12, and US Highway 51.",
+    faqs: [
+      {
+        question: "How do we keep the inside clean on a dusty Hammond dirt-work site?",
+        answer:
+          "The interior is finished with smooth PVC wall and ceiling panels. Unlike drywall or cheap wood paneling, you can simply wipe the PVC clean of any dust or mud.",
+      },
+      {
+        question: "Does the AC unit have surge protection?",
+        answer:
+          "Yes, the 12,000 BTU LG mini-split AC/Heat pump is wired with dedicated surge protection to defend against unpredictable temporary site power.",
+      },
+      {
+        question: "Do we need to build stairs to the entrance?",
+        answer:
+          "No. The container sits flat on the ground, providing an immediate, trip-free entrance through the steel man door.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -361,6 +502,24 @@ export const serviceAreas: ServiceArea[] = [
       "We dispatch directly to your Baton Rouge plant gate or commercial lot. The unit sits flat on the dirt or asphalt, giving your crew safe, step-free entry through the steel man door and easy exterior power access via the 20-amp outlet.",
     localClimateSpecs:
       "The Mississippi River corridor brings extreme humidity. We combat moisture intrusion using 2-inch closed-cell spray foam and mold-resistant PVC ceiling panels. The LG mini-split AC ensures excellent temperature control during the brutal Baton Rouge summers.",
+    localHighways: "I-10, I-12, and Airline Highway.",
+    faqs: [
+      {
+        question: "Are these containers suitable for long-term Baton Rouge industrial projects?",
+        answer:
+          "Absolutely. They are built from durable one-trip shipping containers and fully insulated with spray foam, making them comfortable and structurally sound for years of use.",
+      },
+      {
+        question: "Can we run multiple space heaters in the winter?",
+        answer:
+          "You won't need to. The 12,000 BTU LG mini-split functions as both an air conditioner and a highly efficient heat pump.",
+      },
+      {
+        question: "How many access doors are on the unit?",
+        answer:
+          "There is one 36-inch steel man door for daily personnel access, plus the original cargo doors at the rear for moving large equipment.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -376,6 +535,24 @@ export const serviceAreas: ServiceArea[] = [
       "Navigating Garyville's heavy industrial traffic requires an efficient drop. Our trucks place the container flat on your prepared pad, allowing immediate walk-in access and the flexibility to load oversized items through the fully operational cargo doors.",
     localClimateSpecs:
       "Operating in Garyville means dealing with loud industrial noise and river heat. The closed-cell spray foam provides excellent sound reduction and temperature control, while the 12,000 BTU mini-split and four LED ceiling lights create a comfortable, well-lit interior.",
+    localHighways: "Hwy 61 (Airline Highway) and River Road.",
+    faqs: [
+      {
+        question: "Is the exterior lighting automatic for night shifts at the plant?",
+        answer:
+          "Yes, there is an exterior photocell light installed directly above the entry door that turns on automatically when the sun goes down.",
+      },
+      {
+        question: "How is the unit protected against industrial humidity?",
+        answer:
+          "We seal the unit with 2 inches of closed-cell spray foam, which provides extreme moisture resistance and prevents the walls from sweating.",
+      },
+      {
+        question: "Can we use this as a secure tool crib and office combo?",
+        answer:
+          "Yes, the steel security bars, deadbolted man door, and heavy-duty cargo doors make it an excellent dual-purpose secure storage and climate-controlled workspace.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -391,6 +568,24 @@ export const serviceAreas: ServiceArea[] = [
       "We deliver right to your Reserve industrial yard. Without the need for stairs or skirting, the ground-level design ensures fast deployment and provides a safe, trip-free entrance for your crew.",
     localClimateSpecs:
       "To handle the relentless Reserve humidity, these units are lined with smooth, moisture-resistant PVC panels that are incredibly easy to clean. Combined with 2-inch spray foam and an LG heat pump, your remote office remains a dry, climate-controlled haven year-round.",
+    localHighways: "River Road, Hwy 61, and I-10 logistics routes.",
+    faqs: [
+      {
+        question: "How fast can you set up the office once it arrives in Reserve?",
+        answer:
+          "Deployment is nearly instant. The truck drops the unit flat on the ground, and as soon as you plug into the 20-amp exterior outlet, the lights and AC are operational.",
+      },
+      {
+        question: "Will the interior grow mold in the riverfront humidity?",
+        answer:
+          "No. The interior is clad in smooth PVC panels rather than drywall, which naturally resists mold and moisture absorption.",
+      },
+      {
+        question: "Are the windows functional for fresh air?",
+        answer:
+          "Yes, both 42-inch by 30-inch windows are fully operational sliding windows, allowing for ventilation while still being protected by the exterior steel security bars.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -714,6 +909,20 @@ export const serviceAreas: ServiceArea[] = [
     image: "/images/jobsite-office-container.png",
   },
 ];
+
+function enrichServiceArea(area: ServiceAreaRecord): ServiceArea {
+  return {
+    ...area,
+    localHighways:
+      area.localHighways ?? buildDefaultHighways(area.city, area.state),
+    faqs: area.faqs ?? buildDefaultFaqs(area.city, area.state),
+  };
+}
+
+export const serviceAreas: ServiceArea[] =
+  serviceAreaRecords.map(enrichServiceArea);
+
+export { enrichServiceArea };
 
 export function getServiceAreaHref(area: ServiceArea): string {
   return area.routePath ?? `/locations/${area.slug}`;

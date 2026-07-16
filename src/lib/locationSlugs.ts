@@ -1,6 +1,7 @@
 import {
   getAllServiceAreaSlugs,
   getServiceAreaBySlug,
+  enrichServiceArea,
   type ServiceArea,
 } from "@/lib/data/serviceAreas";
 import { buildClimateSpecs } from "@/lib/serviceAreaClimate";
@@ -118,7 +119,7 @@ function createLegacyServiceArea(slug: string): ServiceArea | null {
 
   const { city, state } = parsed;
 
-  return {
+  return enrichServiceArea({
     slug,
     city,
     state,
@@ -128,7 +129,7 @@ function createLegacyServiceArea(slug: string): ServiceArea | null {
     localDeliveryLogistics: `We dispatch from our Covington, Louisiana yard with winch-loaded trucks, dropping your office container ground-level at your ${city} jobsite on dirt, gravel, or asphalt—ready for power connection without blocking packages or trailer stair towers.`,
     localClimateSpecs: buildClimateSpecs(city, state, slug),
     image: "/images/jobsite-office-container.png",
-  };
+  });
 }
 
 /** Every canonical /locations/[city] slug (service areas + legacy pages). */

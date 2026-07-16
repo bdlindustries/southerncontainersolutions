@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, MapPin, PackageOpen } from "lucide-react";
 import { getImageAlt } from "@/lib/serviceAreaLocalSeo";
+import { STANDARD_OFFICE_CONTAINER_SPECS } from "@/lib/serviceAreaDefaults";
 
 export default function ServiceAreaLanding({ area }) {
   const imageAlt = getImageAlt(area.city, area.state);
@@ -40,9 +41,12 @@ export default function ServiceAreaLanding({ area }) {
           </p>
         </section>
 
-        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4">
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.localDeliveryLogistics}
+          </p>
+          <p className="text-slate-900 font-bold text-lg leading-relaxed">
+            Primary {area.city} Delivery Routes: {area.localHighways}
           </p>
         </section>
 
@@ -50,6 +54,23 @@ export default function ServiceAreaLanding({ area }) {
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.localClimateSpecs}
           </p>
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-black text-slate-950 mb-6">
+            Standard 40&apos; Office Features
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {STANDARD_OFFICE_CONTAINER_SPECS.map((spec) => (
+              <li
+                key={spec}
+                className="flex items-start gap-2 text-slate-700 text-base leading-relaxed"
+              >
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                {spec}
+              </li>
+            ))}
+          </ul>
         </section>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
@@ -76,6 +97,27 @@ export default function ServiceAreaLanding({ area }) {
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
+
+        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-black text-slate-950 mb-6">
+            Frequently Asked Questions in {area.city}
+          </h2>
+          <div className="divide-y divide-slate-200 border border-slate-200 rounded-xl overflow-hidden">
+            {area.faqs.map((faq) => (
+              <details key={faq.question} className="group bg-slate-50 open:bg-white">
+                <summary className="cursor-pointer list-none px-6 py-4 font-bold text-slate-950 hover:text-amber-600 transition-colors flex items-center justify-between gap-4">
+                  <span>{faq.question}</span>
+                  <span className="text-amber-500 text-xl leading-none group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-5 text-slate-700 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
