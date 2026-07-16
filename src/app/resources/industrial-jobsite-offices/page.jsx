@@ -88,6 +88,11 @@ export default function IndustrialOfficesArticle() {
             Shipping containers are inherently designed to be lifted by cranes, dragged by forklifts, and transported on flatbeds without bending. You can deploy a fleet of 10 offices to Phase 1, and physically relocate the entire compound to Phase 2 a year later with zero structural compromise.
           </p>
 
+          <h3>Supporting the South&apos;s Industrial Corridors</h3>
+          <p>
+            We engineer command centers specifically for the Gulf South&apos;s heavy industrial boom. From the massive LNG export terminals in <a href="/locations/lake-charles-la">Lake Charles</a> and <a href="/locations/port-arthur-tx">Port Arthur</a>, to continuous chemical plant turnarounds in <a href="/locations/geismar-la">Geismar</a> and <a href="/locations/pasadena-tx">Pasadena</a>, project managers rely on our 100-amp, climate-stable container offices to keep their engineering teams secure and fully operational on the most demanding sites in the country.
+          </p>
+
           <hr className="my-12 border-slate-200" />
 
           <div className="bg-slate-950 rounded-2xl p-8 text-center not-prose">
