@@ -266,16 +266,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Beaumont, TX",
     heroSub:
-      "Delivering secure, turnkey office containers for the Golden Triangle's refinery expansions, LNG projects, and industrial staging sites.",
+      "Ground level mobile offices supplied to Golden Triangle refineries and heavy industrial projects.",
     localIndustryFocus:
-      "With massive capital projects sweeping through Beaumont, Port Arthur, and Orange, regional project managers need reliable, fast-deployment site infrastructure. Standard mobile trailers are prone to damage and require complex setup. We supply heavy-duty 20' and 40' ground-level container offices built for the realities of Texas refinery work. Protect your blueprints, IT infrastructure, and site personnel in a climate-controlled, steel-enforced workspace without the OSHA trip hazards of stairs.",
+      "Beaumont serves as a massive hub for Texas petrochemical manufacturing. Project managers handling heavy refinery turnarounds and facility expansions need reliable professional workspace. We supply premium office containers built from one trip shipping containers that deliver immediate secure infrastructure to busy plant gates.",
     localDeliveryLogistics:
-      "Cross-state delivery is seamless. We dispatch directly down I-10 to the Golden Triangle, providing transparent pricing and winch-loaded delivery directly to your plant or construction site. Drop it on the dirt and get to work.",
+      "We route our heavy transport trucks directly to your Beaumont jobsite. The container is dropped flat on the prepared dirt or gravel ready for immediate power connection without blocking packages or temporary stair towers.",
     localClimateSpecs:
-      "Every Beaumont unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Golden Triangle refinery heat, coastal humidity, and radiant yard temperatures during turnarounds. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Beaumont command centers. From summer heat advisories to sudden Gulf rain events, your Beaumont, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Industrial sites in Beaumont create intense heat and humidity. Our units stay clean and cool with easy to wash PVC wall panels 2 inch spray foam insulation and a powerful 12,000 BTU heat pump.",
+    localHighways: "Interstate 10 and US Highway 69",
+    faqs: [
+      {
+        question: "What is required to power the office in Beaumont?",
+        answer:
+          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+      },
+      {
+        question: "How do we keep the inside clean on a dusty site?",
+        answer:
+          "The interior is finished with smooth PVC panels. Unlike drywall you can simply wipe the walls and ceiling clean of any construction dust.",
+      },
+      {
+        question: "Is the entry door durable enough for heavy daily use?",
+        answer:
+          "Yes. The unit features a solid 36 inch steel man door equipped with a deadbolt for secure daily access.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
-    imageAlt:
-      "40-foot ground-level mobile office container on a Texas jobsite by Southern Container Solutions",
   },
   {
     slug: "orange-tx",
@@ -283,13 +299,31 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Orange, TX",
     heroSub:
-      "Supporting the Golden Triangle's shipbuilding, petrochemical expansions, and heavy industrial contractors with secure, ground-level mobile offices.",
+      "Turnkey mobile workspaces delivered to Orange County chemical plants and maritime staging sites.",
     localIndustryFocus:
-      "As a critical piece of the Golden Triangle, Orange is home to massive marine fabrication and chemical manufacturing. Staging a project here requires rugged site infrastructure that can handle heavy industrial wear and Gulf Coast weather. Traditional wheeled trailers create safety risks and logistical headaches on unpaved or crowded yards. Southern Container Solutions supplies commercial-grade 20' and 40' steel office containers. Protect your engineering teams and blueprints in a secure, fully insulated, climate-controlled workspace that sits flat on the ground.",
+      "As the Golden Triangle expands its petrochemical footprint contractors need fast reliable staging solutions. Standard rental trailers look unprofessional and take a beating during heavy plant construction. We supply clean highly professional steel office containers that provide your management team with a secure footprint.",
     localDeliveryLogistics:
-      "We run directly down I-10 to service the Golden Triangle. Our specialized winch-loaded trucks drop your office container flat on the dirt or gravel exactly where you need it, eliminating the need for trailer stairs, skirting, or complex anchoring.",
+      "Navigating chemical plants requires precision logistics. Our trucks place the container directly on the ground giving your crew step free access and eliminating the large footprint required by traditional trailer ramps.",
     localClimateSpecs:
-      "Every Orange unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for shipyard salt air and Golden Triangle industrial heat loads on marine fabrication yards. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Orange command centers. From summer heat advisories to sudden Gulf rain events, your Orange, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "We install 2 inch closed cell spray foam to provide excellent temperature control and sound reduction. The 12,000 BTU LG mini split keeps your computers and servers online regardless of the brutal Southeast Texas heat.",
+    localHighways: "Interstate 10 and Texas State Highway 87",
+    faqs: [
+      {
+        question: "Can we place this on unpaved dirt at our Orange site?",
+        answer:
+          "Yes. The rigid steel frame allows the container to sit flush on compacted dirt or gravel without the need for complex blocking.",
+      },
+      {
+        question: "How many electrical outlets are inside?",
+        answer:
+          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+      },
+      {
+        question: "Do we have to run a dedicated power pole?",
+        answer:
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -298,13 +332,64 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Nederland, TX",
     heroSub:
-      "Supplying Golden Triangle midstream terminals, refineries, and heavy industrial contractors with secure, ground-level mobile offices.",
+      "Heavy duty mobile offices for Jefferson County pipeline expansions and terminal operations.",
     localIndustryFocus:
-      "Nederland is a major hub for pipeline terminals and petrochemical storage. Staging capital projects in these high-traffic, heavy industrial zones requires rugged site infrastructure. Standard office trailers cause logistical bottlenecks and create OSHA trip hazards on crowded terminal sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy petrochemical footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+      "Contractors working the heavy pipeline and terminal operations around Nederland require tough remote operations centers. We supply climate controlled container offices that provide a quiet professional environment right in the middle of active unpaved industrial zones.",
     localDeliveryLogistics:
-      "We run our specialized winch-loaded trucks straight down the I-10 corridor to the Golden Triangle. We drop your ground-level office exactly where you need it on your Nederland jobsite, ready for immediate power and completely bypassing the need for vulnerable blocking or skirting.",
+      "We dispatch straight to your Jefferson County jobsite. By placing the container flat on the ground we eliminate the need for stairs and provide easy loading access for your larger equipment through the rear cargo doors.",
     localClimateSpecs:
-      "Every Nederland unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for terminal corridor humidity and heat radiating off midstream pipeline and storage infrastructure. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Nederland command centers. From summer heat advisories to sudden Gulf rain events, your Nederland, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Terminal sites generate intense heat and heavy dust. Our units combat this with moisture resistant PVC wall panels 2 inch spray foam insulation and a dedicated 12,000 BTU heat pump.",
+    localHighways: "US Highway 69 and Texas State Highway 347",
+    faqs: [
+      {
+        question: "Is the insulation thick enough to block out heavy machinery noise?",
+        answer:
+          "Yes. The 2 inch closed cell spray foam insulation provides excellent sound reduction creating a quiet workspace for your project managers.",
+      },
+      {
+        question: "How do we connect power at a new terminal build?",
+        answer:
+          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+      },
+      {
+        question: "Are the windows functional for fresh air?",
+        answer:
+          "Yes. Both 42 inch by 30 inch sliding windows are fully operational while remaining protected by the exterior steel security bars.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "port-arthur-tx",
+    city: "Port Arthur",
+    state: "TX",
+    heroHeadline: "Commercial Jobsite Office Containers in Port Arthur, TX",
+    heroSub:
+      "Secure ground level offices supplied to massive LNG export terminals and refinery turnarounds.",
+    localIndustryFocus:
+      "Port Arthur serves as a critical junction for global energy exports and heavy industry. Staging projects here means dealing with heavy machinery traffic and intense Gulf Coast weather. We provide secure steel framed workspaces built from one trip shipping containers giving your foremen a durable fully finished command center.",
+    localDeliveryLogistics:
+      "Our transport trucks drop your office container flat on your prepared pad. This ground level design ensures fast deployment and provides a safe trip free entrance for your crew during busy shift changes.",
+    localClimateSpecs:
+      "To handle the relentless coastal humidity these units are lined with smooth PVC panels that resist mold. Combined with 2 inch spray foam and an LG heat pump your remote office remains dry and highly comfortable year round.",
+    localHighways: "Texas State Highway 73 and Texas State Highway 87",
+    faqs: [
+      {
+        question: "Can we load heavy testing equipment into the office?",
+        answer:
+          "Yes. You can use the fully operational rear cargo doors to load oversized items directly into the workspace.",
+      },
+      {
+        question: "How do we get power to the unit?",
+        answer:
+          "Your site electrician can wire your temporary power directly into the included 100 amp breaker panel to run the AC and eighteen interior outlets.",
+      },
+      {
+        question: "Is the entry door safe from break ins?",
+        answer:
+          "The container features a solid 36 inch steel man door equipped with a heavy duty deadbolt to keep your assets secure overnight.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
@@ -328,16 +413,32 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "TX",
     heroHeadline: "Commercial Jobsite Office Containers in Houston, TX",
     heroSub:
-      "Supporting the Houston Ship Channel, massive petrochemical expansions, and heavy industrial contractors with heavy-duty, ground-level mobile offices.",
+      "Heavy duty mobile offices supplied for Houston Ship Channel projects and urban infill developments.",
     localIndustryFocus:
-      "Houston is the epicenter of American energy and industrial manufacturing. When you are staging a major turnaround in Pasadena or managing port logistics in Baytown, you need workspaces that match the scale of your project. Southern Container Solutions delivers rugged, commercial-grade 20' and 40' office containers designed to endure Gulf Coast weather and heavy industrial use. Skip the flimsy trailers; our steel-framed offices provide a secure, climate-controlled environment for your engineers and site managers.",
+      "With massive capital flowing into Ship Channel expansions and Harris County commercial builds contractors need highly durable site infrastructure. Out of state modular trailer companies cannot keep up with the rough terrain and tight staging zones. We supply commercial grade steel office containers designed specifically to protect engineers and IT gear on active jobsites.",
     localDeliveryLogistics:
-      "We run straight down I-10 from our Louisiana yard, bypassing the backlog of local Texas trailer rentals. Our winch-loaded trucks drop your ground-level office directly onto the dirt, gravel, or asphalt of your jobsite, ready for immediate power connection.",
+      "We dispatch directly to the mud and gravel of your Houston industrial site or tight urban lot. Our trucks ensure your office is dropped flat on the ground bypassing the need for skirting or sprawling trailer ramps.",
     localClimateSpecs:
-      "Every Houston unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for Ship Channel humidity, radiant asphalt heat, and sustained summer heat indexes across Harris County yards. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Houston command centers. From summer heat advisories to sudden Gulf rain events, your Houston, TX office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch closed cell spray foam to combat intense Houston humidity and heat islands. The 12,000 BTU LG mini split handles the heavy cooling demands keeping your project management team comfortable.",
+    localHighways: "Interstate 10 Interstate 45 and Texas State Highway 225",
+    faqs: [
+      {
+        question: "Do these containers hold up against Houston coastal weather?",
+        answer:
+          "Yes. They are built from one trip shipping containers providing a rigid weather resistant steel shell that outperforms traditional fiberglass trailers.",
+      },
+      {
+        question: "How do we power the office at a Ship Channel site?",
+        answer:
+          "The office is equipped with a 100 amp breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
+      },
+      {
+        question: "Are the interior walls resistant to humidity?",
+        answer:
+          "Yes. The interior is finished with smooth PVC wall and ceiling panels that naturally resist moisture and mold.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
-    imageAlt:
-      "40-foot ground-level mobile office container on a Texas jobsite by Southern Container Solutions",
   },
   {
     slug: "corpus-christi-tx",
@@ -1056,13 +1157,163 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     state: "LA",
     heroHeadline: "Commercial Jobsite Office Containers in Shreveport, LA",
     heroSub:
-      "Supporting logistics hubs, regional manufacturing, and commercial construction across North Louisiana with secure, ground-level mobile offices.",
+      "Turnkey mobile offices supplied to Caddo Parish manufacturing and heavy civil construction projects.",
     localIndustryFocus:
-      "As a major logistics and manufacturing hub in North Louisiana, Shreveport demands rugged site infrastructure. Standard office trailers cause logistical headaches and safety risks on active commercial sites. Southern Container Solutions delivers commercial-grade 20' and 40' steel office containers designed specifically for heavy footprints. Keep your project managers, engineers, and blueprints protected in a fully insulated, climate-controlled workspace that sits flat on the dirt.",
+      "Managing a large scale construction site or logistics hub in Shreveport requires serious site infrastructure. Standard wheeled trailers create logistical bottlenecks and take too long to set up. We supply heavy duty steel office containers built from one trip shipping containers. Keep your blueprints and engineering gear protected in a fully insulated workspace without the trip hazards of trailer stairs.",
     localDeliveryLogistics:
-      "We bypass the red tape and deliver straight to your site. Our dispatch uses specialized winch-loaded trucks, allowing us to drop your office exactly where you need it on your Shreveport jobsite, completely eliminating the need for trailer stairs, skirting, or complex anchoring.",
+      "We dispatch our winch loaded trucks straight to your staging area. By dropping your workspace flat on the ground your crew can bypass complex setups and get to work safely and immediately.",
     localClimateSpecs:
-      "Every Shreveport unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for North Louisiana heat and humidity on logistics hub construction sites. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on Shreveport command centers. From summer heat advisories to sudden Gulf rain events, your Shreveport, LA office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.",
+      "Every unit ships with 2 inch closed cell spray foam and smooth moisture resistant PVC wall systems. The 12,000 BTU LG mini split heat pump features dedicated surge protection to combat the intense North Louisiana summer heat.",
+    localHighways: "Interstate 20 and Interstate 49",
+    faqs: [
+      {
+        question: "How much site preparation is needed for a delivery in Shreveport?",
+        answer:
+          "Because our units sit flat on the ground no stairs or skirting are required. You just need a relatively firm surface like gravel or compacted dirt on your jobsite.",
+      },
+      {
+        question: "How do we power the office container at the jobsite?",
+        answer:
+          "The office includes a 100 amp breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into this panel to run the eighteen interior outlets and AC.",
+      },
+      {
+        question: "Are these containers secure on Shreveport jobsites?",
+        answer:
+          "Yes. They feature a 36 inch steel man door with a deadbolt and heavy duty steel security bars over both sliding windows to protect your assets.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "ruston-la",
+    city: "Ruston",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Ruston, LA",
+    heroSub:
+      "Secure mobile offices supporting Lincoln Parish commercial builds and infrastructure expansions.",
+    localIndustryFocus:
+      "Ruston is expanding fast and local contractors need reliable site infrastructure to keep up with commercial and university projects. We supply commercial grade steel office containers designed for tough unpaved environments to keep your site managers protected and productive.",
+    localDeliveryLogistics:
+      "We deliver directly to your Lincoln Parish jobsite. Our trucks drop your office container flat on the dirt exactly where you need it skipping the hassle of blocking or tying down temporary structures.",
+    localClimateSpecs:
+      "We seal door and window openings and apply 2 inch closed cell spray foam to limit condensation. The LG mini split HVAC maintains stable interior conditions that uninsulated rental trailers simply cannot hold through a full summer project schedule.",
+    localHighways: "Interstate 20 and US Highway 167",
+    faqs: [
+      {
+        question: "Do we need a ramp to access the container office?",
+        answer:
+          "No. The container sits flat on the ground providing step free walk in access which is ideal for active civil construction sites.",
+      },
+      {
+        question: "Is the interior easy to clean after walking through the mud?",
+        answer:
+          "Absolutely. The interior features smooth moisture resistant PVC wall and ceiling panels that are incredibly easy to wipe down and clean.",
+      },
+      {
+        question: "Can this handle a full engineering team?",
+        answer:
+          "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "caddo-la",
+    city: "Caddo",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Caddo, LA",
+    heroSub:
+      "Ground level mobile offices supplied to rural infrastructure and heavy timber staging sites.",
+    localIndustryFocus:
+      "Staging a project in the rural and heavy timber zones of Caddo Parish requires rugged infrastructure. Protect your safety managers and vital technical equipment in a fully climate controlled steel structure built from a one trip shipping container that outperforms traditional fiberglass trailers.",
+    localDeliveryLogistics:
+      "We offer fast direct logistics to your remote staging area. We dispatch straight to your site and drop the container flat on the ground so your team has instant access through the 36 inch steel man door.",
+    localClimateSpecs:
+      "The unpaved rural sites demand excellent temperature and dust control. Your office is outfitted with 2 inch spray foam insulation and a 12,000 BTU heat pump to ensure your networking gear stays dry and cool.",
+    localHighways: "Louisiana Highway 1 and US Highway 71",
+    faqs: [
+      {
+        question: "How do I hook up power at a remote Caddo site?",
+        answer:
+          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+      },
+      {
+        question: "Can we load heavy equipment inside?",
+        answer:
+          "Yes. You can bypass the standard entry door and use the fully operational rear cargo doors to load large equipment or furniture.",
+      },
+      {
+        question: "Will the exterior lighting turn on automatically?",
+        answer:
+          "Yes. There is an exterior photocell light located above the entry door that activates automatically for early morning shifts or night operations.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "holly-ridge-la",
+    city: "Holly Ridge",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in Holly Ridge, LA",
+    heroSub:
+      "Turnkey mobile offices supporting Richland Parish agricultural logistics and industrial staging.",
+    localIndustryFocus:
+      "Contractors handling facility expansions and logistics operations in Holly Ridge need reliable site infrastructure. Traditional trailers sink in the mud and waste time during setup. We supply heavy duty container offices that provide immediate secure workspace for your foremen.",
+    localDeliveryLogistics:
+      "Our trucks navigate straight to your plant gate or construction staging site. By dropping your workspace flat on the dirt your crew can bypass complex leveling and get straight to work.",
+    localClimateSpecs:
+      "To combat heavy North Louisiana heat and agricultural dust these offices feature 2 inch closed cell spray foam and smooth PVC walls. The 12,000 BTU LG mini split ensures excellent temperature control during intense summer workdays.",
+    localHighways: "US Highway 80 and Interstate 20",
+    faqs: [
+      {
+        question: "Are these containers structurally sound for heavy industrial use?",
+        answer:
+          "Yes. They are constructed from heavy duty one trip shipping containers providing a rigid steel frame that easily handles rough environments.",
+      },
+      {
+        question: "How much power capacity does the unit have?",
+        answer:
+          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+      },
+      {
+        question: "Is the AC unit protected against power surges?",
+        answer:
+          "Yes. The 12,000 BTU LG mini split heat pump is wired with dedicated surge protection to defend against unpredictable temporary site power.",
+      },
+    ],
+    image: "/images/jobsite-office-container.png",
+  },
+  {
+    slug: "st-francisville-la",
+    city: "St. Francisville",
+    state: "LA",
+    heroHeadline: "Commercial Jobsite Office Containers in St. Francisville, LA",
+    heroSub:
+      "Heavy duty mobile offices for West Feliciana Parish industrial builds and commercial projects.",
+    localIndustryFocus:
+      "Plant managers and contractors executing capital projects near St. Francisville cannot afford flimsy trailers that create logistical bottlenecks. We provide secure steel framed offices that protect your blueprints and on site IT gear from the heavy river humidity and unpaved site conditions.",
+    localDeliveryLogistics:
+      "We dispatch straight to your West Feliciana Parish plant gate or staging area. The unit is placed directly on the ground giving your crew safe walk in access without the need for skirting or stairs.",
+    localClimateSpecs:
+      "River adjacent industrial corridors generate immense heat. The 2 inch closed cell spray foam provides superior insulation and sound reduction while the LG mini split handles the heavy cooling requirements.",
+    localHighways: "US Highway 61 and Louisiana Highway 10",
+    faqs: [
+      {
+        question: "Can we use this as a command center for our engineering team?",
+        answer:
+          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+      },
+      {
+        question: "Are the windows secure from jobsite vandalism?",
+        answer:
+          "Both 42 inch by 30 inch sliding windows are protected by welded steel security bars to prevent unauthorized access.",
+      },
+      {
+        question: "Will the walls sweat in the extreme humidity?",
+        answer:
+          "No. The combination of 2 inch closed cell spray foam and moisture resistant PVC panels prevents interior condensation and mold buildup.",
+      },
+    ],
     image: "/images/jobsite-office-container.png",
   },
   {
