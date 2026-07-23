@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ServiceAreaLanding from "@/components/ServiceAreaLanding";
+import { buildOfficeContainerProductJsonLd } from "@/lib/serviceAreaDefaults";
 import {
   getAllServiceAreaSlugs,
   getServiceAreaBySlug,
@@ -31,5 +32,15 @@ export default async function ServiceAreaPage({ params }) {
 
   if (!area) notFound();
 
-  return <ServiceAreaLanding area={area} />;
+  const productJsonLd = buildOfficeContainerProductJsonLd(area.city);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <ServiceAreaLanding area={area} />
+    </>
+  );
 }

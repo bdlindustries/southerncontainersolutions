@@ -4,7 +4,22 @@ import { getImageAlt } from "@/lib/serviceAreaLocalSeo";
 import { STANDARD_OFFICE_CONTAINER_SPECS } from "@/lib/serviceAreaDefaults";
 
 export default function ServiceAreaLanding({ area }) {
-  const imageAlt = getImageAlt(area.city, area.state);
+  const defaultAlt = getImageAlt(area.city, area.state);
+  const gallery =
+    area.heroImages?.length > 0
+      ? area.heroImages
+      : [{ src: area.heroImage, alt: area.imageAlt ?? defaultAlt }];
+
+  const industryHeading =
+    area.sectionHeadings?.industry ??
+    `${area.city} Jobsite and Industrial Applications`;
+  const deliveryHeading =
+    area.sectionHeadings?.delivery ?? `Delivery Logistics in ${area.city}, ${area.state}`;
+  const climateHeading =
+    area.sectionHeadings?.climate ??
+    `Climate and Interior Specs for ${area.city}, ${area.state}`;
+
+  const isDeliveryShowcase = Boolean(area.buildModifications && area.heroImages?.length);
 
   return (
     <div className="min-h-screen bg-slate-50 animate-in fade-in duration-300">
@@ -19,28 +34,77 @@ export default function ServiceAreaLanding({ area }) {
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 max-w-4xl">
             {area.heroHeadline}
           </h1>
-          <p className="text-xl text-slate-300 font-medium max-w-3xl leading-relaxed">
+          <h2 className="text-xl text-slate-300 font-medium max-w-3xl leading-relaxed">
             {area.heroSub}
-          </p>
+          </h2>
+          {isDeliveryShowcase && (
+            <Link
+              href="/shop"
+              className="mt-8 inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-xl font-black text-lg transition shadow-lg ring-2 ring-amber-400/40"
+            >
+              <PackageOpen className="w-5 h-5" />
+              Shop Products
+            </Link>
+          )}
         </div>
       </header>
 
+      {isDeliveryShowcase && (
+        <section className="bg-amber-500 border-b-4 border-amber-600 shadow-lg">
+          <div className="max-w-4xl mx-auto px-4 md:px-8 py-6 md:py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-amber-900 mb-1">
+                Ready to Buy
+              </p>
+              <p className="text-xl md:text-2xl font-black text-slate-950 leading-tight">
+                Shop In-Stock Container Offices &amp; Storage Units
+              </p>
+              <p className="text-slate-900 font-semibold mt-2 text-sm md:text-base">
+                See pricing online and buy direct — we deliver to your jobsite.
+              </p>
+            </div>
+            <Link
+              href="/shop"
+              className="shrink-0 inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-black text-lg transition shadow-xl"
+            >
+              <PackageOpen className="w-5 h-5" />
+              Shop Products
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
+      )}
+
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-20 space-y-12">
-        <figure className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
-          <img
-            src={area.heroImage}
-            alt={imageAlt}
-            className="w-full h-auto object-cover"
-          />
-        </figure>
+        <section>
+          <h2 className="text-2xl font-black text-slate-950 mb-6">
+            Verified Delivery Photos in {area.city}, {area.state}
+          </h2>
+          <div className={gallery.length > 1 ? "grid grid-cols-1 gap-6" : ""}>
+            {gallery.map((image) => (
+              <figure
+                key={image.src}
+                className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-auto object-cover"
+                />
+              </figure>
+            ))}
+          </div>
+        </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-black text-slate-950 mb-6">{industryHeading}</h2>
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.localIndustryFocus}
           </p>
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-4">
+          <h2 className="text-2xl font-black text-slate-950">{deliveryHeading}</h2>
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.localDeliveryLogistics}
           </p>
@@ -50,10 +114,37 @@ export default function ServiceAreaLanding({ area }) {
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+          <h2 className="text-2xl font-black text-slate-950 mb-6">{climateHeading}</h2>
           <p className="text-slate-700 text-lg leading-relaxed whitespace-pre-line">
             {area.localClimateSpecs}
           </p>
         </section>
+
+        {area.buildModifications && (
+          <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-black text-slate-950 mb-8">
+              {area.buildModifications.heading}
+            </h2>
+            <div className="grid gap-8 sm:grid-cols-2">
+              {area.buildModifications.groups.map((group) => (
+                <div key={group.title}>
+                  <h3 className="text-lg font-black text-slate-950 mb-4">{group.title}</h3>
+                  <ul className="space-y-3">
+                    {group.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2 text-slate-700 text-base leading-relaxed"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
           <h2 className="text-2xl font-black text-slate-950 mb-6">
@@ -76,10 +167,12 @@ export default function ServiceAreaLanding({ area }) {
           <div className="flex-1 flex flex-col gap-3">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-lg font-black transition-colors"
+              className={`inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-lg font-black transition-colors ${
+                isDeliveryShowcase ? "text-lg shadow-lg ring-2 ring-amber-400/50" : ""
+              }`}
             >
               <PackageOpen className="w-5 h-5" />
-              View Available Units
+              {isDeliveryShowcase ? "Shop Products" : "View Available Units"}
             </Link>
             <Link
               href="/rentals"

@@ -6,6 +6,16 @@ import {
 
 export type { ServiceAreaFaq };
 
+export type ServiceAreaHeroImage = {
+  src: string;
+  alt: string;
+};
+
+export type BuildModificationGroup = {
+  title: string;
+  items: string[];
+};
+
 export type ServiceArea = {
   slug: string;
   city: string;
@@ -18,7 +28,17 @@ export type ServiceArea = {
   localHighways: string;
   faqs: ServiceAreaFaq[];
   heroImage: string;
+  heroImages?: ServiceAreaHeroImage[];
   imageAlt?: string;
+  sectionHeadings?: {
+    industry: string;
+    delivery: string;
+    climate: string;
+  };
+  buildModifications?: {
+    heading: string;
+    groups: BuildModificationGroup[];
+  };
   /** Top-level route when different from /service-areas/[slug] */
   routePath?: string;
 };
@@ -1705,34 +1725,91 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "houma-la",
     city: "Houma",
     state: "LA",
-    heroHeadline: "Commercial Jobsite Office Containers in Houma, LA",
+    heroHeadline: "Recent 40' Office Container Delivery in Houma, LA",
     heroSub:
-      "Ground level mobile offices for shipbuilding and coastal restoration staging throughout Terrebonne Parish.",
+      "Documented ground level office container delivery to a Terrebonne Parish maritime staging and offshore oilfield supply site.",
+    sectionHeadings: {
+      industry: "Why Houma Maritime and Petrochemical Sites Need Container Offices",
+      delivery: "Tilt Bed Delivery to Houma Shell Yards and Dockside Laydown Pads",
+      climate: "Combating Houma Salt Air and Gulf Coast Humidity Inside the Unit",
+    },
+    buildModifications: {
+      heading: "Build Modifications on This 40' Houma Delivery",
+      groups: [
+        {
+          title: "HVAC and Insulation",
+          items: [
+            "12,000 BTU LG mini split heat pump providing AC and heat with dedicated surge protection",
+            "2 inch closed cell spray foam insulation applied throughout the container",
+            "Smooth moisture resistant PVC wall and ceiling panels",
+          ],
+        },
+        {
+          title: "Electrical Package",
+          items: [
+            "100 amp breaker panel for tying in temporary site power pole or jobsite generator",
+            "Eighteen standard interior outlets for desks, chargers, and networking gear",
+            "Four interior LED ceiling lights",
+            "One exterior photocell light mounted above the entry door",
+          ],
+        },
+        {
+          title: "Doors, Windows, and Security",
+          items: [
+            "36 inch steel man door with commercial deadbolt",
+            "Two 42 inch by 30 inch sliding windows with heavy duty welded steel security bars",
+            "Fully operational rear cargo doors for loading oversized equipment",
+          ],
+        },
+        {
+          title: "Container Condition",
+          items: [
+            "Built from a one trip shipping container in excellent structural condition",
+            "Ground level placement with no stairs, skirting, or trailer ramps required",
+          ],
+        },
+      ],
+    },
     localIndustryFocus:
-      "When major marine contractors execute large scale builds in Houma fast mobilization is key. We provide robust container offices built strictly for heavy industrial and maritime use. Protect your engineering teams in a fully insulated steel structure that sits flat on the dirt without OSHA trip hazards.",
+      "Project managers running oilfield service fleets, offshore supply bases, and ship channel logistics around Houma cannot afford flimsy plywood trailers on active laydown yards. This verified delivery shows a one trip shipping container office built for heavy coastal use: a 36 inch steel man door with deadbolt, two 42 inch by 30 inch sliding windows with heavy duty steel security bars, and fully operational rear cargo doors to protect tools and surveying gear overnight. With eighteen interior outlets and four LED ceiling lights, your Houma field team has a secure command center steps from the dock.",
     localDeliveryLogistics:
-      "We offer direct logistics to Terrebonne Parish jobsites. Our trucks navigate straight to your shipyard providing quick deployment so your crew can tie into power and get to work immediately.",
+      "We dispatched this unit to Houma on a tilt bed trailer and dropped it flat on a firm shell and concrete staging surface without blocking, skirting, or stair towers. That ground level placement is critical on crowded dockside laydown yards and crushed shell supply bases where every inch of turnaround space matters. Your crew walks straight through the steel man door while forklifts and offshore cargo still move on the pad. Site electricians tie temporary power from a jobsite generator or site pole directly into the provided 100 amp breaker panel using a permanent hardwire or custom pigtail.",
     localClimateSpecs:
-      "We seal door and window openings and apply 2 inch closed cell spray foam to limit condensation. The LG mini split HVAC maintains stable interior conditions that uninsulated rental trailers simply cannot hold through a long project schedule.",
-    localHighways: "US Highway 90 and Louisiana Highway 24",
+      "Houma sits in heavy Gulf moisture with constant salt air exposure across maritime and petrochemical yards. We line every office with 2 inch closed cell spray foam and smooth moisture resistant PVC wall and ceiling panels so interior steel never sweats through a humid shift. The 12,000 BTU LG mini split heat pump provides dedicated cooling and heat with surge protection, keeping servers, radios, and blueprints stable while exterior photocell lighting above the entry handles dark early mooring calls.",
+    localHighways:
+      "US Highway 90, Louisiana Highway 311, Louisiana Highway 182, and Houma Navigation Canal logistics corridors",
     faqs: [
       {
-        question: "Do we need a ramp to access the container office?",
+        question: "Can you drop a container office on a crushed shell yard near the Houma ship channel?",
         answer:
-          "No. The container sits flat on the ground providing step free walk in access which is ideal for active marine yards.",
+          "Yes. Our tilt bed trucks place the unit directly on compacted shell, gravel, or concrete laydown pads common to offshore supply bases. Because the office sits flat on the ground, your crew gets immediate walk in access without ramps eating staging space.",
       },
       {
-        question: "Is the interior easy to clean after walking through the mud?",
+        question: "How do Houma maritime contractors power the 100 amp panel on a remote dockside pad?",
         answer:
-          "Absolutely. The interior features smooth moisture resistant PVC wall and ceiling panels that are incredibly easy to wipe down.",
+          "Your site electrician can hardwire a permanent line from your temporary power pole or wire a custom pigtail from a diesel generator directly into the 100 amp breaker panel. That panel feeds the eighteen interior outlets, four LED ceiling lights, exterior photocell light, and 12,000 BTU LG mini split.",
       },
       {
-        question: "Can this handle a full engineering team?",
+        question: "Will the interior hold up against Houma salt air and tracked in mud from the yard?",
         answer:
-          "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets.",
+          "The smooth PVC wall and ceiling panels resist moisture and wipe clean after muddy shifts. Combined with 2 inch closed cell spray foam, the interior stays dry and comfortable while welded steel security bars and a deadbolted man door protect assets left on site overnight.",
       },
     ],
-    heroImage: "/City-Pages-Pics/IMG_1042.JPEG",
+    heroImage: "/City-Pages-Pics/Houma-Delivery-1.jpg",
+    heroImages: [
+      {
+        src: "/City-Pages-Pics/Houma-Delivery-1.jpg",
+        alt: "Custom shipping container office exterior delivered in Houma, LA on maritime staging yard with steel security bars",
+      },
+      {
+        src: "/City-Pages-Pics/Houma-Delivery-2.jpg",
+        alt: "40 foot container office build with security bars delivered in Houma, LA on offshore supply shell yard",
+      },
+      {
+        src: "/City-Pages-Pics/Houma-Delivery-3.jpg",
+        alt: "Ground level shipping container office tilt bed delivery in Houma, LA at petrochemical jobsite",
+      },
+    ],
   },
   {
     slug: "thibodaux-la",
