@@ -25,7 +25,7 @@ export function getLocalBusinessSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}/favicon.svg`,
     image: `${BASE_URL}/favicon.svg`,
-    telephone: "+1-985-251-2356",
+    telephone: "+1-985-251-2316",
     email: "info@southerncontainersolutions.com",
     priceRange: "$$",
     description:
