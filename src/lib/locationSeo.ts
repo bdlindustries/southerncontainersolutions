@@ -78,8 +78,17 @@ function buildDefaultUniqueIntro(area: ServiceArea): string {
   return `Southern Container Solutions delivers shipping container offices and portable storage containers to ${area.city}, ${area.state} jobsites. Offices are finished, ground-level steel workspaces; storage units are Corten steel Conex boxes when you need secure laydown without an office build.`;
 }
 
+const FAR_FROM_COVINGTON_RENTAL_STATES = new Set(["TX", "MS", "AL", "FL"]);
+
+export function buildFarShopRentalsParagraph(city: string, state: string): string {
+  return `Browse shipping container offices for sale on our shop page. For secure laydown, request storage container pricing on our raw inventory page. Long-term container office rentals are available through our partner Big Rentals with transportation quoted by distance from our Covington yard—call (985) 251-2316 for a delivery quote to ${city}, ${state}.`;
+}
+
 function buildDefaultShopRentalsParagraph(area: ServiceArea): string {
-  return `Ready to buy? Browse published pricing on shipping container offices in our shop. Need secure storage without a full office build? Request a quote for storage containers and Conex boxes on our raw inventory page. For shorter projects, explore container office rentals on our rentals page.`;
+  if (FAR_FROM_COVINGTON_RENTAL_STATES.has(area.state)) {
+    return buildFarShopRentalsParagraph(area.city, area.state);
+  }
+  return `Ready to buy? Browse published pricing on shipping container offices in our shop. Need secure storage without a full office build? Request a quote for storage containers and Conex boxes on our raw inventory page. For longer schedules, explore container office rentals on our rentals page or call (985) 251-2316.`;
 }
 
 export function enhanceServiceAreaForLocationPage(area: ServiceArea): ServiceArea {
@@ -105,6 +114,10 @@ export function enhanceServiceAreaForLocationPage(area: ServiceArea): ServiceAre
   }
   if (patch?.extraFaqs?.length) {
     next.faqs = [...next.faqs, ...patch.extraFaqs];
+  }
+
+  if (FAR_FROM_COVINGTON_RENTAL_STATES.has(next.state)) {
+    next.localShopRentalsParagraph = buildFarShopRentalsParagraph(next.city, next.state);
   }
 
   return next;
