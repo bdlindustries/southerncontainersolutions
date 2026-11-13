@@ -5,6 +5,7 @@ import {
   getAllServiceAreaSlugs,
   getServiceAreaBySlug,
 } from "@/lib/data/serviceAreas";
+import { normalizeLocationSlug } from "@/lib/locationSlugs";
 
 export async function generateStaticParams() {
   return getAllServiceAreaSlugs().map((city) => ({ city }));
@@ -15,13 +16,13 @@ export async function generateMetadata({ params }) {
   const area = getServiceAreaBySlug(city);
   if (!area) return { title: "Service Area Not Found" };
 
-  const canonicalPath = area.routePath ?? `/service-areas/${area.slug}`;
+  const canonicalSlug = normalizeLocationSlug(area.slug);
 
   return {
     title: `${area.heroHeadline} | Southern Container Solutions`,
     description: area.heroSub,
     alternates: {
-      canonical: `https://www.southerncontainersolutions.com${canonicalPath}`,
+      canonical: `/locations/${canonicalSlug}`,
     },
   };
 }

@@ -1,15 +1,19 @@
 import { HardHat, BookOpen } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Southern Container Solutions",
-  description: "Premium container offices engineered for durability. Built in Covington, Louisiana, delivered nationwide.",
+  title: "About Southern Container Solutions | Covington, LA",
+  description:
+    "Meet Southern Container Solutions in Covington, LA. We build durable shipping container offices with upfront pricing and Gulf South delivery.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-slate-50 animate-in fade-in duration-300">
       <div className="bg-slate-950 text-white py-24 px-4 text-center">
-        <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight uppercase">Who We Are</h2>
+        <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight uppercase">About Southern Container Solutions</h1>
         <p className="text-xl text-amber-500 font-bold max-w-2xl mx-auto">
           Your project stays simple. Your cost stays upfront. Your container shows up ready to work.
         </p>

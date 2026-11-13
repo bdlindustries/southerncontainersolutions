@@ -3,21 +3,26 @@ import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getLocalBusinessSchema } from '@/lib/localBusinessSchema';
+import { SITE_URL } from '@/lib/siteUrl';
+import { defaultOpenGraph, defaultTwitter } from '@/lib/defaultSocialMetadata';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Southern Container Solutions | Custom Shipping Container Offices",
-  description: "Premium shipping container modifications and mobile offices. Custom 20' and 40' container conversions serving the Northshore and Gulf Coast.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Southern Container Solutions",
+    template: "%s",
+  },
+  description:
+    "Shipping container offices and modifications built in Covington, Louisiana and delivered across the Gulf South.",
   keywords: ["shipping container office", "container conversion", "mobile office", "Covington", "Mandeville", "Slidell", "Madisonville", "Hammond"],
   openGraph: {
-    title: "Southern Container Solutions | Custom Container Offices",
-    description: "Premium 20' and 40' shipping container offices and modifications. Built tough. Ready to deploy.",
-    url: "https://southerncontainersolutions.com/",
-    siteName: "Southern Container Solutions",
-    type: "website",
-  }
+    ...defaultOpenGraph,
+    url: SITE_URL,
+  },
+  twitter: defaultTwitter,
 };
 
 export default function RootLayout({ children }) {

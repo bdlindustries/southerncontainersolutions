@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Petrochemical Turnaround Trailers vs Ground Level Container Offices | Southern Container Solutions',
   description: 'Why standard mobile trailers fail during Gulf Coast refinery turnarounds and how ground level steel container offices solve staging, power, and safety challenges.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/petrochemical-turnaround-trailers'
+    canonical: '/resources/petrochemical-turnaround-trailers',
   }
 };
 

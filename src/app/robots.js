@@ -3,8 +3,8 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/'],
+      disallow: ['/api/'],
     },
-    sitemap: 'https://www.southerncontainersolutions.com/sitemap.xml',
+    sitemap: 'https://southerncontainersolutions.com/sitemap.xml',
   };
 }

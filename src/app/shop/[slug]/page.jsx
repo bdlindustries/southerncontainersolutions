@@ -6,6 +6,7 @@ import { getLiveInventory, getProductBySlug } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import ProductPurchaseActions from "@/components/ProductPurchaseActions";
 import ProductImageGallery from "@/components/ProductImageGallery";
+import { buildShopProductJsonLd } from "@/lib/shopProductJsonLd";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -15,6 +16,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${product.title} | Southern Container Solutions`,
     description: product.description,
+    alternates: {
+      canonical: `/shop/${getProductPathSlug(product)}`,
+    },
   };
 }
 
@@ -40,9 +44,16 @@ export default async function ProductDetailPage({ params }) {
 
   const images = listingImageUrls(product);
   const youtubeEmbedUrl = getYoutubeEmbedUrl(product.youtubeUrl || product.videoUrl);
+  const productJsonLd = buildShopProductJsonLd(product);
 
   return (
     <div className="min-h-screen bg-slate-50 py-10 md:py-14">
+      {productJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+      )}
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <Link href="/shop" className="flex items-center gap-2 text-slate-600 hover:text-amber-600 font-bold mb-8 transition-colors group">
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />

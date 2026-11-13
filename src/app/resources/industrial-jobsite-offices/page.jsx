@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Mega Project Jobsite Offices: Container Specs for Data Centers & Industrial Sites',
   description: 'Why mega projects in Texas and Louisiana are replacing modular trailers with secure, climate controlled shipping container command centers.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/industrial-jobsite-offices'
+    canonical: '/resources/industrial-jobsite-offices',
   }
 };
 

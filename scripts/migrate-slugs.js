@@ -15,7 +15,7 @@ const { readFileSync, existsSync } = require("node:fs");
 const { resolve } = require("node:path");
 
 const ROOT = resolve(__dirname, "..");
-const BASE_URL = "https://www.southerncontainersolutions.com";
+const BASE_URL = "https://southerncontainersolutions.com";
 const COLLECTION = "scs_inventory";
 const DRY_RUN = process.argv.includes("--dry-run");
 

@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Urban Jobsite Theft Prevention: Secure Container Offices | Southern Container Solutions',
   description: 'How ground level steel container offices prevent jobsite theft on urban infill projects and zero lot line commercial builds in New Orleans, Houston, and Baton Rouge.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/urban-jobsite-theft-prevention'
+    canonical: '/resources/urban-jobsite-theft-prevention',
   }
 };
 

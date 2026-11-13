@@ -4,7 +4,10 @@ import { PackageOpen, ArrowRight, Droplets, Map, ShieldCheck, HardHat, Lock, Sho
 
 export const metadata = {
   title: 'Shipping Container Resources & Guides | Southern Container Solutions',
-  description: 'Expert guides on shipping container offices, custom builds, delivery requirements, and insulation in the Gulf South.'
+  description: 'Expert guides on shipping container offices, custom builds, delivery requirements, and insulation in the Gulf South.',
+  alternates: {
+    canonical: '/resources',
+  },
 };
 
 export default function ResourcesPage() {

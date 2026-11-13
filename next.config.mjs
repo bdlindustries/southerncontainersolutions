@@ -1,7 +1,16 @@
+import { ROOT_CITY_REDIRECTS } from "./src/lib/rootCityRedirects.ts";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
+  const rootCityRedirects = ROOT_CITY_REDIRECTS.map(({ source, destination }) => ({
+    source,
+    destination,
+    permanent: true,
+  }));
+
     return [
+      ...rootCityRedirects,
       // www → apex (non-www), all paths
       {
         source: '/:path*',

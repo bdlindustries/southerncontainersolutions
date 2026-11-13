@@ -218,9 +218,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "new-orleans-la",
     city: "New Orleans",
     state: "LA",
-    heroHeadline: "Commercial Jobsite Office Containers in New Orleans, LA",
+    heroHeadline: "Shipping Container Offices in New Orleans, LA",
     heroSub:
-      "Secure ground level mobile workspaces built for urban infill projects and Orleans Parish commercial operations.",
+      "Southern Container Solutions delivers shipping container offices in New Orleans, LA for secure ground level jobsite workspace on urban infill and Orleans Parish commercial projects.",
     localIndustryFocus:
       "Building in New Orleans requires intense security and durability. We supply commercial operations with one trip container offices featuring heavy duty steel security bars and a solid 36 inch steel man door to protect your assets in the city.",
     localDeliveryLogistics:
@@ -1478,7 +1478,6 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "gulfport-ms",
     city: "Gulfport",
     state: "MS",
-    routePath: "/gulfport-ms",
     heroHeadline: "Commercial Jobsite Office Containers in Gulfport, MS",
     heroSub:
       "Building heavy duty container offices for Gulfport contractors port adjacent projects and commercial jobsites.",
@@ -1512,7 +1511,6 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "pascagoula-ms",
     city: "Pascagoula",
     state: "MS",
-    routePath: "/pascagoula-ms",
     heroHeadline: "Commercial Jobsite Office Containers in Pascagoula, MS",
     heroSub:
       "Turnkey container office builds for Pascagoula shipyard contractors industrial turnarounds and Jackson County jobsites.",
@@ -1612,7 +1610,6 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "mobile-al",
     city: "Mobile",
     state: "AL",
-    routePath: "/mobile-al",
     heroHeadline: "Commercial Jobsite Office Containers in Mobile, AL",
     heroSub:
       "Heavy duty container offices for Mobile maritime contractors port operations shipbuilding yards and coastal industrial sites.",
@@ -1691,7 +1688,6 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "morgan-city-la",
     city: "Morgan City",
     state: "LA",
-    routePath: "/morgan-city-la",
     heroHeadline: "Commercial Jobsite Office Containers in Morgan City, LA",
     heroSub:
       "Marine grade mobile offices for offshore fabrication and shipyards across St. Mary Parish.",
@@ -1947,7 +1943,6 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     slug: "geismar-la",
     city: "Geismar",
     state: "LA",
-    routePath: "/geismar-la",
     heroHeadline: "Commercial Jobsite Office Containers in Geismar, LA",
     heroSub:
       "Heavy duty mobile offices for Geismar chemical plants and Ascension Parish capital projects.",

@@ -39,7 +39,7 @@ export default function CustomBuildsPage() {
     <div className="bg-slate-950 min-h-screen py-20 text-white animate-in fade-in duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Need a modification? We can help.</h2>
+          <h1 className="text-4xl md:text-5xl font-black mb-6">Custom Shipping Container Builds</h1>
           <p className="text-slate-400 text-lg mb-10 leading-relaxed">
             Need an extra window, custom door placement, a half bath, or an electrical upgrade? We handle straightforward modifications to our standard units to fit your exact needs. Describe your project, and we&apos;ll provide a firm quote.
           </p>

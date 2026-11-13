@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Buy climate controlled, secure portable office buildings and containerized offices for mega projects. Turn key mobile offices built in Louisiana, delivered nationwide.",
   alternates: {
-    canonical: "https://yourdomain.com/shop",
+    canonical: "/shop",
   },
 };
 

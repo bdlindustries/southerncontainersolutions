@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Stop Shipping Container Condensation: The Only Insulation Method That Works in the South',
   description: 'Learn why shipping containers sweat, why fiberglass insulation fails in metal buildings, and how to permanently stop container condensation.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/container-condensation'
+    canonical: '/resources/container-condensation',
   }
 };
 

@@ -365,7 +365,7 @@ const AdminItemForm = ({ item, onSave, onCancel }) => {
                     dragIndex === idx ? 'border-amber-500 opacity-60 scale-95' : 'border-slate-800'
                   } ${dragIndex !== null && dragIndex !== idx ? 'hover:border-amber-500/50' : ''}`}
                 >
-                  <img src={src} alt="" className="w-full h-full object-cover pointer-events-none" draggable={false} />
+                  <img src={src} alt={`Listing photo ${idx + 1}`} className="w-full h-full object-cover pointer-events-none" draggable={false} />
                   {idx === 0 && (
                     <span className="absolute top-2 left-2 text-[10px] font-black uppercase tracking-wider bg-amber-500 text-slate-950 px-2 py-0.5 rounded">
                       Cover
@@ -635,7 +635,13 @@ export default function AdminPage() {
                     <GripVertical className="w-5 h-5" />
                   </div>
                   <div className="w-32 h-24 bg-slate-800 rounded shrink-0 overflow-hidden">
-                    {listingImageUrls(item)[0] && <img src={listingImageUrls(item)[0]} alt="" className="w-full h-full object-cover" />}
+                    {listingImageUrls(item)[0] && (
+                      <img
+                        src={listingImageUrls(item)[0]}
+                        alt={item.title ? `${item.title} listing photo` : "Inventory listing photo"}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </div>
                   <div className="flex-1 ml-4 flex justify-between gap-4 min-w-0">
                     <div className="min-w-0">

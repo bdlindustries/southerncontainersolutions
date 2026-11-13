@@ -142,9 +142,26 @@ export function getAllLocationSlugs(): string[] {
   return [...slugs].sort((a, b) => a.localeCompare(b, "en"));
 }
 
+let knownLocationSlugSet: Set<string> | null = null;
+
+function getKnownLocationSlugSet(): Set<string> {
+  if (!knownLocationSlugSet) {
+    knownLocationSlugSet = new Set(
+      getAllLocationSlugs().map((slug) => normalizeLocationSlug(slug))
+    );
+  }
+  return knownLocationSlugSet;
+}
+
+/** True only for the 77 hub-listed location slugs (after normalization). */
+export function isKnownLocationSlug(rawSlug: string): boolean {
+  return getKnownLocationSlugSet().has(normalizeLocationSlug(rawSlug));
+}
+
 /** Resolve a /locations/[city] param to a renderable service area record. */
 export function resolveLocationArea(rawSlug: string): ServiceArea | undefined {
   const slug = normalizeLocationSlug(rawSlug);
+  if (!isKnownLocationSlug(slug)) return undefined;
 
   const existing = getServiceAreaBySlug(slug);
   if (existing) return existing;

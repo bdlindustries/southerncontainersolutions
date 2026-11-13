@@ -67,6 +67,37 @@
   status = 301
   force = true
 
+# Legacy top-level city URLs → /locations/*
+[[redirects]]
+  from = "/gulfport-ms"
+  to = "/locations/gulfport-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pascagoula-ms"
+  to = "/locations/pascagoula-ms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mobile-al"
+  to = "/locations/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/morgan-city-la"
+  to = "/locations/morgan-city-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/geismar-la"
+  to = "/locations/geismar-la"
+  status = 301
+  force = true
+
 # Legacy service-areas → clean /locations structure
 [[redirects]]
   from = "/service-areas"

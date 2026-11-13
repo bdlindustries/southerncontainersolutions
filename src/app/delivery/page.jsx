@@ -13,7 +13,7 @@ export default async function DeliveryPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">
           <div>
-            <h2 className="text-5xl font-black text-slate-950 mb-6 uppercase tracking-tight">Delivery Made Simple</h2>
+            <h1 className="text-5xl font-black text-slate-950 mb-6 uppercase tracking-tight">Container Office Delivery</h1>
             <p className="text-slate-600 text-xl leading-relaxed mb-6">
               We ship containers anywhere in the continental United States. Delivery cost is paid directly to a third party trucking company. We coordinate everything on your behalf.
             </p>

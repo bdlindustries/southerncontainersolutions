@@ -1,71 +1,34 @@
 import type { MetadataRoute } from "next";
 import { getLiveInventory } from "@/lib/firebase";
 import { getProductPathSlug } from "@/lib/data";
+import { getAllLocationSlugs, normalizeLocationSlug } from "@/lib/locationSlugs";
+import { RESOURCE_ARTICLE_SLUGS, absoluteUrl } from "@/lib/siteUrl";
+import {
+  lastModForPath,
+  LOCATION_HUB_LAST_MOD,
+} from "@/lib/sitemapLastMod";
 
-const BASE_URL = "https://www.southerncontainersolutions.com";
-
-/** All 33 Gulf South service area slugs (canonical path uses top-level route when mapped). */
-const SERVICE_AREA_SLUGS = [
-  "covington-la",
-  "beaumont-tx",
-  "orange-tx",
-  "freeport-tx",
-  "houston-tx",
-  "corpus-christi-tx",
-  "victoria-tx",
-  "brownsville-tx",
-  "baytown-tx",
-  "pasadena-tx",
-  "deer-park-tx",
-  "laporte-tx",
-  "channelview-tx",
-  "lake-charles-la",
-  "sulphur-la",
-  "baton-rouge-la",
-  "garyville-la",
-  "reserve-la",
-  "plaquemine-la",
-  "luling-boutte-la",
-  "convent-la",
-  "jackson-ms",
-  "columbus-ms",
-  "monroe-la",
-  "alexandria-la",
-  "shreveport-la",
-  "gulfport-ms",
-  "pascagoula-ms",
-  "mobile-al",
-  "morgan-city-la",
-  "houma-la",
-  "lafayette-la",
-  "geismar-la",
+const CORE_PATHS = [
+  "/",
+  "/shop",
+  "/raw",
+  "/rentals",
+  "/custom-builds",
+  "/delivery",
+  "/about",
+  "/resources",
+  "/locations",
 ] as const;
-
-/** Top-level city landing pages (canonical URLs for five service areas). */
-const TOP_LEVEL_CITY_PATHS = [
-  "/gulfport-ms",
-  "/pascagoula-ms",
-  "/mobile-al",
-  "/morgan-city-la",
-  "/geismar-la",
-] as const;
-
-const TOP_LEVEL_SLUG_BY_PATH: Record<(typeof TOP_LEVEL_CITY_PATHS)[number], string> = {
-  "/gulfport-ms": "gulfport-ms",
-  "/pascagoula-ms": "pascagoula-ms",
-  "/mobile-al": "mobile-al",
-  "/morgan-city-la": "morgan-city-la",
-  "/geismar-la": "geismar-la",
-};
 
 function entry(
   path: string,
   priority: number,
-  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly"
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly",
+  lastModified?: Date
 ): MetadataRoute.Sitemap[number] {
   return {
-    url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
+    url: absoluteUrl(path),
+    lastModified: lastModified ?? lastModForPath(path),
     changeFrequency,
     priority,
   };
@@ -73,32 +36,50 @@ function entry(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const inventory = await getLiveInventory();
+  const productBuildTime = new Date();
 
   const productEntries: MetadataRoute.Sitemap = inventory.map((product) =>
-    entry(`/shop/${getProductPathSlug(product)}`, 0.9, "daily")
+    entry(`/shop/${getProductPathSlug(product)}`, 0.9, "daily", productBuildTime)
   );
 
-  const topLevelSlugSet = new Set(Object.values(TOP_LEVEL_SLUG_BY_PATH));
+  const locationEntries: MetadataRoute.Sitemap = getAllLocationSlugs().map(
+    (slug) => {
+      const canonicalSlug = normalizeLocationSlug(slug);
+      return entry(
+        `/locations/${canonicalSlug}`,
+        0.8,
+        "monthly",
+        new Date(`${LOCATION_HUB_LAST_MOD}T00:00:00.000Z`)
+      );
+    }
+  );
 
-  const serviceAreaEntries: MetadataRoute.Sitemap = SERVICE_AREA_SLUGS.filter(
-    (slug) => !topLevelSlugSet.has(slug)
-  ).map((slug) => entry(`/service-areas/${slug}`, 0.8));
-
-  const topLevelCityEntries: MetadataRoute.Sitemap = TOP_LEVEL_CITY_PATHS.map((path) =>
-    entry(path, 0.8)
+  const resourceEntries: MetadataRoute.Sitemap = RESOURCE_ARTICLE_SLUGS.map(
+    (slug) => entry(`/resources/${slug}`, 0.7, "monthly")
   );
 
   return [
-    entry("/", 0.9, "weekly"),
-    entry("/shop", 1.0, "daily"),
-    entry("/raw", 0.7, "daily"),
-    entry("/rentals", 0.6, "weekly"),
-    entry("/custom-builds", 1.0, "weekly"),
-    entry("/delivery", 0.6, "monthly"),
-    entry("/about", 0.6, "monthly"),
-    entry("/resources", 0.6, "weekly"),
+    ...CORE_PATHS.map((path) => {
+      const freq =
+        path === "/shop"
+          ? "daily"
+          : path === "/raw"
+            ? "daily"
+            : path === "/" || path === "/custom-builds"
+              ? "weekly"
+              : path === "/delivery" || path === "/about"
+                ? "monthly"
+                : "weekly";
+      const priority =
+        path === "/shop" || path === "/custom-builds"
+          ? 1.0
+          : path === "/"
+            ? 0.9
+            : 0.6;
+      return entry(path, priority, freq);
+    }),
     ...productEntries,
-    ...serviceAreaEntries,
-    ...topLevelCityEntries,
+    ...locationEntries,
+    ...resourceEntries,
   ];
 }

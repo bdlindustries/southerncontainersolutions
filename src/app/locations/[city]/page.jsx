@@ -3,11 +3,12 @@ import ServiceAreaLanding from "@/components/ServiceAreaLanding";
 import { buildOfficeContainerProductJsonLd } from "@/lib/serviceAreaDefaults";
 import {
   getAllLocationSlugs,
+  isKnownLocationSlug,
   normalizeLocationSlug,
   resolveLocationArea,
 } from "@/lib/locationSlugs";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return getAllLocationSlugs().map((city) => ({ city }));
@@ -15,6 +16,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { city } = await params;
+  if (!isKnownLocationSlug(city)) {
+    return { title: "Service Area Not Found" };
+  }
   const area = resolveLocationArea(city);
   if (!area) return { title: "Service Area Not Found" };
 
@@ -24,15 +28,15 @@ export async function generateMetadata({ params }) {
     title: `${area.heroHeadline} | Southern Container Solutions`,
     description: area.heroSub,
     alternates: {
-      canonical: `https://southerncontainersolutions.com/locations/${canonicalSlug}`,
+      canonical: `/locations/${canonicalSlug}`,
     },
   };
 }
 
 export default async function LocationPage({ params }) {
   const { city } = await params;
+  if (!isKnownLocationSlug(city)) notFound();
   const area = resolveLocationArea(city);
-
   if (!area) notFound();
 
   const productJsonLd = buildOfficeContainerProductJsonLd(area.city);

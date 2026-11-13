@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Shipping Container Site Prep & Delivery Requirements in Louisiana',
   description: 'Learn how to prepare your ground for a shipping container, truck turning radiuses, and why leveling is critical on soft Gulf South soil.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/site-prep-delivery'
+    canonical: '/resources/site-prep-delivery',
   }
 };
 

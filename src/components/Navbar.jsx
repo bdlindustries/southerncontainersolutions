@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MapPin, Truck, Phone, PackageOpen, Menu, X, Lock, ArrowRight, ChevronDown } from "lucide-react";
+import { MapPin, Truck, Phone, PackageOpen, Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,14 +83,6 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-3">
             <Link
-              href="/admin"
-              className="flex items-center gap-2 text-slate-600 hover:text-amber-600 font-bold text-sm px-2 py-2 rounded transition-colors"
-              title="Edit listings and view leads"
-            >
-              <Lock className="w-4 h-4" />
-              Admin
-            </Link>
-            <Link
               href="/shop"
               className="bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-2.5 rounded font-black text-sm transition-all shadow-[0_4px_14px_0_rgba(245,158,11,0.39)] hover:shadow-[0_6px_20px_rgba(245,158,11,0.23)] hover:-translate-y-0.5"
             >
@@ -126,13 +118,6 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/admin"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center gap-2 w-full font-bold text-slate-600 py-3 border-b border-slate-100"
-            >
-              <Lock className="w-4 h-4" /> Admin (listings &amp; leads)
-            </Link>
             <Link
               href="/shop"
               onClick={() => setIsMenuOpen(false)}

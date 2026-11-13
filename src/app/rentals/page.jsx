@@ -3,10 +3,11 @@ import Link from 'next/link';
 import { HardHat, FileText, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Mobile Offices & Portable Office Buildings for Rent | Big Rentals',
-  description: 'Rent heavy-duty steel mobile offices and portable office buildings. A secure alternative to standard United Rentals trailers.',
+  title: 'Container Office Rentals | Southern Container Solutions',
+  description:
+    'Rent secure steel shipping container offices for Gulf South jobsites. Southern Container Solutions partners with Big Rentals for short- and long-term fleet options.',
   alternates: {
-    canonical: 'https://yourdomain.com/rentals'
+    canonical: "/rentals",
   }
 };
 
@@ -21,7 +22,7 @@ export default function RentalsPage() {
             <ShieldCheck className="w-4 h-4"/> Fleet Managed by Big Rentals
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
-            Heavy-Duty <span className="text-amber-500">Mobile Offices</span> &<br />Portable Buildings
+            Heavy-Duty <span className="text-amber-500">Mobile Offices</span> &amp; Portable Buildings
           </h1>
           <p className="text-xl text-slate-400 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
             Stop renting flimsy wooden trailers that get broken into. Our Corten steel containerized offices provide vault-like security for commercial jobsites across the South.

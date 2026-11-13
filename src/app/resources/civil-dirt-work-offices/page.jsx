@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Civil Dirt Work Offices: Container Specs for Unpaved Jobsites | Southern Container Solutions',
   description: 'How moisture resistant PVC interiors and closed cell spray foam make container offices the best choice for heavy civil, distribution, and unpaved construction sites.',
   alternates: {
-    canonical: 'https://yourdomain.com/resources/civil-dirt-work-offices'
+    canonical: '/resources/civil-dirt-work-offices',
   }
 };
 

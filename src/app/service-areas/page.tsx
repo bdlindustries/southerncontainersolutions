@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Southern Container Solutions delivers heavy-duty, ground-level office containers to commercial construction, maritime, and petrochemical sites across the Gulf Coast.",
   alternates: {
-    canonical: "https://www.southerncontainersolutions.com/service-areas",
+    canonical: "/locations",
   },
 };
 

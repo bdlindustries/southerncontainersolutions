@@ -76,7 +76,7 @@ export default function ProductImageGallery({ images = [], title = "Product" }) 
             >
               <img
                 src={src}
-                alt=""
+                alt={`${title} thumbnail ${idx + 1}`}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

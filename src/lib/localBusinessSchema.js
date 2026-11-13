@@ -1,4 +1,6 @@
-const BASE_URL = "https://www.southerncontainersolutions.com";
+import { SITE_URL } from "./siteUrl";
+
+const BASE_URL = SITE_URL;
 
 export function getLocalBusinessSchema() {
   const organizationId = `${BASE_URL}/#localbusiness`;

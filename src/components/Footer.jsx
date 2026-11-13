@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Lock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -42,12 +42,6 @@ export default function Footer() {
               <Mail className="w-5 h-5 mr-3 text-amber-500 flex-shrink-0" /> info@southerncontainersolutions.com
             </li>
           </ul>
-          <Link
-            href="/admin"
-            className="mt-8 inline-flex items-center gap-2 text-slate-400 hover:text-amber-500 text-xs font-bold uppercase tracking-widest transition-colors border border-slate-700 hover:border-amber-500/60 rounded-lg px-4 py-2"
-          >
-            <Lock className="w-3.5 h-3.5" /> Admin
-          </Link>
         </div>
       </div>
     </footer>

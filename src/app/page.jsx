@@ -5,6 +5,21 @@ import { getFeaturedInventory } from "@/lib/firebase";
 
 export const dynamic = 'force-dynamic';
 
+export const metadata = {
+  title: "Shipping Container Offices Louisiana | Southern Container Solutions",
+  description:
+    "Shipping container offices built in Covington, LA. Climate-controlled 20' and 40' units for jobsites across LA, TX, MS, and AL. Shop pricing online.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Shipping Container Offices Louisiana | Southern Container Solutions",
+    description:
+      "Shipping container offices built in Covington, LA. Climate-controlled 20' and 40' units for jobsites across LA, TX, MS, and AL.",
+    url: "/",
+  },
+};
+
 export default async function HomePage() {
   const featuredInventory = await getFeaturedInventory(2);
 
