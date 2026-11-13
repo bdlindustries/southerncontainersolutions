@@ -124,7 +124,19 @@
   status = 301
   force = true
 
-# Legacy static .html location pages → clean /locations paths
+# Legacy static .html location pages → canonical slugs (one hop)
+[[redirects]]
+  from = "/locations/st.-francisville-la.html"
+  to = "/locations/st-francisville-la"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/bay-st.-louis-ms.html"
+  to = "/locations/bay-st-louis-ms"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/locations/*.html"
   to = "/locations/:splat"

@@ -88,7 +88,29 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Legacy static .html location pages → clean /locations/:path*
+      // Legacy dotted slugs → canonical (single hop with .html rules below)
+      {
+        source: '/locations/st.-francisville-la',
+        destination: '/locations/st-francisville-la',
+        permanent: true,
+      },
+      {
+        source: '/locations/bay-st.-louis-ms',
+        destination: '/locations/bay-st-louis-ms',
+        permanent: true,
+      },
+
+      // Legacy static .html location pages → canonical slugs (dots normalized)
+      {
+        source: '/locations/st.-francisville-la.html',
+        destination: '/locations/st-francisville-la',
+        permanent: true,
+      },
+      {
+        source: '/locations/bay-st.-louis-ms.html',
+        destination: '/locations/bay-st-louis-ms',
+        permanent: true,
+      },
       {
         source: '/locations/:path*.html',
         destination: '/locations/:path*',
@@ -100,17 +122,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Legacy filenames with dots → canonical slugs
-      {
-        source: '/locations/bay-st.-louis-ms',
-        destination: '/locations/bay-st-louis-ms',
-        permanent: true,
-      },
-      {
-        source: '/locations/st.-francisville-la',
-        destination: '/locations/st-francisville-la',
-        permanent: true,
-      },
     ];
   },
 };

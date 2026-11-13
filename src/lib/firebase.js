@@ -135,8 +135,11 @@ export async function getProductBySlug(slug) {
     if (legacyProduct) return legacyProduct;
   }
 
+  const byDocId = await getProductById(slug);
+  if (byDocId) return byDocId;
+
   const seedBySlug = SEED_INVENTORY.find((p) => p.slug === slug || p.id === slug);
   if (seedBySlug) return enrichInventoryFromSeed(seedBySlug);
 
-  return getProductById(slug);
+  return null;
 }

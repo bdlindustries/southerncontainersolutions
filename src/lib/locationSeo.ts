@@ -44,9 +44,19 @@ export function buildLocationBreadcrumbJsonLd(area: ServiceArea) {
   };
 }
 
+/** Manual neighbors when a section has too few cities in the same bucket. */
+const NEARBY_LOCATION_OVERRIDES: Record<string, string[]> = {
+  "mobile-al": ["theodore-al", "daphne-al", "pascagoula-ms", "pensacola-fl"],
+};
+
 /** Up to four nearby cities in the same curated directory section. */
 export function getNearbyLocationSlugs(slug: string, limit = 4): string[] {
   const normalized = normalizeLocationSlug(slug);
+
+  const override = NEARBY_LOCATION_OVERRIDES[normalized];
+  if (override?.length) {
+    return override.slice(0, limit).map((s) => normalizeLocationSlug(s));
+  }
 
   for (const region of LOCATION_REGIONS) {
     for (const section of region.sections) {

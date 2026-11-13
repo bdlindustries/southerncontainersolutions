@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/check-no-todo-in-build.mjs",
+    "build:verify": "npm run build && node scripts/verify-shop-pages.mjs",
     "start": "next start",
     "lint": "eslint",
     "migrate:slugs": "node scripts/migrate-slugs.js",
