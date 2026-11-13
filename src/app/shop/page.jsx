@@ -3,22 +3,35 @@ import { Zap, ChevronRight, PackageOpen, ShieldCheck, Thermometer, BookOpen, Arr
 import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getLiveInventory } from "@/lib/firebase";
 import { pageOpenGraph } from "@/lib/pageOpenGraph";
+import { buildFaqPageJsonLd } from "@/lib/faqJsonLd";
+import { SHOP_BUYER_GUIDE_PARAGRAPHS, SHOP_PAGE_FAQS } from "@/lib/shopPageContent";
 
 export const metadata = {
-  title: "Mobile Offices & Containerized Offices for Sale | Southern Container Solutions",
+  title: "Shipping Container Offices for Sale | Southern Container",
   description:
-    "Buy climate controlled, secure portable office buildings and containerized offices for mega projects. Turn key mobile offices built in Louisiana, delivered nationwide.",
+    "Shop 20' and 40' climate-controlled shipping container offices with upfront pricing. Built in Covington, LA and delivered across the Gulf South.",
   alternates: {
     canonical: "/shop",
   },
-  openGraph: pageOpenGraph("/shop"),
+  openGraph: pageOpenGraph("/shop", {
+    title: "Shipping Container Offices for Sale | Southern Container",
+    description:
+      "Shop 20' and 40' climate-controlled shipping container offices with upfront pricing. Built in Covington, LA and delivered across the Gulf South.",
+  }),
 };
 
 export default async function ShopPage() {
   const inventory = await getLiveInventory();
+  const shopFaqJsonLd = buildFaqPageJsonLd(SHOP_PAGE_FAQS);
 
   return (
     <div className="min-h-screen bg-slate-50">
+      {shopFaqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(shopFaqJsonLd) }}
+        />
+      )}
       {/* Hero */}
       <header className="bg-slate-950 py-16 md:py-24 border-b-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -27,10 +40,10 @@ export default async function ShopPage() {
             <span>Turn Key Mobile Offices</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 max-w-4xl">
-            Mobile Offices & Containerized Offices
+            Shipping Container Offices for Sale
           </h1>
           <p className="text-xl text-slate-300 font-medium max-w-3xl leading-relaxed">
-            Purchase climate controlled portable office buildings engineered for commercial jobsites and mega projects. Transparent pricing on finished containerized offices, ready for nationwide delivery.
+            Office containers for sale with published pricing on 20&apos; and 40&apos; climate-controlled builds. Finished shipping container offices built in Covington, Louisiana and delivered across the Gulf South.
           </p>
         </div>
       </header>
@@ -56,9 +69,9 @@ export default async function ShopPage() {
               <div className="w-12 h-12 bg-slate-950 rounded-xl flex items-center justify-center mb-6">
                 <Thermometer className="w-6 h-6 text-amber-500" />
               </div>
-              <h3 className="text-xl font-black text-slate-950 mb-3">Closed Cell Spray Foam</h3>
+              <h3 className="text-xl font-black text-slate-950 mb-3">Climate-Controlled Interiors</h3>
               <p className="text-slate-600 leading-relaxed">
-                Seamless closed cell spray foam insulation creates a 100% thermal barrier for extreme Southern heat. No fiberglass, no container rain, no rot.
+                Finished offices ship insulated with HVAC sized for Gulf South heat and humidity—so crews work in a stable interior instead of a bare steel box.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
@@ -129,6 +142,32 @@ export default async function ShopPage() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <h2 className="text-3xl font-black text-slate-950 mb-6">Buying a Shipping Container Office</h2>
+          <div className="max-w-3xl space-y-6 text-slate-700 text-lg leading-relaxed">
+            {SHOP_BUYER_GUIDE_PARAGRAPHS.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <h2 className="text-3xl font-black text-slate-950 mb-6">Office Container Buyer FAQ</h2>
+          <div className="max-w-3xl divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+            {SHOP_PAGE_FAQS.map((faq) => (
+              <details key={faq.question} className="group bg-slate-50 open:bg-white">
+                <summary className="cursor-pointer list-none px-6 py-4 font-bold text-slate-950 hover:text-amber-600 transition-colors flex items-center justify-between gap-4">
+                  <span>{faq.question}</span>
+                  <span className="text-amber-500 text-xl leading-none group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-5 text-slate-700 leading-relaxed">{faq.answer}</div>
+              </details>
+            ))}
           </div>
         </section>
 

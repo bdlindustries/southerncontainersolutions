@@ -8,6 +8,10 @@ import {
   resolveLocationArea,
 } from "@/lib/locationSlugs";
 import { pageOpenGraph } from "@/lib/pageOpenGraph";
+import {
+  buildLocationBreadcrumbJsonLd,
+  buildLocationPageTitle,
+} from "@/lib/locationSeo";
 
 export const dynamicParams = false;
 
@@ -27,14 +31,16 @@ export async function generateMetadata({ params }) {
 
   const path = `/locations/${canonicalSlug}`;
 
+  const pageTitle = buildLocationPageTitle(area.city, area.state);
+
   return {
-    title: `${area.heroHeadline} | Southern Container Solutions`,
+    title: pageTitle,
     description: area.heroSub,
     alternates: {
       canonical: path,
     },
     openGraph: pageOpenGraph(path, {
-      title: `${area.heroHeadline} | Southern Container Solutions`,
+      title: pageTitle,
       description: area.heroSub,
     }),
   };
@@ -47,12 +53,17 @@ export default async function LocationPage({ params }) {
   if (!area) notFound();
 
   const productJsonLd = buildOfficeContainerProductJsonLd(area.city);
+  const breadcrumbJsonLd = buildLocationBreadcrumbJsonLd(area);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <ServiceAreaLanding area={area} />
     </>

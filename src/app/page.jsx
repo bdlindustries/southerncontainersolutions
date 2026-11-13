@@ -63,6 +63,66 @@ export default async function HomePage() {
         </div>
       </header>
 
+      <section className="py-20 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="max-w-3xl mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-950 mb-4">
+              Shipping Container Offices for Sale and Rent
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Buy finished container offices with published pricing, source Conex boxes for secure laydown, or rent a ground-level office for shorter Gulf South projects. We build in Covington, Louisiana and deliver across Louisiana, Texas, Mississippi, and Alabama.
+            </p>
+          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+            <li>
+              <Link href="/shop" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Shipping container offices for sale
+              </Link>
+            </li>
+            <li>
+              <Link href="/raw" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Storage containers and Conex boxes for sale
+              </Link>
+            </li>
+            <li>
+              <Link href="/rentals" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container office rentals for jobsites
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/new-orleans-la" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in New Orleans, LA
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/baton-rouge-la" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in Baton Rouge, LA
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/houma-la" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in Houma, LA
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/lake-charles-la" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in Lake Charles, LA
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/beaumont-tx" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in Beaumont, TX
+              </Link>
+            </li>
+            <li>
+              <Link href="/locations/mobile-al" className="block rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 font-bold text-slate-900 hover:border-amber-400 hover:text-amber-700 transition-colors">
+                Container offices in Mobile, AL
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex justify-between items-end mb-12">

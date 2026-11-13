@@ -16,7 +16,7 @@ export function buildDefaultFaqs(city: string, state: string): ServiceAreaFaq[] 
     {
       question: "How do I power the office container?",
       answer:
-        "The unit includes a 100-amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets, LED lights, and 12,000 BTU AC.",
+        "Finished offices include a jobsite breaker panel. Your site electrician typically ties in temporary power from a generator or temporary service using a hardwired line or generator pigtail to run interior outlets, lighting, and climate control.",
     },
     {
       question: `Are these containers secure on ${city} jobsites?`,
@@ -27,15 +27,13 @@ export function buildDefaultFaqs(city: string, state: string): ServiceAreaFaq[] 
 }
 
 export const STANDARD_OFFICE_CONTAINER_SPECS = [
-  '2" closed-cell spray foam',
-  "12,000 BTU LG mini split heat pump (AC & Heat)",
-  "Moisture-resistant PVC wall/ceiling panels",
-  "4 interior LED lights",
-  "1 exterior photocell light",
-  "18 interior outlets",
-  "100-amp breaker panel",
-  'two 42"x30" sliding windows with steel security bars',
-  '36" steel man door with deadbolt',
+  "Climate-controlled finished interior (insulation + HVAC)",
+  "Moisture-resistant PVC wall and ceiling panels",
+  "Interior and exterior LED lighting",
+  "Jobsite electrical package with breaker panel and multiple outlets",
+  'Two sliding windows with steel security bars',
+  'Steel man door with deadbolt',
+  "Operational cargo doors for equipment access",
 ] as const;
 
 export function buildOfficeContainerProductJsonLd(city: string) {

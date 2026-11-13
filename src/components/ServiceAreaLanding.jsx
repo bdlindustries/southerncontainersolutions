@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArrowRight, MapPin, PackageOpen } from "lucide-react";
 import { getImageAlt } from "@/lib/serviceAreaLocalSeo";
 import { STANDARD_OFFICE_CONTAINER_SPECS } from "@/lib/serviceAreaDefaults";
+import { getNearbyLocationSlugs } from "@/lib/locationSeo";
+import { normalizeLocationSlug, resolveLocationArea } from "@/lib/locationSlugs";
 
 export default function ServiceAreaLanding({ area }) {
   const defaultAlt = getImageAlt(area.city, area.state);
@@ -17,9 +19,13 @@ export default function ServiceAreaLanding({ area }) {
     area.sectionHeadings?.delivery ?? `Delivery Logistics in ${area.city}, ${area.state}`;
   const climateHeading =
     area.sectionHeadings?.climate ??
-    `Climate and Interior Specs for ${area.city}, ${area.state}`;
+    `Climate-Controlled Shipping Container Offices in ${area.city}, ${area.state}`;
 
   const isDeliveryShowcase = Boolean(area.buildModifications && area.heroImages?.length);
+
+  const nearbyAreas = getNearbyLocationSlugs(area.slug)
+    .map((slug) => resolveLocationArea(slug))
+    .filter(Boolean);
 
   return (
     <div className="min-h-screen bg-slate-50 animate-in fade-in duration-300">
@@ -76,6 +82,35 @@ export default function ServiceAreaLanding({ area }) {
       )}
 
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-20 space-y-12">
+        <nav aria-label="Breadcrumb" className="text-sm font-semibold text-slate-500 -mt-4">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li>
+              <Link href="/" className="hover:text-amber-600 transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link href="/locations" className="hover:text-amber-600 transition-colors">
+                Locations
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li className="text-slate-800">
+              {area.city}, {area.state}
+            </li>
+          </ol>
+        </nav>
+
+        {area.localUniqueIntro && (
+          <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-black text-slate-950 mb-4">
+              Shipping Container Offices &amp; Storage in {area.city}
+            </h2>
+            <p className="text-slate-700 text-lg leading-relaxed">{area.localUniqueIntro}</p>
+          </section>
+        )}
+
         <section>
           <h2 className="text-2xl font-black text-slate-950 mb-6">
             Verified Delivery Photos in {area.city}, {area.state}
@@ -146,9 +181,54 @@ export default function ServiceAreaLanding({ area }) {
           </section>
         )}
 
+        {area.localShopRentalsParagraph && (
+          <section className="bg-amber-50 rounded-2xl border border-amber-200 shadow-sm p-8 md:p-10">
+            <h2 className="text-xl font-black text-slate-950 mb-4">
+              Buy, Rent, or Store on Your {area.city} Jobsite
+            </h2>
+            <p className="text-slate-800 text-lg leading-relaxed">
+              {area.localShopRentalsParagraph}{" "}
+              <Link href="/shop" className="font-bold text-amber-700 hover:text-amber-800 underline">
+                Shop offices
+              </Link>
+              ,{" "}
+              <Link href="/raw" className="font-bold text-amber-700 hover:text-amber-800 underline">
+                raw storage containers
+              </Link>
+              , and{" "}
+              <Link href="/rentals" className="font-bold text-amber-700 hover:text-amber-800 underline">
+                rentals
+              </Link>
+              .
+            </p>
+          </section>
+        )}
+
+        {nearbyAreas.length > 0 && (
+          <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+            <h2 className="text-2xl font-black text-slate-950 mb-4">Nearby Service Areas</h2>
+            <p className="text-slate-600 mb-4">
+              We also deliver shipping container offices and storage containers to communities
+              around {area.city}:
+            </p>
+            <ul className="flex flex-wrap gap-3">
+              {nearbyAreas.map((neighbor) => (
+                <li key={neighbor.slug}>
+                  <Link
+                    href={`/locations/${normalizeLocationSlug(neighbor.slug)}`}
+                    className="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 hover:border-amber-400 hover:text-amber-700 transition-colors"
+                  >
+                    {neighbor.city}, {neighbor.state}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
           <h2 className="text-2xl font-black text-slate-950 mb-6">
-            Standard 40&apos; Office Features
+            Standard Finished Office Features
           </h2>
           <ul className="grid sm:grid-cols-2 gap-3">
             {STANDARD_OFFICE_CONTAINER_SPECS.map((spec) => (

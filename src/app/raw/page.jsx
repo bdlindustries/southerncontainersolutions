@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { db } from "@/lib/firebase";
 import { sendSiteLeadEmail } from "@/lib/leads";
+import { RAW_PAGE_FAQS, RAW_SUPPORTING_PARAGRAPHS } from "@/lib/rawPageContent";
 
 const AVAILABLE_INVENTORY = [
   {
@@ -89,10 +90,10 @@ export default function RawContainersPage() {
             <span>Industrial Jobsite Storage</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 max-w-4xl">
-            Portable Storage Units & Conex Boxes
+            Storage Containers for Sale
           </h1>
           <p className="text-xl text-slate-300 font-medium max-w-3xl leading-relaxed mb-6">
-            Source heavy duty Corten steel conex boxes and One Trip Shipping Containers directly from Gulf South depots. Built for contractors who need secure, wind and water tight portable storage units on active jobsites.
+            Conex boxes for sale—20&apos; and 40&apos; wind- and water-tight Corten steel storage containers and one-trip units for secure Gulf South jobsite laydown.
           </p>
           <p className="text-slate-400 max-w-3xl leading-relaxed">
             Pricing fluctuates daily with depot supply. Request a quote below for today&apos;s exact freight and availability on 20&apos; and 40&apos; portable storage units.
@@ -169,6 +170,32 @@ export default function RawContainersPage() {
           <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-900 text-sm font-bold flex items-start gap-2">
             <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
             Exact unit condition and pricing confirmed at quote. Submit the form below for depot availability in your delivery zone.
+          </div>
+        </section>
+
+        <section className="mb-20 max-w-3xl">
+          <h2 className="text-3xl font-black text-slate-950 mb-6">Jobsite Storage &amp; Conex Boxes</h2>
+          <div className="space-y-6 text-slate-700 text-lg leading-relaxed">
+            {RAW_SUPPORTING_PARAGRAPHS.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-20 max-w-3xl">
+          <h2 className="text-3xl font-black text-slate-950 mb-6">Storage Container FAQ</h2>
+          <div className="divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+            {RAW_PAGE_FAQS.map((faq) => (
+              <details key={faq.question} className="group bg-slate-50 open:bg-white">
+                <summary className="cursor-pointer list-none px-6 py-4 font-bold text-slate-950 hover:text-amber-600 transition-colors flex items-center justify-between gap-4">
+                  <span>{faq.question}</span>
+                  <span className="text-amber-500 text-xl leading-none group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-5 text-slate-700 leading-relaxed">{faq.answer}</div>
+              </details>
+            ))}
           </div>
         </section>
 

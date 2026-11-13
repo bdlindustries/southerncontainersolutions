@@ -50,5 +50,5 @@ export function buildClimateSpecs(city: string, state: string, slug: string): st
     CLIMATE_ANGLE[slug] ??
     `${city} jobsite humidity, heat, and weather exposure typical of ${stateName} industrial corridors`;
 
-  return `Every ${city} unit ships with 2-inch closed-cell spray foam, commercial PVC wall systems, and mini-split HVAC sized for ${angle}. We seal door and window openings to limit condensation that ruins blueprints, networking gear, and crew comfort on ${city} command centers. From summer heat advisories to sudden Gulf rain events, your ${city}, ${state} office maintains stable interior conditions that uninsulated rental trailers cannot hold through a full turnaround or capital project schedule.`;
+  return `Finished shipping container offices we deliver to ${city}, ${state} are climate-controlled workspaces—not empty steel boxes. Standard office builds include insulated walls, interior HVAC, moisture-resistant interior panels, LED lighting, and secure doors and windows suited for ${angle}. That combination keeps crews, paperwork, and basic site electronics comfortable when uninsulated rental trailers struggle through a full Gulf South project season. Compare published office pricing on our shop page, or request a quote for raw storage containers when you need secure laydown without an office build.`;
 }

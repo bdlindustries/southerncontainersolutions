@@ -3,6 +3,7 @@ import {
   buildDefaultHighways,
   type ServiceAreaFaq,
 } from "@/lib/serviceAreaDefaults";
+import { buildClimateSpecs } from "@/lib/serviceAreaClimate";
 
 export type { ServiceAreaFaq };
 
@@ -41,11 +42,16 @@ export type ServiceArea = {
   };
   /** Top-level route when different from /service-areas/[slug] */
   routePath?: string;
+  /** Unique local intro paragraph (SEO). */
+  localUniqueIntro?: string;
+  /** Paragraph linking to shop, raw, and rentals. */
+  localShopRentalsParagraph?: string;
 };
 
-type ServiceAreaRecord = Omit<ServiceArea, "localHighways" | "faqs"> & {
+type ServiceAreaRecord = Omit<ServiceArea, "localHighways" | "faqs" | "localClimateSpecs"> & {
   localHighways?: string;
   faqs?: ServiceAreaFaq[];
+  localClimateSpecs?: string;
 };
 
 const serviceAreaRecords: ServiceAreaRecord[] = [
@@ -1980,6 +1986,7 @@ function enrichServiceArea(area: ServiceAreaRecord): ServiceArea {
     localHighways:
       area.localHighways ?? buildDefaultHighways(area.city, area.state),
     faqs: area.faqs ?? buildDefaultFaqs(area.city, area.state),
+    localClimateSpecs: buildClimateSpecs(area.city, area.state, area.slug),
   };
 }
 

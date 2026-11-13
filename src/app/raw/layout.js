@@ -1,15 +1,25 @@
 import { pageOpenGraph } from "@/lib/pageOpenGraph";
+import RawFaqJsonLd from "@/components/RawFaqJsonLd";
 
 export const metadata = {
-  title: 'Portable Storage Units & Conex Boxes for Sale | Southern Container Solutions',
+  title: "Storage Containers for Sale | Southern Container Solutions",
   description:
-    'Buy heavy duty, wind and water tight shipping containers and conex boxes for industrial jobsite storage. Secure Corten steel portable storage units delivered across the Gulf South.',
+    "Buy wind- and water-tight storage containers and Conex boxes for jobsite laydown. 20' and 40' Corten steel units sourced for the Gulf South with delivery quotes by zip.",
   alternates: {
     canonical: "/raw",
   },
-  openGraph: pageOpenGraph("/raw"),
+  openGraph: pageOpenGraph("/raw", {
+    title: "Storage Containers for Sale | Southern Container Solutions",
+    description:
+      "Buy wind- and water-tight storage containers and Conex boxes for jobsite laydown. 20' and 40' Corten steel units sourced for the Gulf South with delivery quotes by zip.",
+  }),
 };
 
 export default function RawLayout({ children }) {
-  return children;
+  return (
+    <>
+      <RawFaqJsonLd />
+      {children}
+    </>
+  );
 }
