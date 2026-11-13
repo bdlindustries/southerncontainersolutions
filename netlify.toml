@@ -98,6 +98,19 @@
   status = 301
   force = true
 
+# Legacy Firestore product IDs → readable shop slugs
+[[redirects]]
+  from = "/shop/C2k0uxNu5N8fNWRdGaTC"
+  to = "/shop/scs-40-climate-storage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shop/T9zMYdawbuAyL4Lh9Mq1"
+  to = "/shop/scs-20-climate-storage"
+  status = 301
+  force = true
+
 # Legacy service-areas → clean /locations structure
 [[redirects]]
   from = "/service-areas"

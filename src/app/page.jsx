@@ -2,22 +2,22 @@ import Link from "next/link";
 import { ShoppingCart, ChevronRight, PackageOpen } from "lucide-react";
 import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getFeaturedInventory } from "@/lib/firebase";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: "Shipping Container Offices Louisiana | Southern Container Solutions",
+  title: "Container Offices Louisiana | Southern Container Solutions",
   description:
     "Shipping container offices built in Covington, LA. Climate-controlled 20' and 40' units for jobsites across LA, TX, MS, and AL. Shop pricing online.",
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    title: "Shipping Container Offices Louisiana | Southern Container Solutions",
+  openGraph: pageOpenGraph("/", {
+    title: "Container Offices Louisiana | Southern Container Solutions",
     description:
       "Shipping container offices built in Covington, LA. Climate-controlled 20' and 40' units for jobsites across LA, TX, MS, and AL.",
-    url: "/",
-  },
+  }),
 };
 
 export default async function HomePage() {

@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, PackageOpen, Shovel } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Civil Dirt Work Offices: Container Specs for Unpaved Jobsites | Southern Container Solutions',
   description: 'How moisture resistant PVC interiors and closed cell spray foam make container offices the best choice for heavy civil, distribution, and unpaved construction sites.',
   alternates: {
     canonical: '/resources/civil-dirt-work-offices',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/civil-dirt-work-offices'),
 };
 
 export default function CivilDirtWorkOfficesArticle() {

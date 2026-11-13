@@ -1,3 +1,5 @@
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
+
 export const metadata = {
   title: 'Portable Storage Units & Conex Boxes for Sale | Southern Container Solutions',
   description:
@@ -5,6 +7,7 @@ export const metadata = {
   alternates: {
     canonical: "/raw",
   },
+  openGraph: pageOpenGraph("/raw"),
 };
 
 export default function RawLayout({ children }) {

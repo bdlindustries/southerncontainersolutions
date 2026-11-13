@@ -1,4 +1,5 @@
 import { HardHat, BookOpen } from "lucide-react";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export const metadata = {
   title: "About Southern Container Solutions | Covington, LA",
@@ -7,6 +8,7 @@ export const metadata = {
   alternates: {
     canonical: "/about",
   },
+  openGraph: pageOpenGraph("/about"),
 };
 
 export default function AboutPage() {

@@ -1,4 +1,5 @@
 import { ROOT_CITY_REDIRECTS } from "./src/lib/rootCityRedirects.ts";
+import { LEGACY_SHOP_REDIRECTS } from "./src/lib/productSlugFixes.ts";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,8 +10,15 @@ const nextConfig = {
     permanent: true,
   }));
 
+  const legacyShopRedirects = LEGACY_SHOP_REDIRECTS.map(({ source, destination }) => ({
+    source,
+    destination,
+    permanent: true,
+  }));
+
     return [
       ...rootCityRedirects,
+      ...legacyShopRedirects,
       // www → apex (non-www), all paths
       {
         source: '/:path*',

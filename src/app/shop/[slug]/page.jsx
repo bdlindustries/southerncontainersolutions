@@ -7,18 +7,25 @@ import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import ProductPurchaseActions from "@/components/ProductPurchaseActions";
 import ProductImageGallery from "@/components/ProductImageGallery";
 import { buildShopProductJsonLd } from "@/lib/shopProductJsonLd";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) return { title: 'Product Not Found' };
   
+  const path = `/shop/${getProductPathSlug(product)}`;
+
   return {
     title: `${product.title} | Southern Container Solutions`,
     description: product.description,
     alternates: {
-      canonical: `/shop/${getProductPathSlug(product)}`,
+      canonical: path,
     },
+    openGraph: pageOpenGraph(path, {
+      title: `${product.title} | Southern Container Solutions`,
+      description: product.description,
+    }),
   };
 }
 

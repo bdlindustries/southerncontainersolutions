@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Map, PackageOpen, Truck } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Shipping Container Site Prep & Delivery Requirements in Louisiana',
   description: 'Learn how to prepare your ground for a shipping container, truck turning radiuses, and why leveling is critical on soft Gulf South soil.',
   alternates: {
     canonical: '/resources/site-prep-delivery',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/site-prep-delivery'),
 };
 
 export default function SitePrepArticle() {

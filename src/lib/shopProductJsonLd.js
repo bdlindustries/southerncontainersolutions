@@ -22,16 +22,15 @@ function availabilityToSchema(availability) {
   return "https://schema.org/InStock";
 }
 
-function resolveProductImage(product) {
-  const urls = listingImageUrls(product);
-  const first = urls[0];
-  if (!first) {
-    return absoluteUrl("/og-image.jpg");
-  }
-  if (first.startsWith("http://") || first.startsWith("https://")) {
-    return first;
-  }
-  return absoluteUrl(first.startsWith("/") ? first : `/${first}`);
+function resolveProductImages(product) {
+  return listingImageUrls(product)
+    .map((url) => {
+      if (url.startsWith("http://") || url.startsWith("https://")) {
+        return url;
+      }
+      return absoluteUrl(url.startsWith("/") ? url : `/${url}`);
+    })
+    .filter(Boolean);
 }
 
 /** Product + Offer JSON-LD for shop detail pages that display a price. */
@@ -40,12 +39,12 @@ export function buildShopProductJsonLd(product) {
   if (price == null) return null;
 
   const slug = getProductPathSlug(product);
+  const images = resolveProductImages(product);
 
-  return {
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
-    image: resolveProductImage(product),
     offers: {
       "@type": "Offer",
       url: absoluteUrl(`/shop/${slug}`),
@@ -59,4 +58,12 @@ export function buildShopProductJsonLd(product) {
       },
     },
   };
+
+  if (images.length === 1) {
+    jsonLd.image = images[0];
+  } else if (images.length > 1) {
+    jsonLd.image = images;
+  }
+
+  return jsonLd;
 }

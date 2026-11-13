@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 import { PackageOpen, ArrowRight, Droplets, Map, ShieldCheck, HardHat, Lock, Shovel } from 'lucide-react';
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
   alternates: {
     canonical: '/resources',
   },
+  openGraph: pageOpenGraph('/resources'),
 };
 
 export default function ResourcesPage() {

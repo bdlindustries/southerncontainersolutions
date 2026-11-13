@@ -1,3 +1,5 @@
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
+
 export const metadata = {
   title: "Container Office Delivery Quotes | Southern Container Solutions",
   description:
@@ -5,6 +7,7 @@ export const metadata = {
   alternates: {
     canonical: "/delivery",
   },
+  openGraph: pageOpenGraph("/delivery"),
 };
 
 export default function DeliveryLayout({ children }) {

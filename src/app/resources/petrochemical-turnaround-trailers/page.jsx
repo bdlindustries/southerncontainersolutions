@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, HardHat, PackageOpen } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Petrochemical Turnaround Trailers vs Ground Level Container Offices | Southern Container Solutions',
   description: 'Why standard mobile trailers fail during Gulf Coast refinery turnarounds and how ground level steel container offices solve staging, power, and safety challenges.',
   alternates: {
     canonical: '/resources/petrochemical-turnaround-trailers',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/petrochemical-turnaround-trailers'),
 };
 
 export default function PetrochemicalTurnaroundArticle() {

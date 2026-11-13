@@ -7,6 +7,7 @@ import {
   enrichInventoryFromSeed,
   normalizeInventoryItemFromFirestore,
 } from "@/lib/data";
+import { applyLegacyProductSlug } from "@/lib/productSlugFixes";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDBMS_N1VZQfB99YUFSGcLBR-dm7cH5YqE",
@@ -68,7 +69,9 @@ export async function getLiveInventory() {
     const items = snapshot.docs
       .filter((d) => isInventoryListingDoc(d.id))
       .map((d) =>
-        enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
+        applyLegacyProductSlug(
+          enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
+        )
       );
     if (items.length) {
       return items.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
@@ -93,8 +96,10 @@ export async function getProductById(id) {
     const docRef = doc(db, 'scs_inventory', id);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      return enrichInventoryFromSeed(
-        normalizeInventoryItemFromFirestore(docSnap.id, docSnap.data())
+      return applyLegacyProductSlug(
+        enrichInventoryFromSeed(
+          normalizeInventoryItemFromFirestore(docSnap.id, docSnap.data())
+        )
       );
     }
     const seed = SEED_INVENTORY.find((p) => p.id === id);
@@ -114,8 +119,10 @@ export async function getProductBySlug(slug) {
     const snapshot = await getDocs(slugQuery);
     const match = snapshot.docs.find((d) => isInventoryListingDoc(d.id));
     if (match) {
-      return enrichInventoryFromSeed(
-        normalizeInventoryItemFromFirestore(match.id, match.data())
+      return applyLegacyProductSlug(
+        enrichInventoryFromSeed(
+          normalizeInventoryItemFromFirestore(match.id, match.data())
+        )
       );
     }
   } catch (e) {

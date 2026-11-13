@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, HardHat, PackageOpen } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Mega Project Jobsite Offices: Container Specs for Data Centers & Industrial Sites',
   description: 'Why mega projects in Texas and Louisiana are replacing modular trailers with secure, climate controlled shipping container command centers.',
   alternates: {
     canonical: '/resources/industrial-jobsite-offices',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/industrial-jobsite-offices'),
 };
 
 export default function IndustrialOfficesArticle() {

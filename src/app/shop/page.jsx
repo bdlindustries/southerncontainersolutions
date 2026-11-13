@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Zap, ChevronRight, PackageOpen, ShieldCheck, Thermometer, BookOpen, ArrowRight } from "lucide-react";
 import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getLiveInventory } from "@/lib/firebase";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export const metadata = {
   title: "Mobile Offices & Containerized Offices for Sale | Southern Container Solutions",
@@ -10,6 +11,7 @@ export const metadata = {
   alternates: {
     canonical: "/shop",
   },
+  openGraph: pageOpenGraph("/shop"),
 };
 
 export default async function ShopPage() {

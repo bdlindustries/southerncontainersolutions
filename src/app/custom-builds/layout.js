@@ -1,3 +1,5 @@
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
+
 export const metadata = {
   title: "Custom Shipping Container Builds | Southern Container Solutions",
   description:
@@ -5,6 +7,7 @@ export const metadata = {
   alternates: {
     canonical: "/custom-builds",
   },
+  openGraph: pageOpenGraph("/custom-builds"),
 };
 
 export default function CustomBuildsLayout({ children }) {

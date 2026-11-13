@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, AlertTriangle, PackageOpen } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Stop Shipping Container Condensation: The Only Insulation Method That Works in the South',
   description: 'Learn why shipping containers sweat, why fiberglass insulation fails in metal buildings, and how to permanently stop container condensation.',
   alternates: {
     canonical: '/resources/container-condensation',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/container-condensation'),
 };
 
 export default function ContainerCondensationArticle() {

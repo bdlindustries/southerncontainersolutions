@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Lock, PackageOpen } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Urban Jobsite Theft Prevention: Secure Container Offices | Southern Container Solutions',
   description: 'How ground level steel container offices prevent jobsite theft on urban infill projects and zero lot line commercial builds in New Orleans, Houston, and Baton Rouge.',
   alternates: {
     canonical: '/resources/urban-jobsite-theft-prevention',
-  }
+  },
+  openGraph: pageOpenGraph('/resources/urban-jobsite-theft-prevention'),
 };
 
 export default function UrbanTheftPreventionArticle() {

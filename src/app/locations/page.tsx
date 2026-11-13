@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import LocationDirectory from "@/components/LocationDirectory";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export const metadata = {
   title: "Service Areas | Southern Container Solutions",
@@ -8,6 +9,7 @@ export const metadata = {
   alternates: {
     canonical: "/locations",
   },
+  openGraph: pageOpenGraph("/locations"),
 };
 
 export default function LocationsHubPage() {

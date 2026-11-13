@@ -18,10 +18,7 @@ export const metadata = {
   description:
     "Shipping container offices and modifications built in Covington, Louisiana and delivered across the Gulf South.",
   keywords: ["shipping container office", "container conversion", "mobile office", "Covington", "Mandeville", "Slidell", "Madisonville", "Hammond"],
-  openGraph: {
-    ...defaultOpenGraph,
-    url: SITE_URL,
-  },
+  openGraph: defaultOpenGraph,
   twitter: defaultTwitter,
 };
 

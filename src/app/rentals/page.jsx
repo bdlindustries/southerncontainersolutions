@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { HardHat, FileText, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
+import { pageOpenGraph } from '@/lib/pageOpenGraph';
 
 export const metadata = {
   title: 'Container Office Rentals | Southern Container Solutions',
@@ -8,7 +9,8 @@ export const metadata = {
     'Rent secure steel shipping container offices for Gulf South jobsites. Southern Container Solutions partners with Big Rentals for short- and long-term fleet options.',
   alternates: {
     canonical: "/rentals",
-  }
+  },
+  openGraph: pageOpenGraph('/rentals'),
 };
 
 export default function RentalsPage() {
@@ -22,7 +24,10 @@ export default function RentalsPage() {
             <ShieldCheck className="w-4 h-4"/> Fleet Managed by Big Rentals
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
-            Heavy-Duty <span className="text-amber-500">Mobile Offices</span> &amp; Portable Buildings
+            Heavy-Duty{" "}
+            <span className="text-amber-500">Mobile Offices</span>
+            {" "}&{" "}
+            Portable Buildings
           </h1>
           <p className="text-xl text-slate-400 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
             Stop renting flimsy wooden trailers that get broken into. Our Corten steel containerized offices provide vault-like security for commercial jobsites across the South.

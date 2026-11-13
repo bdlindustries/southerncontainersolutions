@@ -7,6 +7,7 @@ import {
   normalizeLocationSlug,
   resolveLocationArea,
 } from "@/lib/locationSlugs";
+import { pageOpenGraph } from "@/lib/pageOpenGraph";
 
 export const dynamicParams = false;
 
@@ -24,12 +25,18 @@ export async function generateMetadata({ params }) {
 
   const canonicalSlug = normalizeLocationSlug(area.slug);
 
+  const path = `/locations/${canonicalSlug}`;
+
   return {
     title: `${area.heroHeadline} | Southern Container Solutions`,
     description: area.heroSub,
     alternates: {
-      canonical: `/locations/${canonicalSlug}`,
+      canonical: path,
     },
+    openGraph: pageOpenGraph(path, {
+      title: `${area.heroHeadline} | Southern Container Solutions`,
+      description: area.heroSub,
+    }),
   };
 }
 
