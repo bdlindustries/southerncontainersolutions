@@ -7,7 +7,7 @@ import {
   enrichInventoryFromSeed,
   normalizeInventoryItemFromFirestore,
 } from "@/lib/data";
-import { applyLegacyProductSlug } from "@/lib/productSlugFixes";
+import { applyLegacyProductSlug, getLegacyDocIdForShopSlug } from "@/lib/productSlugFixes";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDBMS_N1VZQfB99YUFSGcLBR-dm7cH5YqE",
@@ -127,6 +127,12 @@ export async function getProductBySlug(slug) {
     }
   } catch (e) {
     console.error("Firebase slug lookup failed", e);
+  }
+
+  const legacyDocId = getLegacyDocIdForShopSlug(slug);
+  if (legacyDocId) {
+    const legacyProduct = await getProductById(legacyDocId);
+    if (legacyProduct) return legacyProduct;
   }
 
   const seedBySlug = SEED_INVENTORY.find((p) => p.slug === slug || p.id === slug);

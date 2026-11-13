@@ -6,8 +6,9 @@ import { getLiveInventory, getProductBySlug } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import ProductPurchaseActions from "@/components/ProductPurchaseActions";
 import ProductImageGallery from "@/components/ProductImageGallery";
-import { buildShopProductJsonLd } from "@/lib/shopProductJsonLd";
+import { buildShopProductJsonLd, productOpenGraphImages } from "@/lib/shopProductJsonLd";
 import { pageOpenGraph } from "@/lib/pageOpenGraph";
+import { LEGACY_SHOP_SLUG_BY_DOC_ID } from "@/lib/productSlugFixes";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -15,26 +16,39 @@ export async function generateMetadata({ params }) {
   if (!product) return { title: 'Product Not Found' };
   
   const path = `/shop/${getProductPathSlug(product)}`;
+  const ogImages = productOpenGraphImages(product);
+  const pageTitle = `${product.title} | Southern Container Solutions`;
 
   return {
-    title: `${product.title} | Southern Container Solutions`,
+    title: pageTitle,
     description: product.description,
     alternates: {
       canonical: path,
     },
     openGraph: pageOpenGraph(path, {
-      title: `${product.title} | Southern Container Solutions`,
+      title: pageTitle,
       description: product.description,
+      ...(ogImages ? { images: ogImages } : {}),
     }),
+    ...(ogImages
+      ? {
+          twitter: {
+            card: "summary_large_image",
+            images: ogImages.map((img) => img.url),
+          },
+        }
+      : {}),
   };
 }
 
 export async function generateStaticParams() {
   const inventory = await getLiveInventory();
   const source = inventory.length ? inventory : SEED_INVENTORY;
-  return source.map((product) => ({
-    slug: getProductPathSlug(product),
-  }));
+  const slugSet = new Set(source.map((product) => getProductPathSlug(product)));
+  for (const mappedSlug of Object.values(LEGACY_SHOP_SLUG_BY_DOC_ID)) {
+    slugSet.add(mappedSlug);
+  }
+  return [...slugSet].map((slug) => ({ slug }));
 }
 
 export const dynamicParams = true;

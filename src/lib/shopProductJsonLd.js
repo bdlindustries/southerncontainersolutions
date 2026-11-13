@@ -22,7 +22,7 @@ function availabilityToSchema(availability) {
   return "https://schema.org/InStock";
 }
 
-function resolveProductImages(product) {
+export function resolveProductImages(product) {
   return listingImageUrls(product)
     .map((url) => {
       if (url.startsWith("http://") || url.startsWith("https://")) {
@@ -31,6 +31,18 @@ function resolveProductImages(product) {
       return absoluteUrl(url.startsWith("/") ? url : `/${url}`);
     })
     .filter(Boolean);
+}
+
+/** Open Graph / Twitter image metadata for a shop listing. */
+export function productOpenGraphImages(product) {
+  const urls = resolveProductImages(product);
+  if (!urls.length) return undefined;
+  return [
+    {
+      url: urls[0],
+      alt: product?.title ? `${product.title} — Southern Container Solutions` : "Southern Container Solutions product",
+    },
+  ];
 }
 
 /** Product + Offer JSON-LD for shop detail pages that display a price. */
