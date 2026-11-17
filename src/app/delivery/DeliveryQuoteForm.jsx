@@ -5,6 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import { db } from "@/lib/firebase";
 import { sendSiteLeadEmail } from "@/lib/leads";
+import { SHOP_PRODUCT_FORM_OPTIONS } from "@/lib/productSpecs";
 
 export default function DeliveryQuoteForm() {
   const [formData, setFormData] = useState({ email: '', product: '', address: '', type: 'Commercial', message: '' });
@@ -66,10 +67,20 @@ export default function DeliveryQuoteForm() {
         </div>
         <div>
           <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Product Interested In</label>
-          <select className="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:border-amber-500 outline-none" onChange={e => setFormData({...formData, product: e.target.value})}>
-            <option>20&apos; Standard Office</option>
-            <option>40&apos; Combo Unit</option>
-            <option>Custom Build</option>
+          <select
+            required
+            className="w-full bg-slate-50 border border-slate-300 rounded p-3 focus:border-amber-500 outline-none"
+            defaultValue=""
+            onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+          >
+            <option value="" disabled>
+              Select a product
+            </option>
+            {SHOP_PRODUCT_FORM_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
           </select>
         </div>
       </div>

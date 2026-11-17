@@ -20,6 +20,10 @@ export const metadata = {
   keywords: ["shipping container office", "container conversion", "mobile office", "Covington", "Mandeville", "Slidell", "Madisonville", "Hammond"],
   openGraph: defaultOpenGraph,
   twitter: defaultTwitter,
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.svg"],
+  },
 };
 
 export default function RootLayout({ children }) {

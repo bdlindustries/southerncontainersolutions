@@ -17,7 +17,10 @@ export default function Navbar() {
   ];
 
   const secondaryLinks = [
+    { path: '/contact', label: 'Contact' },
     { path: '/delivery', label: 'Delivery' },
+    { path: '/faq', label: 'FAQ' },
+    { path: '/gallery', label: 'Gallery' },
     { path: '/about', label: 'About' },
     { path: '/resources', label: 'Resources' },
   ];

@@ -48,7 +48,7 @@ export default function PetrochemicalTurnaroundArticle() {
           </p>
           <h3>The Ground Level Steel Solution</h3>
           <p>
-            We supply commercial grade shipping container offices that sit completely flat on the ground. This eliminates the need for stairs and skirting providing immediate trip free access. Every unit is heavily insulated with 2 inch closed cell spray foam to combat extreme plant heat and comes equipped with a true 100 amp breaker panel. Your site electricians can easily hardwire a permanent line or wire a custom pigtail to your jobsite generator ensuring your IT gear and AC run without interruption.
+            We supply commercial grade shipping container offices that sit completely flat on the ground. This eliminates the need for stairs and skirting providing immediate trip free access. Every unit is heavily insulated with 2 inch closed cell spray foam to combat extreme plant heat and ships with a jobsite breaker panel sized for published shop specs—10 interior outlets on 20&apos; offices and 18 on 40&apos; builds. Your site electricians can easily hardwire a permanent line or wire a custom pigtail to your jobsite generator ensuring your IT gear and AC run without interruption.
           </p>
           <h3>Supporting the Heavy Petrochemical Corridors</h3>
           <p>

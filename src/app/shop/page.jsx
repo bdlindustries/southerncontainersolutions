@@ -3,8 +3,7 @@ import { Zap, ChevronRight, PackageOpen, ShieldCheck, Thermometer, BookOpen, Arr
 import { listingImageUrls, getProductPathSlug } from "@/lib/data";
 import { getLiveInventory } from "@/lib/firebase";
 import { pageOpenGraph } from "@/lib/pageOpenGraph";
-import { buildFaqPageJsonLd } from "@/lib/faqJsonLd";
-import { SHOP_BUYER_GUIDE_PARAGRAPHS, SHOP_PAGE_FAQS } from "@/lib/shopPageContent";
+import { SHOP_BUYER_GUIDE_PARAGRAPHS } from "@/lib/shopPageContent";
 
 export const metadata = {
   title: "Shipping Container Offices for Sale | Southern Container",
@@ -22,16 +21,8 @@ export const metadata = {
 
 export default async function ShopPage() {
   const inventory = await getLiveInventory();
-  const shopFaqJsonLd = buildFaqPageJsonLd(SHOP_PAGE_FAQS);
-
   return (
     <div className="min-h-screen bg-slate-50">
-      {shopFaqJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(shopFaqJsonLd) }}
-        />
-      )}
       {/* Hero */}
       <header className="bg-slate-950 py-16 md:py-24 border-b-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -155,20 +146,16 @@ export default async function ShopPage() {
         </section>
 
         <section className="mb-20">
-          <h2 className="text-3xl font-black text-slate-950 mb-6">Office Container Buyer FAQ</h2>
-          <div className="max-w-3xl divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-            {SHOP_PAGE_FAQS.map((faq) => (
-              <details key={faq.question} className="group bg-slate-50 open:bg-white">
-                <summary className="cursor-pointer list-none px-6 py-4 font-bold text-slate-950 hover:text-amber-600 transition-colors flex items-center justify-between gap-4">
-                  <span>{faq.question}</span>
-                  <span className="text-amber-500 text-xl leading-none group-open:rotate-45 transition-transform">
-                    +
-                  </span>
-                </summary>
-                <div className="px-6 pb-5 text-slate-700 leading-relaxed">{faq.answer}</div>
-              </details>
-            ))}
-          </div>
+          <h2 className="text-3xl font-black text-slate-950 mb-4">Questions before you buy?</h2>
+          <p className="text-slate-600 text-lg max-w-3xl mb-6 leading-relaxed">
+            Permits, site prep, lead times, and delivery clearance are answered on our dedicated FAQ page.
+          </p>
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-xl px-6 py-4 font-black text-slate-950 hover:border-amber-500 hover:text-amber-700 transition-colors shadow-sm"
+          >
+            Read the buyer FAQ <ArrowRight className="w-5 h-5" />
+          </Link>
         </section>
 
         {/* SEO internal link */}

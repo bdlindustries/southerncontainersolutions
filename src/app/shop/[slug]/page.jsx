@@ -89,7 +89,11 @@ export default async function ProductDetailPage({ params }) {
                 <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 {product.availability}
               </div>
-              <ProductImageGallery images={images} title={product.title} />
+              <ProductImageGallery
+                images={images}
+                title={product.title}
+                galleryNote={product.imageGalleryNote}
+              />
               {youtubeEmbedUrl && (
                 <div className="mt-4">
                   <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Video walkthrough</p>

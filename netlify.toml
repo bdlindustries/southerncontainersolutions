@@ -26,8 +26,8 @@
   force = true
 
 [[redirects]]
-  from = "/contact"
-  to = "/shop"
+  from = "/rent-to-own"
+  to = "/contact"
   status = 301
   force = true
 

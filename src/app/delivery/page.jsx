@@ -2,6 +2,7 @@ import { AlertTriangle, ShieldCheck, Truck, Video } from "lucide-react";
 import { getDeliveryPageSettings } from "@/lib/firebase";
 import { getYoutubeEmbedUrl } from "@/lib/youtube";
 import DeliveryQuoteForm from "./DeliveryQuoteForm";
+import { TILT_BED_CLEARANCE_SUMMARY } from "@/lib/deliveryClearance";
 
 export default async function DeliveryPage() {
   const settings = await getDeliveryPageSettings();
@@ -46,7 +47,7 @@ export default async function DeliveryPage() {
               </li>
               <li className="flex flex-col">
                 <span className="font-bold text-slate-900">2. Clearance Space</span>
-                <span className="text-slate-600 text-sm mt-1">Trucks need up to 100ft of straight clearance to slide a 40ft container off a tilt bed trailer.</span>
+                <span className="text-slate-600 text-sm mt-1">{TILT_BED_CLEARANCE_SUMMARY}</span>
               </li>
               <li className="flex flex-col">
                 <span className="font-bold text-slate-900">3. Overhead Clearance</span>

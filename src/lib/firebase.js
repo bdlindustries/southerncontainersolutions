@@ -8,6 +8,7 @@ import {
   normalizeInventoryItemFromFirestore,
 } from "@/lib/data";
 import { applyLegacyProductSlug, getLegacyDocIdForShopSlug } from "@/lib/productSlugFixes";
+import { enrichClimateStorageListing } from "@/lib/climateStorageProductDefaults";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDBMS_N1VZQfB99YUFSGcLBR-dm7cH5YqE",
@@ -69,17 +70,23 @@ export async function getLiveInventory() {
     const items = snapshot.docs
       .filter((d) => isInventoryListingDoc(d.id))
       .map((d) =>
-        applyLegacyProductSlug(
-          enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
+        enrichClimateStorageListing(
+          applyLegacyProductSlug(
+            enrichInventoryFromSeed(normalizeInventoryItemFromFirestore(d.id, d.data()))
+          )
         )
       );
     if (items.length) {
       return items.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
     }
-    return [...SEED_INVENTORY].sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+    return [...SEED_INVENTORY]
+      .map((p) => enrichClimateStorageListing(enrichInventoryFromSeed(p)))
+      .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
   } catch (e) {
     console.error("Firebase fetch failed", e);
-    return [...SEED_INVENTORY].sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+    return [...SEED_INVENTORY]
+      .map((p) => enrichClimateStorageListing(enrichInventoryFromSeed(p)))
+      .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
   }
 }
 
@@ -96,18 +103,20 @@ export async function getProductById(id) {
     const docRef = doc(db, 'scs_inventory', id);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      return applyLegacyProductSlug(
-        enrichInventoryFromSeed(
-          normalizeInventoryItemFromFirestore(docSnap.id, docSnap.data())
+      return enrichClimateStorageListing(
+        applyLegacyProductSlug(
+          enrichInventoryFromSeed(
+            normalizeInventoryItemFromFirestore(docSnap.id, docSnap.data())
+          )
         )
       );
     }
     const seed = SEED_INVENTORY.find((p) => p.id === id);
-    return seed ? enrichInventoryFromSeed(seed) : null;
+    return seed ? enrichClimateStorageListing(enrichInventoryFromSeed(seed)) : null;
   } catch (e) {
     console.error("Firebase fetch failed", e);
     const seed = SEED_INVENTORY.find((p) => p.id === id);
-    return seed ? enrichInventoryFromSeed(seed) : null;
+    return seed ? enrichClimateStorageListing(enrichInventoryFromSeed(seed)) : null;
   }
 }
 
@@ -119,9 +128,11 @@ export async function getProductBySlug(slug) {
     const snapshot = await getDocs(slugQuery);
     const match = snapshot.docs.find((d) => isInventoryListingDoc(d.id));
     if (match) {
-      return applyLegacyProductSlug(
-        enrichInventoryFromSeed(
-          normalizeInventoryItemFromFirestore(match.id, match.data())
+      return enrichClimateStorageListing(
+        applyLegacyProductSlug(
+          enrichInventoryFromSeed(
+            normalizeInventoryItemFromFirestore(match.id, match.data())
+          )
         )
       );
     }
@@ -139,7 +150,7 @@ export async function getProductBySlug(slug) {
   if (byDocId) return byDocId;
 
   const seedBySlug = SEED_INVENTORY.find((p) => p.slug === slug || p.id === slug);
-  if (seedBySlug) return enrichInventoryFromSeed(seedBySlug);
+  if (seedBySlug) return enrichClimateStorageListing(enrichInventoryFromSeed(seedBySlug));
 
   return null;
 }

@@ -19,6 +19,11 @@ const nextConfig = {
     return [
       ...rootCityRedirects,
       ...legacyShopRedirects,
+      {
+        source: '/favicon.ico',
+        destination: '/favicon.svg',
+        permanent: true,
+      },
       // www → apex (non-www), all paths
       {
         source: '/:path*',
@@ -39,8 +44,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/contact',
-        destination: '/shop',
+        source: '/rent-to-own',
+        destination: '/contact',
         permanent: true,
       },
       {

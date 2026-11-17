@@ -21,20 +21,15 @@ export function buildDefaultFaqs(city: string, state: string): ServiceAreaFaq[] 
     {
       question: `Are these containers secure on ${city} jobsites?`,
       answer:
-        "Yes. They are built from one-trip shipping containers and include a 36-inch steel man door with a deadbolt, plus heavy-duty steel security bars over both sliding windows.",
+        "Yes. They are built from one-trip shipping containers and include a 36-inch steel man door with a deadbolt, plus steel security bars over the sliding window(s)—one on 20' models, two on 40' office builds.",
     },
   ];
 }
 
-export const STANDARD_OFFICE_CONTAINER_SPECS = [
-  "Climate-controlled finished interior (insulation + HVAC)",
-  "Moisture-resistant PVC wall and ceiling panels",
-  "Interior and exterior LED lighting",
-  "Jobsite electrical package with breaker panel and multiple outlets",
-  'Two sliding windows with steel security bars',
-  'Steel man door with deadbolt',
-  "Operational cargo doors for equipment access",
-] as const;
+export {
+  OFFICE_20_STANDARD_SPECS,
+  OFFICE_40_STANDARD_SPECS,
+} from "@/lib/productSpecs";
 
 export function buildOfficeContainerProductJsonLd(city: string) {
   return {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, PackageOpen } from "lucide-react";
 
-export default function ProductImageGallery({ images = [], title = "Product" }) {
+export default function ProductImageGallery({ images = [], title = "Product", galleryNote = "" }) {
   const urls = images.filter(Boolean);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -58,6 +58,12 @@ export default function ProductImageGallery({ images = [], title = "Product" }) 
           </>
         )}
       </div>
+
+      {galleryNote ? (
+        <p className="text-xs text-slate-600 leading-relaxed bg-amber-50 border border-amber-200/80 rounded-lg px-3 py-2">
+          {galleryNote}
+        </p>
+      ) : null}
 
       {hasMultiple && (
         <div className="flex gap-2 overflow-x-auto pb-1">

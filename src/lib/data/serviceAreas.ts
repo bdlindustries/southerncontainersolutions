@@ -78,7 +78,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I power the office container?",
         answer:
-          "The unit includes a 100-amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets, LED lights, and 12,000 BTU AC.",
+          "The unit includes a jobsite breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the interior outlets (10 on 20′ offices, 18 on 40′), LED lights, and 12,000 BTU AC.",
       },
       {
         question: "Are these containers secure against Northshore jobsite theft?",
@@ -129,7 +129,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Professional, fully finished workspaces for Northshore commercial operations and temporary office needs.",
     localIndustryFocus:
-      "Commercial projects in Mandeville demand a clean, professional aesthetic. Our mobile offices are built from one-trip containers, offering a modern look with four interior LED ceiling lights and eighteen standard interior outlets to power your entire project management team.",
+      "Commercial projects in Mandeville demand a clean, professional aesthetic. Our mobile offices are built from one-trip containers, offering a modern look with four interior LED ceiling lights and interior outlets (10 on 20′ offices, 18 on 40′) to power your entire project management team.",
     localDeliveryLogistics:
       "Navigating Mandeville's retail corridors requires a straightforward drop. We deliver the unit directly to the asphalt or dirt, providing instant, step-free access to your temporary office while avoiding the massive footprint of traditional trailer ramps.",
     localClimateSpecs:
@@ -144,7 +144,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How fast can I get my team working inside?",
         answer:
-          "Almost immediately. Once we drop the unit flat on your site, tie your temporary power into the provided 100-amp breaker panel, and the climate control and eighteen interior outlets are instantly active.",
+          "Almost immediately. Once we drop the unit flat on your site, tie your temporary power into the provided jobsite breaker panel, and the climate control and interior outlets (10 on 20′ offices, 18 on 40′) are instantly active.",
       },
       {
         question: "Can I load furniture through the back doors?",
@@ -164,7 +164,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     localIndustryFocus:
       "Metairie renovations and commercial builds rarely have extra space. Our office containers give growing businesses and construction crews a fully finished workspace that fits perfectly in cramped urban lots. The two 42-inch by 30-inch sliding windows are protected by steel security bars, giving you a secure remote operations center.",
     localDeliveryLogistics:
-      "We drop your office flat on the pavement in your Metairie staging zone. The ground-level design eliminates trip hazards, and the provided 100-amp breaker panel allows your electrician to quickly tie into your site's temporary power pole.",
+      "We drop your office flat on the pavement in your Metairie staging zone. The ground-level design eliminates trip hazards, and the provided jobsite breaker panel allows your electrician to quickly tie into your site's temporary power pole.",
     localClimateSpecs:
       "The asphalt heat in Metairie requires aggressive cooling. Our units feature a 12,000 BTU LG mini-split and 2-inch spray foam insulation to maintain excellent temperature control, while the smooth PVC interior walls make it easy to wipe down the daily construction dust.",
     localHighways: "I-10, Causeway Blvd, and Veterans Memorial Blvd.",
@@ -182,7 +182,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Does the AC run on standard power?",
         answer:
-          "Yes, the 12,000 BTU LG mini-split operates on standard 220v power, and the unit features a dedicated 100-amp breaker panel for easy connection to your site's temporary power pole.",
+          "Yes, the 12,000 BTU LG mini-split operates on standard 220v power, and the unit features a dedicated jobsite breaker panel for easy connection to your site's temporary power pole.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_1048.JPEG",
@@ -243,7 +243,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit on a tight lot?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+          "The office is equipped with a jobsite breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Are the windows safe from urban vandalism?",
@@ -304,7 +304,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "What is required to power the office in Beaumont?",
         answer:
-          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+          "Your site electrician can tie a permanent line or custom pigtail into the provided jobsite breaker panel to activate the AC lights and outlets.",
       },
       {
         question: "How do we keep the inside clean on a dusty site?",
@@ -342,12 +342,12 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How many electrical outlets are inside?",
         answer:
-          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+          "The office is heavily wired with interior outlets (10 on 20′ offices, 18 on 40′) allowing you to power desks chargers and networking equipment.",
       },
       {
         question: "Do we have to run a dedicated power pole?",
         answer:
-          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided jobsite breaker panel.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8627.JPEG",
@@ -375,7 +375,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we connect power at a new terminal build?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+          "The unit includes a jobsite breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
       },
       {
         question: "Are the windows functional for fresh air?",
@@ -408,7 +408,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit?",
         answer:
-          "Your site electrician can wire your temporary power directly into the included 100 amp breaker panel to run the AC and eighteen interior outlets.",
+          "Your site electrician can wire your temporary power directly into the included jobsite breaker panel to run the AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Is the entry door safe from break ins?",
@@ -441,7 +441,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit on a remote coastal site?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+          "The office is equipped with a jobsite breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Are the interior walls resistant to coastal humidity?",
@@ -474,7 +474,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office at the port?",
         answer:
-          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+          "Your electrician can wire a custom pigtail to a diesel generator via the included jobsite breaker panel giving you reliable power for the entire office.",
       },
       {
         question: "Will the exterior lighting turn on automatically?",
@@ -507,7 +507,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office at a Ship Channel site?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
+          "The office is equipped with a jobsite breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
       },
       {
         question: "Are the interior walls resistant to humidity?",
@@ -540,7 +540,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I hook up power at a remote terminal site?",
         answer:
-          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+          "The unit comes with a jobsite breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
       },
       {
         question: "Are the windows secure from jobsite vandalism?",
@@ -603,7 +603,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit?",
         answer:
-          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+          "The office features a jobsite breaker panel allowing you to tie in substantial temporary power for the interior outlets (10 on 20′ offices, 18 on 40′) and climate control systems.",
       },
       {
         question: "Is the AC unit protected against power surges?",
@@ -636,7 +636,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I power the office container?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets and AC.",
+          "The unit includes a jobsite breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the interior outlets (10 on 20′ offices, 18 on 40′) and AC.",
       },
       {
         question: "Are these containers secure on Pasadena jobsites?",
@@ -714,7 +714,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office at an LNG expansion site?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
+          "The office is equipped with a jobsite breaker panel. You can easily tie into your jobsite generator using a custom pigtail to power the lights and climate control.",
       },
       {
         question: "Are the interior walls resistant to coastal humidity?",
@@ -747,7 +747,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I power the office container at the plant?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the eighteen interior outlets and AC.",
+          "The unit includes a jobsite breaker panel. You can have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator to power the interior outlets (10 on 20′ offices, 18 on 40′) and AC.",
       },
       {
         question: "Are these containers secure on Sulphur jobsites?",
@@ -780,7 +780,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit on a remote coastal site?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+          "The office is equipped with a jobsite breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Are the interior walls resistant to coastal humidity?",
@@ -813,7 +813,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office at the port?",
         answer:
-          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+          "Your electrician can wire a custom pigtail to a diesel generator via the included jobsite breaker panel giving you reliable power for the entire office.",
       },
       {
         question: "Will the exterior lighting turn on automatically?",
@@ -831,9 +831,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
     heroSub:
       "Climate-controlled temporary offices for Capital Region industrial yards and commercial operations.",
     localIndustryFocus:
-      "Capital Region industrial contractors and growing businesses cannot wait on slow setups. Our one-trip shipping container offices provide an immediate, fully finished workspace with eighteen standard interior outlets to power a full engineering or management team.",
+      "Capital Region industrial contractors and growing businesses cannot wait on slow setups. Our one-trip shipping container offices provide an immediate, fully finished workspace with interior outlets (10 on 20′ offices, 18 on 40′) to power a full engineering or management team.",
     localDeliveryLogistics:
-      "We dispatch directly to your Baton Rouge plant gate or commercial lot. The unit sits flat on the dirt or asphalt, giving your crew safe, step-free entry through the steel man door and commercial-grade power capacity via the included 100-amp breaker panel.",
+      "We dispatch directly to your Baton Rouge plant gate or commercial lot. The unit sits flat on the dirt or asphalt, giving your crew safe, step-free entry through the steel man door and commercial-grade power capacity via the included jobsite breaker panel.",
     localClimateSpecs:
       "The Mississippi River corridor brings extreme humidity. We combat moisture intrusion using 2-inch closed-cell spray foam and mold-resistant PVC ceiling panels. The LG mini-split AC ensures excellent temperature control during the brutal Baton Rouge summers.",
     localHighways: "I-10, I-12, and Airline Highway.",
@@ -874,7 +874,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I hook up power at a port site?",
         answer:
-          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the eighteen interior outlets and AC.",
+          "The unit comes with a jobsite breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the interior outlets (10 on 20′ offices, 18 on 40′) and AC.",
       },
       {
         question: "Are the windows secure from jobsite vandalism?",
@@ -940,7 +940,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How fast can you set up the office once it arrives in Reserve?",
         answer:
-          "Deployment is nearly instant. The truck drops the unit flat on the ground, and as soon as you tie into the 100-amp breaker panel, the lights and AC are operational.",
+          "Deployment is nearly instant. The truck drops the unit flat on the ground, and as soon as you tie into the jobsite breaker panel, the lights and AC are operational.",
       },
       {
         question: "Will the interior grow mold in the riverfront humidity?",
@@ -978,7 +978,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office container at the plant?",
         answer:
-          "The office includes a 100 amp breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into this panel using a custom pigtail or a permanent line to run the eighteen interior outlets and AC.",
+          "The office includes a jobsite breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into the jobsite breaker panel using a custom pigtail or a permanent line to run the interior outlets (10 on 20′ offices, 18 on 40′) and AC.",
       },
       {
         question: "Are these containers secure on Plaquemine jobsites?",
@@ -1016,7 +1016,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Can this handle a full engineering team?",
         answer:
-          "Yes. With a 100 amp breaker panel handling the power load, you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
+          "Yes. With a jobsite breaker panel handling the power load, you can run computers and servers using the interior outlets (10 on 20′ offices, 18 on 40′) while staying comfortable under the four interior LED ceiling lights.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8631.JPEG",
@@ -1039,7 +1039,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I hook up power at a remote St. Rose terminal site?",
         answer:
-          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+          "The unit comes with a jobsite breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
       },
       {
         question: "Can we load heavy equipment inside?",
@@ -1077,7 +1077,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How much power capacity does the unit have?",
         answer:
-          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+          "The office features a jobsite breaker panel allowing you to tie in substantial temporary power for the interior outlets (10 on 20′ offices, 18 on 40′) and climate control systems.",
       },
       {
         question: "Is the AC unit protected against power surges?",
@@ -1105,7 +1105,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "What is required to power the office in Gonzales?",
         answer:
-          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+          "Your site electrician can tie a permanent line or custom pigtail into the provided jobsite breaker panel to activate the AC lights and outlets.",
       },
       {
         question: "How do we keep the inside clean on a dusty site?",
@@ -1143,12 +1143,12 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How many electrical outlets are inside?",
         answer:
-          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+          "The office is heavily wired with interior outlets (10 on 20′ offices, 18 on 40′) allowing you to power desks chargers and networking equipment.",
       },
       {
         question: "Do we have to run a dedicated power pole?",
         answer:
-          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided jobsite breaker panel.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8956.JPEG",
@@ -1176,7 +1176,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we connect power at a new commercial build?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+          "The unit includes a jobsite breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
       },
       {
         question: "Are the windows functional for fresh air?",
@@ -1209,7 +1209,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit?",
         answer:
-          "Your site electrician can wire your temporary power directly into the included 100 amp breaker panel to run the AC and eighteen interior outlets.",
+          "Your site electrician can wire your temporary power directly into the included jobsite breaker panel to run the AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Is the entry door safe from break ins?",
@@ -1272,7 +1272,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I power the office container?",
         answer:
-          "The unit includes a 100 amp breaker panel. Have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator.",
+          "The unit includes a jobsite breaker panel. Have your site electrician hardwire a permanent line or wire up a custom pigtail to your jobsite generator.",
       },
       {
         question: "Are these containers secure on Monroe jobsites?",
@@ -1300,7 +1300,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "What is required to power the office in Alexandria?",
         answer:
-          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+          "Your site electrician can tie a permanent line or custom pigtail into the provided jobsite breaker panel to activate the AC lights and outlets.",
       },
       {
         question: "How do we keep the inside clean on a dusty civil site?",
@@ -1338,7 +1338,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office container at the jobsite?",
         answer:
-          "The office includes a 100 amp breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into this panel to run the eighteen interior outlets and AC.",
+          "The office includes a jobsite breaker panel. Your site electrician can tie your temporary power pole or jobsite generator directly into this panel to run the interior outlets (10 on 20′ offices, 18 on 40′) and AC.",
       },
       {
         question: "Are these containers secure on Shreveport jobsites?",
@@ -1376,7 +1376,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Can this handle a full engineering team?",
         answer:
-          "Yes. With a 100 amp breaker panel handling the power load you can run computers and servers using the eighteen interior outlets while staying comfortable under the four interior LED ceiling lights.",
+          "Yes. With a jobsite breaker panel handling the power load you can run computers and servers using the interior outlets (10 on 20′ offices, 18 on 40′) while staying comfortable under the four interior LED ceiling lights.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8620.JPEG",
@@ -1399,7 +1399,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do I hook up power at a remote Caddo site?",
         answer:
-          "The unit comes with a 100 amp breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
+          "The unit comes with a jobsite breaker panel. You can easily have an electrician wire a custom pigtail to a diesel generator to power the entire office.",
       },
       {
         question: "Can we load heavy equipment inside?",
@@ -1437,7 +1437,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How much power capacity does the unit have?",
         answer:
-          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+          "The office features a jobsite breaker panel allowing you to tie in substantial temporary power for the interior outlets (10 on 20′ offices, 18 on 40′) and climate control systems.",
       },
       {
         question: "Is the AC unit protected against power surges?",
@@ -1465,7 +1465,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Can we use this as a command center for our engineering team?",
         answer:
-          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+          "Absolutely. With four interior LED lights eighteen standard outlets and a jobsite breaker panel for reliable power it serves as a highly functional project management hub.",
       },
       {
         question: "Are the windows secure from jobsite vandalism?",
@@ -1503,7 +1503,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we connect power at a new commercial build?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+          "The unit includes a jobsite breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
       },
       {
         question: "Are the windows functional for fresh air?",
@@ -1536,7 +1536,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we power the office at the shipyard?",
         answer:
-          "Your electrician can wire a custom pigtail to a diesel generator via the included 100 amp breaker panel giving you reliable power for the entire office.",
+          "Your electrician can wire a custom pigtail to a diesel generator via the included jobsite breaker panel giving you reliable power for the entire office.",
       },
       {
         question: "Will the exterior lighting turn on automatically?",
@@ -1564,7 +1564,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "What is required to power the office in Biloxi?",
         answer:
-          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and outlets.",
+          "Your site electrician can tie a permanent line or custom pigtail into the provided jobsite breaker panel to activate the AC lights and outlets.",
       },
       {
         question: "How do we keep the inside clean on a dusty site?",
@@ -1602,12 +1602,12 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How many electrical outlets are inside?",
         answer:
-          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+          "The office is heavily wired with interior outlets (10 on 20′ offices, 18 on 40′) allowing you to power desks chargers and networking equipment.",
       },
       {
         question: "Do we have to run a dedicated power pole?",
         answer:
-          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+          "You can tie into a power pole or wire a custom pigtail to a jobsite generator using the provided jobsite breaker panel.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_8950.JPEG",
@@ -1635,7 +1635,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we get power to the unit on a waterfront site?",
         answer:
-          "The office is equipped with a 100 amp breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and eighteen interior outlets.",
+          "The office is equipped with a jobsite breaker panel. Tie into your jobsite generator using a custom pigtail to run the lights AC and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Are the interior walls resistant to coastal humidity?",
@@ -1713,7 +1713,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How much power capacity does the unit have?",
         answer:
-          "The office features a 100 amp breaker panel allowing you to tie in substantial temporary power for the eighteen interior outlets and climate control systems.",
+          "The office features a jobsite breaker panel allowing you to tie in substantial temporary power for the interior outlets (10 on 20′ offices, 18 on 40′) and climate control systems.",
       },
       {
         question: "Is the AC unit protected against power surges?",
@@ -1749,8 +1749,8 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
         {
           title: "Electrical Package",
           items: [
-            "100 amp breaker panel for tying in temporary site power pole or jobsite generator",
-            "Eighteen standard interior outlets for desks, chargers, and networking gear",
+            "jobsite breaker panel for tying in temporary site power pole or jobsite generator",
+            "18 interior outlets (40′ office standard) for desks, chargers, and networking gear",
             "Four interior LED ceiling lights",
             "One exterior photocell light mounted above the entry door",
           ],
@@ -1773,9 +1773,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       ],
     },
     localIndustryFocus:
-      "Project managers running oilfield service fleets, offshore supply bases, and ship channel logistics around Houma cannot afford flimsy plywood trailers on active laydown yards. This verified delivery shows a one trip shipping container office built for heavy coastal use: a 36 inch steel man door with deadbolt, two 42 inch by 30 inch sliding windows with heavy duty steel security bars, and fully operational rear cargo doors to protect tools and surveying gear overnight. With eighteen interior outlets and four LED ceiling lights, your Houma field team has a secure command center steps from the dock.",
+      "Project managers running oilfield service fleets, offshore supply bases, and ship channel logistics around Houma cannot afford flimsy plywood trailers on active laydown yards. This verified delivery shows a one trip shipping container office built for heavy coastal use: a 36 inch steel man door with deadbolt, two 42 inch by 30 inch sliding windows with heavy duty steel security bars, and fully operational rear cargo doors to protect tools and surveying gear overnight. With interior outlets (10 on 20′ offices, 18 on 40′) and four LED ceiling lights, your Houma field team has a secure command center steps from the dock.",
     localDeliveryLogistics:
-      "We dispatched this unit to Houma on a tilt bed trailer and dropped it flat on a firm shell and concrete staging surface without blocking, skirting, or stair towers. That ground level placement is critical on crowded dockside laydown yards and crushed shell supply bases where every inch of turnaround space matters. Your crew walks straight through the steel man door while forklifts and offshore cargo still move on the pad. Site electricians tie temporary power from a jobsite generator or site pole directly into the provided 100 amp breaker panel using a permanent hardwire or custom pigtail.",
+      "We dispatched this unit to Houma on a tilt bed trailer and dropped it flat on a firm shell and concrete staging surface without blocking, skirting, or stair towers. That ground level placement is critical on crowded dockside laydown yards and crushed shell supply bases where every inch of turnaround space matters. Your crew walks straight through the steel man door while forklifts and offshore cargo still move on the pad. Site electricians tie temporary power from a jobsite generator or site pole directly into the provided jobsite breaker panel using a permanent hardwire or custom pigtail.",
     localClimateSpecs:
       "Houma sits in heavy Gulf moisture with constant salt air exposure across maritime and petrochemical yards. We line every office with 2 inch closed cell spray foam and smooth moisture resistant PVC wall and ceiling panels so interior steel never sweats through a humid shift. The 12,000 BTU LG mini split heat pump provides dedicated cooling and heat with surge protection, keeping servers, radios, and blueprints stable while exterior photocell lighting above the entry handles dark early mooring calls.",
     localHighways:
@@ -1787,9 +1787,9 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
           "Yes. Our tilt bed trucks place the unit directly on compacted shell, gravel, or concrete laydown pads common to offshore supply bases. Because the office sits flat on the ground, your crew gets immediate walk in access without ramps eating staging space.",
       },
       {
-        question: "How do Houma maritime contractors power the 100 amp panel on a remote dockside pad?",
+        question: "How do Houma maritime contractors power the jobsite breaker panel on a remote dockside pad?",
         answer:
-          "Your site electrician can hardwire a permanent line from your temporary power pole or wire a custom pigtail from a diesel generator directly into the 100 amp breaker panel. That panel feeds the eighteen interior outlets, four LED ceiling lights, exterior photocell light, and 12,000 BTU LG mini split.",
+          "Your site electrician can hardwire a permanent line from your temporary power pole or wire a custom pigtail from a diesel generator directly into the jobsite breaker panel. That panel feeds the interior outlets (10 on 20′ offices, 18 on 40′), four LED ceiling lights, exterior photocell light, and 12,000 BTU LG mini split.",
       },
       {
         question: "Will the interior hold up against Houma salt air and tracked in mud from the yard?",
@@ -1836,12 +1836,12 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How many electrical outlets are inside?",
         answer:
-          "The office is heavily wired with eighteen standard interior outlets allowing you to power desks chargers and networking equipment.",
+          "The office is heavily wired with interior outlets (10 on 20′ offices, 18 on 40′) allowing you to power desks chargers and networking equipment.",
       },
       {
         question: "Do we have to run a dedicated power pole?",
         answer:
-          "You can tie into a permanent power pole or wire a custom pigtail to a jobsite generator using the provided 100 amp breaker panel.",
+          "You can tie into a permanent power pole or wire a custom pigtail to a jobsite generator using the provided jobsite breaker panel.",
       },
     ],
     heroImage: "/City-Pages-Pics/IMG_1047.JPEG",
@@ -1869,7 +1869,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "How do we connect power at a mill expansion site?",
         answer:
-          "The unit includes a 100 amp breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
+          "The unit includes a jobsite breaker panel. You can easily have your electrician wire it directly to your temporary site power.",
       },
       {
         question: "Are the windows functional for fresh air?",
@@ -1902,7 +1902,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "What is required to power the office?",
         answer:
-          "Your site electrician can tie a permanent line or custom pigtail into the provided 100 amp breaker panel to activate the AC lights and eighteen interior outlets.",
+          "Your site electrician can tie a permanent line or custom pigtail into the provided jobsite breaker panel to activate the AC lights and interior outlets (10 on 20′ offices, 18 on 40′).",
       },
       {
         question: "Is the entry door safe from break ins?",
@@ -1930,7 +1930,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Can we use this as a command center for our engineering team?",
         answer:
-          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+          "Absolutely. With four interior LED lights eighteen standard outlets and a jobsite breaker panel for reliable power it serves as a highly functional project management hub.",
       },
       {
         question: "Are the windows secure from jobsite vandalism?",
@@ -1963,7 +1963,7 @@ const serviceAreaRecords: ServiceAreaRecord[] = [
       {
         question: "Can we use this as a command center for our engineering team?",
         answer:
-          "Absolutely. With four interior LED lights eighteen standard outlets and a 100 amp breaker panel for reliable power it serves as a highly functional project management hub.",
+          "Absolutely. With four interior LED lights eighteen standard outlets and a jobsite breaker panel for reliable power it serves as a highly functional project management hub.",
       },
       {
         question: "Are the windows secure from jobsite vandalism?",

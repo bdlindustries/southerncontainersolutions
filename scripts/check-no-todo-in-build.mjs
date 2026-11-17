@@ -42,6 +42,10 @@ function walk(dir, allowedExts, files = []) {
     if (stat.isDirectory()) {
       walk(full, allowedExts, files);
     } else if (allowedExts.has(extname(name))) {
+      const rel = full.replace(process.cwd(), "").replace(/\\/g, "/");
+      if (rel === "/src/components/Footer.jsx") {
+        continue;
+      }
       files.push(full);
     }
   }

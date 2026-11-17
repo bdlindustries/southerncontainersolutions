@@ -8,7 +8,7 @@ export const SHOP_PAGE_FAQS = [
   {
     question: "What site prep is required before delivery?",
     answer:
-      "You need a relatively flat, firm surface—compacted dirt, gravel, shell, asphalt, or concrete—clear enough for a tilt-bed or winch truck to back in and set the unit. We do not require stairs, skirting, or trailer blocking. For uneven pads, see our site prep guide on the Delivery page, or request a delivery quote so we can review access and turnaround space for your address.",
+      "You need a relatively flat, firm surface—compacted dirt, gravel, shell, asphalt, or concrete—clear enough for a tilt-bed or winch truck to back in and set the unit. We do not require stairs, skirting, or trailer blocking. For uneven pads, see our site prep and delivery guide, or request a delivery quote so we can review access and turnaround space for your address.",
   },
   {
     question: "How do I hook up power to a container office?",

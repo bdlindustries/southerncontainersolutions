@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, MapPin, PackageOpen } from "lucide-react";
 import { getImageAlt } from "@/lib/serviceAreaLocalSeo";
-import { STANDARD_OFFICE_CONTAINER_SPECS } from "@/lib/serviceAreaDefaults";
+import { OFFICE_20_STANDARD_SPECS, OFFICE_40_STANDARD_SPECS } from "@/lib/serviceAreaDefaults";
 import { getNearbyLocationSlugs } from "@/lib/locationSeo";
 import { normalizeLocationSlug, resolveLocationArea } from "@/lib/locationSlugs";
 
@@ -226,21 +226,38 @@ export default function ServiceAreaLanding({ area }) {
           </section>
         )}
 
-        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
-          <h2 className="text-2xl font-black text-slate-950 mb-6">
-            Standard Finished Office Features
-          </h2>
-          <ul className="grid sm:grid-cols-2 gap-3">
-            {STANDARD_OFFICE_CONTAINER_SPECS.map((spec) => (
-              <li
-                key={spec}
-                className="flex items-start gap-2 text-slate-700 text-base leading-relaxed"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-                {spec}
-              </li>
-            ))}
-          </ul>
+        <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10 space-y-10">
+          <p className="text-slate-600 leading-relaxed">
+            Shop product pages are the source of truth. Standard finished office builds follow the specs below.
+          </p>
+          <div>
+            <h2 className="text-xl font-black text-slate-950 mb-4">20&apos; standard office</h2>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {OFFICE_20_STANDARD_SPECS.map((spec) => (
+                <li
+                  key={spec}
+                  className="flex items-start gap-2 text-slate-700 text-base leading-relaxed"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                  {spec}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl font-black text-slate-950 mb-4">40&apos; standard office</h2>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {OFFICE_40_STANDARD_SPECS.map((spec) => (
+                <li
+                  key={spec}
+                  className="flex items-start gap-2 text-slate-700 text-base leading-relaxed"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                  {spec}
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
